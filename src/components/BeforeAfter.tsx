@@ -16,7 +16,7 @@ export function BeforeAfter() {
                         <div className="px-12">
                             <h2 className="text-2xl font-bold tracking-tight text-slate-200">From darkness&hellip;</h2>
                             <p className="mt-6 text-xl leading-8 text-slate-200">
-                                As a Starknet developer, you've known the abyss. Transactions fail, and you're left without a clue, navigating through chaos and frustration.
+                                As a Starknet developer, you&apos;ve known the abyss. Transactions fail, and you&apos;re left without a clue, navigating through chaos and frustration.
                             </p>
                         </div>
                         <div className="px-12">
