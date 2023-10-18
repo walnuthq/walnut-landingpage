@@ -15,7 +15,7 @@ export function Testimonial() {
                   viewBox="0 0 162 128"
                   fill="none"
                   aria-hidden="true"
-                  className="absolute -top-12 left-0 -z-10 h-32 stroke-gray-900/10"
+                  className="absolute -top-12 left-0 z-10 h-32 stroke-gray-900/10"
                 >
                   <path
                     id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"

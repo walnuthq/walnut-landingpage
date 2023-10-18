@@ -4,13 +4,39 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 
+import logoWalnut from '@/images/logos/walnut.svg'
+
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s | Walnut',
+    default: 'Debugger for Starknet smart contract developers | Walnut',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.',
+  keywords: [
+    'Starknet', 'Debugger', 'Cairo', 'Transaction', 'Gas profiler', 'Stack trace', 'Debugging'
+  ],
+  openGraph: {
+    title: 'Finally: The Debugger Starknet Deserved',
+    description: 'Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Secure your early access now.',
+    images: [
+      {
+        url: logoWalnut.src,
+        width: 520,
+        height: 160,
+        alt: 'Walnut logo'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+    url: 'https://walnut.dev'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Finally: The Debugger Starknet Deserved',
+    description: 'Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Secure your early access now.',
+    images: [logoWalnut.src],
+  },
 }
 
 const inter = Inter({
