@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'Starknet', 'Debugger', 'Cairo', 'Transaction', 'Gas profiler', 'Stack trace', 'Debugging'
   ],
+  metadataBase: new URL('https://walnut.dev/'),
   openGraph: {
     title: 'Finally: The Debugger Starknet Deserved',
     description: 'Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Secure your early access now.',
