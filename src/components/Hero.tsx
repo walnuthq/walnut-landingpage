@@ -12,6 +12,7 @@ import logoTuple from '@/images/logos/tuple.svg'
 import logoJediswap from '@/images/logos/jediswap.svg'
 import logoCarmine from '@/images/logos/carmine_finance.png'
 import logoCompound from '@/images/logos/compound.svg'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -52,7 +53,7 @@ export function Hero() {
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
-          From the Wido team, trusted by
+          From the <Link className='underline' href='https://joinwido.com/' target='_blank' aria-label='Wido home page'>Wido team</Link>, trusted by
         </p>
         <ul
           role="list"
@@ -61,11 +62,11 @@ export function Hero() {
           {[
             [
               { name: 'Yearn', logo: logoYearn, classNameExt: 'opacity-90' },
-              { name: 'JediSwap', logo: logoJediswap, classNameExt: 'opacity-80' },
+              { name: 'JediSwap', logo: logoJediswap, classNameExt: 'opacity-90' },
             ],
             [
               { name: 'Compound', logo: logoCompound, classNameExt: '' },
-              { name: 'Carmine Finance', logo: logoCarmine, classNameExt: '' },
+              { name: 'Carmine Finance', logo: logoCarmine, classNameExt: 'opacity-90' },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
