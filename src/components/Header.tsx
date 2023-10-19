@@ -114,6 +114,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#request-access">Request access</NavLink>
+              <NavLink href="mailto:someone@example.com">Contact</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

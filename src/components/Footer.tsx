@@ -14,6 +14,7 @@ export function Footer() {
             <div className="-my-1 flex justify-center gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#request-access">Request access</NavLink>
+              <NavLink href="mailto:someone@example.com">Contact</NavLink>
             </div>
           </nav>
         </div>
