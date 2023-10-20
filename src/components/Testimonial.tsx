@@ -39,7 +39,7 @@ export function Testimonial() {
               </div>
               <figcaption className="text-base lg:col-start-1 lg:row-start-3">
                 <div className="font-semibold text-gray-900">Martín Triay</div>
-                <div className="mt-1 text-gray-500">Product Developer of Open Zeppelin</div>
+                <div className="mt-1 text-gray-500">Product Developer of OpenZeppelin</div>
               </figcaption>
             </figure>
           </div>
