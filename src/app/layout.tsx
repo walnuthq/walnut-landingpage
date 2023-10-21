@@ -5,6 +5,7 @@ import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 
 import logoWalnut from '@/images/logos/walnut.svg'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
@@ -67,6 +68,18 @@ export default function RootLayout({
       )}
     >
       <body className="flex h-full flex-col">{children}</body>
+      <div>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-3C2NZTCV18" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-3C2NZTCV18');
+          `}
+        </Script>
+      </div>
     </html>
   )
 }
