@@ -1,18 +1,17 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+'use client'
+
+import { FormEvent, useState } from 'react'
+
 export function RequestAccess() {
+
+    const [isSignedUp, setIsSignedUp] = useState(false)
+
+    async function onSubmit() {
+        setTimeout(() => {
+            setIsSignedUp(true);
+        }, 10);
+    }
+
     return (
         <section id="request-access">
             <div className=" bg-slate-50 pb-16 sm:pb-24">
@@ -29,6 +28,7 @@ export function RequestAccess() {
                         id="mc-embedded-subscribe-form"
                         name="mc-embedded-subscribe-form"
                         target="_blank"
+                        onSubmit={onSubmit}
                         className="mx-auto mt-10 flex max-w-md gap-x-4">
                         <label htmlFor="email-address" className="sr-only">
                             Email address
@@ -38,23 +38,34 @@ export function RequestAccess() {
                             name="EMAIL"
                             type="email"
                             autoComplete="email"
+                            disabled={isSignedUp}
                             required
-                            className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                            className={`min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6 ${isSignedUp ? 'opacity-80' : ''}`}
                             placeholder="Enter your email"
                         />
                         <div className="hidden">
                             <input type="hidden" name="tags" value="5890423" />
                         </div>
-                        <div aria-hidden="true" className="hidden">
+                        <div aria-hidden="true" className="absolute left-[1000vh]">
                             <input type="text" name="b_519a9433ee6834f49d94686d9_f836ce2ed8" value="" />
                         </div>
                         <button
                             type="submit"
-                            className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            disabled={isSignedUp}
+                            className={`flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${isSignedUp ? 'opacity-80' : ''}`}
                         >
                             Notify me
                         </button>
                     </form>
+
+                    {
+                        isSignedUp ? (
+                            <div className="text-center text-white mt-4">
+                                Thank you for joining us!
+                            </div>
+                        ) : <></>
+                    }
+                    
 
                     <svg
                     viewBox="0 0 1024 1024"
