@@ -37,7 +37,7 @@ export function RequestAccess() {
 							<label htmlFor="email" className="sr-only">
 								Email address
 							</label>
-							<input id="phone" name="phone" type="text" autoComplete="" className="absolute left-[1000vh]" />
+							<input id="phone" name="phone" type="text" autoComplete="off" className="absolute left-[1000vh]" />
 							<input
 								disabled={isSignedUp}
 								id="email"
@@ -50,7 +50,7 @@ export function RequestAccess() {
 								placeholder="Enter your email"
 							/>
 							<div className="absolute left-[1000vh]">
-								<input id="name" name="name" type="text" autoComplete="" />
+								<input id="name" name="name" type="text" autoComplete="off" />
 							</div>
 							<button
 								type="submit"
