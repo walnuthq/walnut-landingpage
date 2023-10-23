@@ -2,6 +2,8 @@ import { SignupEmailTemplate, signupEmailPlainText } from '@/components/SignupEm
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
+export const runtime = 'edge'
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const isValidEmail = (email: string): boolean => /^\S+@\S+\.\S+$/.test(email)
