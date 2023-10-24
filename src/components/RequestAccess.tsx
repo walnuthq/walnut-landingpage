@@ -1,18 +1,17 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+'use client'
+
+import { FormEvent, useState } from 'react'
+
 export function RequestAccess() {
+
+    const [isSignedUp, setIsSignedUp] = useState(false)
+
+    async function onSubmit() {
+        setTimeout(() => {
+            setIsSignedUp(true);
+        }, 10);
+    }
+
     return (
         <section id="request-access">
             <div className=" bg-slate-50 pb-16 sm:pb-24">
@@ -22,28 +21,52 @@ export function RequestAccess() {
                     Get notified when we launch.
                     </h2>
                     <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-                    Sign up now for early access to Walnut Debugger and ascend to new heights in Starknet development.
+                        Sign up now for early access to Walnut Debugger and ascend to new heights in Starknet development.
                     </p>
-                    <form className="mx-auto mt-10 flex max-w-md gap-x-4">
-                    <label htmlFor="email-address" className="sr-only">
-                        Email address
-                    </label>
-                    <input
-                        id="email-address"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        required
-                        className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                        placeholder="Enter your email"
-                    />
-                    <button
-                        type="submit"
-                        className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                    >
-                        Notify me
-                    </button>
+                    <form action="https://joinwido.us1.list-manage.com/subscribe/post?u=519a9433ee6834f49d94686d9&amp;id=f836ce2ed8&amp;f_id=00d49de5f0"
+                        method="post"
+                        id="mc-embedded-subscribe-form"
+                        name="mc-embedded-subscribe-form"
+                        target="_blank"
+                        onSubmit={onSubmit}
+                        className="mx-auto mt-10 flex max-w-md gap-x-4">
+                        <label htmlFor="email-address" className="sr-only">
+                            Email address
+                        </label>
+                        <input
+                            id="email-address"
+                            name="EMAIL"
+                            type="email"
+                            autoComplete="email"
+                            disabled={isSignedUp}
+                            required
+                            className={`min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6 ${isSignedUp ? 'opacity-80' : ''}`}
+                            placeholder="Enter your email"
+                        />
+                        <div className="hidden">
+                            <input type="hidden" name="tags" value="5890423" />
+                        </div>
+                        <div aria-hidden="true" className="absolute left-[1000vh]">
+                            <input type="text" name="b_519a9433ee6834f49d94686d9_f836ce2ed8" value="" />
+                        </div>
+                        <button
+                            type="submit"
+                            disabled={isSignedUp}
+                            className={`flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${isSignedUp ? 'opacity-80' : ''}`}
+                        >
+                            Notify me
+                        </button>
                     </form>
+
+                    {
+                        isSignedUp ? (
+                            <div className="text-center text-white mt-4">
+                                Thank you for joining us!
+                            </div>
+                        ) : <></>
+                    }
+                    
+
                     <svg
                     viewBox="0 0 1024 1024"
                     className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
