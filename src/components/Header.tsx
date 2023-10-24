@@ -90,9 +90,9 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="#request-access">Request access</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="mailto:hi@walnut.dev">Contact</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -114,7 +114,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#request-access">Request access</NavLink>
-              <NavLink href="mailto:someone@example.com">Contact</NavLink>
+              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
