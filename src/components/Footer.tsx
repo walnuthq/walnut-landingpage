@@ -14,14 +14,14 @@ export function Footer() {
             <div className="-my-1 flex justify-center gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#request-access">Request access</NavLink>
-              <NavLink href="mailto:someone@example.com">Contact</NavLink>
+              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
             </div>
           </nav>
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link
-              href="https://twitter.com/widolabs"
+              href="https://twitter.com/walnut_dev"
               className="group"
               aria-label="Wido on Twitter"
               target='_blank'
@@ -34,7 +34,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://github.com/widolabs"
+              href="https://twitter.com/walnut_dev"
               className="group"
               aria-label="Wido on GitHub"
               target='_blank'
