@@ -36,7 +36,7 @@ export function Hero() {
         Delve deeper into Cairo transaction execution, swiftly identifying bugs and pinpointing areas for improvement.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Request early access</Button>
+        <Button href="#request-access">Request early access</Button>
         <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
