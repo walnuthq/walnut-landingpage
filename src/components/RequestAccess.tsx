@@ -44,10 +44,10 @@ export function RequestAccess() {
                             placeholder="Enter your email"
                         />
                         <div className="hidden">
-                            <input type="hidden" name="tags" value="5890423" />
+                            <input type="hidden" name="tags" defaultValue="5890423" />
                         </div>
                         <div aria-hidden="true" className="absolute left-[1000vh]">
-                            <input type="text" name="b_519a9433ee6834f49d94686d9_f836ce2ed8" value="" />
+                            <input type="text" name="b_519a9433ee6834f49d94686d9_f836ce2ed8" defaultValue="" />
                         </div>
                         <button
                             type="submit"
