@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { SignalIcon, ArrowPathIcon, BugAntIcon, PaperAirplaneIcon, FunnelIcon } from '@heroicons/react/24/outline'
+import { SignalIcon, ArrowPathIcon, BugAntIcon, PaperAirplaneIcon, FunnelIcon, PresentationChartLineIcon } from '@heroicons/react/24/outline'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
 
@@ -10,6 +10,12 @@ const features = [
     description:
       'Input your transaction hash and receive in-depth tracing insights, shedding light on the transaction execution.',
     icon: SignalIcon,
+  },
+  {
+    name: 'Transaction monitoring',
+    description:
+      'Monitor your user\'s transactions, understand their behavior, get insights and resolve failures quickly.',
+    icon: PresentationChartLineIcon,
   },
   {
     name: 'Gas Profiler',
