@@ -33,6 +33,11 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [formsPlugin, headlessuiPlugin],
+	plugins: [
+		formsPlugin, 
+		headlessuiPlugin,
+		require('@tailwindcss/typography'),
+	],
+	
 }
 export default config

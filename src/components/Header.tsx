@@ -88,10 +88,10 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#request-access">Request access</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
+            <MobileNavLink href="/#features">Features</MobileNavLink>
+            <MobileNavLink href="/#request-access">Request access</MobileNavLink>
+            <MobileNavLink href="/blog">Blog</MobileNavLink>
+                        <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="mailto:hi@walnut.dev">Contact</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -100,21 +100,22 @@ function MobileNavigation() {
   )
 }
 
-export function Header() {
+export function Header({ condensed }: { condensed?: boolean}) {
   return (
-    <header className="py-10">
+    <header className={clsx('py-4 sticky', condensed && 'border-b border-slate-200')}>
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Image src={logoWalnut} alt="Walnut logo" unoptimized  className="h-10 w-auto" />
             </Link>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#request-access">Request access</NavLink>
-              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
+              <NavLink href="/#features">Features</NavLink>
+              <NavLink href="/#request-access">Request access</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
+                            <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

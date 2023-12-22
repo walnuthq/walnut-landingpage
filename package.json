@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.6.3",
+    "@tailwindcss/typography": "^0.5.10",
     "eslint-plugin-next-on-pages": "^1.6.3",
     "vercel": "^32.4.1"
   }
