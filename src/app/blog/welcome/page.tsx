@@ -58,11 +58,19 @@ export default function Blog() {
 
                                 <p><strong>Gas profiling.</strong> Execution on Starknet is generally cheap, but developers still need visibility into gas consumption. Poorly written contracts can eat a lot of gas, even on Starknet, and a good gas profiler can offer monitoring over such situations and ability to improve the gas footprint.</p>
 
+                                <p><strong>Enhanced Cairo language server.</strong> We would like to see the Cairo server to be enhanced with advanced features like seeing gas consumption of a function right inside the code editor.</p>
+
+                                <p><strong>Web 3 actions</strong> will allow Starknet developers to create custom actions that execute on a predefined set of on-chain events. Example: send Telegram notification when a loan health factor drops below a certain percentage.</p>
+
+                                <p><strong>Transaction simulator and dApp monitoring</strong> allows developers to test out transactions and see outcomes before sending them on-chain. dApp developers can use simulations to get visibility into failures their users can run into, without needing the user to contact support.</p>
+
+                                <p><strong>Shared devnets</strong> will allow developer teams to collaborate on their app in a private, hosted environment.</p>
+
                                 <p>
-                                Blockchain technology, with Starknet at its forefront, is poised to revolutionize the world. Starknet's vision, enabling individuals to freely implement and use any social function they desire, is a testament to the transformative power of blockchain. Developers are key to this change. With tools like the debugger and our upcoming developments, we're dedicated to supporting developers who will be instrumental in ensuring the success and growth of Starknet's ecosystem.
+                                Blockchain technology, with Starknet at its forefront, is poised to revolutionize the world. Starknet's vision, <a href="https://community.starknet.io/t/starknet-vision/101255" target='_blank'>enabling individuals to freely implement and use any social function they desire</a>, is a testament to the transformative power of blockchain. Developers are key to this change. With tools like the debugger and our upcoming developments, we're dedicated to supporting developers who will be instrumental in ensuring the success and growth of Starknet's ecosystem.
                                 </p>
 
-                                <p className='mt-12 text-gray-500'>* According to a detailed report by Electric Capital, Starknet has the fastest-growing number of full-time developers compared to other layer two ecosystems. Among the top 20 ecosystems (measured by full time developers), Starknet's number of full-time developers has increased by an incredible 622% in the last two years. This growth is much higher than Osmosis at 194% and Arbitrum at 125%, who are at 2nd and 3rd place respectively.</p>
+                                <p className='mt-12 text-gray-500'>* According to a detailed <a href="https://www.developerreport.com/" target="_blank">report by Electric Capital</a>, Starknet has the fastest-growing number of full-time developers compared to other layer&nbsp;two ecosystems. Among the top 20 ecosystems (measured by full-time developers), Starknet's number of full-time developers has increased by an incredible 622% in the last two years. This growth is much higher than Osmosis at 194% and Arbitrum at 125%, who are at 2nd and 3rd place respectively.</p>
                             </div>
                         </article>
                     </main>
