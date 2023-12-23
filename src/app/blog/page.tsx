@@ -33,7 +33,7 @@ export default function Blog() {
 								Welcome to Walnut
 							</h3>
 							<div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-								<p>Today’s the day — we just published the first development preview of Catalyst, our first fully-componentized, batteries-included application UI kit for React, just in time for your holiday hacking sessions.</p>
+								<p>Welcome to our blog focused on Starknet developer tooling development. Our first highlight is the Walnut Debugger, a game-changer for Cairo developers, now in closed Beta and set for a Q1 2024 release.</p>
 							</div>
 							<dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
 								<dt className="sr-only">Date</dt>
@@ -44,7 +44,7 @@ export default function Blog() {
 						</div>
 						<a className="flex items-center text-sm text-pink-600 font-medium" href="/blog/welcome">
 							<span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-							<span className="relative">Read more<span className="sr-only">, Introducing Catalyst: A modern UI kit for React</span></span>
+							<span className="relative">Read more<span className="sr-only">, Welcome to Walnut Blog</span></span>
 							<svg className="relative mt-px overflow-visible ml-2.5 text-pink-600" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M0 0L3 3L0 6"></path></svg>
 						</a>
 					</article>

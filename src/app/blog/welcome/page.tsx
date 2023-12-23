@@ -46,28 +46,36 @@ export default function Blog() {
                                 </ul>
                             </div>
                             <div className="mt-12 mb-24 prose">
-                                <p className="lead">We are excited to launch this blog as a platform to share our experiences, challenges, and advancements in developing tools for blockchain engineers, focusing specifically on Starknet. Our goal is to foster insightful discussions and actively engage with community feedback.</p>
+                                <p className="lead">We are excited to launch this blog as a platform for sharing our experiences, challenges, and advancements in developing tools for blockchain engineers, with a specific focus on Starknet. Our goal is to foster insightful discussions and actively engage with community feedback.</p>
                                 <p>Our mission is clear:</p>
                                 <blockquote>
                                 <p>We aim to empower every Starknet developer to achieve more.</p>
                                 </blockquote>
-                                <p>Our first product is a visual, step-by-step debugger designed for Starknet developers who work with Cairo. Currently in its closed Beta stage, we anticipate launching in Q1 2024. Walnut fills a critical gap building the first debugger for Cairo. If you&apos;re interested in early access, we&apos;d love to hear from you.</p>
-                                <p>While we recognize that a debugger alone is not enough to fulfill our mission for the rapidly expanding Starknet developer community, we see it as a crucial step. Beyond debugger, we plan to create an array of tools for Starknet developers. While we anticipate that what we build will depend on the state of Starknet tooling at the time we start the work, we are still listing some examples of tools and areas we are particularly interested in. If these areas interest you, or if you&apos;re actively involved in them, we encourage you to reach out and connect with us.</p>
+                                <p>Our first product, the Walnut Debugger, is a visual, step-by-step debugger designed for Starknet developers who work with Cairo. Currently in its closed Beta stage, we anticipate launching in Q1 2024. The Walnut Debugger fills a critical gap by being the first debugger built for Cairo. If you&apos;re interested in early access, we&apos;d love to hear from you.</p>
+                                <p>While we recognize that a debugger alone is not enough to fulfill our mission for the rapidly expanding Starknet developer community, we see it as a crucial step. Now, let&apos;s delve into other areas and tools we at Walnut are developing, each tailored to address specific challenges Starknet developers face.</p>
 
-                                <p><strong>Storage diff visualization.</strong> On Starknet, the majority of transaction costs come from storage. Developers need better tooling to get visibility into smart contract storage, how transactions affect it, so that they can reduce the memory footprint.</p>
+                                <ul>
+                                    <li>
+                                        <p><strong>Storage diff visualization.</strong> Developers need better visibility into smart contract storage and how transactions affect it. This tool is particularly useful for optimizing smart contract memory. On Starknet, transaction costs are significantly impacted by storage, therefore the ability to optimize storage is vital.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Gas profiling.</strong> Starknet&apos;s execution may be generally cheap, but visibility into gas consumption is still necessary. Poorly written contracts can consume excessive gas, even on Starknet. Gas profilers offer monitoring capabilities and assist in improving the gas footprint.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Web 3 actions</strong> enable developers to write custom code that executes in response to predefined on-chain events on Starknet. For instance, a developer could set up a Telegram notification when a loan health factor drops below a certain percentage.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Transaction simulator and dApp monitoring tools.</strong> Simulations allow developers to test transactions and see outcomes without the need to send them on-chain and pay for gas. Monitoring tools based on these simulations provide dApp developers with insights into potential user issues, reducing the need for direct user support interaction.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Shared devnets</strong> provide Starknet developer teams with a collaborative environment for writing smart contracts and dApps. Unlike public testnets, shared devnets offer privacy for projects and a gas-free environment.</p>
+                                    </li>
+                                </ul>
 
-                                <p><strong>Gas profiling.</strong> Execution on Starknet is generally cheap, but developers still need visibility into gas consumption. Poorly written contracts can eat a lot of gas, even on Starknet, and a good gas profiler can offer monitoring over such situations and ability to improve the gas footprint.</p>
-
-                                <p><strong>Enhanced Cairo language server.</strong> We would like to see the Cairo server to be enhanced with advanced features like seeing gas consumption of a function right inside the code editor.</p>
-
-                                <p><strong>Web 3 actions</strong> will allow Starknet developers to create custom actions that execute on a predefined set of on-chain events. Example: send Telegram notification when a loan health factor drops below a certain percentage.</p>
-
-                                <p><strong>Transaction simulator and dApp monitoring</strong> allows developers to test out transactions and see outcomes before sending them on-chain. dApp developers can use simulations to get visibility into failures their users can run into, without needing the user to contact support.</p>
-
-                                <p><strong>Shared devnets</strong> will allow developer teams to collaborate on their app in a private, hosted environment.</p>
+                                <p>If any of these areas interest you, or if you&apos;re actively involved in them, we encourage you to reach out and connect with us.</p>
 
                                 <p>
-                                Blockchain technology, with Starknet at its forefront, is poised to revolutionize the world. Starknet&apos;s vision, <a href="https://community.starknet.io/t/starknet-vision/101255" target='_blank'>enabling individuals to freely implement and use any social function they desire</a>, is a testament to the transformative power of blockchain. Developers are key to this change. With tools like the debugger and our upcoming developments, we&apos;re dedicated to supporting developers who will be instrumental in ensuring the success and growth of Starknet&apos;s ecosystem.
+                                    Blockchain technology, with Starknet at its forefront, is poised to revolutionize the world. Starknet&apos;s vision, <a href="https://community.starknet.io/t/starknet-vision/101255" target='_blank'>enabling individuals to freely implement and use any social function they desire</a>, is a testament to the transformative power of blockchain. Developers are key to this change. With tools like the Walnut Debugger and our upcoming developments at Walnut, we&apos;re dedicated to supporting developers who will play a key role in ensuring the success and growth of Starknet&apos;s ecosystem.
                                 </p>
 
                                 <p className='mt-12 text-gray-500'>* According to a detailed <a href="https://www.developerreport.com/" target="_blank">report by Electric Capital</a>, Starknet has the fastest-growing number of full-time developers compared to other layer&nbsp;two ecosystems. Among the top 20 ecosystems (measured by full-time developers), Starknet&apos;s number of full-time developers has increased by an incredible 622% in the last two years. This growth is much higher than Osmosis at 194% and Arbitrum at 125%, who are at 2nd and 3rd place respectively.</p>
