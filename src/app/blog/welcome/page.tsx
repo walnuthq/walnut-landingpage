@@ -52,11 +52,11 @@ export default function Blog() {
                                 <p>We aim to empower every Starknet developer to achieve more.</p>
                                 </blockquote>
                                 <p>Our first product, the Walnut Debugger, is a visual, step-by-step debugger designed for Starknet developers who work with Cairo. Currently in its closed Beta stage, we anticipate launching in Q1 2024. The Walnut Debugger fills a critical gap by being the first debugger built for Cairo. If you&apos;re interested in early access, we&apos;d love to hear from you.</p>
-                                <p>While we recognize that a debugger alone is not enough to fulfill our mission for the rapidly expanding Starknet developer community, we see it as a crucial step. Now, let&apos;s delve into other areas and tools we at Walnut are developing, each tailored to address specific challenges Starknet developers face.</p>
+                                <p>While we recognize that a debugger alone is not enough to fulfill our mission for the rapidly expanding Starknet developer community, we see it as a crucial step. With this understanding, let&apos;s delve into other areas and tools we at Walnut are developing, each tailored to address specific challenges Starknet developers face.</p>
 
                                 <ul>
                                     <li>
-                                        <p><strong>Storage diff visualization.</strong> Developers need better visibility into smart contract storage and how transactions affect it. This tool is particularly useful for optimizing smart contract memory. On Starknet, transaction costs are significantly impacted by storage, therefore the ability to optimize storage is vital.</p>
+                                        <p><strong>Storage diff visualization.</strong> Developers need better visibility into smart contract storage and how transactions affect it. This tool is particularly useful for optimizing smart contract memory. On Starknet, transaction costs are mostly impacted by storage, therefore the ability to optimize storage is vital.</p>
                                     </li>
                                     <li>
                                         <p><strong>Gas profiling.</strong> Starknet&apos;s execution may be generally cheap, but visibility into gas consumption is still necessary. Poorly written contracts can consume excessive gas, even on Starknet. Gas profilers offer monitoring capabilities and assist in improving the gas footprint.</p>
