@@ -45,7 +45,7 @@ export default function Blog() {
                                 </ul>
                             </div>
                             <div className="mt-12 mb-24 prose">
-                                <p className="lead">In this article, we'll explore the current challenges Starknet developers face in debugging.</p>
+                                <p className="lead">In this article, we&apos;ll explore the current challenges Starknet developers face in debugging.</p>
 
                                 <p>For any Starknet developer, errors are common occurrences. Broadly classified into <strong>Syntax Errors</strong>, <strong>Runtime Errors</strong>, and <strong>Logic Errors</strong>, each presents its unique challenges. While Syntax errors are easily detected by the compiler, the others pose more significant challenges.</p>
 
@@ -61,7 +61,7 @@ export default function Blog() {
                                 </pre>
                                 <figcaption className='mt-2 text-gray-500'>Exception taken from transaction <a href="https://starkscan.co/tx/0x02ff0a85f980a07e43a21fc4c36ac7433024d6147cb3e6df7361f8119efb3c31">this transaction</a></figcaption>
                                 <p>The exception reveals the contract address where the error occurred, accompanied by an error message stating <em>Assertion failed</em>. Developers are still left scratching their heads in search of potential solutions to resolve this issue.</p>
-                                <p>Now that we understand the challenges, let's explore the current state of tools available to Starknet developers</p>
+                                <p>Now that we understand the challenges, let&apos;s explore the current state of tools available to Starknet developers</p>
                                 <ul>
                                     <li><strong>Logging</strong>, a widely used debugging method, is convenient but limited to the local development environment and unavailable after contract deployment.</li>
 
