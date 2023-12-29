@@ -33,7 +33,7 @@ export default function Blog() {
 								Why does Starknet need a debugger?
 							</h3>
 							<div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-								<p>In this article, we&apos;ll explore the current challenges Starknet developers face in debugging.</p>
+								<p>In this article, we&apos;ll explore current challenges developers face with debugging transactions on Starknet.</p>
 							</div>
 							<dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
 								<dt className="sr-only">Date</dt>
