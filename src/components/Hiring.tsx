@@ -26,7 +26,7 @@ export function Hiring() {
             <dl className="relative flex flex-wrap gap-x-3">
               <dt className="sr-only">Role</dt>
               <dd className="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                <Link href="/careers/founding-engineer">
+                <Link href="/careers/senior-backend-engineer">
                   Senior Backend Engineer
                   <span className="absolute inset-0" aria-hidden="true"></span>
                 </Link>
