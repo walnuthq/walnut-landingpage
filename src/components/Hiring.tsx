@@ -1,6 +1,7 @@
 import { Container } from './Container'
 import WalnutTeam from '@/images/walnut_team.webp'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Hiring() {
 	return (
@@ -25,16 +26,20 @@ export function Hiring() {
             <dl className="relative flex flex-wrap gap-x-3">
               <dt className="sr-only">Role</dt>
               <dd className="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                <a href="#">
-                  Founding engineer
+                <Link href="/careers/founding-engineer">
+                  Senior Backend Engineer
                   <span className="absolute inset-0" aria-hidden="true"></span>
-                </a>
+                </Link>
               </dd>
               <dt className="sr-only">Description</dt>
-              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.</dd>
+              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Join our founding team to build developer tools for StarkNet, and be at the forefront of one of the most rapidly expanding blockchain ecosystems.</dd>
               <dt className="sr-only">Location</dt>
               <dd className="mt-4 flex items-center gap-x-3 text-base leading-7 text-gray-500">
                 Remote, Europe
+                <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 flex-none fill-gray-500" aria-hidden="true">
+                    <circle cx="1" cy="1" r="1" />
+                </svg>
+                <Link href="/careers/senior-backend-engineer" className="text-pink-600 hover:text-sky-700">Learn more</Link>
               </dd>
             </dl>
           </li>
@@ -42,16 +47,20 @@ export function Hiring() {
             <dl className="relative flex flex-wrap gap-x-3">
               <dt className="sr-only">Role</dt>
               <dd className="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                <a href="#">
-                  Open position
+                <Link target='_blank' href="mailto:hi@walnut.dev">
+                  Open application
                   <span className="absolute inset-0" aria-hidden="true"></span>
-                </a>
+                </Link>
               </dd>
               <dt className="sr-only">Description</dt>
-              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.</dd>
+              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Send your resume our way and we'll keep in touch about future opportunities.</dd>
               <dt className="sr-only">Location</dt>
               <dd className="mt-4 flex items-center gap-x-3 text-base leading-7 text-gray-500">
                 Remote, Europe
+                <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 flex-none fill-gray-500" aria-hidden="true">
+                    <circle cx="1" cy="1" r="1" />
+                </svg>
+                <a target="_blank" href="mailto:hi@walnut.dev" className="text-pink-600 hover:text-sky-600">Send your CV</a>
               </dd>
             </dl>
           </li>
