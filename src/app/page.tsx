@@ -5,7 +5,7 @@ import { Hero } from '@/components/Hero'
 import { BeforeAfter } from '@/components/BeforeAfter'
 import { Features } from '@/components/Features'
 import { Testimonial } from '@/components/Testimonial'
-import { Hiring } from '@/components/Hiring'
+import { Careers } from '@/components/Hiring'
 import { RequestAccess } from '@/components/RequestAccess'
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <BeforeAfter />
         <Features />
         <Testimonial />
-        <Hiring />
+        <Careers />
         <RequestAccess />
       </main>
       <Footer />

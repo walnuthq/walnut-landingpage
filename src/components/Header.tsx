@@ -91,7 +91,8 @@ function MobileNavigation() {
             <MobileNavLink href="/#features">Features</MobileNavLink>
             <MobileNavLink href="/#request-access">Request access</MobileNavLink>
             <MobileNavLink href="/blog">Blog</MobileNavLink>
-                        <hr className="m-2 border-slate-300/40" />
+            <MobileNavLink href="/#careers">Careers</MobileNavLink>
+            <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="mailto:hi@walnut.dev">Contact</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -113,9 +114,9 @@ export function Header({ condensed }: { condensed?: boolean}) {
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/#features">Features</NavLink>
-              <NavLink href="/#request-access">Request access</NavLink>
               <NavLink href="/blog">Blog</NavLink>
-                            <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
+              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
+              <NavLink href="/#careers">Careers</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
