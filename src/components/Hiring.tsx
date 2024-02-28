@@ -11,7 +11,7 @@ export function Hiring() {
 
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
   	<div className="w-full text-center pb-16">
-	  	<p className="text-base font-semibold leading-7 text-pink-600">We're hiring</p>
+	  	<p className="text-base font-semibold leading-7 text-pink-600">We&apos;re hiring</p>
 		<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Join the Walnut team</h2>
 		<p className="mt-6 text-xl leading-8 text-gray-600">Help Starknetians crack bugs in Cairo contracts.</p>
 	</div>
@@ -53,7 +53,7 @@ export function Hiring() {
                 </Link>
               </dd>
               <dt className="sr-only">Description</dt>
-              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Send your resume our way and we'll keep in touch about future opportunities.</dd>
+              <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">Send your resume our way and we&apos;ll keep in touch about future opportunities.</dd>
               <dt className="sr-only">Location</dt>
               <dd className="mt-4 flex items-center gap-x-3 text-base leading-7 text-gray-500">
                 Remote, Europe

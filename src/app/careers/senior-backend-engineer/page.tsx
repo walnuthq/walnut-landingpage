@@ -40,7 +40,7 @@ export default function Position() {
                                 </ul>
                             </div>
                             <div className="mt-12 mb-24 prose">
-                                <p className="lead">Join us in our mission to build tools for blockchain developers, with a special focus on Starknet. We're in the early stages, presenting an opportunity for you to have a massive impact on both our product and the company's culture. Our partnership with Starknet places us in an advantageous position to succeed.</p>
+                                <p className="lead">Join us in our mission to build tools for blockchain developers, with a special focus on Starknet. We&apos;re in the early stages, presenting an opportunity for you to have a massive impact on both our product and the company&apos;s culture. Our partnership with Starknet places us in an advantageous position to succeed.</p>
 
                                 <h2>Why you should care</h2>
                                 
@@ -81,7 +81,7 @@ export default function Position() {
                                         Experience with working in a fully remote, async culture.
                                     </li>
                                     <li>
-                                        We are looking for people in Europe so that it's easier for us to occasionally meet in person. We plan to host two offsites per year in nice places around Europe.
+                                        We are looking for people in Europe so that it&apos;s easier for us to occasionally meet in person. We plan to host two offsites per year in nice places around Europe.
                                     </li>
                                 </ul>
 
