@@ -16,7 +16,9 @@ export function Testimonial() {
 								/>
 								<use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
 							</svg>
-							<Image className="h-8" src="https://www.openzeppelin.com/hubfs/openzeppelin_logo.svg" alt="" />
+							<div className="w-48 h-8">
+								<Image width="192" height="32" src="https://www.openzeppelin.com/hubfs/openzeppelin_logo.svg" alt="" />
+							</div>
 							<blockquote className="text-xl mt-6 font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
 								<p>A debugger would be a major levelup for Cairo development.</p>
 							</blockquote>
