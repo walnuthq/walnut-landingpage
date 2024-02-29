@@ -46,16 +46,22 @@ export default function Position() {
                                 
                                 <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
                                     <li>
-                                        <strong>Be early to Starknet and become an OG.</strong> After announcing Walnut, we received strong interest from top Starknet companies like Argent, Briq or StarknetID. Building Walnut presents an opportunity to collaborate with the top devs on Starknet, solve their problems, build friendships, and get deep into the ecosystem.
+                                        <strong>Build a product people will actually use and love.</strong> After announcing Walnut at the end of 2023 during StarkNet Istanbul (and <Link href="https://x.com/Starknet/status/1724865566303821948?s=20">winning the hackathon 🙌</Link>), we received strong interest from top StarkNet companies such as <Link href="https://argent.xyz/">Argent</Link>, <Link href="https://briq.construction/">Briq</Link>, and <Link href="https://starknet.id/">StarknetID</Link>. They all said they &quot;definitely need a transaction debugger for their day-to-day&quot; and are waiting for V1 to go live.
                                     </li>
                                     <li>
-                                        <strong>Live and work wherever you choose.</strong> You will work in a fully remote and async setup. The whole team consists only of developers, and we are building a developer-friendly culture: very few meetings, logical & async conversations, transparency, and good documentation, with a focus on building state-of-the-art products. We are huge fans of 37signals and their books.
+                                        <strong>Live and work wherever you choose.</strong> The entire team comprises only developers, and we are fostering a remote-first, developer-friendly culture. This involves having very few meetings and numerous transparent, well-documented asynchronous conversations. We are huge fans of <Link href="https://37signals.com/">37signals</Link> and their books.
                                     </li>
                                     <li>
-                                        <strong>Build a product from 0 to 1.</strong> We closed a partnership with Starknet, are funded, and have strong user interest for the product. We now just need to build it.
+                                        <strong>Increase your odds of success.</strong> Walnut is well-capitalized and officially supported by the StarkNet Foundation, which recognizes the need for a transaction debugger. Our runway is healthy, and we have strong partners behind our backs.
                                     </li>
                                     <li>
-                                        <strong>Have an impact.</strong> You will become the third person on our team, which speaks for itself. You can influence pretty much anything you choose — the roadmap, the tech stack, the way we do agile. If you don’t like anything, all the stakeholders are there, on every standup, ready to listen.
+                                        <strong>Build it from the ground up.</strong> The core tech stack and infrastructure are being developed, and you can be part of the design process.
+                                    </li>
+                                    <li>
+                                        <strong>Create impact.</strong> You will become the third person on our team, which allows you to influence everything from the roadmap and the tech stack to the way we implement agile. If you don&apos;t like anything, the entire company is there at every standup, every day.
+                                    </li>
+                                    <li>
+                                        <strong>Become our CTO.</strong> It&apos;s a role we will need to fill soon. If things go very well, it can be yours.
                                     </li>
                                 </ul>
 
@@ -63,64 +69,60 @@ export default function Position() {
                                 <h2>Who are we looking for</h2>
                                 <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
                                     <li>
-                                        Excellent programming skills, solid experience with Rust.
+                                        At least 5 years of experience as a Full-stack / Backend engineer.
                                     </li>
                                     <li>
-                                        Great understanding of Blockchains and distributed systems, i.e., Ethereum and its rollups, Polkadot, Cosmos, etc.
+                                        Excellent programming skills with solid experience with Rust.
                                     </li>
                                     <li>
-                                        Full-stack / Backend engineer with at least 5 years of experience.
+                                        Great understanding of blockchains and distributed systems, such as Ethereum and its rollups, Polkadot, Cosmos, etc.
                                     </li>
                                     <li>
-                                        Great communication skills.
+                                    Great communication skills and experience working in a fully remote, asynchronous culture.
                                     </li>
                                     <li>
-                                        Self-organized person.
-                                    </li>
-                                    <li>
-                                        Experience with working in a fully remote, async culture.
-                                    </li>
-                                    <li>
-                                        We are looking for people in Europe so that it&apos;s easier for us to occasionally meet in person. We plan to host two offsites per year in nice places around Europe.
+                                        This role is available only to candidates in Europe to make it easier for us to occasionally meet in person. We plan to host two offsites per year in beautiful places around Europe.
                                     </li>
                                 </ul>
 
                                 <h2>About Walnut</h2>
                                 <p>
-                                    We are a team of (currently) two developers building Walnut: a web-based debugger for Starknet transactions. We mostly deal with Rust on the backend and React / NextJS on the frontend. Our work also touches the Cairo Compiler and Cairo VM, which we need to tweak to generate the debug information required by the debugger.
+                                    We are a team of (currently) two developers building Walnut: a web-based debugger for Starknet transactions.
                                 </p>
                                 <p>
-                                    From a high level, the Walnut architecture involves running a custom node with a forked and enhanced Cairo VM and Compiler, capable of generating the necessary debug information. We have a front-end app, https://app.walnut.dev/, where users can paste transactions. The front end then sends a query to our backend, which reruns the transaction using our modified node to generate the necessary debug info. Finally, the server returns the debug info back to the client to present the debugger UI.
+                                    From a high level, the Walnut architecture involves a Backend that is capable of forking the Starknet blockchain and rerunning (simulating) transactions with a customized Cairo VM and Compiler in order to generate debug information for the transaction runtime. It communicates with a Front-End web app, <Link href="https://app.walnut.dev">https://app.walnut.dev</Link>, where users can paste transaction hashes and get the ability to debug those transactions.
                                 </p>
                                 <p>
-                                    We are also behind <Link href="https://cairovm.codes/">cairovm.codes</Link>, a web-based playground for learning and debugging Cairo programs and exploring the Cairo VM execution trace. The app has been recognized by Starkware and is in the process of being integrated into the official documentation of Starknet.
+                                    We are also building <Link href="https://cairovm.codes/">cairovm.codes</Link>, a web-based playground for learning and debugging Cairo programs and exploring the Cairo VM execution trace. The app has been recognized by Starkware and is in the process of being integrated into the official documentation of Starknet.
                                 </p>
                                 <p>
-                                    We are VC-backed and have a healthy runway. We are not just another “crazy-excited”, “move-fast-and-change-direction-every-day”, “VC-backed-and-soon-to-die” startup. We have been around for a while and have experienced our fair share of successes and failures. We are well-capitalized and committed for the long term.
+                                    We are VC-backed and have a healthy runway. We are not just another &quot;crazy-excited&quot;, &quot;move-fast-and-change-direction-every-day&quot;, &quot;VC-backed-and-soon-to-die&quot; startup. We have been around for a while and have experienced our fair share of successes and failures.
                                 </p>
 
                                 <h2>What you will work on</h2>
                                 <p>
-                                    You will spend approximately 100% of your time building Walnut. The only meetings we conduct are standups and bi-weekly retrospectives. Among other responsibilities, you will:
+                                    You will spend approximately 100% of your time building Walnut. The only regular meetings we conduct are standups and short bi-weekly retrospectives. You will mainly:
                                 </p>
                                 <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
                                     <li>
-                                        Work on the Node infrastructure to ensure its stability.
+                                        work on the API infrastructure to ensure its stability.
                                     </li>
                                     <li>
-                                        Work on the Backend code (written in Rust) that simulates (reruns) transactions and generates debug information.
+                                        work on the Backend code (written in Rust) that simulates (reruns) transactions and generates debug information.
                                     </li>
                                     <li>
-                                        Work on the frontend code (React + Next) of the debugger. Note: UI skills are not expected here; we have that covered. :)
+                                        work on the frontend code (React + Next) of the debugger. Note: UI skills are not expected in this role as we have that covered. 💅
                                     </li>
                                 </ul>
 
                                 <p>
-                                In addition, you will also be involved in regular experiments to learn new things. The next one we are planning is a two-week exploration project to ideate and build a debugger MVP for the app-chain future, where there are thousands of chains. This future poses a problem to our current architecture, as we need to rerun every transaction to get the debug data. In the experiment, we aim to explore some solutions to this problem.
+                                    In addition, you will also be involved in regular experiments to learn new things. The next experiment we are planning is a two-week exploration project to ideate and build an MVP for a debugger that would support thousands of chains. Our current architecture will struggle with large numbers of chains due to the requirement to rerun transactions for each one. In the experiment, we aim to explore multiple solutions to solve this problem.
                                 </p>
 
                                 <h2>Summary</h2>
-                                <p>This opportunity is tailored for highly skilled, experienced developers who are passionate about blockchain technology and looking for a chance to make a significant impact in a cutting-edge, supportive, and flexible work environment.</p>
+                                <p>
+                                    This opportunity is tailored for highly skilled, experienced developers who are passionate about blockchain technology and looking for a chance to build a lasting product that will solve many people&apos;s needs.
+                                </p>
                                 <Link href="mailto:hi@walnut.dev">Send us a CV if you are interested.</Link>
                             </div>
                         </article>
