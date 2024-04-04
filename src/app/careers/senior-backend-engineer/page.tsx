@@ -72,7 +72,7 @@ export default function Position() {
                                         At least 5 years of experience as a Full-stack / Backend engineer.
                                     </li>
                                     <li>
-                                        Excellent programming skills with solid experience with Rust.
+                                        Excellent programming skills. Experience with Rust is a bonus.
                                     </li>
                                     <li>
                                         Great understanding of blockchains and distributed systems, such as Ethereum and its rollups, Polkadot, Cosmos, etc.
@@ -87,7 +87,7 @@ export default function Position() {
 
                                 <h2>About Walnut</h2>
                                 <p>
-                                    We are a team of (currently) two developers building Walnut: a web-based debugger for Starknet transactions.
+                                    We are a team of two developers seeking to hire two more backend developers to join our ranks. Expect a team of four builders—an ideal group to create a new product, ship quickly, and iterate effectively.
                                 </p>
                                 <p>
                                     From a high level, the Walnut architecture involves a Backend that is capable of forking the Starknet blockchain and rerunning (simulating) transactions with a customized Cairo VM and Compiler in order to generate debug information for the transaction runtime. It communicates with a Front-End web app, <Link href="https://app.walnut.dev">https://app.walnut.dev</Link>, where users can paste transaction hashes and get the ability to debug those transactions.
