@@ -113,10 +113,10 @@ export function Header({ condensed }: { condensed?: boolean}) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="/#features">Features</NavLink>
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
-              <NavLink href="/#careers">Careers</NavLink>
+              <NavLink href="features">Features</NavLink>
+              <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/blog">Blog</Link>
+              <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="mailto:hi@walnut.dev">Contact</Link>
+              <NavLink href="careers">Careers</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
