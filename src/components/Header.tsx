@@ -10,7 +10,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
-
+import { Link as ReactScrollLink } from 'react-scroll';
 import logoWalnut from '@/images/logos/walnut.svg'
 
 function MobileNavLink({
@@ -21,7 +21,13 @@ function MobileNavLink({
   children: React.ReactNode
 }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Popover.Button as={ReactScrollLink}
+    className="block w-full p-2"  
+    to={href}     
+    spy={true}
+    smooth={true}
+    offset={50}
+    duration={500} >
       {children}
     </Popover.Button>
   )
@@ -88,12 +94,12 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/#features">Features</MobileNavLink>
-            <MobileNavLink href="/#request-access">Request access</MobileNavLink>
-            <MobileNavLink href="/blog">Blog</MobileNavLink>
-            <MobileNavLink href="/#careers">Careers</MobileNavLink>
+            <MobileNavLink href="features">Features</MobileNavLink>
+            <MobileNavLink href="request-access">Request access</MobileNavLink>
+            <Popover.Button as={Link} className="block w-full p-2" href="/blog">Blog</Popover.Button>
+            <MobileNavLink href="careers">Careers</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="mailto:hi@walnut.dev">Contact</MobileNavLink>
+            <Popover.Button as={Link} className="block w-full p-2" href="mailto:hi@walnut.dev">Contact</Popover.Button>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
