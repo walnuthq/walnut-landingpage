@@ -1,4 +1,5 @@
-import Link from 'next/link'
+'use client'
+import { Link } from 'react-scroll';
 
 export function NavLink({
   href,
@@ -9,8 +10,12 @@ export function NavLink({
 }) {
   return (
     <Link
-      href={href}
-      className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+      to={href}
+      className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+      spy={true}
+      smooth={true}
+      offset={50}
+      duration={500}
     >
       {children}
     </Link>
