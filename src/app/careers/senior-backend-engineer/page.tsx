@@ -29,7 +29,7 @@ export default function Position() {
                                     <li className="flex items-center font-medium whitespace-nowrap px-5 mt-6">
                                         <div className="text-sm leading-4">
                                             <div className="text-slate-900 flex gap-x-3 items-center text-base">
-                                                Location: Remote, Europe
+                                                Location: Remote
                                                 <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 flex-none fill-gray-500" aria-hidden="true">
                                                     <circle cx="1" cy="1" r="1" />
                                                 </svg>
