@@ -115,7 +115,7 @@ export function Header({ condensed }: { condensed?: boolean}) {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
-              <Image src={logoWalnut} alt="Walnut logo" unoptimized  className="h-10 w-auto" />
+              <Image src={logoWalnut} alt="Walnut logo" unoptimized  className="h-10 w-auto bg-white white" />
             </Link>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
