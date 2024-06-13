@@ -21,7 +21,7 @@ export function SignUpForm() {
       name="mc-embedded-subscribe-form"
       target="_blank"
       onSubmit={onSubmit}
-      className="relative isolate mt-8 flex items-center pr-1">
+      className="relative isolate mt-8 flex items-center pr-1 mx-[1.5px] md:mx-0">
       
       <label htmlFor="email-address" className="sr-only">
         Email address
