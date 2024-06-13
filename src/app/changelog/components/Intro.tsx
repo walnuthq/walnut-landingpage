@@ -39,21 +39,21 @@ export function Intro() {
         </Link>
       </div>
       <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
-        Debugger{' '}
+        Transaction Debugger and Simulator
         <span className="text-[#e93281]"> for Starknet</span>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
-      Delve deeper into Cairo transaction execution, swiftly identifying bugs and pinpointing areas for improvement.
+      Walnut is a transaction debugger and simulator for Starknet. Use Walnut to gain deeper insights into Cairo transaction execution, identify bugs, and discover areas for improvement.
       </p>
       <SignUpForm />
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink href="https://x.com/walnut_dev" icon={XIcon} className="flex-none">
+        <IconLink href="https://x.com/walnut_dev" target="_blank" icon={XIcon} className="flex-none">
           Twitter
         </IconLink>
-        <IconLink href="https://github.com/walnuthq" icon={GitHubIcon} className="flex-none">
+        <IconLink href="https://github.com/walnuthq" target="_blank" icon={GitHubIcon} className="flex-none">
           GitHub
         </IconLink>
-        <IconLink href="https://t.me/walnutcorestars" icon={TelegramIcon} className="flex-none">
+        <IconLink href="https://t.me/walnutcorestars" target="_blank" icon={TelegramIcon} className="flex-none">
           Telegram
         </IconLink>
       </div>
