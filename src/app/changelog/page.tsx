@@ -21,7 +21,7 @@ export default function Page() {
                 <SparkleIcon className="w-5 h-5"/> Improvements
               </h3>
               <ul className="list-disc text-gray-500 pl-6">
-                <li>New transaction simulation modal that allows to re-run existing transactions or simulate new ones on the Starknet Mainnet network</li>
+                <li>New transaction simulation screen that allows to re-run existing transactions or simulate new ones on the Starknet Mainnet network</li>
                 <li>Simulations support modification of the following transaction parameters: sender address, calldata, block number, chain id, and transaction version</li>
               </ul>
             </>
