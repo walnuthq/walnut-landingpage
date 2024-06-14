@@ -4,7 +4,7 @@ import { article as Article, img as Image } from "./components/mdx";
 import WalnutHPImage from "@/images/changelog/walnut-hp.png";
 import CallTraceInternal from "@/images/changelog/call-trace-internal.png";
 import TxSimIntro from "@/images/changelog/tx-sim-intro.gif";
-import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.gif";
+import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
 
 export default function Page() {
   return (
@@ -16,32 +16,26 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Contract code snippet in call trace
+            Contract Source Code in Call Trace
           </h2>
           <p className="text-gray-500">
-            In the latest release we added support that call trace now displays
-            corresponding code snippet.
+            In the latest release, we added support for displaying the corresponding Cairo source code for each call in the call trace.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Each call trace now displays the associated Cairo line and its
-              corresponding code snippet where the call occurred! This only
-              works for verified contracts.
+              Each call trace now displays the associated Cairo line and the corresponding code snippet where the call occurred. This only works for verified contracts.
             </li>
             <li>
-              New events tab showcases all emitted events for simulated
-              transactions
+              The new events tab showcases all emitted events for simulated transactions.
             </li>
             <li>
-              Data for arguments and results is now also available on view
-              functions
+              Data for arguments and results is now also available in view functions.
             </li>
             <li>
-              In the Call Trace, the DELEGATE and CALL functions have now been
-              merged and are displayed as DCALL.
+              In the Call Trace, the DELEGATE and CALL functions have now been merged and are displayed as DCALL.
             </li>
           </ul>
         </>
