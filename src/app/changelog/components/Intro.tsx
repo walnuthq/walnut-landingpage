@@ -38,12 +38,11 @@ export function Intro() {
           <Logo src={logoWalnut} className="inline-block h-8 w-auto" />
         </Link>
       </div>
-      <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
-        Transaction Debugger and Simulator
-        <span className="text-[#e93281] lg:whitespace-nowrap"> for Starknet</span>
+      <h1 className="mt-14 font-display text-4xl/tight font-semibold text-white">
+        Changelog
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
-      Walnut is a transaction debugger and simulator for Starknet. Use Walnut to gain deeper insights into Cairo transaction execution, identify bugs, and discover areas for improvement.
+        Stay updated on everything we ship. Subscribe with your email to get the latest Walnut news straight to your inbox.
       </p>
       <SignUpForm />
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
