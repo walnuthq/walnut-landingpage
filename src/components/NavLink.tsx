@@ -1,5 +1,6 @@
 'use client'
-import { Link } from 'react-scroll';
+import { Events, Link } from 'react-scroll';
+import { useEffect } from 'react';
 
 export function NavLink({
   href,
@@ -8,6 +9,21 @@ export function NavLink({
   href: string
   children: React.ReactNode
 }) {
+  useEffect(() => {
+    const updateHash = (hash: string) => {
+      const currentUrl = new URL(window.location.href);
+      currentUrl.hash = hash;
+      window.history.pushState(null, '', currentUrl.toString());
+    };
+
+    Events.scrollEvent.register('end', (to, element) => {
+      updateHash(to);
+    });
+
+    return () => {
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
   return (
     <Link
       to={href}
