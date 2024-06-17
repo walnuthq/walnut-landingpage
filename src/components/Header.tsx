@@ -60,7 +60,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
   )
 }
 
-function MobileNavigation() {
+function MobileNavigation({ condensed }: { condensed?: boolean}) {
   return (
     <Popover>
       <Popover.Button
@@ -94,11 +94,22 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="features">Features</MobileNavLink>
-            <MobileNavLink href="request-access">Request access</MobileNavLink>
+            {condensed? 
+            <>
+              <Popover.Button as={Link} className="block w-full p-2" href="/#features">Features</Popover.Button>
+              <Popover.Button as={Link} className="block w-full p-2" href="/#request-access">Request access</Popover.Button>
+              <Popover.Button as={Link} className="block w-full p-2" href="/#careers">Careers</Popover.Button>
+            </>
+            :
+            <>
+              <MobileNavLink href="features">Features</MobileNavLink>
+              <MobileNavLink href="request-access">Request access</MobileNavLink>
+              <MobileNavLink href="careers">Careers</MobileNavLink>
+            </>
+            }
             <Popover.Button as={Link} className="block w-full p-2" href="/blog">Blog</Popover.Button>
             <Popover.Button as={Link} className="block w-full p-2" href="/changelog">Changelog</Popover.Button>
-            <MobileNavLink href="careers">Careers</MobileNavLink>
+
             <hr className="m-2 border-slate-300/40" />
             <Popover.Button as={Link} className="block w-full p-2" href="mailto:hi@walnut.dev">Contact</Popover.Button>
           </Popover.Panel>
@@ -120,14 +131,24 @@ export function Header({ condensed }: { condensed?: boolean}) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="features">Features</NavLink>
+              {condensed? 
+              <>
+                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/#features">Features</Link>
+                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/#careers">Careers</Link>
+              </>
+              :
+              <>
+                <NavLink href="features">Features</NavLink>
+                <NavLink href="careers">Careers</NavLink>
+              </>
+              }
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/blog">Blog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/changelog" target="blank">Changelog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="mailto:hi@walnut.dev">Contact</Link>
-              <NavLink href="careers">Careers</NavLink>
+
             </div>
             <div className="-mr-1 md:hidden">
-              <MobileNavigation />
+              <MobileNavigation condensed/>
             </div>
           </div>
         </nav>
