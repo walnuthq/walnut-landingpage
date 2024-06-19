@@ -18,7 +18,7 @@ export function NavLink({
       smooth={true}
       offset={50}
       duration={100}
-      onClick={() => router.push(`#${href}`)}
+      onClick={() => router.replace(`/#${href}`)}
     >
       {children}
     </Link>
