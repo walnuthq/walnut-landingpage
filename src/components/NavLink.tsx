@@ -1,6 +1,6 @@
 'use client'
 import { Events, Link } from 'react-scroll';
-import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export function NavLink({
   href,
@@ -9,21 +9,7 @@ export function NavLink({
   href: string
   children: React.ReactNode
 }) {
-  useEffect(() => {
-    const updateHash = (hash: string) => {
-      const currentUrl = new URL(window.location.href);
-      currentUrl.hash = hash;
-      window.history.pushState(null, '', currentUrl.toString());
-    };
-
-    Events.scrollEvent.register('end', (to, element) => {
-      updateHash(to);
-    });
-
-    return () => {
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
+  const router = useRouter();
   return (
     <Link
       to={href}
@@ -31,7 +17,8 @@ export function NavLink({
       spy={true}
       smooth={true}
       offset={50}
-      duration={500}
+      duration={100}
+      onClick={() => router.replace(`/#${href}`)}
     >
       {children}
     </Link>

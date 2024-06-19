@@ -7,31 +7,11 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
+import { useRouter } from 'next/navigation'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
-import { Link as ReactScrollLink } from 'react-scroll';
 import logoWalnut from '@/images/logos/walnut.svg'
 
-function MobileNavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
-  return (
-    <Popover.Button as={ReactScrollLink}
-    className="block w-full p-2"  
-    to={href}     
-    spy={true}
-    smooth={true}
-    offset={50}
-    duration={500} >
-      {children}
-    </Popover.Button>
-  )
-}
 
 function MobileNavIcon({ open }: { open: boolean }) {
   return (
@@ -60,7 +40,8 @@ function MobileNavIcon({ open }: { open: boolean }) {
   )
 }
 
-function MobileNavigation({ condensed }: { condensed?: boolean}) {
+function MobileNavigation() {
+  const router = useRouter();
   return (
     <Popover>
       <Popover.Button
@@ -94,19 +75,9 @@ function MobileNavigation({ condensed }: { condensed?: boolean}) {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            {condensed? 
-            <>
-              <Popover.Button as={Link} className="block w-full p-2" href="/#features">Features</Popover.Button>
-              <Popover.Button as={Link} className="block w-full p-2" href="/#request-access">Request access</Popover.Button>
-              <Popover.Button as={Link} className="block w-full p-2" href="/#careers">Careers</Popover.Button>
-            </>
-            :
-            <>
-              <MobileNavLink href="features">Features</MobileNavLink>
-              <MobileNavLink href="request-access">Request access</MobileNavLink>
-              <MobileNavLink href="careers">Careers</MobileNavLink>
-            </>
-            }
+            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#features')}>Features</Popover.Button>
+            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#request-access')}>Request access</Popover.Button>
+            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#careers')}>Careers</Popover.Button>
             <Popover.Button as={Link} className="block w-full p-2" href="/blog">Blog</Popover.Button>
             <Popover.Button as={Link} className="block w-full p-2" href="/changelog">Changelog</Popover.Button>
 
@@ -131,24 +102,15 @@ export function Header({ condensed }: { condensed?: boolean}) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
-              {condensed? 
-              <>
-                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/#features">Features</Link>
-                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/#careers">Careers</Link>
-              </>
-              :
-              <>
-                <NavLink href="features">Features</NavLink>
-                <NavLink href="careers">Careers</NavLink>
-              </>
-              }
+              <NavLink href="features">Features</NavLink>
+              <NavLink href="careers">Careers</NavLink>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/blog">Blog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/changelog" target="blank">Changelog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="mailto:hi@walnut.dev">Contact</Link>
 
             </div>
             <div className="-mr-1 md:hidden">
-              <MobileNavigation condensed/>
+              <MobileNavigation/>
             </div>
           </div>
         </nav>
