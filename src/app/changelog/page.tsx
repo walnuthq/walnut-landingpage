@@ -5,10 +5,33 @@ import WalnutHPImage from "@/images/changelog/walnut-hp.png";
 import CallTraceInternal from "@/images/changelog/call-trace-internal.png";
 import TxSimIntro from "@/images/changelog/tx-sim-intro.gif";
 import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
+import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-06-21T00:00Z"} id="debugger-launch">
+        <Image
+          src={CodeSnippet20240621}
+          alt="Sneak peak of the Walnut Debugger for Starknet Transactions"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Debugger for Starknet Transactions
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we finally launched the first version of the step by step debugger. It comes with support for multiple contracts in the transaction, and moves the code execution accordingly.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+            External calls now also present the source code of the contract in Cairo.
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-06-14T00:00Z"} id="source-code-introduction">
         <Image
           src={CodeSnippet20240614}
