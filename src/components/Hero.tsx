@@ -22,7 +22,7 @@ export function Hero() {
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
-          From the <Link className='underline' href='https://joinwido.com/' target='_blank' aria-label='Wido home page'>Wido team</Link>, trusted by
+          Trusted by
         </p>
         <ul
           role="list"
