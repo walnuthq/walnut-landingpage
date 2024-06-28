@@ -18,7 +18,7 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Contract verification API endpoint
+            Contract Verification API
           </h2>
           <p className="text-gray-500">
             In the latest release, we have introduced the contract class
@@ -29,15 +29,14 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              The{" "}
+              Launched new API at {" "}
               <a
                 href="https://api.walnut.dev/"
                 target="_blank"
                 style={{ color: "#FF5733" }}
               >
                 api.walnut.dev
-              </a>{" "}
-              will return JSON with information about endpoint.
+              </a>{" "} with a `verify` endpoint for Cairo Contract Verification.
             </li>
             <li>
               In the Call Trace, the DELEGATE and CALL functions have now been
