@@ -37,6 +37,7 @@ export default function Page() {
               >
                 api.walnut.dev
               </a>{" "} with a <code>/verify</code> endpoint for Cairo Smart Contract Verification.
+              
             </li>
             <li>
               In the Call Trace, the DELEGATE and CALL functions have now been
