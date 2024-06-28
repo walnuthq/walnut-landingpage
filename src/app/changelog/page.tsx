@@ -6,10 +6,46 @@ import CallTraceInternal from "@/images/changelog/call-trace-internal.png";
 import TxSimIntro from "@/images/changelog/tx-sim-intro.gif";
 import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
 import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
+import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-06-28T00:00Z"} id="verification-api">
+        <Image
+          src={CodeSnippet20240628}
+          alt="Sneak peak of the Walnut Verifaction API for starknet smart contracts"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Contract Verification API
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we have introduced the contract class
+            verification API endpoint.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Launched new API at {" "}
+              <a
+                href="https://api.walnut.dev/"
+                target="_blank"
+                style={{ color: "#FF5733" }}
+              >
+                api.walnut.dev
+              </a>{" "} with a <code>/verify</code> endpoint for Cairo Smart Contract Verification.
+              
+            </li>
+            <li>
+              In the Call Trace, the DELEGATE and CALL functions have now been
+              merged and are displayed as DCALL.
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-06-21T00:00Z"} id="debugger-launch">
         <Image
           src={CodeSnippet20240621}
@@ -20,14 +56,17 @@ export default function Page() {
             Debugger for Starknet Transactions
           </h2>
           <p className="text-gray-500">
-            In the latest release, we finally launched the first version of the step by step debugger. It comes with support for multiple contracts in the transaction, and moves the code execution accordingly.
+            In the latest release, we finally launched the first version of the
+            step by step debugger. It comes with support for multiple contracts
+            in the transaction, and moves the code execution accordingly.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-            External calls now also present the source code of the contract in Cairo.
+              External calls now also present the source code of the contract in
+              Cairo.
             </li>
           </ul>
         </>
@@ -42,23 +81,25 @@ export default function Page() {
             Contract Source Code in Call Trace
           </h2>
           <p className="text-gray-500">
-            In the latest release, we added support for displaying the corresponding Cairo source code for each call in the call trace.
+            In the latest release, we added support for displaying the
+            corresponding Cairo source code for each call in the call trace.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Each call trace now displays the associated Cairo line and the corresponding code snippet where the call occurred. This only works for verified contracts.
+              Each call trace now displays the associated Cairo line and the
+              corresponding code snippet where the call occurred. This only
+              works for verified contracts.
             </li>
             <li>
-              The new events tab showcases all emitted events for simulated transactions.
+              The new events tab showcases all emitted events for simulated
+              transactions.
             </li>
             <li>
-              Data for arguments and results is now also available in view functions.
-            </li>
-            <li>
-              In the Call Trace, the DELEGATE and CALL functions have now been merged and are displayed as DCALL.
+              Data for arguments and results is now also available in view
+              functions.
             </li>
           </ul>
         </>
