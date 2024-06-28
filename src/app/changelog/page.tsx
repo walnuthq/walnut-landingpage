@@ -36,7 +36,7 @@ export default function Page() {
                 style={{ color: "#FF5733" }}
               >
                 api.walnut.dev
-              </a>{" "} with a `verify` endpoint for Cairo Contract Verification.
+              </a>{" "} with a <code>/verify</code> endpoint for Cairo Smart Contract Verification.
             </li>
             <li>
               In the Call Trace, the DELEGATE and CALL functions have now been
