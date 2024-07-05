@@ -8,41 +8,40 @@ import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
 import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-07-05T00:00Z"} id="verification-api">
+      <Article date={"2024-07-05T00:00Z"} id="arguments-and-result-values">
         <Image
           src={CodeSnippet20240705}
           alt="Sneak peak of the Walnut Debugger Window with arguments and result values"
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Debugger Window with Arguments and Result Values
+            Added Argument and Result Values to the Debugger
           </h2>
           <p className="text-gray-500">
-            In the latest release, function arguments and return results are now
-            visible in step-by-step-debugger.
+            Function arguments and return results are now
+            visible in the step-by-step-debugger. In the screenshot above, the <code>extract_age</code> function returns a single result: <code>18</code>.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>The debugger windows show the arguments and return values.</li>
+            <li>The debugger now show arguments and return values. The data might be missing in some specific places, which will be improved in the future.</li>
             <li>
-              Internal function call now present the arguments and results
-              values.
+            Internal function calls in the Call Trace now display the argument and result values.
             </li>
             <li>
-              Support querying source code of verified contracts via the API
-              using the{" "}
+              New API endpoint for querying the source code of verified contracts via API using <code>Class ID</code>. Available at {" "}
               <code>
-                /class/{`{`}id{`}`}
+                class/{`{`}id{`}`}
               </code>{" "}
-              endpoint.
+              endpoint. <Link href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675">Example</Link>.
             </li>
-            <li>Sepolia is now available; Goerli is no longer supported.</li>
+            <li>Added support for Sepolia testnet and deprecated Goerli.</li>
           </ul>
         </>
       </Article>
