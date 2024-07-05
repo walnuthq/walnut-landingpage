@@ -7,19 +7,52 @@ import TxSimIntro from "@/images/changelog/tx-sim-intro.gif";
 import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
 import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
+import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-07-05T00:00Z"} id="verification-api">
+        <Image
+          src={CodeSnippet20240705}
+          alt="Sneak peak of the Walnut Debugger Window with arguments and result values"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Debugger Window with Arguments and Result Values
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, function arguments and return results are now
+            visible in step-by-step-debugger.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>The debugger windows show the arguments and return values.</li>
+            <li>
+              Internal function call now present the arguments and results
+              values.
+            </li>
+            <li>
+              Support querying source code of verified contracts via the API
+              using the{" "}
+              <code>
+                /class/{`{`}id{`}`}
+              </code>{" "}
+              endpoint.
+            </li>
+            <li>Sepolia is now available; Goerli is no longer supported.</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-06-28T00:00Z"} id="verification-api">
         <Image
           src={CodeSnippet20240628}
           alt="Sneak peak of the Walnut Verifaction API for starknet smart contracts"
         />
         <>
-          <h2 className="font-bold my-4 text-xl">
-            Contract Verification API
-          </h2>
+          <h2 className="font-bold my-4 text-xl">Contract Verification API</h2>
           <p className="text-gray-500">
             In the latest release, we have introduced the contract class
             verification API endpoint.
@@ -29,15 +62,16 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Launched new API at {" "}
+              Launched new API at{" "}
               <a
                 href="https://api.walnut.dev/"
                 target="_blank"
                 style={{ color: "#FF5733" }}
               >
                 api.walnut.dev
-              </a>{" "} with a <code>/verify</code> endpoint for Cairo Smart Contract Verification.
-              
+              </a>{" "}
+              with a <code>/verify</code> endpoint for Cairo Smart Contract
+              Verification.
             </li>
             <li>
               In the Call Trace, the DELEGATE and CALL functions have now been
