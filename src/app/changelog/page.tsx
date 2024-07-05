@@ -37,9 +37,9 @@ export default function Page() {
             <li>
               New API endpoint for querying the source code of verified contracts via API using <code>Class ID</code>. Available at the {" "}
               <code>
-                class/{`{`}id{`}`}
+                /{`{`}network_id{`}`}/classes/{`{`}class_id{`}`}
               </code>{" "}
-              endpoint. <Link href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675">Example</Link>.
+              endpoint. <Link href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675" className="underline">Try it here</Link>.
             </li>
             <li>Added support for the Sepolia testnet and deprecated Goerli.</li>
           </ul>
