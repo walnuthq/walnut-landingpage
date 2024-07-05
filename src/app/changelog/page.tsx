@@ -30,18 +30,18 @@ export default function Page() {
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>The debugger now show arguments and return values. The data might be missing in some specific places, which will be improved in the future.</li>
+            <li>The debugger now shows arguments and return values. Some data might be missing in specific places, which will be improved in the future.</li>
             <li>
             Internal function calls in the Call Trace now display the argument and result values.
             </li>
             <li>
-              New API endpoint for querying the source code of verified contracts via API using <code>Class ID</code>. Available at {" "}
+              New API endpoint for querying the source code of verified contracts via API using <code>Class ID</code>. Available at the {" "}
               <code>
                 class/{`{`}id{`}`}
               </code>{" "}
               endpoint. <Link href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675">Example</Link>.
             </li>
-            <li>Added support for Sepolia testnet and deprecated Goerli.</li>
+            <li>Added support for the Sepolia testnet and deprecated Goerli.</li>
           </ul>
         </>
       </Article>
