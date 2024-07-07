@@ -40,9 +40,9 @@ export default function BeerForm() {
 				connectors: [
 				new InjectedConnector({
           options: {id: "braavos"}
-        })]});
+        })], dappName: 'Walnut'});
 		}else {
-			result = await connect();
+			result = await connect({dappName: 'Walnut'});
 		}
 		
     if (result && result.wallet) {
@@ -82,7 +82,7 @@ export default function BeerForm() {
 			const formattedSupply = (supply / BigInt(10**18)).toString();
 			const count = Number(formattedSupply);
 
-			if (count >= 10) {
+			if (count >= 3) {
 				alert('Beer is over!');
 				return;
 			}
