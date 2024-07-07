@@ -10,9 +10,10 @@ import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../utils/to
 // import { Connector, useAccount, useConnect, useContract, useContractRead, useContractWrite } from '@starknet-react/core';
 // import { ArgentMobileConnector } from "starknetkit/argentMobile";
 // import  { InjectedConnector } from "starknetkit/injected";
-import { connect, disconnect } from 'starknetkit'
+import { connect, ConnectedStarknetWindowObject, disconnect } from 'starknetkit'
 import { InjectedConnector } from 'starknetkit/injected';
 import { ArgentMobileConnector } from 'starknetkit/argentMobile';
+import { StarknetWindowObject } from 'get-starknet-core';
 import { WebWalletConnector } from 'starknetkit/webwallet';
 
 const CONTRACT_ABI = [
@@ -88,8 +89,8 @@ const CONTRACT_ADDRESS = '0x000a9a1bf96abc37d4959f395f74d0b00d61ce716dab42789fc2
 
 export default function BeerForm() {
   const [age, setAge] = useState('');
-  const [wallet, setWallet] = useState();
-  const [provider, setProvider] = useState();
+	const [wallet, setWallet] = useState<ConnectedStarknetWindowObject | null>(null);
+  const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
 
   useEffect(() => {
     const init = async () => {
@@ -100,18 +101,24 @@ export default function BeerForm() {
   }, []);
 
   const handleConnect = async () => {
-    const { wallet } = await connect({
+		const result = await connect({
 			connectors: [
-        new InjectedConnector({
-          options: {id: "braavos"}
-        }),
+				new InjectedConnector({
+					options: {id: "braavos"}
+				}),
 				new WebWalletConnector({
 					url: "braavos://dapp/walnut.dev/starknetcc2024",
 				}),
-					new ArgentMobileConnector(),
+				new ArgentMobileConnector(),
 			]
-	});
-    setWallet(wallet);
+		});
+	
+    if (result && result.wallet) {
+      setWallet(result.wallet as ConnectedStarknetWindowObject);
+    } else {
+      setWallet(null);
+    }
+
   };
 
 	async function getTotalSupply() {
@@ -131,7 +138,7 @@ export default function BeerForm() {
 	}
 
 	
-	async function handleSubmit(e) {
+	async function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
 		if (!wallet || !wallet.isConnected) {
 			alert('Please connect your wallet first');
@@ -173,10 +180,10 @@ export default function BeerForm() {
 
       console.log('Transaction submitted:', tx.transaction_hash);
       alert('Transaction submitted successfully! Transaction hash: ' + tx.transaction_hash);
-    } catch (error) {
-      console.error('Error submitting transaction:', error);
-      alert('Error submitting transaction: ' + error.message);
-    }
+		} catch (error: unknown) {
+			console.error('Error submitting transaction:', error);
+			alert('Error submitting transaction: ' + (error as Error).message);
+		}
   }
 
   return (
