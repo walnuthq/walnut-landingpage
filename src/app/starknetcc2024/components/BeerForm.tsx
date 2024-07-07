@@ -104,7 +104,7 @@ export default function BeerForm() {
 		const result = await connect({
 			connectors: [
 				new WebWalletConnector({
-					url: "braavos://starknetcc2024.walnut.pages.dev/starknetcc2024",
+					url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
 				}),
 				new ArgentMobileConnector(),
 			]
