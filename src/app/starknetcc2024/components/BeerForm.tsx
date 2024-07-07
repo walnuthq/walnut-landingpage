@@ -1,3 +1,4 @@
+
 import {useEffect, useState } from 'react';
 import { Header } from "@/components/Header";
 import { Banner } from "@/components/Banner";
@@ -5,6 +6,8 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { RpcProvider, Contract, CallData,  } from 'starknet';
+import { usePathname, useSearchParams } from 'next/navigation'
+
 
 import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../consts/token';
 import { connect, ConnectedStarknetWindowObject} from 'starknetkit'
@@ -12,9 +15,10 @@ import { InjectedConnector } from 'starknetkit/injected';
 import { CONTRACT_ADDRESS } from '../../../../consts/contract';
 
 
-
 export default function BeerForm() {
-	
+
+	const searchParams = useSearchParams();
+	const urlRef = searchParams.get('ref')
   const [age, setAge] = useState('');
 	const [wallet, setWallet] = useState<ConnectedStarknetWindowObject | null>(null);
   const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
@@ -28,10 +32,9 @@ export default function BeerForm() {
   }, []);
 
 
-
   const handleConnect = async () => {
 		let result;
-		if (window.location.href.includes('ref=braavos')) {
+		if (urlRef === 'braavos') {
 			
 			result = await connect({			
 				connectors: [
@@ -79,7 +82,7 @@ export default function BeerForm() {
 			const formattedSupply = (supply / BigInt(10**18)).toString();
 			const count = Number(formattedSupply);
 
-			if (count >= 3) {
+			if (count >= 10) {
 				alert('Beer is over!');
 				return;
 			}
@@ -129,9 +132,9 @@ export default function BeerForm() {
           (
             <div className="mb-6 md:space-x-10 space-y-2 items-center mx-auto flex justify-center md:flex-row flex-col">
               <Button onClick={handleConnect}>
-                Connect {window.location.href.includes('ref=braavos')? 'Braavos' : 'Argent'} 
+                Connect {urlRef === 'braavos'? 'Braavos' : 'Argent'} 
               </Button>
-							{!window.location.href.includes('ref=braavos') && <Button onClick={openBraavosMobile}>Connect Braavos</Button>}
+							{urlRef !== 'braavos' && <Button onClick={openBraavosMobile}>Connect Braavos</Button>}
 							
             </div>
           ) : (
