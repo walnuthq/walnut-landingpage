@@ -113,13 +113,15 @@ export default function BeerForm() {
 		// 	]
 		// });
 
-		const result = await connect();
+		const result = await connect({webWalletUrl: 'braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024'});
 	
     if (result && result.wallet) {
       setWallet(result.wallet as ConnectedStarknetWindowObject);
     } else {
       setWallet(null);
     }
+
+
 
   };
 
