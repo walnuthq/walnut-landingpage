@@ -107,7 +107,7 @@ export default function BeerForm() {
 					options: {id: "braavos"}
 				}),
 				new WebWalletConnector({
-					url: "braavos://dapp/walnut.dev/starknetcc2024",
+					url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
 				}),
 				new ArgentMobileConnector(),
 			]
