@@ -88,7 +88,8 @@ const CONTRACT_ADDRESS = '0x000a9a1bf96abc37d4959f395f74d0b00d61ce716dab42789fc2
 
 
 export default function BeerForm() {
-	
+	const urlParams = new URLSearchParams(window.location.search);
+
   const [age, setAge] = useState('');
 	const [wallet, setWallet] = useState<ConnectedStarknetWindowObject | null>(null);
   const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
@@ -113,7 +114,7 @@ export default function BeerForm() {
 		// 	]
 		// });
 		let result;
-		if (window.location.href.includes('braavos://')) {
+		if (urlParams.get('ref') === 'braavos') {
 			result = await connect({			
 				connectors: [
 				new InjectedConnector({
@@ -198,7 +199,7 @@ export default function BeerForm() {
 		}
   }
 	const openBraavosMobile = () => {
-    window.open(`braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024`);
+    window.open(`braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024?ref=braavos`);
   };
 
   return (
