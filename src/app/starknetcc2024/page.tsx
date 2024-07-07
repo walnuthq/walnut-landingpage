@@ -1,7 +1,6 @@
 'use client'
 import { mainnet, sepolia } from "@starknet-react/chains";
 import { Call, Abi, constants } from 'starknet';
-import { WebWalletConnector } from "starknetkit/webwallet";
 import { ArgentMobileConnector } from "starknetkit/argentMobile";
 import  { InjectedConnector } from "starknetkit/injected";
 import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from "./token";
