@@ -103,9 +103,6 @@ export default function BeerForm() {
   const handleConnect = async () => {
 		const result = await connect({
 			connectors: [
-				new InjectedConnector({
-					options: {id: "braavos"}
-				}),
 				new WebWalletConnector({
 					url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
 				}),
