@@ -113,7 +113,7 @@ export default function BeerForm() {
 		// 	]
 		// });
 
-		const result = await connect({webWalletUrl: 'braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024'});
+		const result = await connect({webWalletUrl: 'braavos://starknetcc2024.walnut.pages.dev/starknetcc2024', dappName:'Walnut'});
 	
     if (result && result.wallet) {
       setWallet(result.wallet as ConnectedStarknetWindowObject);
