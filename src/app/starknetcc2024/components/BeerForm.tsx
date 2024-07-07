@@ -4,87 +4,13 @@ import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
-import { RpcProvider, Account, Contract, json, stark, uint256, shortString, CallData,  } from 'starknet';
+import { RpcProvider, Contract, CallData,  } from 'starknet';
 
-import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../utils/token';
-// import { Connector, useAccount, useConnect, useContract, useContractRead, useContractWrite } from '@starknet-react/core';
-// import { ArgentMobileConnector } from "starknetkit/argentMobile";
-// import  { InjectedConnector } from "starknetkit/injected";
-import { connect, ConnectedStarknetWindowObject, useStarknetkitConnectModal } from 'starknetkit'
+import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../consts/token';
+import { connect, ConnectedStarknetWindowObject} from 'starknetkit'
 import { InjectedConnector } from 'starknetkit/injected';
-import { ArgentMobileConnector } from 'starknetkit/argentMobile';
-import { StarknetWindowObject } from 'get-starknet-core';
-import { WebWalletConnector } from 'starknetkit/webwallet';
+import { CONTRACT_ADDRESS } from '../../../../consts/contract';
 
-const CONTRACT_ABI = [
-  {
-    "inputs": [
-      {
-        "name": "beer_token_address",
-        "type": "felt"
-      }
-    ],
-    "name": "constructor",
-    "outputs": [],
-    "type": "constructor"
-  },
-  {
-    "inputs": [
-      {
-        "name": "age_proof",
-        "type": "Beer::AgeProof"
-      }
-    ],
-    "name": "get_beer",
-    "outputs": [],
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "beer_token",
-    "outputs": [
-      {
-        "name": "res",
-        "type": "felt"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "name": "FreeBeer",
-    "type": "event",
-    "keys": [],
-    "data": [
-      {
-        "name": "winner",
-        "type": "felt"
-      }
-    ]
-  },
-  {
-    "name": "AgeProof",
-    "type": "struct",
-    "members": [
-      {
-        "name": "proof",
-        "type": "felt"
-      },
-      {
-        "name": "age",
-        "type": "u128"
-      }
-    ]
-  }
-];
-
-
-const CONTRACT_ADDRESS = '0x000a9a1bf96abc37d4959f395f74d0b00d61ce716dab42789fc2a68249655780'
-
-
-
-// mainet
-// const CONTRACT_ADDRESS = '0x0168d11d36cd342d52d077296922e7cd505060778464c2d28bc28b4f3a9dc41c';
 
 
 export default function BeerForm() {
@@ -98,22 +24,12 @@ export default function BeerForm() {
       setProvider(provider);
     };
     init();
+
   }, []);
 
 
 
   const handleConnect = async () => {
-		// const result = await connect({
-			// connectors: [
-			// 	new InjectedConnector({
-      //     options: {id: "braavos"}
-      //   }),
-				// new WebWalletConnector({
-				// 	url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
-				// }),
-		// 		new ArgentMobileConnector(),
-		// 	]
-		// });
 		let result;
 		if (window.location.href.includes('ref=braavos')) {
 			
@@ -131,9 +47,6 @@ export default function BeerForm() {
     } else {
       setWallet(null);
     }
-
-
-
   };
 
 	async function getTotalSupply() {
@@ -166,7 +79,7 @@ export default function BeerForm() {
 			const formattedSupply = (supply / BigInt(10**18)).toString();
 			const count = Number(formattedSupply);
 
-			if (count >= 31) {
+			if (count >= 3) {
 				alert('Beer is over!');
 				return;
 			}
@@ -216,9 +129,10 @@ export default function BeerForm() {
           (
             <div className="mb-6 md:space-x-10 space-y-2 items-center mx-auto flex justify-center md:flex-row flex-col">
               <Button onClick={handleConnect}>
-                Connect Argent
+                Connect {window.location.href.includes('ref=braavos')? 'Braavos' : 'Argent'} 
               </Button>
-							<Button onClick={openBraavosMobile}>Connect Braavos</Button>
+							{!window.location.href.includes('ref=braavos') && <Button onClick={openBraavosMobile}>Connect Braavos</Button>}
+							
             </div>
           ) : (
             <div className="bg-white shadow sm:rounded-lg text-left">
