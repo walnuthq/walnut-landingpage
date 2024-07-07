@@ -1,6 +1,5 @@
 'use client'
 import { mainnet, sepolia } from "@starknet-react/chains";
-import { Call, Abi, constants } from 'starknet';
 import { ArgentMobileConnector } from "starknetkit/argentMobile";
 import  { InjectedConnector } from "starknetkit/injected";
 import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from "./token";
@@ -24,7 +23,7 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 
-const CONTRACT_ABI: Abi = [
+const CONTRACT_ABI = [
   {
     "inputs": [
       {
@@ -149,7 +148,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   };
 
 	console.log(ageProof.age);
-	const calls: Call[] = [
+	const calls = [
 		{
 			contractAddress: CONTRACT_ADDRESS,
 			entrypoint: 'get_beer',
@@ -252,7 +251,7 @@ export default function StarknetCC2024() {
     new ArgentMobileConnector({
       dappName: "Walnut",
       url: 'https://walnut.dev/',
-      chainId: constants.NetworkName.SN_MAIN,
+
     }),
 
   ];

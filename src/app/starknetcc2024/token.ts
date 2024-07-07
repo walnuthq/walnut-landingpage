@@ -1,31 +1,7 @@
 
-import { mainnet, sepolia } from "@starknet-react/chains";
-import { Call, Abi } from 'starknet';
-import { WebWalletConnector } from "starknetkit/webwallet";
-import { ArgentMobileConnector } from "starknetkit/argentMobile";
-import  { InjectedConnector } from "starknetkit/injected";
-
-import {
-  StarknetConfig,
-  publicProvider,
-  argent,
-  braavos,
-  useAccount,
-  useConnect,
-  useContract,
-  useContractWrite,
-  useContractRead
-} from "@starknet-react/core";
-import {useEffect, useState } from 'react';
-import { Header } from "@/components/Header";
-import { Banner } from "@/components/Banner";
-import { Footer } from "@/components/Footer";
-import { Container } from "@/components/Container";
-import { Button } from "@/components/Button";
-
 
 export const TOKEN_CONTRACT_ADDRESS = '0x014ab8ea9c7798e8a21fc642f4cf3a2d3409da31a4956e16762e90569a1af3fa'
-export const TOKEN_CONTRACT_ABI: Abi = [
+export const TOKEN_CONTRACT_ABI = [
   {
     "name": "ERC20MixinImpl",
     "type": "impl",
