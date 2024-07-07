@@ -24,7 +24,7 @@ export default function BeerForm() {
   const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
   useEffect(() => {
     const init = async () => {
-      const provider = new RpcProvider({ nodeUrl: 'https://free-rpc.nethermind.io/sepolia-juno' });
+      const provider = new RpcProvider({ nodeUrl: 'https://free-rpc.nethermind.io/mainnet-juno' });
       setProvider(provider);
     };
     init();
@@ -82,7 +82,7 @@ export default function BeerForm() {
 			const formattedSupply = (supply / BigInt(10**18)).toString();
 			const count = Number(formattedSupply);
 
-			if (count >= 3) {
+			if (count >= 10) {
 				alert('Beer is over!');
 				return;
 			}
