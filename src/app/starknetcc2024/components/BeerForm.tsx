@@ -88,6 +88,7 @@ const CONTRACT_ADDRESS = '0x000a9a1bf96abc37d4959f395f74d0b00d61ce716dab42789fc2
 
 
 export default function BeerForm() {
+	const userAgent = navigator.userAgent;
   const [age, setAge] = useState('');
 	const [wallet, setWallet] = useState<ConnectedStarknetWindowObject | null>(null);
   const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
@@ -112,7 +113,7 @@ export default function BeerForm() {
 		// 	]
 		// });
 		let result;
-		if (window.location.href.indexOf('utm_source=braavos') > -1) {
+		if (userAgent.match(/braavos/i)) {
 			result = await connect({			
 				connectors: [
 				new InjectedConnector({
