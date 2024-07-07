@@ -6,6 +6,11 @@ import { type Metadata } from 'next'
 
 import logoWalnut from '@/images/logos/walnut.svg'
 import Script from 'next/script'
+// import { cookieToInitialState } from 'wagmi'
+// import { headers } from 'next/headers'
+// import { config } from '../../config'
+// import Web3ModalProvider from '../../context'
+
 
 export const metadata: Metadata = {
 	title: {
@@ -51,6 +56,7 @@ const lexend = Lexend({
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	// const initialState = cookieToInitialState(config, headers().get('cookie'))
 	return (
 		<html lang="en" className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}>
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-3C2NZTCV18" />
@@ -63,7 +69,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-3C2NZTCV18');
           `}
 			</Script>
-			<body className="flex h-full flex-col">{children}</body>
+			<body className="flex h-full flex-col">
+				{/* <Web3ModalProvider initialState={initialState}> */}
+					{children}
+					{/* </Web3ModalProvider> */}
+					</body>
 		</html>
 	)
 }
