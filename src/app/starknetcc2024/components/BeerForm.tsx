@@ -10,7 +10,7 @@ import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../utils/to
 // import { Connector, useAccount, useConnect, useContract, useContractRead, useContractWrite } from '@starknet-react/core';
 // import { ArgentMobileConnector } from "starknetkit/argentMobile";
 // import  { InjectedConnector } from "starknetkit/injected";
-import { connect, ConnectedStarknetWindowObject, disconnect } from 'starknetkit'
+import { connect, ConnectedStarknetWindowObject, useStarknetkitConnectModal } from 'starknetkit'
 import { InjectedConnector } from 'starknetkit/injected';
 import { ArgentMobileConnector } from 'starknetkit/argentMobile';
 import { StarknetWindowObject } from 'get-starknet-core';
@@ -91,7 +91,6 @@ export default function BeerForm() {
   const [age, setAge] = useState('');
 	const [wallet, setWallet] = useState<ConnectedStarknetWindowObject | null>(null);
   const [provider, setProvider] = useState<RpcProvider | undefined>(undefined);
-
   useEffect(() => {
     const init = async () => {
       const provider = new RpcProvider({ nodeUrl: 'https://free-rpc.nethermind.io/sepolia-juno' });
@@ -102,19 +101,30 @@ export default function BeerForm() {
 
   const handleConnect = async () => {
 		// const result = await connect({
-		// 	connectors: [
-		// 		new InjectedConnector({
-    //       options: {id: "braavos"}
-    //     }),
-		// 		new WebWalletConnector({
-		// 			url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
-		// 		}),
+			// connectors: [
+			// 	new InjectedConnector({
+      //     options: {id: "braavos"}
+      //   }),
+				// new WebWalletConnector({
+				// 	url: "braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024",
+				// }),
 		// 		new ArgentMobileConnector(),
 		// 	]
 		// });
-
-		const result = await connect({webWalletUrl: 'braavos://starknetcc2024.walnut.pages.dev/starknetcc2024', dappName:'Walnut'});
-	
+		let result;
+		if (window.location.href.indexOf('utm_source=braavos') > -1) {
+			result = await connect({			
+				connectors: [
+				new InjectedConnector({
+          options: {id: "braavos"}
+        })]});
+		}else {
+			result = await connect({			
+				connectors: [
+					new ArgentMobileConnector(),
+				]});
+		}
+		
     if (result && result.wallet) {
       setWallet(result.wallet as ConnectedStarknetWindowObject);
     } else {
@@ -189,6 +199,9 @@ export default function BeerForm() {
 			alert('Error submitting transaction: ' + (error as Error).message);
 		}
   }
+	const openBraavosMobile = () => {
+    window.open(`braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024`);
+  };
 
   return (
     <>
@@ -202,8 +215,9 @@ export default function BeerForm() {
           (
             <div className="mb-6 md:space-x-10 space-y-2 items-center mx-auto flex justify-center md:flex-row flex-col">
               <Button onClick={handleConnect}>
-                Connect
+                Connect Argent
               </Button>
+							<Button onClick={openBraavosMobile}>Connect Braavos</Button>
             </div>
           ) : (
             <div className="bg-white shadow sm:rounded-lg text-left">
