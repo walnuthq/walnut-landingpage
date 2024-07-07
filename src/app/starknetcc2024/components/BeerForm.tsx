@@ -119,10 +119,7 @@ export default function BeerForm() {
           options: {id: "braavos"}
         })]});
 		}else {
-			result = await connect({			
-				connectors: [
-					new ArgentMobileConnector(),
-				]});
+			result = await connect();
 		}
 		
     if (result && result.wallet) {
