@@ -199,7 +199,7 @@ export default function BeerForm() {
               <div className="px-4 py-5 sm:p-6">
                 <h3 className="text-base font-semibold leading-6 text-gray-900">Claim a Beer Token</h3>
                 <div className="mt-2 max-w-xl text-sm text-gray-500">
-                  <p>This form's purpose is to just have fun during Starknet CC. You don't need to specify your exact age.</p>
+                  <p>This form`&apos;`s purpose is to just have fun during Starknet CC. You don`&apos;`t need to specify your exact age.</p>
                 </div>
                 <form onSubmit={handleSubmit} className="mt-5 sm:flex sm:items-center">
                   <div className="w-full sm:max-w-xs">
