@@ -117,7 +117,7 @@ export default function BeerForm() {
 		}
   }
 	const openBraavosMobile = () => {
-    window.open(`braavos://dapp/starknetcc2024.walnut.pages.dev/starknetcc2024?ref=braavos`);
+    window.open(`braavos://dapp/walnut.dev/starknetcc2024?ref=braavos`);
   };
 
   return (
