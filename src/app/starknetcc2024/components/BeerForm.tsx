@@ -13,10 +13,11 @@ import { TOKEN_CONTRACT_ABI, TOKEN_CONTRACT_ADDRESS } from '../../../../consts/t
 import { connect, ConnectedStarknetWindowObject} from 'starknetkit'
 import { InjectedConnector } from 'starknetkit/injected';
 import { CONTRACT_ADDRESS } from '../../../../consts/contract';
+import { userAgent } from 'next/server';
 
 
 export default function BeerForm() {
-
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean|undefined>()
 	const searchParams = useSearchParams();
 	const urlRef = searchParams.get('ref')
   const [age, setAge] = useState('');
@@ -28,8 +29,12 @@ export default function BeerForm() {
       setProvider(provider);
     };
     init();
+    const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  
+    setIsMobileDevice(mobileRegex.test(window.navigator.userAgent))
 
   }, []);
+
 
 
   const handleConnect = async () => {
@@ -42,7 +47,7 @@ export default function BeerForm() {
           options: {id: "braavos"}
         })], dappName: 'Walnut'});
 		}else {
-			result = await connect({dappName: 'Walnut'});
+			result = await connect({dappName: 'Walnut', argentMobileOptions: {dappName: 'Walnut'}});
 		}
 		
     if (result && result.wallet) {
@@ -132,9 +137,9 @@ export default function BeerForm() {
           (
             <div className="mb-6 md:space-x-10 space-y-2 items-center mx-auto flex justify-center md:flex-row flex-col">
               <Button onClick={handleConnect}>
-                Connect&nbsp;<span className=' block sm:hidden'>{urlRef === 'braavos'? 'Braavos' : 'Argent'}&nbsp;</span>Wallet
+                Connect&nbsp;<span className={`${!isMobileDevice && 'hidden'}`}>{urlRef === 'braavos'? 'Braavos' : 'Argent'}&nbsp;</span>Wallet
               </Button>
-							{urlRef !== 'braavos' && <Button className=' block sm:hidden' onClick={openBraavosMobile}>Connect Braavos Wallet</Button>}
+							{urlRef !== 'braavos' && <Button className={`${!isMobileDevice && 'hidden'}`} onClick={openBraavosMobile}>Connect Braavos Wallet</Button>}
 							
             </div>
           ) : (
