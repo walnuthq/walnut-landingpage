@@ -42,7 +42,7 @@ export default function BeerForm() {
           options: {id: "braavos"}
         })], dappName: 'Walnut'});
 		}else {
-			result = await connect({dappName: 'Walnut'});
+			result = await connect({dappName: 'Walnut', argentMobileOptions: {dappName: 'Walnut'}});
 		}
 		
     if (result && result.wallet) {
