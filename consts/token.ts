@@ -349,32 +349,3 @@ export const TOKEN_CONTRACT_ABI = [
     ]
   }
 ]
-
-// function TokenComponent() {
-//   const { data: totalSupply } = useContractRead({
-//     address: CONTRACT_ADDRESS,
-//     abi: CONTRACT_ABI,
-//     functionName: 'total_supply',
-//     args: []
-//   });
-
-//   const [formattedTotalSupply, setFormattedTotalSupply] = useState('');
-
-//   console.log(totalSupply?.toString());
-//   useEffect(() => {
-//     if (totalSupply) {
-      
-//       const supply = BigInt(totalSupply.toString());
-//       const formattedSupply = (supply / BigInt(10**18)).toString();
-//       setFormattedTotalSupply(formattedSupply);
-//     }
-//   }, [totalSupply]);
-
-//   return (
-//     <Container>
-//       <p>TOTAL BEERS: {formattedTotalSupply}</p>
-//     </Container>
-//   );
-// }
-
-// export default TokenComponent;
