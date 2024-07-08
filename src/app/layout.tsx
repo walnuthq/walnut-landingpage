@@ -8,6 +8,7 @@ import logoWalnut from '@/images/logos/walnut.svg'
 import Script from 'next/script'
 
 
+
 export const metadata: Metadata = {
 	title: {
 		template: '%s | Walnut',
@@ -64,7 +65,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-3C2NZTCV18');
           `}
 			</Script>
-			<body className="flex h-full flex-col">{children}</body>
+			<body className="flex h-full flex-col">
+					{children}
+					</body>
 		</html>
 	)
 }
