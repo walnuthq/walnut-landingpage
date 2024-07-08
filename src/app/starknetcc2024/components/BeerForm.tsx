@@ -132,7 +132,7 @@ export default function BeerForm() {
           (
             <div className="mb-6 md:space-x-10 space-y-2 items-center mx-auto flex justify-center md:flex-row flex-col">
               <Button onClick={handleConnect}>
-                Connect&nbsp;<span className=' block sm:hidden'>{urlRef === 'braavos'? 'Braavos' : 'Argent'}</span>&nbsp;Wallet
+                Connect&nbsp;<span className=' block sm:hidden'>{urlRef === 'braavos'? 'Braavos' : 'Argent'}&nbsp;</span>Wallet
               </Button>
 							{urlRef !== 'braavos' && <Button className=' block sm:hidden' onClick={openBraavosMobile}>Connect Braavos Wallet</Button>}
 							
