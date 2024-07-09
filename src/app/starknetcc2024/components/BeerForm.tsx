@@ -39,6 +39,7 @@ export default function BeerForm() {
 
   }, []);
 
+
   const handleConnect = async () => {
 		let result;
 		if (urlRef === 'braavos') {
@@ -144,6 +145,7 @@ export default function BeerForm() {
       <Container className="pb-16 pt-20 text-center lg:pt-32">
         <div className="max-w-2xl mx-auto">
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">Get a Beer</h1>
+
           {params.toString().includes('transactionHash')? (
           <div>
             <CheckCircleIcon className='w-28 h-28 my-6 mx-auto text-green-500'/>
@@ -160,6 +162,7 @@ export default function BeerForm() {
                   </Button>
                   {urlRef !== 'braavos' && <Button className={`${!isMobileDevice && 'hidden'}`} onClick={openBraavosMobile}>Connect Braavos Wallet</Button>}
                   
+
                 </div>
               ) : (
                 <div className="bg-white shadow sm:rounded-lg text-left">
