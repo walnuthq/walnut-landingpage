@@ -8,11 +8,46 @@ import CodeSnippet20240614 from "@/images/changelog/CodeSnippet20240614.png";
 import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
+import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-07-12T00:00Z"} id="internal-fn-call-panic">
+        <Image
+          src={CodeSnippet20240712}
+          alt="Sneak Peek of Walnut Window with internal function call panic"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Internal Function Call with Error
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we focused on displaying errors in the call
+            trace.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added error details below the deepest internal function call where
+              the panic occurred.
+            </li>
+            <li>
+              In collaboration with Software Mansion, we added contract
+              verification into foundry. Check the guide documentation{" "}
+              <Link
+                href="https://github.com/foundry-rs/starknet-foundry/blob/master/docs/src/starknet/verify.md"
+                className="underline"
+              >
+                here.
+              </Link>
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-07-05T00:00Z"} id="arguments-and-result-values">
         <Image
           src={CodeSnippet20240705}
@@ -23,25 +58,42 @@ export default function Page() {
             Added Argument and Result Values to the Debugger
           </h2>
           <p className="text-gray-500">
-            Function arguments and return results are now
-            visible in the step-by-step-debugger. In the screenshot above, the <code>extract_age</code> function returns a single result: <code>18</code>.
+            Function arguments and return results are now visible in the
+            step-by-step-debugger. In the screenshot above, the{" "}
+            <code>extract_age</code> function returns a single result:{" "}
+            <code>18</code>.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>The debugger now shows arguments and return values. Some data might be missing in specific places, which will be improved in the future.</li>
             <li>
-            Internal function calls in the Call Trace now display the argument and result values.
+              The debugger now shows arguments and return values. Some data
+              might be missing in specific places, which will be improved in the
+              future.
             </li>
             <li>
-              New API endpoint for querying the source code of verified contracts via API using <code>Class ID</code>. Available at the {" "}
+              Internal function calls in the Call Trace now display the argument
+              and result values.
+            </li>
+            <li>
+              New API endpoint for querying the source code of verified
+              contracts via API using <code>Class ID</code>. Available at the{" "}
               <code>
                 /{`{`}network_id{`}`}/classes/{`{`}class_id{`}`}
               </code>{" "}
-              endpoint. <Link href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675" className="underline">Try it here</Link>.
+              endpoint.{" "}
+              <Link
+                href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675"
+                className="underline"
+              >
+                Try it here
+              </Link>
+              .
             </li>
-            <li>Added support for the Sepolia testnet and deprecated Goerli.</li>
+            <li>
+              Added support for the Sepolia testnet and deprecated Goerli.
+            </li>
           </ul>
         </>
       </Article>
@@ -105,10 +157,7 @@ export default function Page() {
         </>
       </Article>
       <Article date={"2024-06-14T00:00Z"} id="source-code-introduction">
-        <Image
-          src={CodeSnippet20240614}
-          alt="Gif of showing an code snippet on Walnut"
-        />
+        <Image src={CodeSnippet20240614} alt="Code snippet on Walnut" />
         <>
           <h2 className="font-bold my-4 text-xl">
             Contract Source Code in Call Trace
