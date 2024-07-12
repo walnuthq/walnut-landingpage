@@ -21,23 +21,23 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Internal Function Call with Panic Result
+            Internal Function Call with Error
           </h2>
           <p className="text-gray-500">
-            In the latest release, internal function calls display error trace
-            lines with panic results.
+            In the latest release, we focused on displaying errors in the call
+            trace.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Error trace lines appear below the deepest internal function call
-              where the panic occurred.{" "}
+              Added error details below the deepest internal function call where
+              the panic occurred.
             </li>
             <li>
-              The contract verification guide is live. Check it out in the
-              Starknet Foundry documentation{" "}
+              In collaboration with Software Mansion, we added contract
+              verification into foundry. Check the guide documentation{" "}
               <Link
                 href="https://github.com/foundry-rs/starknet-foundry/blob/master/docs/src/starknet/verify.md"
                 className="underline"
