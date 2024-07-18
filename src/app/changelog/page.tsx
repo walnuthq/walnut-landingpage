@@ -9,15 +9,15 @@ import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
-import CodeSnippet20240718 from "@/images/changelog/CodeSnippet20240718.png";
+import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-07-18T00:00Z"} id="nudge-people-to-verify">
+      <Article date={"2024-07-19T00:00Z"} id="nudge-people-to-verify">
         <Image
-          src={CodeSnippet20240718}
+          src={CodeSnippet20240719}
           alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
         />
         <>
