@@ -9,11 +9,51 @@ import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
+import CodeSnippet20240718 from "@/images/changelog/CodeSnippet20240718.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-07-18T00:00Z"} id="nudge-people-to-verify">
+        <Image
+          src={CodeSnippet20240718}
+          alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Contract Verification Nudge
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we have introduced a feature to nudge users
+            to verify contracts.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Adding an alert window in the debugger tab for contract
+              verification.
+            </li>
+            <li>
+              Including a popover on the debug icon if the contract is not
+              verified.
+            </li>
+            <li>
+              Integrating an alert for contract verification in the call trace.
+            </li>
+            <li>
+              Displaying error messages when hovering over the error icon in
+              case of an error.
+            </li>
+            <li>
+              Opening the debugger at the step corresponding to the trace line.
+            </li>
+            <li>Renaming "testnet" to "sepolia".</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-07-12T00:00Z"} id="internal-fn-call-panic">
         <Image
           src={CodeSnippet20240712}
