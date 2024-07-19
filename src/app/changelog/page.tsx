@@ -40,7 +40,7 @@ Added a new alert message in the debugger tab and the call trace to prompt contr
             <li>
               Opening the debugger from the call trace line now moves the execution to the corresponding line.
             </li>
-            <li>Renamed "testnet" to "sepolia".</li>
+            <li>Renamed &quot;testnet&quot; to &quot;sepolia&quot;.</li>
           </ul>
         </>
       </Article>
