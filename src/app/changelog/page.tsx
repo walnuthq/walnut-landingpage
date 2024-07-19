@@ -9,11 +9,41 @@ import CodeSnippet20240621 from "@/images/changelog/CodeSnippet20240621.png";
 import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
+import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-07-19T00:00Z"} id="nudge-people-to-verify">
+        <Image
+          src={CodeSnippet20240719}
+          alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Contract Verification
+          </h2>
+          <p className="text-gray-500">
+In the latest release, we added full support for contract verification to Walnut. Developers can verify their contracts to get detailed call traces, step-by-step debugging, and execution mapping to the source code in the Cairo contracts.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+Added a new alert message in the debugger tab and the call trace to prompt contract verification if the contract is not yet verified.
+            </li>
+            <li>
+              Errors in the call traces now show details about the error.
+            </li>
+            <li>
+              Opening the debugger from the call trace line now moves the execution to the corresponding line.
+            </li>
+            <li>Renamed "testnet" to "sepolia".</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-07-12T00:00Z"} id="internal-fn-call-panic">
         <Image
           src={CodeSnippet20240712}
