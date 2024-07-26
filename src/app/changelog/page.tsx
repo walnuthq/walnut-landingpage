@@ -10,11 +10,37 @@ import CodeSnippet20240628 from "@/images/changelog/CodeSnippet20240628.png";
 import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
 import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
+import CodeSnippet20240726 from "@/images/changelog/CodeSnippet20240726.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-07-26T00:00Z"} id="contract-calls-in-internal-trace">
+        <Image
+          src={CodeSnippet20240726}
+          alt="Contract Call within Internal Function Call Trace"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Improvements to the Call Trace
+          </h2>
+          <p className="text-gray-500">
+In the latest release, we focused on improving the call trace. Concretely, we worked on displaying contract calls within internal function calls. In the screenshot above, you can see the <code>IVerificationHelper.calculation_proof</code> correctly placed right after the internal function call <code>IVerificationHelperDispatcherImpl::calculation_proof</code>.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+If the Contract Name is not present, the app now uses Interface Name as a fallback.
+            </li>
+            <li>
+              Added human readable Chain ID to transaction details.
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-07-19T00:00Z"} id="nudge-people-to-verify">
         <Image
           src={CodeSnippet20240719}
