@@ -11,11 +11,42 @@ import CodeSnippet20240705 from "@/images/changelog/CodeSnippet20240705.png";
 import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
 import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
 import CodeSnippet20240726 from "@/images/changelog/CodeSnippet20240726.png";
+import CodeSnippet20240802 from "@/images/changelog/CodeSnippet20240802.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article
+        date={"2024-08-02T00:00Z"}
+        id="transaction-page-additional-information"
+      >
+        <Image
+          src={CodeSnippet20240802}
+          alt="Transaction page information box"
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Improvements to the Transaction Information Box
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we focused on enhancing the information box
+            on the transaction page. We now display the transaction type,
+            timestamp, and transaction version.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for Declare transactions.</li>
+            <li>
+              Input and output data can now be switched between Hexadecimal and
+              Decimal formats, and vice versa.
+            </li>
+            <li>Improved handling of transaction simulation errors.</li>{" "}
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-07-26T00:00Z"} id="contract-calls-in-internal-trace">
         <Image
           src={CodeSnippet20240726}
@@ -26,18 +57,22 @@ export default function Page() {
             Improvements to the Call Trace
           </h2>
           <p className="text-gray-500">
-In the latest release, we focused on improving the call trace. Concretely, we worked on displaying contract calls within internal function calls. In the screenshot above, you can see the <code>IVerificationHelper.calculation_proof</code> correctly placed right after the internal function call <code>IVerificationHelperDispatcherImpl::calculation_proof</code>.
+            In the latest release, we focused on improving the call trace.
+            Concretely, we worked on displaying contract calls within internal
+            function calls. In the screenshot above, you can see the{" "}
+            <code>IVerificationHelper.calculation_proof</code> correctly placed
+            right after the internal function call{" "}
+            <code>IVerificationHelperDispatcherImpl::calculation_proof</code>.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-If the Contract Name is not present, the app now uses Interface Name as a fallback.
+              If the Contract Name is not present, the app now uses Interface
+              Name as a fallback.
             </li>
-            <li>
-              Added human readable Chain ID to transaction details.
-            </li>
+            <li>Added human readable Chain ID to transaction details.</li>
           </ul>
         </>
       </Article>
@@ -47,24 +82,26 @@ If the Contract Name is not present, the app now uses Interface Name as a fallba
           alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
         />
         <>
-          <h2 className="font-bold my-4 text-xl">
-            Contract Verification
-          </h2>
+          <h2 className="font-bold my-4 text-xl">Contract Verification</h2>
           <p className="text-gray-500">
-In the latest release, we added full support for contract verification to Walnut. Developers can verify their contracts to get detailed call traces, step-by-step debugging, and execution mapping to the source code in the Cairo contracts.
+            In the latest release, we added full support for contract
+            verification to Walnut. Developers can verify their contracts to get
+            detailed call traces, step-by-step debugging, and execution mapping
+            to the source code in the Cairo contracts.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-Added a new alert message in the debugger tab and the call trace to prompt contract verification if the contract is not yet verified.
+              Added a new alert message in the debugger tab and the call trace
+              to prompt contract verification if the contract is not yet
+              verified.
             </li>
+            <li>Errors in the call traces now show details about the error.</li>
             <li>
-              Errors in the call traces now show details about the error.
-            </li>
-            <li>
-              Opening the debugger from the call trace line now moves the execution to the corresponding line.
+              Opening the debugger from the call trace line now moves the
+              execution to the corresponding line.
             </li>
             <li>Renamed &quot;testnet&quot; to &quot;sepolia&quot;.</li>
           </ul>
