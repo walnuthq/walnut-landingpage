@@ -18,8 +18,12 @@ import Link from "next/link";
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug info">
-        <Image src={CodeSnippet20240809} alt="" />
+      <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug-info">
+        <Image
+          src={CodeSnippet20240809}
+          alt="The gif of source file switch"
+          unoptimized
+        />
         <>
           <h2 className="font-bold my-4 text-xl">
             Improvements to the Debugger Window
