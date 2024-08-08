@@ -39,7 +39,7 @@ export default function Page() {
             <li>
               The Cairo version is now displayed in the contract details view.
             </li>
-            <li>Improved error handling for the contract verification.</li>
+            <li>Improved error handling for contract verification.</li>
             <li>
               Added a message when no execution trace is found, instead of
               nudging users for verification.
