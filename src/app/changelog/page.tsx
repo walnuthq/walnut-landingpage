@@ -12,11 +12,41 @@ import CodeSnippet20240712 from "@/images/changelog/CodeSnippet20240712.png";
 import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
 import CodeSnippet20240726 from "@/images/changelog/CodeSnippet20240726.png";
 import CodeSnippet20240802 from "@/images/changelog/CodeSnippet20240802.png";
+import CodeSnippet20240809 from "@/images/changelog/CodeSnippet20240809.gif";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug-info">
+        <Image
+          src={CodeSnippet20240809}
+          alt="The gif of source file switch"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Improvements to the Debugger Window
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we improved the debugging experience by
+            allowing switching between source files in the debug window.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              The Cairo version is now displayed in the contract details view.
+            </li>
+            <li>Improved error handling for contract verification.</li>
+            <li>
+              Added a message when no execution trace is found, instead of
+              nudging users for verification.
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article
         date={"2024-08-02T00:00Z"}
         id="transaction-page-additional-information"
