@@ -25,6 +25,29 @@ export default function Blog() {
 				<div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 sm:block"></div>
 
 				<div className="space-y-16">
+				<article className="relative group">
+						<div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
+						<svg viewBox="0 0 9 9" className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"><circle cx="4.5" cy="4.5" r="4.5" stroke="currentColor" className="fill-white" strokeWidth="2"></circle></svg>
+						<div className="relative">
+							<h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
+								Announcing Contract Verification on Starknet
+							</h3>
+							<div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
+								<p>We are excited to introduce Cairo Contract Verification for Starknet, now live on Walnut and accessible via Walnut APIs.</p>
+							</div>
+							<dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
+								<dt className="sr-only">Date</dt>
+								<dd className="whitespace-nowrap text-sm leading-6">
+									August 12, 2024
+								</dd>
+							</dl>
+						</div>
+						<a className="flex items-center text-sm text-pink-600 font-medium" href="/blog/starknet-contract-verification">
+							<span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
+							<span className="relative">Read more<span className="sr-only">, Announcing Starknet Contract Verification</span></span>
+							<svg className="relative mt-px overflow-visible ml-2.5 text-pink-600" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M0 0L3 3L0 6"></path></svg>
+						</a>
+					</article>
 					<article className="relative group">
 						<div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
 						<svg viewBox="0 0 9 9" className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"><circle cx="4.5" cy="4.5" r="4.5" stroke="currentColor" className="fill-white" strokeWidth="2"></circle></svg>
