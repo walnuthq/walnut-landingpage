@@ -46,11 +46,11 @@ export default function Page() {
               for transactions, contracts, or classes.
             </li>
             <li>
-              New API endpoint for verification that doesn't require{" "}
+              New API endpoint for verification that does not require{" "}
               <code>chain_id</code>, available at <code>/v1/verify/</code>.
             </li>
             <li>
-              Added support for contract verification with Cairo version{" "}
+              Added support for contract verification with Cairo version
               <code>2.7.0</code>.
             </li>
             <li>
@@ -70,7 +70,7 @@ export default function Page() {
                 contract verification guide
               </Link>
               .
-            </li>{" "}
+            </li>
           </ul>
         </>
       </Article>
