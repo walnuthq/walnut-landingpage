@@ -22,11 +22,9 @@ export default function Page() {
       <Article date={"2024-08-16T00:00Z"} id="aggregated-search">
         <Image src={CodeSnippet20240816} alt="code-highlight" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">
-            Introduction of Aggregated Search
-          </h2>
+          <h2 className="font-bold my-4 text-xl">Aggregated Search</h2>
           <p className="text-gray-500">
-            In the latest release, we introduced aggregated search allowing
+            In the latest release, we introduced aggregated search, allowing
             users to search for transactions, contracts, or classes across all
             networks.
           </p>
