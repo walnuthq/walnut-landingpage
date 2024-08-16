@@ -52,13 +52,9 @@ export default function Page() {
             </li>
             <li>
               Launched{" "}
-              <a
-                href="https://docs.walnut.dev/"
-                target="_blank"
-                style={{ color: "#FF5733" }}
-              >
+              <Link href="https://docs.walnut.dev/" className="text-blue-500">
                 Walnut Documentation
-              </a>
+              </Link>
               , with{" "}
               <Link
                 href="https://docs.walnut.dev/verify-contract-classes"
@@ -216,7 +212,7 @@ export default function Page() {
               verification into foundry. Check the guide documentation{" "}
               <Link
                 href="https://github.com/foundry-rs/starknet-foundry/blob/master/docs/src/starknet/verify.md"
-                className="underline"
+                className="text-blue-500"
               >
                 here.
               </Link>
@@ -261,7 +257,7 @@ export default function Page() {
               endpoint.{" "}
               <Link
                 href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675"
-                className="underline"
+                className="text-blue-500"
               >
                 Try it here
               </Link>
@@ -290,13 +286,9 @@ export default function Page() {
           <ul className="list-disc text-gray-500 pl-6">
             <li>
               Launched new API at{" "}
-              <a
-                href="https://api.walnut.dev/"
-                target="_blank"
-                style={{ color: "#FF5733" }}
-              >
+              <Link href="https://api.walnut.dev/" className="text-blue-500">
                 api.walnut.dev
-              </a>{" "}
+              </Link>{" "}
               with a <code>/verify</code> endpoint for Cairo Smart Contract
               Verification.
             </li>
