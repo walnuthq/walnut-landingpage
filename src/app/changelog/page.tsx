@@ -13,11 +13,60 @@ import CodeSnippet20240719 from "@/images/changelog/CodeSnippet20240719.png";
 import CodeSnippet20240726 from "@/images/changelog/CodeSnippet20240726.png";
 import CodeSnippet20240802 from "@/images/changelog/CodeSnippet20240802.png";
 import CodeSnippet20240809 from "@/images/changelog/CodeSnippet20240809.gif";
+import CodeSnippet20240816 from "@/images/changelog/CodeSnippet20240816.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-08-16T00:00Z"} id="aggregated-search">
+        <Image src={CodeSnippet20240816} alt="code-highlight" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Aggregated Search</h2>
+          <p className="text-gray-500">
+            In the latest release, we introduced aggregated search, allowing
+            users to search for transactions, contracts, or classes across all
+            networks.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              New contract page displays verified contract source files and
+              code.
+            </li>
+            <li>
+              A new API endpoint for verification that does not require{" "}
+              <code>chain_id</code> is available at <code>/v1/verify/</code>.
+              This is an important prerequisite for making Walnut work with
+              fully on-chain games deployed to appchains like Slot.
+            </li>
+            <li>
+              Added support for contract verification with Cairo version{" "}
+              <code>2.7.0</code>.
+            </li>
+            <li>
+              Enhanced code highlighting with additional Cairo location mapping
+              in the execution trace.
+            </li>
+            <li>
+              Launched{" "}
+              <Link href="https://docs.walnut.dev/" className="text-blue-500">
+                Walnut Documentation
+              </Link>
+              , with{" "}
+              <Link
+                href="https://docs.walnut.dev/verify-contract-classes"
+                className="text-blue-500"
+              >
+                contract verification guide
+              </Link>
+              .
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug-info">
         <Image
           src={CodeSnippet20240809}
@@ -163,7 +212,7 @@ export default function Page() {
               verification into foundry. Check the guide documentation{" "}
               <Link
                 href="https://github.com/foundry-rs/starknet-foundry/blob/master/docs/src/starknet/verify.md"
-                className="underline"
+                className="text-blue-500"
               >
                 here.
               </Link>
@@ -208,7 +257,7 @@ export default function Page() {
               endpoint.{" "}
               <Link
                 href="https://api.walnut.dev/v1/sn_main/classes/0x04aab8d89aa68063b10d5dfa8ce69660c5ba2797698918b08b57256685630675"
-                className="underline"
+                className="text-blue-500"
               >
                 Try it here
               </Link>
@@ -237,13 +286,9 @@ export default function Page() {
           <ul className="list-disc text-gray-500 pl-6">
             <li>
               Launched new API at{" "}
-              <a
-                href="https://api.walnut.dev/"
-                target="_blank"
-                style={{ color: "#FF5733" }}
-              >
+              <Link href="https://api.walnut.dev/" className="text-blue-500">
                 api.walnut.dev
-              </a>{" "}
+              </Link>{" "}
               with a <code>/verify</code> endpoint for Cairo Smart Contract
               Verification.
             </li>
