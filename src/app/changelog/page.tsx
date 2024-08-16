@@ -19,39 +19,38 @@ import Link from "next/link";
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-08-16T00:00Z"} id="more-cairo-location-mapping">
+      <Article date={"2024-08-16T00:00Z"} id="aggregated-search">
         <Image src={CodeSnippet20240816} alt="code-highlight" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Improvements to Code Highlighting in Debugger
+            Introduction of Aggregated Search
           </h2>
           <p className="text-gray-500">
-            In the latest release, we introduced code highlighting for the
-            actual code rather than attributes during debugging.
+            In the latest release, we introduced aggregated search allowing
+            users to search for transactions, contracts, or classes across all
+            networks.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Enhanced code highlighting with additional Cairo location mapping
-              in the execution trace.
-            </li>
-            <li>
               New contract page displays verified contract source files and
               code.
             </li>
             <li>
-              Aggregated search across all networks, allowing users to search
-              for transactions, contracts, or classes.
+              A new API endpoint for verification that does not require{" "}
+              <code>chain_id</code> is available at <code>/v1/verify/</code>.
+              This is an important prerequisite for making Walnut work with
+              fully on-chain games deployed to appchains like Slot.
             </li>
             <li>
-              New API endpoint for verification that does not require{" "}
-              <code>chain_id</code>, available at <code>/v1/verify/</code>.
-            </li>
-            <li>
-              Added support for contract verification with Cairo version
+              Added support for contract verification with Cairo version{" "}
               <code>2.7.0</code>.
+            </li>
+            <li>
+              Enhanced code highlighting with additional Cairo location mapping
+              in the execution trace.
             </li>
             <li>
               Launched{" "}
