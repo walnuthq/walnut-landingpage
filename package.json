@@ -13,13 +13,14 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.17",
+    "@headlessui/react": "^2.1.2",
     "@headlessui/tailwindcss": "^0.2.0",
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/forms": "^0.5.6",
     "@types/node": "20.8.5",
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.16",
     "clsx": "^2.0.0",
     "eslint": "8.51.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.6.3",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/aos": "^3.0.7",
     "@types/react-scroll": "^1.8.10",
     "eslint-plugin-next-on-pages": "^1.6.3",
     "vercel": "^32.4.1"
