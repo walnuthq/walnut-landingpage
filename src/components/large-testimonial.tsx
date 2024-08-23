@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TestimonialImg from "@/images/lite/large-testimonial.jpg";
+import TestimonialImg from "@/images/lite/jackanorack.png";
 
 export default function LargeTestimonial() {
   return (
@@ -30,17 +30,14 @@ export default function LargeTestimonial() {
               />
             </div>
             <p className="text-2xl font-bold text-gray-900">
-              “Simple has simplified my life in more ways than one. From
-              managing my sites to{" "}
-              <em className="italic text-gray-500">keeping track of tasks</em>,
-              it&apos;s become my go-to tool for everything.”
+              “Tenderly provides a great service in this respect, but it would be great to see an open-source version of this that can be freely used and built on.”
             </p>
             <div className="text-sm font-medium text-gray-500">
-              <span className="text-gray-700">Mary Sullivan</span>{" "}
+              <a className="text-blue-500" href="https://x.com/jack_anorak">Jack Anorack</a>{" "}
               <span className="text-gray-400">/</span>{" "}
-              <a className="text-blue-500" href="#0">
-                CTO at Microsoft
-              </a>
+              <span className="text-gray-700">
+                Optimism Foundation
+              </span>
             </div>
           </div>
         </div>
