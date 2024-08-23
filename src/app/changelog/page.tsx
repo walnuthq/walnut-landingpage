@@ -14,13 +14,40 @@ import CodeSnippet20240726 from "@/images/changelog/CodeSnippet20240726.png";
 import CodeSnippet20240802 from "@/images/changelog/CodeSnippet20240802.png";
 import CodeSnippet20240809 from "@/images/changelog/CodeSnippet20240809.gif";
 import CodeSnippet20240816 from "@/images/changelog/CodeSnippet20240816.png";
+import CodeSnippet20240823 from "@/images/changelog/CodeSnippet20240823.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-08-23T00:00Z"} id="code-attribute-highlight">
+        <Image
+          src={CodeSnippet20240823}
+          alt="code-attribute-highlight"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Code and Attribute Highlighting in Debugger
+          </h2>
+          <p className="text-gray-500">
+            In the latest release, we introduced highlighting for both Cairo
+            attributes and Code snippets in the step-by-step debugger.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Debugger windows automatically open to the nearest verified
+              contract.
+            </li>
+            <li>Fixed a bug related to incorrect block timestamp.</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-08-16T00:00Z"} id="aggregated-search">
-        <Image src={CodeSnippet20240816} alt="code-highlight" unoptimized />
+        <Image src={CodeSnippet20240816} alt="aggregated-search" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">Aggregated Search</h2>
           <p className="text-gray-500">
