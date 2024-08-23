@@ -12,10 +12,10 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="/#features">Features</NavLink>
-              <NavLink href="/#request-access">Request access</NavLink>
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="mailto:hi@walnut.dev">Contact</NavLink>
+              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="https://docs.walnut.dev">Docs</Link>
+              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/#request-access">Request access</Link>
+              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/blog">Blog</Link>
+              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="mailto:hi@walnut.dev">Contact</Link>
             </div>
           </nav>
         </div>
