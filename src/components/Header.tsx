@@ -75,9 +75,8 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#features')}>Features</Popover.Button>
+            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('https://docs.walnut.dev')}>Docs</Popover.Button>
             <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#request-access')}>Request access</Popover.Button>
-            <Popover.Button className="block w-full p-2 text-left" onClick={() => router.replace('/#careers')}>Careers</Popover.Button>
             <Popover.Button as={Link} className="block w-full p-2" href="/blog">Blog</Popover.Button>
             <Popover.Button as={Link} className="block w-full p-2" href="/changelog">Changelog</Popover.Button>
 
@@ -102,8 +101,7 @@ export function Header({ condensed }: { condensed?: boolean}) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="features">Features</NavLink>
-              <NavLink href="careers">Careers</NavLink>
+              <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="https://docs.walnut.dev">Docs</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/blog">Blog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="/changelog" target="blank">Changelog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" href="mailto:hi@walnut.dev">Contact</Link>
