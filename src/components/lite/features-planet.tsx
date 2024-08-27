@@ -15,10 +15,10 @@ export default function FeaturesPlanet() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
             <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              Debug and simulate transactions on any chain or rollup
+            Debug Any EVM Chain or Rollup. Anytime, Anywhere.
             </h2>
             <div className="text-lg text-gray-200 md:text-xl mt-12">
-              Walnut Lite is fully local, and allows you to specify any custom RPC. All EVM chains are supported. This ensures you can use Walnut Lite to debug anything on any EVM chain out there.
+            Walnut Lite runs entirely in your computer’s memory, allowing seamless connection to any RPC, including local nodes. Debug and simulate transactions on any EVM chain privately.
             </div>
           </div>
           {/* Planet */}
