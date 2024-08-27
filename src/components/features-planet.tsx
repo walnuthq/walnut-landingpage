@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PlanetImg from "@/images/lite/planet.png";
-import PlanetOverlayImg from "@/images/lite/planet-overlay.svg";
+import PlanetOverlayImg from "@/images/lite/blockchain.png";
+import PlanetOverlayImg2 from "@/images/lite/blockchain3.png";
 import PlanetTagImg01 from "@/images/lite/planet-tag-01.png";
 import PlanetTagImg02 from "@/images/lite/planet-tag-02.png";
 import PlanetTagImg03 from "@/images/lite/planet-tag-03.png";
@@ -14,8 +15,11 @@ export default function FeaturesPlanet() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
             <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              Simple helps your teams work more efficiently together
+              Debug and simulate transactions on any chain or rollup
             </h2>
+            <div className="text-lg text-gray-200 md:text-xl mt-12">
+              Walnut Lite is fully local, and allows you to specify any custom RPC. All EVM chains are supported. This ensures you can use Walnut Lite to debug anything on any EVM chain out there.
+            </div>
           </div>
           {/* Planet */}
           <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
@@ -28,43 +32,96 @@ export default function FeaturesPlanet() {
                   height={400}
                   alt="Planet"
                 />
+                {/* <Image
+                  className="rounded-full bg-gray-900"
+                  src={PlanetOverlayImg2}
+                  width={400}
+                  height={400}
+                  alt="Planet"
+                /> */}
                 <div className="pointer-events-none" aria-hidden="true">
                   <Image
-                    className="absolute -right-64 -top-20 z-10 max-w-none"
+                    className="absolute -right-12 -top-12 z-10 max-w-none"
                     src={PlanetOverlayImg}
-                    width={789}
-                    height={755}
+                    width={500}
+                    height={500}
                     alt="Planet decoration"
                   />
                   <div>
-                    <Image
+                    <div
                       className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg01}
-                      width={253}
-                      height={56}
-                      alt="Tag 01"
-                    />
-                    <Image
+
+                    >
+                      <div className="py-1 bg-slate-800 rounded-md text-white">
+                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
+                          <div className="h-6 w-6 bg-white rounded-full ">
+                          </div>
+                          <div className="text-left">
+                            <div>
+                              0x123...399
+                            </div>
+                            <div>
+                              Base
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
                       className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                      src={PlanetTagImg02}
-                      width={241}
-                      height={56}
-                      alt="Tag 02"
-                    />
-                    <Image
+                    >
+                      <div className="py-1 bg-slate-800 rounded-md text-white">
+                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
+                          <div className="h-6 w-6 bg-white rounded-full ">
+                          </div>
+                          <div className="text-left">
+                            <div>
+                              0x123...399
+                            </div>
+                            <div>
+                              Zora
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
                       className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                      src={PlanetTagImg03}
-                      width={243}
-                      height={56}
-                      alt="Tag 03"
-                    />
-                    <Image
+                    >
+                      <div className="py-1 bg-slate-800 rounded-md text-white">
+                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
+                          <div className="h-6 w-6 bg-white rounded-full ">
+                          </div>
+                          <div className="text-left">
+                            <div >
+                              0x123...399
+                            </div>
+                            <div>
+                              OP Mainnet
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
                       className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg04}
-                      width={251}
-                      height={56}
-                      alt="Tag 04"
-                    />
+
+                    >
+                      <div className="py-1 bg-slate-800 rounded-md text-white">
+                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
+                          <div className="h-6 w-6 bg-white rounded-full ">
+                          </div>
+                          <div className="text-left">
+                            <div>
+                              0x123...399
+                            </div>
+                            <div className=" whitespace-nowrap">
+                              Custom RPC: https
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

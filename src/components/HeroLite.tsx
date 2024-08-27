@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/images/lite/avatar-03.jpg";
@@ -6,6 +7,7 @@ import Avatar03 from "@/images/lite/avatar-03.jpg";
 import Avatar04 from "@/images/lite/avatar-03.jpg";
 import Avatar05 from "@/images/lite/avatar-03.jpg";
 import Avatar06 from "@/images/lite/avatar-03.jpg";
+import Typewriter from 'typewriter-effect';
 
 export default function HeroHome() {
   return (
@@ -20,49 +22,26 @@ export default function HeroHome() {
               className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
               data-aos="zoom-y-out"
             >
-              <div className="-mx-0.5 flex justify-center -space-x-3">
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar01}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar02}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar03}
-                  width={32}
-                  height={32}
-                  alt="Avatar 02"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar04}
-                  width={32}
-                  height={32}
-                  alt="Avatar 03"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar05}
-                  width={32}
-                  height={32}
-                  alt="Avatar 04"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar06}
-                  width={32}
-                  height={32}
-                  alt="Avatar 05"
-                />
+              <div className="-mx-0.5 flex justify-center -space-x-3 font-bold text-3xl text-pink-600">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString('Open source.')
+                  .pauseFor(3000)
+                  .deleteAll()
+                  .start();
+                  typewriter.typeString('Free.')
+                  .pauseFor(1750)
+                  .deleteAll()
+                  .start();
+                  typewriter.typeString('Local.')
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .start();
+                }}
+                options={{
+                  loop: true
+                }}
+              />
               </div>
             </div>
             <h1
@@ -70,8 +49,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              The website builder you&apos;re <br className="max-lg:hidden" />
-              looking for
+              Transaction Debugger and<br className="max-lg:hidden" />
+              Simulator for EVM
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -79,8 +58,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Simple is a modern website builder powered by AI that changes
-                how companies create user interfaces together.
+                Debug and simulate transactions on any EVM chain. Zero integration required.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div

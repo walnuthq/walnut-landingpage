@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
+import Header from "@/components/lite/header";
+import Footer from "@/components/lite/footer";
 
 export default function DefaultLayout({
   children,
@@ -23,12 +22,12 @@ export default function DefaultLayout({
   });
 
   return (
-    <>
-      <Header />
-
-      <main className="grow">{children}</main>
-
-      <Footer />
-    </>
+    <div className="font-inter tracking-tight text-gray-900 antialiased">
+      <div className={`flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip font-inter tracking-tight text-gray-900`}>
+          <Header />
+          <main className="grow">{children}</main>
+          <Footer />
+      </div>
+    </div>
   );
 }

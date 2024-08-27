@@ -66,8 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
 			</Script>
 			<body className="flex h-full flex-col">
-					{children}
-					</body>
+				{children}
+			</body>
 		</html>
 	)
 }
