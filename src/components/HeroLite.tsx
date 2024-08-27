@@ -22,11 +22,11 @@ export default function HeroHome() {
               className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
               data-aos="zoom-y-out"
             >
-              <div className="-mx-0.5 flex justify-center -space-x-3 font-bold text-3xl text-pink-600">
+              <div className="-mx-0.5 flex justify-center -space-x-3 font-bold text-2xl text-pink-600">
               <Typewriter
                 onInit={(typewriter) => {
-                  typewriter.typeString('Open source.')
-                  .pauseFor(3000)
+                  typewriter.typeString('Open Source.')
+                  .pauseFor(2500)
                   .deleteAll()
                   .start();
                   typewriter.typeString('Free.')
@@ -34,6 +34,10 @@ export default function HeroHome() {
                   .deleteAll()
                   .start();
                   typewriter.typeString('Local.')
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .start();
+                  typewriter.typeString('Private.')
                   .pauseFor(2000)
                   .deleteAll()
                   .start();
@@ -49,16 +53,16 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Transaction Debugger and<br className="max-lg:hidden" />
-              Simulator for EVM
+              In-Memory EVM<br className="max-lg:hidden" />
+              Debugger and Simulator
             </h1>
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-2xl">
               <p
                 className="mb-8 text-lg text-gray-700"
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Debug and simulate transactions on any EVM chain. Zero integration required.
+                Connect Walnut Lite to any RPC node and debug transactions right from your local machine. No third-party services required.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -71,7 +75,7 @@ export default function HeroHome() {
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Free Trial{" "}
+                      Join Telegram{" "}
                       <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
