@@ -1,15 +1,10 @@
 import Image from "next/image";
 import PlanetImg from "@/images/lite/planet.png";
 import PlanetOverlayImg from "@/images/lite/blockchain.png";
-import PlanetOverlayImg2 from "@/images/lite/blockchain3.png";
-import PlanetTagImg01 from "@/images/lite/planet-tag-01.png";
-import PlanetTagImg02 from "@/images/lite/planet-tag-02.png";
-import PlanetTagImg03 from "@/images/lite/planet-tag-03.png";
-import PlanetTagImg04 from "@/images/lite/planet-tag-04.png";
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
+    <section id="debugger" className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}

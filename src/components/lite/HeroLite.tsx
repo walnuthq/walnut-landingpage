@@ -1,12 +1,6 @@
 "use client";
-import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import Avatar01 from "@/images/lite/avatar-03.jpg";
-import Avatar02 from "@/images/lite/avatar-03.jpg";
-import Avatar03 from "@/images/lite/avatar-03.jpg";
-import Avatar04 from "@/images/lite/avatar-03.jpg";
-import Avatar05 from "@/images/lite/avatar-03.jpg";
-import Avatar06 from "@/images/lite/avatar-03.jpg";
+import Link from "next/link";
 import Typewriter from 'typewriter-effect';
 
 export default function HeroHome() {
@@ -14,9 +8,7 @@ export default function HeroHome() {
     <section className="relative">
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Hero content */}
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
-          {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
             <div
               className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
@@ -83,7 +75,7 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
+                    href="#debugger"
                   >
                     Learn More
                   </a>
