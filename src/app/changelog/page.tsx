@@ -29,10 +29,10 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Non-Blocking Contract Class Verification
+            Improvements to Contract Class Verification
           </h2>
           <p className="text-gray-500">
-            In the latest release, we improve the contract class verification
+            In the latest release, we improved the contract class verification
             process by moving it to run in the background.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
@@ -40,8 +40,8 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              A new API endpoint to check the verification status of a contract
-              class is available at{" "}
+              Introduced a new API endpoint to check the verification status of a contract
+              class. Available at{" "}
               <code>{`/v1/verification/{:id}/status`}</code>.{" "}
               <Link
                 href="https://api.walnut.dev/v1/verification/77f1d905-fdb4-4280-b7d6-57cd029d1259/status"
@@ -52,7 +52,7 @@ export default function Page() {
               .
             </li>
             <li>
-              Updated the nudge verification link to direct users to the{" "}
+              Updated the nudge verification link from the Walnut app to direct users to the{" "}
               <Link
                 href="https://docs.walnut.dev/verify-contract-classes"
                 className="text-blue-500"
