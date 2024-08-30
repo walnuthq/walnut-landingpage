@@ -52,6 +52,9 @@ export default function Page() {
               .
             </li>
             <li>
+              Enhanced the accuracy of simulated transactions by applying state transitions for all preceding transactions within the same block.
+            </li>
+            <li>
               Updated the nudge verification link from the Walnut app to direct users to the{" "}
               <Link
                 href="https://docs.walnut.dev/verify-contract-classes"
