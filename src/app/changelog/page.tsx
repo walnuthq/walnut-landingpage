@@ -29,11 +29,10 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Improvements to Contract Class Verification
+            More Resilient Contract Class Verification
           </h2>
           <p className="text-gray-500">
-            In the latest release, we improved the contract class verification
-            process by moving it to run in the background.
+            In the latest release, we moved contract class verification to run in the background, making the service more resilient when verifying larger contracts or multiple contracts.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
