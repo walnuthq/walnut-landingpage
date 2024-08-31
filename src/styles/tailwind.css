@@ -5,3 +5,16 @@
 
 @import "additional-styles/utility-patterns.css";
 @import "additional-styles/theme.css";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
