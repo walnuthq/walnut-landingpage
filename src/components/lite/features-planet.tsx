@@ -1,8 +1,157 @@
-import Image from "next/image";
+'use client'
+
+import Image, { StaticImageData } from "next/image";
 import PlanetImg from "@/images/lite/planet.png";
 import PlanetOverlayImg from "@/images/lite/blockchain.png";
+import eth_logo from '@/images/blockchain_logos/Ethereum logo.png'
+import op_logo from '@/images/blockchain_logos/Optimism Ethereum Logo.png'
+import arbitrum_logo from '@/images/blockchain_logos/Arbitrum Logo.png'
+import polygon_logo from '@/images/blockchain_logos/Polygon icon.png'
+import avalanche_logo from '@/images/blockchain_logos/Avalanche AVAX Logo.png'
+import blast_logo from '@/images/blockchain_logos/Blast Chain Logo (1).webp'
+import base_logo from '@/images/blockchain_logos/Base Chain Logo.webp'
+import linea_logo from '@/images/blockchain_logos/Linea Chain Logo.png'
+import mantle_logo from '@/images/blockchain_logos/Mantle Logo.png'
+import cardano_logo from '@/images/blockchain_logos/Cardano ADA logo.png'
+import solana_logo from "@/images/blockchain_logos/Solana SOL logo.png"
+import tron_logo from "@/images/blockchain_logos/Tron TRX Logo.png"
+import { XCircleIcon } from "@heroicons/react/24/outline";
+import {CheckCircleIcon} from "@heroicons/react/24/outline";
+import {ArrowPathIcon} from "@heroicons/react/24/outline";
+import { useCallback, useEffect, useState } from "react";
+
+
+interface ChainCardsInterface {
+  name: string,
+  address: string,
+  icon: StaticImageData,
+}
+
+const chainCards: ChainCardsInterface[] = [
+  {
+    name: 'Ethereum',
+    address: '0x12345...32399',
+    icon: eth_logo,
+  },
+  {
+    name: 'Optimism',
+    address: '0x12345...32399',
+    icon: op_logo,
+  },
+  {
+    name: 'Arbitrum',
+    address: '0x12345...32399',
+    icon: arbitrum_logo,
+  },
+  {
+    name: 'Polygon',
+    address: '0x12345...32399',
+    icon: polygon_logo,
+  },
+  {
+    name: 'Avalanche',
+    address: '0x12345...32399',
+    icon: avalanche_logo,
+  },
+  {
+    name: 'Base',
+    address: '0x12345...32399',
+    icon: base_logo,
+  },
+  {
+    name: 'Blast',
+    address: '0x12345...32399',
+    icon: blast_logo,
+  },
+  {
+    name: 'Linea',
+    address: '0x12345...32399',
+    icon: linea_logo,
+  },
+  {
+    name: 'Mantle',
+    address: '0x12345...32399',
+    icon: mantle_logo,
+  },
+  {
+    name: 'Cardano',
+    address: '0x12345...32399',
+    icon: cardano_logo,
+  },
+  {
+    name: 'Solana',
+    address: '0x12345...32399',
+    icon: solana_logo,
+  },
+  {
+    name: 'Tron',
+    address: '0x12345...32399',
+    icon: tron_logo,
+  },
+]
+
+const getRandomOffset = () => {
+  return {
+    offsetX: Math.floor(Math.random() * 81) - 40,
+    offsetY: Math.floor(Math.random() * 101) - 50
+  };
+}
 
 export default function FeaturesPlanet() {
+
+  const [displayedCards, setDisplayedCards] = useState<(ChainCardsInterface & { isVisible: boolean, key: number, offsetX: number, offsetY: number })[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const currentPosition = (i: number) => {
+    let position = '';
+    switch(i){
+      case 0: 
+        position = `-left-28 top-16 animate-[float_4s_ease-in-out_infinite_both]`
+        break;
+      case 1: 
+        position = 'left-56 top-7 animate-[float_4s_ease-in-out_infinite_1s_both]'
+        break;
+      case 2: 
+        position ='-left-20 bottom-24 animate-[float_4s_ease-in-out_infinite_2s_both]'
+        break;
+      case 3:
+        position = 'bottom-32 left-64 animate-[float_4s_ease-in-out_infinite_3s_both]'
+        break;
+    }
+    return position;
+  }
+
+  const [fadeIndex, setFadeIndex] = useState(-1);
+
+  useEffect(() => {
+    setDisplayedCards(chainCards.slice(0, 4).map((card, index )=> ({ ...card, isVisible: true, key: index, ...getRandomOffset() })));
+
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % chainCards.length;
+        setDisplayedCards((prevCards) => {
+          const newCards = [...prevCards];
+          const cardToReplaceIndex = nextIndex % 4;
+          
+          
+          newCards[cardToReplaceIndex] = { ...newCards[cardToReplaceIndex], isVisible: false };
+          
+          
+          setTimeout(() => {
+            setDisplayedCards(cards => {
+              const updatedCards = [...cards];
+              updatedCards[cardToReplaceIndex] = { ...chainCards[nextIndex], isVisible: true, key: Date.now(), ...getRandomOffset() };
+              return updatedCards;
+            });
+          }, 2000); 
+          return newCards;
+        });
+        return nextIndex;
+      });
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <section id="debugger" className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -21,19 +170,12 @@ export default function FeaturesPlanet() {
             <div className="text-center">
               <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.500),transparent)]">
                 <Image
-                  className="rounded-full bg-gray-900"
+                  className="rounded-full bg-gray-900 lef"
                   src={PlanetImg}
                   width={400}
                   height={400}
                   alt="Planet"
                 />
-                {/* <Image
-                  className="rounded-full bg-gray-900"
-                  src={PlanetOverlayImg2}
-                  width={400}
-                  height={400}
-                  alt="Planet"
-                /> */}
                 <div className="pointer-events-none" aria-hidden="true">
                   <Image
                     className="absolute -right-12 -top-12 z-10 max-w-none"
@@ -43,80 +185,30 @@ export default function FeaturesPlanet() {
                     alt="Planet decoration"
                   />
                   <div>
-                    <div
-                      className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
+                    {displayedCards.map((item, i) => (
+                      <div
+                      key={item.key}
 
-                    >
-                      <div className="py-1 bg-slate-800 rounded-md text-white">
-                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
-                          <div className="h-6 w-6 bg-white rounded-full ">
-                          </div>
-                          <div className="text-left">
-                            <div>
-                              0x123...399
+                      className={`absolute ${currentPosition(i)} ${item.isVisible ? 'opacity-90 fade-in' : 'opacity-0'} z-10 transition-opacity duration-1000 ease-in-out`}
+                      >
+                        <div style={{transform: `translate(${item.offsetX}px, ${item.offsetY}px)`}} className="py-2 bg-slate-800 w-64 transition-opacity rounded-md text-white">
+                          <div className="min-w-full min-h-full flex gap-2 items-center pl-4 pr-2">
+                            <Image src={item.icon} className="h-10 object-contain w-10 rounded-full " alt={item.name}/>
+                            <div className="text-left">
+                              <div>
+                                {item.address}
+                              </div>
+                              <div>
+                                {item.name}
+                              </div>
                             </div>
-                            <div>
-                              Base
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                    >
-                      <div className="py-1 bg-slate-800 rounded-md text-white">
-                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
-                          <div className="h-6 w-6 bg-white rounded-full ">
-                          </div>
-                          <div className="text-left">
-                            <div>
-                              0x123...399
-                            </div>
-                            <div>
-                              Zora
+                            <div className="ml-auto self-end">
+                              <LoadingItem key={item.key}/>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                    >
-                      <div className="py-1 bg-slate-800 rounded-md text-white">
-                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
-                          <div className="h-6 w-6 bg-white rounded-full ">
-                          </div>
-                          <div className="text-left">
-                            <div >
-                              0x123...399
-                            </div>
-                            <div>
-                              OP Mainnet
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-
-                    >
-                      <div className="py-1 bg-slate-800 rounded-md text-white">
-                        <div className="min-w-full min-h-full flex gap-6 items-center px-4">
-                          <div className="h-6 w-6 bg-white rounded-full ">
-                          </div>
-                          <div className="text-left">
-                            <div>
-                              0x123...399
-                            </div>
-                            <div className=" whitespace-nowrap">
-                              Custom RPC: https
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -242,3 +334,28 @@ export default function FeaturesPlanet() {
     </section>
   );
 }
+
+
+const LoadingItem = ({ key } : {key:number}) => {
+  const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
+
+  useEffect(() => {
+    setStatus('loading');
+    const loadingTime = Math.random() * 2000 + 1000;
+    const successProbability = 0.7; 
+
+    const timeout = setTimeout(() => {
+      setStatus(Math.random() < successProbability ? 'success' : 'error');
+    }, loadingTime);
+
+    return () => clearTimeout(timeout);
+  }, [key]); 
+
+  return (
+    <>
+      {status === 'loading' && <ArrowPathIcon className="w-6 h-6 animate-spin" />}
+      {status === 'success' && <CheckCircleIcon className='w-6 h-6 text-green-600' />}
+      {status === 'error' && <XCircleIcon className='w-6 h-6 text-red-600' />}
+    </>
+  );
+};
