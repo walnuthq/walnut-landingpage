@@ -52,7 +52,7 @@ export function Intro() {
         <IconLink href="https://github.com/walnuthq" target="_blank" icon={GitHubIcon} className="flex-none">
           GitHub
         </IconLink>
-        <IconLink href="https://t.me/walnutcorestars" target="_blank" icon={TelegramIcon} className="flex-none">
+        <IconLink href="https://t.me/walnuthq" target="_blank" icon={TelegramIcon} className="flex-none">
           Telegram
         </IconLink>
       </div>

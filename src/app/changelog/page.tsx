@@ -25,34 +25,28 @@ export default function Page() {
       <Article date={"2024-09-06T00:00Z"} id="new-settings-page">
         <Image src={CodeSnippet20240906} alt="settings-page" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Custom Network Support</h2>
+          <h2 className="font-bold my-4 text-xl">Debugging on Custom Networks</h2>
           <p className="text-gray-500">
-            In the latest release, we introduced a new settings page that lets
-            users store custom networks, search and simulate transactions on
-            them.
+          This week we added support for debugging transactions on custom networks, a key request from DOJO on-chain game developers. Walnut now connects to any Starknet network via custom RPC URLs, with full support for debugging, simulating, and verifying smart contracts. Next week, we will pilot custom networks with hosted Slot instances in New York, meeting DOJO game developers and demonstrating Walnut.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Added a Settings page to configure custom RPC URLs, allowing users
-              to manage and name their own networks.
+            Created a new Settings page to configure custom RPC URLs, enabling debugging transactions on custom networks.
             </li>
             <li>
-              Aggregated search now supports the mainnet, testnet, and
-              pre-configured custom networks.
+            Aggregated search now displays transactions and verified contracts from mainnet, testnet, and custom networks.
             </li>
             <li>
-              Instead of directory caching, we introduced a new in-memory cache
-              for transaction state simulations.
+            Fixed a caching bug that caused state mismatches and inconsistencies in transaction simulations.
             </li>
             <li>
-              Introduced the display of function call arguments, results, and
-              interface names in call trace.
+            Extended Call Trace to include function call arguments, results, and interface names for internal calls.
             </li>
             <li>
-              Fixed an issue with the incorrect display of function call names.
+            Improved regex parsing for function call names in the Call Trace for better readability.
             </li>
           </ul>
         </>
