@@ -49,7 +49,7 @@ export default function Page() {
             </li>
             <li>
               Introduced the display of function call arguments, results, and
-              interface names in dropdowns.
+              interface names in call trace.
             </li>
             <li>
               Fixed an issue with the incorrect display of function call names.
