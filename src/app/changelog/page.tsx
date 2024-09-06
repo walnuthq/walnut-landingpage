@@ -16,11 +16,47 @@ import CodeSnippet20240809 from "@/images/changelog/CodeSnippet20240809.gif";
 import CodeSnippet20240816 from "@/images/changelog/CodeSnippet20240816.png";
 import CodeSnippet20240823 from "@/images/changelog/CodeSnippet20240823.png";
 import CodeSnippet20240830 from "@/images/changelog/CodeSnippet20240830.png";
+import CodeSnippet20240906 from "@/images/changelog/CodeSnippet20240906.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-09-06T00:00Z"} id="new-settings-page">
+        <Image src={CodeSnippet20240906} alt="settings-page" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Custom Network Support</h2>
+          <p className="text-gray-500">
+            In the latest release, we introduced a new settings page that lets
+            users store custom networks, search and simulate transactions on
+            them.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added a Settings page to configure custom RPC URLs, allowing users
+              to manage and name their own networks.
+            </li>
+            <li>
+              Aggregated search now supports the mainnet, testnet, and
+              pre-configured custom networks.
+            </li>
+            <li>
+              Instead of directory caching, we introduced a new in-memory cache
+              for transaction state simulations.
+            </li>
+            <li>
+              Introduced the display of function call arguments, results, and
+              interface names in dropdowns.
+            </li>
+            <li>
+              Fixed an issue with the incorrect display of function call names.
+            </li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-08-30T00:00Z"} id="verification-status-api">
         <Image
           src={CodeSnippet20240830}
@@ -32,15 +68,17 @@ export default function Page() {
             More Resilient Contract Class Verification
           </h2>
           <p className="text-gray-500">
-            In the latest release, we moved contract class verification to run in the background, making the service more resilient when verifying larger contracts or multiple contracts.
+            In the latest release, we moved contract class verification to run
+            in the background, making the service more resilient when verifying
+            larger contracts or multiple contracts.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Introduced a new API endpoint to check the verification status of a contract
-              class. Available at{" "}
+              Introduced a new API endpoint to check the verification status of
+              a contract class. Available at{" "}
               <code>{`/v1/verification/{:id}/status`}</code>.{" "}
               <Link
                 href="https://api.walnut.dev/v1/verification/77f1d905-fdb4-4280-b7d6-57cd029d1259/status"
@@ -51,10 +89,12 @@ export default function Page() {
               .
             </li>
             <li>
-              Enhanced the accuracy of simulated transactions by applying state transitions for all preceding transactions within the same block.
+              Enhanced the accuracy of simulated transactions by applying state
+              transitions for all preceding transactions within the same block.
             </li>
             <li>
-              Updated the nudge verification link from the Walnut app to direct users to the{" "}
+              Updated the nudge verification link from the Walnut app to direct
+              users to the{" "}
               <Link
                 href="https://docs.walnut.dev/verify-contract-classes"
                 className="text-blue-500"
