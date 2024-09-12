@@ -31,29 +31,27 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Contract calls in Debugger window
+            Contract calls in Debugger Window
           </h2>
           <p className="text-gray-500">
-            In the latest release, we implemented the display of contract calls
-            from internal calls within the debugger window.
+          The step-by-step debugger now supports nested contract flows. When you reach a contract call in the source code, just hit “Next” to seamlessly move into the new contract and continue debugging.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Integrated Walnut into Sozo and added support for contract
+              Integrated Walnut into <Link href="https://book.dojoengine.org/toolchain/sozo" className="text-blue-500"></Link>Sozo and added support for contract
               verification directly from Sozo.
             </li>
             <li>
               Added contract verification for custom networks, including support
-              for hosted Slot instances.
+              for hosted <Link href="https://book.dojoengine.org/toolchain/slot" className="text-blue-500">Slot</Link> instances.
             </li>
             <li>
-              Added chain information to the transaction simulation context and
-              fixed inconsistencies in transaction simulations.
+            Chain information has been added to the transaction simulation context, fixing occasional data inconsistencies in simulations.
             </li>
-            <li>Made visual improvements for a clearer experience.</li>
+            <li>Updated the app UI to support full screen mode, making it easier to debug large codebases.</li>
           </ul>
         </>
       </Article>
