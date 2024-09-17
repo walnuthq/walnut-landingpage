@@ -98,7 +98,7 @@ export default function Blog() {
                     💡 cairovm.codes has now been officially recognized by
                     Starkware. The Cairo team has integrated cairovm.codes into
                     the official Cairo website, which you can visit at{" "}
-                    <a href="https://www.cairo-lang.org/cairovm/">
+                    <a href="https://www.cairo-lang.org/cairovmn/">
                       cairo-lang.org/cairovm.
                     </a>
                   </p>
