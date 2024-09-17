@@ -99,8 +99,8 @@ export default function Blog() {
                     Starkware. The Cairo team has integrated cairovm.codes into
                     the official Cairo website, which you can visit at{" "}
                     <a href="https://www.cairo-lang.org/cairovm/">
-                      cairo-lang.org/cairovm.
-                    </a>
+                      cairo-lang.org/cairovm
+                    </a>.
                   </p>
 
                   <h2>How cairovm.codes Works: A Step-by-Step Guide</h2>
