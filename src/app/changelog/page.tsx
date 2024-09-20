@@ -35,18 +35,16 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Multiple classes verification
+            Multiple Classes Verification
           </h2>
           <p className="text-gray-500">
-            In the latest release, we introduced support for verifying multiple
-            classes in a single request. This improves user experience on
-            verification server and boosts performance.
+          In the latest release, we introduced support for verifying multiple classes in a single request. This improves the Class Verification user experience and boosts performance.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Added support for Dojo Alpha 12.</li>
+            <li>Added support for Dojo Alpha 12, to support the latest on-chain game developers.</li>
             <li>
               Increased server resources to ensure faster response time and
               handle high-demand requests.
@@ -56,11 +54,8 @@ export default function Page() {
               more detailed debugging information.
             </li>
             <li>
-              Resolved issues with Dojo verifications, including configuring
-              Scarb caching for Sozo and using the default namespace from Dojo
-              configuration.
+            Addressed several Class Verification issues reported primarily by DOJO game developers. These include configuring Scarb caching for Sozo and applying the default namespace from the Dojo configuration.
             </li>
-            <li>Upgrade to Rust 1.80.0</li>
           </ul>
         </>
       </Article>
