@@ -18,7 +18,7 @@ import CodeSnippet20240823 from "@/images/changelog/CodeSnippet20240823.png";
 import CodeSnippet20240830 from "@/images/changelog/CodeSnippet20240830.png";
 import CodeSnippet20240906 from "@/images/changelog/CodeSnippet20240906.png";
 import CodeSnippet20240913 from "@/images/changelog/CodeSnippet20240913.gif";
-//import CodeSnippet20240920 from "@/images/changelog/CodeSnippet20240920.png";
+import CodeSnippet20240920 from "@/images/changelog/CodeSnippet20240920.png";
 import Link from "next/link";
 
 export default function Page() {
@@ -28,15 +28,19 @@ export default function Page() {
         date={"2024-09-20T00:00Z"}
         id="multiple-verification-improvments"
       >
-        <Image src={""} alt="Multiple class verfication" unoptimized />
+        <Image
+          src={CodeSnippet20240920}
+          alt="Multiple class verfication"
+          unoptimized
+        />
         <>
           <h2 className="font-bold my-4 text-xl">
             Multiple classes verification
           </h2>
           <p className="text-gray-500">
             In the latest release, we introduced support for verifying multiple
-            class hashes in a single request. This improves user experience on
-            our verification server and boosts performance.
+            classes in a single request. This improves user experience on
+            verification server and boosts performance.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
@@ -44,7 +48,7 @@ export default function Page() {
           <ul className="list-disc text-gray-500 pl-6">
             <li>Added support for Dojo Alpha 12.</li>
             <li>
-              Increased server resources to ensure faster response times and
+              Increased server resources to ensure faster response time and
               handle high-demand requests.
             </li>
             <li>
