@@ -18,12 +18,48 @@ import CodeSnippet20240823 from "@/images/changelog/CodeSnippet20240823.png";
 import CodeSnippet20240830 from "@/images/changelog/CodeSnippet20240830.png";
 import CodeSnippet20240906 from "@/images/changelog/CodeSnippet20240906.png";
 import CodeSnippet20240913 from "@/images/changelog/CodeSnippet20240913.gif";
+import CodeSnippet20240920 from "@/images/changelog/CodeSnippet20240920.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-09-06T00:00Z"} id="new-settings-page">
+      <Article
+        date={"2024-09-20T00:00Z"}
+        id="multiple-verification-improvments"
+      >
+        <Image
+          src={CodeSnippet20240920}
+          alt="Multiple class verfication"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Multiple Classes Verification
+          </h2>
+          <p className="text-gray-500">
+          In the latest release, we introduced support for verifying multiple classes in a single request. This improves the Class Verification user experience and boosts performance.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for Dojo Alpha 12, to support the latest on-chain game developers.</li>
+            <li>
+              Increased server resources to ensure faster response time and
+              handle high-demand requests.
+            </li>
+            <li>
+              Improved error handling by mapping errors, leading to clearer and
+              more detailed debugging information.
+            </li>
+            <li>
+            Addressed several Class Verification issues reported primarily by DOJO game developers. These include configuring Scarb caching for Sozo and applying the default namespace from the Dojo configuration.
+            </li>
+          </ul>
+        </>
+      </Article>
+      <Article date={"2024-09-13T00:00Z"} id="debug-contract-call-page">
         <Image
           src={CodeSnippet20240913}
           alt="debug-page-contract-call"
@@ -34,24 +70,42 @@ export default function Page() {
             Contract calls in Debugger Window
           </h2>
           <p className="text-gray-500">
-          The step-by-step debugger now supports nested contract flows. When you reach a contract call in the source code, just hit “Next” to seamlessly move into the new contract and continue debugging.
+            The step-by-step debugger now supports nested contract flows. When
+            you reach a contract call in the source code, just hit “Next” to
+            seamlessly move into the new contract and continue debugging.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Integrated Walnut into <Link href="https://book.dojoengine.org/toolchain/sozo" className="text-blue-500"></Link>Sozo and added support for contract
-              verification directly from Sozo.
+              Integrated Walnut into{" "}
+              <Link
+                href="https://book.dojoengine.org/toolchain/sozo"
+                className="text-blue-500"
+              ></Link>
+              Sozo and added support for contract verification directly from
+              Sozo.
             </li>
             <li>
               Added contract verification for custom networks, including support
-              for hosted <Link href="https://book.dojoengine.org/toolchain/slot" className="text-blue-500">Slot</Link> instances.
+              for hosted{" "}
+              <Link
+                href="https://book.dojoengine.org/toolchain/slot"
+                className="text-blue-500"
+              >
+                Slot
+              </Link>{" "}
+              instances.
             </li>
             <li>
-            Chain information has been added to the transaction simulation context, fixing occasional data inconsistencies in simulations.
+              Chain information has been added to the transaction simulation
+              context, fixing occasional data inconsistencies in simulations.
             </li>
-            <li>Updated the app UI to support full screen mode, making it easier to debug large codebases.</li>
+            <li>
+              Updated the app UI to support full screen mode, making it easier
+              to debug large codebases.
+            </li>
           </ul>
         </>
       </Article>
