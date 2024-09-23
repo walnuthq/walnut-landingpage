@@ -1,5 +1,7 @@
 import { Footer } from "@/components/Footer";
 import BlogHeader from "@/app/blog/components/BlogHeader";
+import Image from "next/image";
+import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 
 export default function Blog() {
   return (
@@ -47,7 +49,7 @@ export default function Blog() {
                 <div className="mt-6">
                   <ul className="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
                     <li className="flex items-center font-medium whitespace-nowrap px-5 mt-6">
-                      {/* <img src="/_next/static/media/adamwathan.8adb7a70.jpg" alt="" className="mr-3 w-9 h-9 rounded-full bg-slate-50" decoding="async" /> */}
+                      <Image src={author} alt="" className="mr-3 w-9 h-9 rounded-full bg-slate-50" decoding="async" />
                       <div className="text-sm leading-4">
                         <div className="text-slate-900">Roman Mazur</div>
                         <div className="mt-1">
