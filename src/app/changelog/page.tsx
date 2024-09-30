@@ -392,9 +392,9 @@ export default function Page() {
             In the latest release, we focused on improving the call trace.
             Concretely, we worked on displaying contract calls within internal
             function calls. In the screenshot above, you can see the{" "}
-            <code>IVerificationHelper.calculation_proof</code> correctly placed
+            <code className="break-words">IVerificationHelper.calculation_proof</code> correctly placed
             right after the internal function call{" "}
-            <code>IVerificationHelperDispatcherImpl::calculation_proof</code>.
+            <code className="break-words">IVerificationHelperDispatcherImpl::calculation_proof</code>.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
