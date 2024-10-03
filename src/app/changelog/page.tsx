@@ -40,8 +40,8 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Fixed the 'Unknown function' bug by ensuring the backend provides
-              accurate function information.
+              Fixed the {`'Unknown function'`} bug by ensuring the backend
+              provides accurate function information.
             </li>
             <li>
               Users can now debug transactions on Katana if there are multiple
