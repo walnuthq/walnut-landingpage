@@ -20,11 +20,41 @@ import CodeSnippet20240906 from "@/images/changelog/CodeSnippet20240906.png";
 import CodeSnippet20240913 from "@/images/changelog/CodeSnippet20240913.gif";
 import CodeSnippet20240920 from "@/images/changelog/CodeSnippet20240920.png";
 import CodeSnippet20240927 from "@/images/changelog/CodeSnippet20240927.gif";
+import CodeSnippet20241004 from "@/images/changelog/CodeSnippet20241004.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-10-03T00:00Z"} id="search-improvment">
+        <Image src={CodeSnippet20241004} alt="Searh improvment" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Improvements in Search</h2>
+          <p className="text-gray-500">
+            In the latest release, we added a footer to search results that shows the networks being queried, making it easier to recognize when a custom network should be set if the search doesn&apos;t return expected results.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              As part of ongoing improvements to the Call Trace, we removed the &quot;Unknown Function&quot; frame which was only causing confusion.
+            </li>
+            <li>
+              Collaborated with Dojo to support Katana blocks with multiple transactions. Thanks Dojo for your help on this{" "}
+              <Link
+                href="https://github.com/dojoengine/dojo/issues/2458"
+                className="text-blue-500"
+              >
+                issue #2458
+              </Link>
+              .
+            </li>
+            <li>Added support for Dojo Alpha 13.</li>
+            <li>Updated the Contract Verification service to support Cairo 2.8.2.</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2024-09-27T00:00Z"} id="expand-collapse-in-trace">
         <Image
           src={CodeSnippet20240927}
@@ -392,9 +422,14 @@ export default function Page() {
             In the latest release, we focused on improving the call trace.
             Concretely, we worked on displaying contract calls within internal
             function calls. In the screenshot above, you can see the{" "}
-            <code className="break-words">IVerificationHelper.calculation_proof</code> correctly placed
-            right after the internal function call{" "}
-            <code className="break-words">IVerificationHelperDispatcherImpl::calculation_proof</code>.
+            <code className="break-words">
+              IVerificationHelper.calculation_proof
+            </code>{" "}
+            correctly placed right after the internal function call{" "}
+            <code className="break-words">
+              IVerificationHelperDispatcherImpl::calculation_proof
+            </code>
+            .
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
