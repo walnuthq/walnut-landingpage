@@ -38,7 +38,7 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              As part of ongoing improvements to the Call Trace, we removed the "Unknown Function" frame which was only causing confusion.
+              As part of ongoing improvements to the Call Trace, we removed the &quot;Unknown Function&quot; frame which was only causing confusion.
             </li>
             <li>
               Collaborated with Dojo to support Katana blocks with multiple transactions. Thanks Dojo for your help on this{" "}
