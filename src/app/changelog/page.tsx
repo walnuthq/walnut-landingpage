@@ -31,21 +31,17 @@ export default function Page() {
         <>
           <h2 className="font-bold my-4 text-xl">Improvements in Search</h2>
           <p className="text-gray-500">
-            In the latest release, we enhanced the search functionality by
-            adding a footer that displays the number of results found and the
-            network being queried.
+            In the latest release, we added a footer to search results that shows the networks being queried, making it easier to recognize when a custom network should be set if the search doesn&apos;t return expected results.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Fixed the {`'Unknown function'`} bug by ensuring the backend
-              provides accurate function information.
+              As part of ongoing improvements to the Call Trace, we removed the "Unknown Function" frame which was only causing confusion.
             </li>
             <li>
-              Users can now debug transactions on Katana if there are multiple
-              transactions in a block, thanks to resolving issue by Dojo -{" "}
+              Collaborated with Dojo to support Katana blocks with multiple transactions. Thanks Dojo for your help on this{" "}
               <Link
                 href="https://github.com/dojoengine/dojo/issues/2458"
                 className="text-blue-500"
@@ -55,15 +51,7 @@ export default function Page() {
               .
             </li>
             <li>Added support for Dojo Alpha 13.</li>
-            <li>The Verification service now supports Cairo 2.8.2.</li>
-            <li>
-              Integrated Sentry into our verification services to promptly alert
-              us on any failed verifications.
-            </li>
-            <li>
-              Integrated Sentry session replay to track user sessions, so we can
-              enhance user experience.
-            </li>
+            <li>Updated the Contract Verification service to support Cairo 2.8.2.</li>
           </ul>
         </>
       </Article>
