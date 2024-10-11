@@ -30,29 +30,25 @@ export default function Page() {
       <Article date={"2024-10-11T00:00Z"} id="search-call-trace">
         <Image src={CodeSnippet20241011} alt="Search call trace" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Call Trace Search</h2>
+          <h2 className="font-bold my-4 text-xl">New Search in the Call Trace</h2>
           <p className="text-gray-500">
-            This week, we introduced a search functionality within the call
-            trace, enhancing the efficiency of its exploration.
+          This week, we added a search feature to the call trace, allowing developers to search by contract address, contract name, entrypoint, or any Cairo function name.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Users can now search by contract name and address, with file names
-              and line numbers displayed in the search results.
+            Users can now search by contract name and address, with search results showing source file names and line numbers.
             </li>
             <li>
-              Improved the copy-to-clipboard functionality, making it available
-              across the application, with a toast notification confirming when
-              content is copied.
+            Enhanced the copy-to-clipboard functionality across the app, with a toast notification confirming when content is copied.
             </li>
             <li>
-              Added short hash formatting for better mobile view experience.
+            Added short transaction hash formatting for a better mobile experience.
             </li>
             <li>
-              Fixed the horizontal scroll bar in the call so it always appears.
+            Fixed an issue with the horizontal scroll bar in the call trace, ensuring it always appears.
             </li>
           </ul>
         </>
