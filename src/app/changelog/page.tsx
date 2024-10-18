@@ -22,33 +22,74 @@ import CodeSnippet20240920 from "@/images/changelog/CodeSnippet20240920.png";
 import CodeSnippet20240927 from "@/images/changelog/CodeSnippet20240927.gif";
 import CodeSnippet20241004 from "@/images/changelog/CodeSnippet20241004.png";
 import CodeSnippet20241011 from "@/images/changelog/CodeSnippet20241011.gif";
+import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-10-11T00:00Z"} id="search-call-trace">
-        <Image src={CodeSnippet20241011} alt="Search call trace" unoptimized />
+      <Article date={"2024-10-18T00:00Z"} id="home-page-header">
+        <Image src={CodeSnippet20241018} alt="Home page header" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">New Search in the Call Trace</h2>
+          <h2 className="font-bold my-4 text-xl">
+            New Homepage with easier access to Transaction Simulations and Settings
+          </h2>
           <p className="text-gray-500">
-          This week, we added a search feature to the call trace, allowing developers to search by contract address, contract name, entrypoint, or any Cairo function name.
+            This week, we updated the homepage to enable
+            users to simulate transactions and configure custom networks
+            directly, without opening a tranasction first.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-            Users can now search by contract name and address, with search results showing source file names and line numbers.
+              Resolved an issue with content width in the Call Trace,
+              eliminating unnecessary horizontal scrolling.
             </li>
             <li>
-            Enhanced the copy-to-clipboard functionality across the app, with a toast notification confirming when content is copied.
+              The Transaction Simulation dialog will now use the &quot;latest&quot; block by
+              default if none is provided.
+            </li>
+            <li>Added support for Dojo Alpha 14 and 16.</li>
+            <li>
+              Other minor optimizations and ongoing work to prepare for 
+              upcoming improvements in the debugger window.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-10-11T00:00Z"} id="search-call-trace">
+        <Image src={CodeSnippet20241011} alt="Search call trace" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            New Search in the Call Trace
+          </h2>
+          <p className="text-gray-500">
+            This week, we added a search feature to the call trace, allowing
+            developers to search by contract address, contract name, entrypoint,
+            or any Cairo function name.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Users can now search by contract name and address, with search
+              results showing source file names and line numbers.
             </li>
             <li>
-            Added short transaction hash formatting for a better mobile experience.
+              Enhanced the copy-to-clipboard functionality across the app, with
+              a toast notification confirming when content is copied.
             </li>
             <li>
-            Fixed an issue with the horizontal scroll bar in the call trace, ensuring it always appears.
+              Added short transaction hash formatting for a better mobile
+              experience.
+            </li>
+            <li>
+              Fixed an issue with the horizontal scroll bar in the call trace,
+              ensuring it always appears.
             </li>
           </ul>
         </>
