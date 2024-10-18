@@ -32,32 +32,28 @@ export default function Page() {
         <Image src={CodeSnippet20241018} alt="Home page header" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Easily Simulate Transaction and Configure Networks from the Homepage
+            New Homepage with easier access to Transaction Simulations and Settings
           </h2>
           <p className="text-gray-500">
-            This week, we introduced a new header on the homepage, enabling
+            This week, we updated the homepage to enable
             users to simulate transactions and configure custom networks
-            directly, without the need for a transaction hash.
+            directly, without opening a tranasction first.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              New header provides quick access to transaction simulation and
-              custom network settings from the homepage.
-            </li>
-            <li>
-              Resolved an issue with the content width in the call trace,
+              Resolved an issue with content width in the Call Trace,
               eliminating unnecessary horizontal scrolling.
             </li>
             <li>
-              Set simulation dialog to use the &quot;latest&quot; block by
-              default when none is provided.
+              The Transaction Simulation dialog will now use the &quot;latest&quot; block by
+              default if none is provided.
             </li>
             <li>Added support for Dojo Alpha 14 and 16.</li>
             <li>
-              Refactored code and implemented minor optimizations to prepare for
+              Other minor optimizations and ongoing work to prepare for 
               upcoming improvements in the debugger window.
             </li>
           </ul>
