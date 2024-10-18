@@ -51,6 +51,10 @@ export default function Page() {
               Resolved an issue with the content width in the call trace,
               eliminating unnecessary horizontal scrolling.
             </li>
+            <li>
+              Set simulation dialog to use the "latest" block by default when
+              none is provided.
+            </li>
             <li>Added support for Dojo Alpha 14 and 16.</li>
             <li>
               Refactored code and implemented minor optimizations to prepare for
