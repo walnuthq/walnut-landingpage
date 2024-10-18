@@ -52,8 +52,8 @@ export default function Page() {
               eliminating unnecessary horizontal scrolling.
             </li>
             <li>
-              Set simulation dialog to use the "latest" block by default when
-              none is provided.
+              Set simulation dialog to use the &quot;latest&quot; block by
+              default when none is provided.
             </li>
             <li>Added support for Dojo Alpha 14 and 16.</li>
             <li>
