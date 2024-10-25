@@ -23,28 +23,26 @@ import CodeSnippet20240927 from "@/images/changelog/CodeSnippet20240927.gif";
 import CodeSnippet20241004 from "@/images/changelog/CodeSnippet20241004.png";
 import CodeSnippet20241011 from "@/images/changelog/CodeSnippet20241011.gif";
 import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
-//import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.gif";
+import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
       <Article date={"2024-10-18T00:00Z"} id="step-over">
-        <Image src={""} alt="step-over" unoptimized />
+        <Image src={CodeSnippet20241025} alt="step-over" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             Step Over Button in Debugger
           </h2>
           <p className="text-gray-500">
-            This week, we introduced a Step Over button to improve the debugging
-            experience by allowing developers to debug code line by line without
-            stepping into functions.
+          We finally added the “Step Over” button, one of the most requested features from our early users. It speeds up the debugging experience by allowing developers to skip over functions and focus on the main logic, saving time and reducing the need to manually step through each line in deeply nested code.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Enhaced the Call Trace with __validate__ call.</li>
+            <li>Enhanced the Call Trace with <code>__validate__</code> Account call, to better express <Link href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/" className="text-blue-500">Starknet's Account Abstraction model</Link>.</li>
             <li>
               Updated the copy and added a link to the{" "}
               <Link
