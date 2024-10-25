@@ -23,21 +23,55 @@ import CodeSnippet20240927 from "@/images/changelog/CodeSnippet20240927.gif";
 import CodeSnippet20241004 from "@/images/changelog/CodeSnippet20241004.png";
 import CodeSnippet20241011 from "@/images/changelog/CodeSnippet20241011.gif";
 import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
+import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-10-18T00:00Z"} id="step-over">
+        <Image src={CodeSnippet20241025} alt="step-over" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Step Over Button in Debugger
+          </h2>
+          <p className="text-gray-500">
+          We finally added the &apos;Step Over&apos; button, one of the most requested features from our early users. It speeds up the debugging experience by allowing developers to skip over functions and focus on the main logic, saving time and reducing the need to manually step through each line in deeply nested code.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Enhanced the Call Trace with <code>__validate__</code> Account call, to better express <Link href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/" className="text-blue-500">Starknet&apos;s Account Abstraction model</Link>.</li>
+            <li>
+              Updated the copy and added a link to the{" "}
+              <Link
+                href="https://docs.walnut.dev/verify-contract-classes"
+                className="text-blue-500"
+              >
+                Walnut Verification Guide
+              </Link>{" "}
+              in the debugger window for non-verified contracts.
+            </li>
+            <li>
+              Addressed and resolved minor bugs to improve overall application
+              stability and performance.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2024-10-18T00:00Z"} id="home-page-header">
         <Image src={CodeSnippet20241018} alt="Home page header" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
-            New Homepage with easier access to Transaction Simulations and Settings
+            New Homepage with easier access to Transaction Simulations and
+            Settings
           </h2>
           <p className="text-gray-500">
-            This week, we updated the homepage to enable
-            users to simulate transactions and configure custom networks
-            directly, without opening a tranasction first.
+            This week, we updated the homepage to enable users to simulate
+            transactions and configure custom networks directly, without opening
+            a tranasction first.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
@@ -48,13 +82,13 @@ export default function Page() {
               eliminating unnecessary horizontal scrolling.
             </li>
             <li>
-              The Transaction Simulation dialog will now use the &quot;latest&quot; block by
-              default if none is provided.
+              The Transaction Simulation dialog will now use the
+              &quot;latest&quot; block by default if none is provided.
             </li>
             <li>Added support for Dojo Alpha 14 and 16.</li>
             <li>
-              Other minor optimizations and ongoing work to prepare for 
-              upcoming improvements in the debugger window.
+              Other minor optimizations and ongoing work to prepare for upcoming
+              improvements in the debugger window.
             </li>
           </ul>
         </>
