@@ -36,13 +36,13 @@ export default function Page() {
             Step Over Button in Debugger
           </h2>
           <p className="text-gray-500">
-          We finally added the “Step Over” button, one of the most requested features from our early users. It speeds up the debugging experience by allowing developers to skip over functions and focus on the main logic, saving time and reducing the need to manually step through each line in deeply nested code.
+          We finally added the &apos;Step Over&apos; button, one of the most requested features from our early users. It speeds up the debugging experience by allowing developers to skip over functions and focus on the main logic, saving time and reducing the need to manually step through each line in deeply nested code.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Enhanced the Call Trace with <code>__validate__</code> Account call, to better express <Link href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/" className="text-blue-500">Starknet's Account Abstraction model</Link>.</li>
+            <li>Enhanced the Call Trace with <code>__validate__</code> Account call, to better express <Link href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/" className="text-blue-500">Starknet&apos;s Account Abstraction model</Link>.</li>
             <li>
               Updated the copy and added a link to the{" "}
               <Link
