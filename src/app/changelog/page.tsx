@@ -38,13 +38,13 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Clearer Arguments and Results Representation
+            Clearer Arguments and Results representation
           </h2>
           <p className="text-gray-500">
-            This week, we've introduced simplification of argument and result
-            namespaces to streamline call traces and reduce visual complexity.
-            This update helps users to read and understand function calls more
-            easily.
+            This week, we&apos;ve introduced simplification of argument and
+            result namespaces to streamline call traces and reduce visual
+            complexity. This update helps users to read and understand function
+            calls more easily.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
