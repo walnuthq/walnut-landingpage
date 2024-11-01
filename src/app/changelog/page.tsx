@@ -41,10 +41,7 @@ export default function Page() {
             Clearer Arguments and Results representation
           </h2>
           <p className="text-gray-500">
-            This week, we&apos;ve introduced simplification of argument and
-            result namespaces to streamline call traces and reduce visual
-            complexity. This update helps users to read and understand function
-            calls more easily.
+          This week, we simplified the Call Trace by removing argument and result namespaces and skipping system arguments. This reduces visual complexity, making it easier for users to navigate function calls!
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
@@ -54,40 +51,27 @@ export default function Page() {
               Added Debugger Keyboard Shortcuts:
               <ul className="list-disc list-inside">
                 <li>
-                  <strong>b</strong> - Step Back
+                  <code>b</code> &mdash; Step Back
                 </li>
                 <li>
-                  <strong>n</strong> - Step Into
+                  <code>n</code> &mdash; Step Into
                 </li>
                 <li>
-                  <strong>o</strong> - Step Over
+                  <code>o</code> &mdash; Step Over
                 </li>
               </ul>
             </li>
             <li>
-              Skipped system arguments in the Call Trace to focus on relevant
-              information.
+              Improved error messages in the Transaction Simulation Dialog to help users complete the form more easily.
             </li>
             <li>
-              Simplified argument names by removing namespaces for easier
-              readability.
+              Fixed a bug in fetching CASM instructions. Previously, some instructions were missed, causing issues in specific transactions. Now, all CASM instructions are reliably retrieved, resolving the issue.
             </li>
             <li>
-              Improved error messages for incorrect simulation arguments to
-              assist in troubleshooting.
+            Resolved issues with transaction inconsistencies on custom networks by adding the chain ID of custom networks to the transaction execution context.
             </li>
             <li>
-              Enhanced CASM instruction mappings ensuring that we have fetched
-              all instruction correctly.
-            </li>
-            <li>
-              Provided the chain ID of custom networks to the transaction
-              execution context, required for external execution.
-            </li>
-            <li>
-              Fixed mobile visibility bug by adding a burger navigation menu
-              with settings and simulation options, and ensuring the footer
-              always stays positioned at the bottom of the page.
+            Enhanced the mobile experience by fixing the navigation burger menu on the home screen and ensuring the footer remains anchored at the bottom of the page.
             </li>
           </ul>
         </>
