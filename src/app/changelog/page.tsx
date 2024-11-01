@@ -78,11 +78,16 @@ export default function Page() {
             </li>
             <li>
               Enhanced CASM instruction mappings ensuring that we have fetched
-              all instruction correctly{" "}
+              all instruction correctly.
             </li>
             <li>
               Provided the chain ID of custom networks to the transaction
               execution context, required for external execution.
+            </li>
+            <li>
+              Fixed mobile visibility bug by adding a burger navigation menu
+              with settings and simulation options, and ensuring the footer
+              always stays positioned at the bottom of the page.
             </li>
           </ul>
         </>
