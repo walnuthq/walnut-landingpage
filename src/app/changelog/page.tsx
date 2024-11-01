@@ -24,25 +24,87 @@ import CodeSnippet20241004 from "@/images/changelog/CodeSnippet20241004.png";
 import CodeSnippet20241011 from "@/images/changelog/CodeSnippet20241011.gif";
 import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
 import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
+import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-10-18T00:00Z"} id="step-over">
+      <Article date={"2024-11-01T00:00Z"} id="args-res-simplification">
+        <Image
+          src={CodeSnippet20241101}
+          alt="args-res-simplification"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Clearer Arguments and Results representation
+          </h2>
+          <p className="text-gray-500">
+          This week, we simplified the Call Trace by removing argument and result namespaces and skipping system arguments. This reduces visual complexity, making it easier for users to navigate function calls!
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added Debugger Keyboard Shortcuts:
+              <ul className="list-disc list-inside">
+                <li>
+                  <code>b</code> &mdash; Step Back
+                </li>
+                <li>
+                  <code>n</code> &mdash; Step Into
+                </li>
+                <li>
+                  <code>o</code> &mdash; Step Over
+                </li>
+              </ul>
+            </li>
+            <li>
+              Improved error messages in the Transaction Simulation Dialog to help users complete the form more easily.
+            </li>
+            <li>
+              Fixed a bug in fetching CASM instructions. Previously, some instructions were missed, causing issues in specific transactions. Now, all CASM instructions are reliably retrieved, resolving the issue.
+            </li>
+            <li>
+            Resolved issues with transaction inconsistencies on custom networks by adding the chain ID of custom networks to the transaction execution context.
+            </li>
+            <li>
+            Enhanced the mobile experience by fixing the navigation burger menu on the home screen and ensuring the footer remains anchored at the bottom of the page.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-10-25T00:00Z"} id="step-over">
         <Image src={CodeSnippet20241025} alt="step-over" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             Step Over Button in Debugger
           </h2>
           <p className="text-gray-500">
-          We finally added the &apos;Step Over&apos; button, one of the most requested features from our early users. It speeds up the debugging experience by allowing developers to skip over functions and focus on the main logic, saving time and reducing the need to manually step through each line in deeply nested code.
+            We finally added the &apos;Step Over&apos; button, one of the most
+            requested features from our early users. It speeds up the debugging
+            experience by allowing developers to skip over functions and focus
+            on the main logic, saving time and reducing the need to manually
+            step through each line in deeply nested code.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Enhanced the Call Trace with <code>__validate__</code> Account call, to better express <Link href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/" className="text-blue-500">Starknet&apos;s Account Abstraction model</Link>.</li>
+            <li>
+              Enhanced the Call Trace with <code>__validate__</code> Account
+              call, to better express{" "}
+              <Link
+                href="https://docs.starknet.io/architecture-and-concepts/accounts/account-functions/"
+                className="text-blue-500"
+              >
+                Starknet&apos;s Account Abstraction model
+              </Link>
+              .
+            </li>
             <li>
               Updated the copy and added a link to the{" "}
               <Link
