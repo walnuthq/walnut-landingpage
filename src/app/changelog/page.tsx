@@ -34,34 +34,28 @@ export default function Page() {
       <Article date={"2024-11-08T00:00Z"} id="class-page">
         <Image src={CodeSnippet20241108} alt="class-page" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Classes Page</h2>
+          <h2 className="font-bold my-4 text-xl">Brand New Page for Class Details</h2>
           <p className="text-gray-500">
-            In this release, we’ve introduced a new Classes Page that shows the
-            network where each class is declared, along with its associated
-            source file.
+            In this release, we&apos;ve introduced a new Class Page that displays details about the class, including the Class Hash, the list of networks where the class is declared, and the associated source code.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Added input validation in the simulation dialog to help users
-              avoid errors and ensure correct input.
+              Added form validation to the Transaction Simulation dialog to help users avoid errors and ensure correct input.
             </li>
             <li>
-              Included ContractState function arguments in the call trace,
-              making it clear when a function accesses the contract state.
+              Included <code>ContractState</code> function argument in the Call Trace, enabling users to explore these values.
             </li>
             <li>
-              Fixed a bug that caused inconsistent states when declare, deploy,
+              Fixed a bug that caused inconsistent state when declare, deploy,
               and invoke transactions occurred within the same block. This
               improvement ensures accurate and reliable transaction processing
-              in these scenarios.
+              in this scenario.
             </li>
             <li>
-              Resolved an issue where loading text was incorrectly displayed,
-              providing a smoother and clearer experience during verification
-              status update.
+              Improved the loading state text in the Contract Verification window for clarity.
             </li>
           </ul>
         </>
