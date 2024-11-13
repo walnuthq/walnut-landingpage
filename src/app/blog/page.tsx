@@ -49,7 +49,7 @@ export default function Blog() {
                 <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
                   <p>
                   We’re excited to announce that Walnut has received a grant from the Optimism Foundation 
-                  to develop Walnut Lite, a fully open-source solution for transaction simulation and debugging 
+                  to develop Walnut Lite, a fully open-source solution for transaction simulations and debugging 
                   on the Superchain. This tool is designed to give developers a local, customisable debugging 
                   experience for smart contracts.
                   </p>
