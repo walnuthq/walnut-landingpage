@@ -3,7 +3,6 @@ import BlogHeader from "@/app/blog/components/BlogHeader";
 
 import Image from "next/image";
 
-import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 
 export default function Blog() {
@@ -75,11 +74,7 @@ export default function Blog() {
                 </div>
                 <div className="mt-12 mb-24 prose">
                   <p className="lead">
-                    We’re excited to announce that Walnut has received a grant 
-                    from the Optimism Foundation to develop Walnut Lite, a 
-                    fully open-source solution for transaction simulation and debugging on the Superchain. 
-                    This tool is designed to give developers a local, 
-                    customisable debugging experience for smart contracts.
+                  We&apos;re excited to announce that Walnut has received a grant from the Optimism Foundation to develop Walnut Lite, a fully open-source solution for transaction simulations and debugging on the OP&nbsp;Stack and the Superchain. Walnut Lite is designed to give Solidty developers a local, lightweight and customisable debugging experience for their Smart Contract Applications.
                   </p>
                   <h2>The Problem</h2>
                   <p>
