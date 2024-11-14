@@ -141,7 +141,7 @@ function DarkBentoSection() {
       <Container>
         <Subheading dark>Blockchain Research and Engineering</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
-          More Tools From Walnut Labs.
+          More from Walnut&nbsp;Labs
         </Heading>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
