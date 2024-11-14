@@ -95,7 +95,7 @@ const testimonials = [
           company: 'Dojo',
           companyUrl: 'https://www.dojoengine.org/',
           imageUrl:
-            'https://media.licdn.com/dms/image/v2/D5603AQG6R7ou_4UwtA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687842444236?e=1736985600&v=beta&t=C8yU1sAeuPU-PjGF5RdYI70pbdyy6lIfGfemexZxtTQ',
+            '/testimonials/glihm.jpg',
         },
       },
       {
