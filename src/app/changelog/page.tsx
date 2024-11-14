@@ -25,11 +25,42 @@ import CodeSnippet20241011 from "@/images/changelog/CodeSnippet20241011.gif";
 import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
 import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
 import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
+import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-11-08T00:00Z"} id="class-page">
+        <Image src={CodeSnippet20241108} alt="class-page" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Brand New Page for Class Details</h2>
+          <p className="text-gray-500">
+            In this release, we&apos;ve introduced a new Class Page that displays details about the class, including the Class Hash, the list of networks where the class is declared, and the associated source code.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added form validation to the Transaction Simulation dialog to help users avoid errors and ensure correct input.
+            </li>
+            <li>
+              Included <code>ContractState</code> function argument in the Call Trace, enabling users to explore these values.
+            </li>
+            <li>
+              Fixed a bug that caused inconsistent state when declare, deploy,
+              and invoke transactions occurred within the same block. This
+              improvement ensures accurate and reliable transaction processing
+              in this scenario.
+            </li>
+            <li>
+              Improved the loading state text in the Contract Verification window for clarity.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2024-11-01T00:00Z"} id="args-res-simplification">
         <Image
           src={CodeSnippet20241101}
@@ -41,7 +72,9 @@ export default function Page() {
             Clearer Arguments and Results representation
           </h2>
           <p className="text-gray-500">
-          This week, we simplified the Call Trace by removing argument and result namespaces and skipping system arguments. This reduces visual complexity, making it easier for users to navigate function calls!
+            This week, we simplified the Call Trace by removing argument and
+            result namespaces and skipping system arguments. This reduces visual
+            complexity, making it easier for users to navigate function calls!
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
@@ -62,16 +95,24 @@ export default function Page() {
               </ul>
             </li>
             <li>
-              Improved error messages in the Transaction Simulation Dialog to help users complete the form more easily.
+              Improved error messages in the Transaction Simulation Dialog to
+              help users complete the form more easily.
             </li>
             <li>
-              Fixed a bug in fetching CASM instructions. Previously, some instructions were missed, causing issues in specific transactions. Now, all CASM instructions are reliably retrieved, resolving the issue.
+              Fixed a bug in fetching CASM instructions. Previously, some
+              instructions were missed, causing issues in specific transactions.
+              Now, all CASM instructions are reliably retrieved, resolving the
+              issue.
             </li>
             <li>
-            Resolved issues with transaction inconsistencies on custom networks by adding the chain ID of custom networks to the transaction execution context.
+              Resolved issues with transaction inconsistencies on custom
+              networks by adding the chain ID of custom networks to the
+              transaction execution context.
             </li>
             <li>
-            Enhanced the mobile experience by fixing the navigation burger menu on the home screen and ensuring the footer remains anchored at the bottom of the page.
+              Enhanced the mobile experience by fixing the navigation burger
+              menu on the home screen and ensuring the footer remains anchored
+              at the bottom of the page.
             </li>
           </ul>
         </>
