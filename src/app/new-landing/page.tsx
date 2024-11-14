@@ -139,47 +139,54 @@ function DarkBentoSection() {
   return (
     <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
       <Container>
-        <Subheading dark>Outreach</Subheading>
+        <Subheading dark>Blockchain Research and Engineering</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
-          Customer outreach has never been easier.
+          More Tools From Walnut Labs.
         </Heading>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           <BentoCard
             dark
-            eyebrow="Networking"
-            title="Sell at the speed of light"
-            description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead."
+            eyebrow="Starknet / Cairo"
+            title="Cairo Playground"
+            description="A web playground for Cairo developers to explore the CairoVM and experiment with writing Cairo code online."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/networking.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(https://walnut.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCairo%20Playground.b1e65fa5.jpg&w=3840&q=75)] bg-cover bg-[center_10%] bg-no-repeat" />
             }
             fade={['top']}
             className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Integrations"
-            title="Meet leads where they are"
-            description="With thousands of integrations, no one will be able to escape your cold outreach."
+            eyebrow="Aztec / Noir"
+            title="Noir Package Registry"
+            description="An online catalog of Noir libraries where developers can discover, search, and download libraries for their projects."
             graphic={<LogoTimeline />}
             // `!overflow-visible` is needed to work around a Chrome bug that disables the mask on the graphic.
             className="z-10 !overflow-visible lg:col-span-2 lg:rounded-tr-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Meetings"
-            title="Smart call scheduling"
-            description="Automatically insert intro calls into your leads' calendars without their consent."
+            eyebrow="Optimism / Superchain"
+            title="Walnut Lite"
+            description={
+            <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain. Read more{' '}
+              <a 
+              className='text-blue-500 hover:underline' 
+              href='https://walnut.dev/blog/walnut-receives-grant-from-optimism-foundation-to-improve-debugging-on-the-superchain'>
+                in our blog
+              </a>.
+            </div>}
             graphic={<LinkedAvatars />}
             className="lg:col-span-2 lg:rounded-bl-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Engagement"
-            title="Become a thought leader"
-            description="RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales, helping you build a reputation as a thought leader."
+            eyebrow="Optimism / Superchain"
+            title={<div className='flex items-center gap-2'><a href="https://github.com/walnuthq/op-scan"><img className='h-6 w-6' src="/logo_opscan.webp" alt="" /></a><div>OP Scan</div></div>}
+            description="A fully open-source, lightweight, local transaction explorer purpose-built for the OP Stack and the Superchain. Runs on a laptop."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/opscan_screen.png)] bg-cover bg-[left_10%] bg-no-repeat" />
             }
             fade={['top']}
             className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"

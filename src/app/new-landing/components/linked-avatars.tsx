@@ -55,38 +55,19 @@ function Checkmark() {
             transition: { ...transition, duration: 0.75 },
           },
         }}
-        className="flex size-6 items-center justify-center rounded-full bg-gradient-to-t from-green-500 to-green-300 shadow"
+        className="flex font-mono text-white text-xl p-2 items-center justify-center"
       >
-        <CheckIcon className="size-4 fill-white" />
+        Coming soon
       </motion.div>
     </div>
   )
 }
 
-function Photos() {
-  return (
-    <div className="z-10 col-start-1 row-start-1">
-      <div className="mx-auto flex size-full max-w-md items-center justify-around">
-        <img
-          alt=""
-          src="/linked-avatars/customer.jpg"
-          className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
-        />
-        <img
-          alt=""
-          src="/linked-avatars/manager.jpg"
-          className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
-        />
-      </div>
-    </div>
-  )
-}
 
 export function LinkedAvatars() {
   return (
     <div aria-hidden="true" className="isolate mx-auto grid h-full grid-cols-1">
       <Rings />
-      <Photos />
       <Checkmark />
     </div>
   )

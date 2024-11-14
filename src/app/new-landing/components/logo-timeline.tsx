@@ -13,32 +13,33 @@ function Row({ children }: { children: React.ReactNode }) {
 
 function Logo({
   label,
-  src,
+  // src,
   className,
 }: {
   label: string
-  src: string
+  // src: string
   className: string
 }) {
   return (
     <div
       className={clsx(
         className,
-        'absolute top-2 grid grid-cols-[1rem,1fr] items-center gap-2 whitespace-nowrap px-3 py-1',
+        'absolute top-2 whitespace-nowrap px-3 py-1 ',
         'rounded-full bg-gradient-to-t from-gray-800 from-50% to-gray-700 ring-1 ring-inset ring-white/10',
         '[--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)] [animation-iteration-count:infinite] [animation-name:move-x] [animation-play-state:paused] [animation-timing-function:linear] group-hover:[animation-play-state:running]',
       )}
     >
-      <img alt="" src={src} className="size-4" />
-      <span className="text-sm/6 font-medium text-white">{label}</span>
+      {/* <img alt="" src={src} className="size-4" /> */}
+      <div className='text-sm/6 font-medium text-white'>{label}</div>
+      
     </div>
   )
 }
 
 export function LogoTimeline() {
   return (
-    <div aria-hidden="true" className="relative h-full overflow-hidden">
-      <div className="absolute inset-0 top-8 z-10 flex items-center justify-center">
+    <div aria-hidden="true" className="relative h-full overflow-hidden rounded-lg lg:rounded-tr-4xl bg-[url(/screenshots/Noir_Package_Registry.webp)] bg-cover bg-[center_50%] bg-no-repeat">
+      {/* <div className="absolute  inset-0 top-8 z-10 flex items-center justify-center">
         <div
           className="absolute inset-0 backdrop-blur-md"
           style={{
@@ -50,78 +51,30 @@ export function LogoTimeline() {
         <div className="relative flex size-24 items-center justify-center rounded-xl bg-gradient-to-t from-white/5 to-white/25 shadow outline outline-offset-[-5px] outline-white/5 ring-1 ring-inset ring-white/10">
           <Mark className="h-9 fill-white" />
         </div>
-      </div>
+      </div> */}
       <div className="absolute inset-0 grid grid-cols-1 pt-8 [container-type:inline-size]">
         <Row>
           <Logo
-            label="Loom"
-            src="/logo-timeline/loom.svg"
-            className="[animation-delay:-26s] [animation-duration:30s]"
-          />
-          <Logo
-            label="Gmail"
-            src="/logo-timeline/gmail.svg"
+            label="aztec"
             className="[animation-delay:-8s] [animation-duration:30s]"
           />
         </Row>
         <Row>
           <Logo
-            label="Asana"
-            src="/logo-timeline/asana.svg"
-            className="[animation-delay:-40s] [animation-duration:40s]"
+            label="safe-math"
+            className="[animation-delay:-25s] [animation-duration:40s]"
           />
-          <Logo
-            label="Microsoft Teams"
-            src="/logo-timeline/microsoft-teams.svg"
+        </Row>
+        <Row>
+        <Logo
+            label="value-note"
             className="[animation-delay:-20s] [animation-duration:40s]"
           />
         </Row>
         <Row>
           <Logo
-            label="Google Calendar"
-            src="/logo-timeline/google-calendar.svg"
-            className="[animation-delay:-10s] [animation-duration:40s]"
-          />
-          <Logo
-            label="Google Drive"
-            src="/logo-timeline/google-drive.svg"
-            className="[animation-delay:-32s] [animation-duration:40s]"
-          />
-        </Row>
-        <Row>
-          <Logo
-            label="Basecamp"
-            src="/logo-timeline/basecamp.svg"
-            className="[animation-delay:-45s] [animation-duration:45s]"
-          />
-          <Logo
-            label="Discord"
-            src="/logo-timeline/discord.svg"
-            className="[animation-delay:-23s] [animation-duration:45s]"
-          />
-        </Row>
-        <Row>
-          <Logo
-            label="Hubspot"
-            src="/logo-timeline/hubspot.svg"
-            className="[animation-delay:-55s] [animation-duration:60s]"
-          />
-          <Logo
-            label="Slack"
-            src="/logo-timeline/slack.svg"
-            className="[animation-delay:-20s] [animation-duration:60s]"
-          />
-        </Row>
-        <Row>
-          <Logo
-            label="Adobe Creative Cloud"
-            src="/logo-timeline/adobe-creative-cloud.svg"
-            className="[animation-delay:-9s] [animation-duration:40s]"
-          />
-          <Logo
-            label="Zoom"
-            src="/logo-timeline/zoom.svg"
-            className="[animation-delay:-28s] [animation-duration:40s]"
+            label="easy-private-state"
+            className="[animation-delay:-8s] [animation-duration:30s]"
           />
         </Row>
       </div>
