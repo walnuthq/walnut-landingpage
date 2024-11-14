@@ -26,27 +26,79 @@ import CodeSnippet20241018 from "@/images/changelog/CodeSnippet20241018.png";
 import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
 import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
+import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
+
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-11-08T00:00Z"} id="class-page">
-        <Image src={CodeSnippet20241108} alt="class-page" unoptimized />
+      <Article date={"2024-11-15T00:00Z"} id="function-call-details">
+        <Image
+          src={CodeSnippet20241115}
+          alt="function-call-details"
+          unoptimized
+        />
         <>
-          <h2 className="font-bold my-4 text-xl">Brand New Page for Class Details</h2>
+          <h2 className="font-bold my-4 text-xl">
+            Function Call Details Window
+          </h2>
           <p className="text-gray-500">
-            In this release, we&apos;ve introduced a new Class Page that displays details about the class, including the Class Hash, the list of networks where the class is declared, and the associated source code.
+            In this release, we&apos;ve introduced a Function Call Details
+            window within the debugger. This window displays the function name,
+            arguments, and results for the function being debugged, providing a
+            detailed view to better understand its behavior.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Added form validation to the Transaction Simulation dialog to help users avoid errors and ensure correct input.
+              Introduced resizable windows within the debugger to give users
+              greater control over their workspace and make it easier to focus
+              on relevant details.
             </li>
             <li>
-              Included <code>ContractState</code> function argument in the Call Trace, enabling users to explore these values.
+              Core Starknet functions in the call trace are now by default
+              collapsed, improving visibility and navigation in large
+              transactions.
+            </li>
+            <li>
+              Added the verification using class hashes. This feature was added
+              based on a request from StarkWare, who will be adding support on
+              their side as well.
+            </li>
+            <li>
+              Resolved contract display issues in the call trace, enhancing
+              application reliability.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-11-08T00:00Z"} id="class-page">
+        <Image src={CodeSnippet20241108} alt="class-page" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Brand New Page for Class Details
+          </h2>
+          <p className="text-gray-500">
+            In this release, we&apos;ve introduced a new Class Page that
+            displays details about the class, including the Class Hash, the list
+            of networks where the class is declared, and the associated source
+            code.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added form validation to the Transaction Simulation dialog to help
+              users avoid errors and ensure correct input.
+            </li>
+            <li>
+              Included <code>ContractState</code> function argument in the Call
+              Trace, enabling users to explore these values.
             </li>
             <li>
               Fixed a bug that caused inconsistent state when declare, deploy,
@@ -55,7 +107,8 @@ export default function Page() {
               in this scenario.
             </li>
             <li>
-              Improved the loading state text in the Contract Verification window for clarity.
+              Improved the loading state text in the Contract Verification
+              window for clarity.
             </li>
           </ul>
         </>
