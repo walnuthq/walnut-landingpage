@@ -1,34 +1,62 @@
 const featuredTestimonial = {
-  body: 'Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.',
+  body: 'Transaction Debugging and Simulations are a big missing piece on Starknet, so it’s great to see Walnut providing developers with these essential tools.',
   author: {
-    name: 'Brenna Goyette',
-    handle: 'brennagoyette',
+    name: 'Ariel Elperin',
+    twitter: 'FeedTheFed',
     imageUrl:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80',
-    logoUrl: 'https://tailwindui.com/plus/img/logos/savvycal-logo-gray-900.svg',
+      'https://pbs.twimg.com/profile_images/1715973817082712064/pZKSXb7V_400x400.jpg',
+    logoUrl: 'https://pbs.twimg.com/profile_images/1656026873078398981/Ht7OXAUs_400x400.jpg',
+    profileUrl: 'https://x.com/feedthefed'
   },
 }
 const testimonials = [
   [
     [
       {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+        body: 'Debugger and transaction simulator is a big missing piece in Starknet. At Argent, we are excited that this gap is being filled with Walnut.',
         author: {
-          name: 'Leslie Alexander',
-          handle: 'lesliealexander',
+          name: 'Sergio Garcia',
+          position: 'Cairo Developer at',
+          company: 'Argent',
+          companyUrl: 'https://www.argent.xyz',
           imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            'https://media.licdn.com/dms/image/v2/C5103AQFk-SwGD7qXlQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516559225789?e=1736985600&v=beta&t=SPrzlpMkOHvpoiaGSUonRvD_YCQJXvgaES8c4Ij5rR8',
         },
       },
+      {
+        body: 'Debugging or simulating transactions is an absolutely critical task for any on-chain developer. We cannot wait to have Walnut integrated with Karnot and Madara Appchains.',
+        author: {
+          name: 'Apoorv Sadana',
+          position: 'CEO at',
+          company: 'Karnot, Appchain Wiz 🧙‍♂️',
+          companyUrl: 'https://www.karnot.xyz/',
+          imageUrl:
+            'https://pbs.twimg.com/profile_images/1783811322377015297/QKLuV1iB_400x400.jpg',
+        },
+      },
+      // More testimonials...
     ],
     [
       {
-        body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
+        body: 'I think Walnut is very important and that you [the Walnut team] are doing very valuable work for Starknet.',
         author: {
-          name: 'Lindsay Walton',
-          handle: 'lindsaywalton',
+          name: 'Amanusk',
+          position: 'Devtools at',
+          company: 'Starkware',
+          companyUrl: 'https://starkware.co/',
           imageUrl:
-            'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            'https://pbs.twimg.com/profile_images/1770371954718961664/-VO1BWxj_400x400.jpg',
+        },
+      },
+      {
+        body: 'Debugging transactions and performance monitoring are pain points on Starknet today. Every DeFi protocol builder woud benefit from better tooling, and it’s great to see Walnut addressing this need.',
+        author: {
+          name: 'Vukašin Manojlović',
+          position: 'DEFI developer at',
+          company: 'Nostra',
+          companyUrl: 'https://nostra.finance/',
+          imageUrl:
+            'https://media.licdn.com/dms/image/v2/C4D03AQEx_C55GAvEcw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1646393064455?e=1736985600&v=beta&t=QVOQ6gDEWpfuzV6w37RmpvbJzoTEo5fpmuakyGXJxNw',
         },
       },
     ],
@@ -36,26 +64,53 @@ const testimonials = [
   [
     [
       {
-        body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
+        body: 'At Cartridge, we see a lot of interest in transaction debugging and simulation. Walnut has the potential to become a critical tool for game developers building on Starknet.',
         author: {
-          name: 'Tom Cook',
-          handle: 'tomcook',
+          name: 'tarrence v',
+          position: 'CEO at',
+          company: 'Cartridge',
+          companyUrl: 'https://cartridge.gg/',
           imageUrl:
-            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            'https://media.licdn.com/dms/image/v2/D5603AQEtgVtXX2_HQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708622697344?e=1736985600&v=beta&t=crDW00mXRMsoS4XLw9sxH4Mrc_G5Kq1XCu3FD4Q-N6E',
+        },
+      },
+      {
+        body: 'With Enso, we are not yet on Starknet. However, seeing a debugger and simulator like Walnut is a great testament to Starknet’s maturing devtools ecosystem, making it more appealing to new developers. We need a debugger and simulator to ship anything on Starknet, as we rely on this tooling in all EVM ecosystems and cannot build without it.',
+        author: {
+          name: 'Connor',
+          position: 'CEO at',
+          company: 'Enso Finance',
+          companyUrl: 'https://www.enso.finance/',
+          imageUrl:
+            'https://pbs.twimg.com/profile_images/1847655739575115777/EUWKAAV9_400x400.jpg',
         },
       },
     ],
     [
       {
-        body: 'Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.',
+        body: 'We are thrilled about the Walnut integration with Dojo. Step-by-step debugging with instant replay of transactions will be another string to the bow for all the sensei building on Dojo.',
         author: {
-          name: 'Leonard Krasner',
-          handle: 'leonardkrasner',
+          name: 'Glihm',
+          position: 'Lead dev at',
+          company: 'Dojo',
+          companyUrl: 'https://www.dojoengine.org/',
           imageUrl:
-            'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            'https://media.licdn.com/dms/image/v2/D5603AQG6R7ou_4UwtA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687842444236?e=1736985600&v=beta&t=C8yU1sAeuPU-PjGF5RdYI70pbdyy6lIfGfemexZxtTQ',
+        },
+      },
+      {
+        body: 'At Nimbora, we are big supporters of Walnut and the transaction debugger and simulator for Starknet. We are looking forward to using it with Nimbora and integrating it with Devnet and Rivet, our new developer-focused wallet.',
+        author: {
+          name: 'Edi Sinovčić',
+          position: 'CEO at',
+          company: 'Spaceshard',
+          companyUrl: 'https://www.spaceshard.io/',
+          imageUrl:
+            'https://media.licdn.com/dms/image/v2/D4D35AQGC68B6RiZhYA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1663528432936?e=1732147200&v=beta&t=6ZECmkWZpDwL2a0rMFs9yARUIZg7BsY2ORTp8MuvJcI',
         },
       },
     ],
+
   ],
 ]
 
@@ -94,7 +149,7 @@ export default function Testimonials() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-base/7 font-semibold text-indigo-600">Testimonials</h2>
           <p className="mt-2 text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            We have worked with thousands of amazing people
+            Developers love Walnut
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
@@ -109,8 +164,12 @@ export default function Testimonials() {
                 className="h-10 w-10 flex-none rounded-full bg-gray-50"
               />
               <div className="flex-auto">
-                <div className="font-semibold">{featuredTestimonial.author.name}</div>
-                <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
+                <a className="hover:underline" href={featuredTestimonial.author.profileUrl}>
+                  <div className="font-semibold">{featuredTestimonial.author.name}</div>
+                </a>
+                <a className="hover:underline" href={featuredTestimonial.author.profileUrl}>
+                  <div className="text-gray-600">{`@${featuredTestimonial.author.twitter}`}</div>
+                </a>
               </div>
               <img alt="" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" />
             </figcaption>
@@ -130,7 +189,7 @@ export default function Testimonials() {
                 >
                   {column.map((testimonial) => (
                     <figure
-                      key={testimonial.author.handle}
+                      key={testimonial.author.position}
                       className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
                     >
                       <blockquote className="text-gray-900">
@@ -140,7 +199,12 @@ export default function Testimonials() {
                         <img alt="" src={testimonial.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
                         <div>
                           <div className="font-semibold">{testimonial.author.name}</div>
-                          <div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
+                          <div className="text-gray-600">{`${testimonial.author.position}`}
+                            <span>
+                            {' '}
+                              <a className="text-blue-500 hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
+                              </span>
+                          </div>
                         </div>
                       </figcaption>
                     </figure>
