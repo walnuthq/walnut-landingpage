@@ -40,11 +40,11 @@ function Hero() {
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Monitoring for Onchain Apps
+          <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-8xl/[0.8]">
+            Starknet Error Monitoring
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Smart Contract Developers, Auditors and MEV Searchers use Walnut to find errors in their onchain apps and fix them quickly.
+            Cairo Developers use Walnut to fix bugs in their Smart Contracts.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="#">Get started</Button>
@@ -63,7 +63,7 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-24">
         <Heading as="h2" className="max-w-3xl">
-          A Debugger for Onchain Transactions
+          Transaction Debugger and Simulator for Cairo
         </Heading>
         <Screenshot
           width={1216}
