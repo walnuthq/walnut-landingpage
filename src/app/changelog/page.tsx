@@ -57,7 +57,7 @@ export default function Page() {
               Core Starknet functions in the call trace are now collapsed by default, making large transactions easier to navigate.
             </li>
             <li>
-              Added suport for class hash verification, a feature requested by StarkWare.
+              Added support for class hash verification, a feature requested by StarkWare.
             </li>
             <li>
             Fixed contract display issues in the call trace to make the application more reliable.
