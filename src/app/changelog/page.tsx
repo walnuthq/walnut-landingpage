@@ -41,36 +41,26 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Function Call Details Window
+            New Memory Window
           </h2>
           <p className="text-gray-500">
-            In this release, we&apos;ve introduced a Function Call Details
-            window within the debugger. This window displays the function name,
-            arguments, and results for the function being debugged, providing a
-            detailed view to better understand its behavior.
+            We&apos;re excited to introduce a brand new Memory Window in the Debugger to display function call arguments and results.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Introduced resizable windows within the debugger to give users
-              greater control over their workspace and make it easier to focus
-              on relevant details.
+              Made debugger windows resizable, giving you more control over your workspace and helping you focus on what matters.
             </li>
             <li>
-              Core Starknet functions in the call trace are now by default
-              collapsed, improving visibility and navigation in large
-              transactions.
+              Core Starknet functions in the call trace are now collapsed by default, making large transactions easier to navigate.
             </li>
             <li>
-              Added the verification using class hashes. This feature was added
-              based on a request from StarkWare, who will be adding support on
-              their side as well.
+              Added suport for class hash verification, a feature requested by StarkWare.
             </li>
             <li>
-              Resolved contract display issues in the call trace, enhancing
-              application reliability.
+            Fixed contract display issues in the call trace to make the application more reliable.
             </li>
           </ul>
         </>
