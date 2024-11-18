@@ -205,11 +205,11 @@ export default function Home() {
         <Container className="mt-10">
           <LogoCloud />
         </Container>
-        <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
+        <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
           <FeatureSection />
           <BentoSection />
+          <Testimonials />
         </div>
-        <Testimonials />
         <DarkBentoSection />
         <BlogSection/>
       </main>
