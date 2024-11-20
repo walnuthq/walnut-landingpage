@@ -5,25 +5,16 @@ import { GradientBackground } from '../components/gradient'
 import { Link } from '../components/link'
 import { Navbar } from '../components/navbar'
 import { Heading, Lead, Subheading } from '../components/text'
-import { image } from '@/sanity/image'
 import {
-  getCategories,
-  getFeaturedPosts,
-  getPosts,
-  getPostsCount,
-} from '@/sanity/queries'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import {
-  CheckIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  ChevronUpDownIcon,
-  RssIcon,
 } from '@heroicons/react/16/solid'
 import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { posts } from '../utils/blogs'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -33,27 +24,28 @@ export const metadata: Metadata = {
 
 const postsPerPage = 5
 
-async function FeaturedPosts() {
-  let featuredPosts = await getFeaturedPosts(3)
+async function LastPosts() {
 
-  if (featuredPosts.length === 0) {
+
+  if (posts.length === 0) {
     return
   }
 
   return (
     <div className="mt-16 bg-gradient-to-t from-gray-100 pb-14">
       <Container>
-        <h2 className="text-2xl font-medium tracking-tight">Featured</h2>
+        <h2 className="text-2xl font-medium tracking-tight">Last posts</h2>
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {featuredPosts.map((post) => (
+          {posts.map((post, index) => 
+            index < 3 && (
             <div
               key={post.slug}
               className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md shadow-black/5 ring-1 ring-black/5"
             >
               {post.mainImage && (
-                <img
-                  alt={post.mainImage.alt || ''}
-                  src={image(post.mainImage).size(1170, 780).url()}
+                <Image
+                  alt={''}
+                  src={post.mainImage}
                   className="aspect-[3/2] w-full rounded-2xl object-cover"
                 />
               )}
@@ -62,7 +54,7 @@ async function FeaturedPosts() {
                   {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
                 </div>
                 <div className="mt-2 text-base/7 font-medium">
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/new-landing/blog/${post.slug}`}>
                     <span className="absolute inset-0" />
                     {post.title}
                   </Link>
@@ -73,9 +65,9 @@ async function FeaturedPosts() {
                 {post.author && (
                   <div className="mt-6 flex items-center gap-3">
                     {post.author.image && (
-                      <img
+                      <Image
                         alt=""
-                        src={image(post.author.image).size(64, 64).url()}
+                        src={post.author.image}
                         className="aspect-square size-6 rounded-full object-cover"
                       />
                     )}
@@ -93,65 +85,8 @@ async function FeaturedPosts() {
   )
 }
 
-async function Categories({ selected }: { selected?: string }) {
-  let categories = await getCategories()
-
-  if (categories.length === 0) {
-    return
-  }
-
-  return (
-    <div className="flex flex-wrap items-center justify-between gap-2">
-      <Menu>
-        <MenuButton className="flex items-center justify-between gap-2 font-medium">
-          {categories.find(({ slug }) => slug === selected)?.title ||
-            'All categories'}
-          <ChevronUpDownIcon className="size-4 fill-slate-900" />
-        </MenuButton>
-        <MenuItems
-          anchor="bottom start"
-          className="min-w-40 rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
-        >
-          <MenuItem>
-            <Link
-              href="/blog"
-              data-selected={selected === undefined ? true : undefined}
-              className="group grid grid-cols-[1rem,1fr] items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-950/5"
-            >
-              <CheckIcon className="hidden size-4 group-data-[selected]:block" />
-              <p className="col-start-2 text-sm/6">All categories</p>
-            </Link>
-          </MenuItem>
-          {categories.map((category) => (
-            <MenuItem key={category.slug}>
-              <Link
-                href={`/blog?category=${category.slug}`}
-                data-selected={category.slug === selected ? true : undefined}
-                className="group grid grid-cols-[16px,1fr] items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-950/5"
-              >
-                <CheckIcon className="hidden size-4 group-data-[selected]:block" />
-                <p className="col-start-2 text-sm/6">{category.title}</p>
-              </Link>
-            </MenuItem>
-          ))}
-        </MenuItems>
-      </Menu>
-      <Button variant="outline" href="/blog/feed.xml" className="gap-1">
-        <RssIcon className="size-4" />
-        RSS Feed
-      </Button>
-    </div>
-  )
-}
-
-async function Posts({ page, category }: { page: number; category?: string }) {
-  let posts = await getPosts(
-    (page - 1) * postsPerPage,
-    page * postsPerPage,
-    category,
-  )
-
-  if (posts.length === 0 && (page > 1 || category)) {
+async function Posts({ page }: { page: number; }) {
+  if (posts.length === 0 && (page > 1 )) {
     notFound()
   }
 
@@ -173,9 +108,9 @@ async function Posts({ page, category }: { page: number; category?: string }) {
             {post.author && (
               <div className="mt-2.5 flex items-center gap-3">
                 {post.author.image && (
-                  <img
+                  <Image
                     alt=""
-                    src={image(post.author.image).width(64).height(64).url()}
+                    src={post.author.image}
                     className="aspect-square size-6 rounded-full object-cover"
                   />
                 )}
@@ -190,7 +125,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
             <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
             <div className="mt-4">
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/new-landing/blog/${post.slug}`}
                 className="flex items-center gap-1 text-sm/5 font-medium"
               >
                 <span className="absolute inset-0" />
@@ -207,21 +142,18 @@ async function Posts({ page, category }: { page: number; category?: string }) {
 
 async function Pagination({
   page,
-  category,
 }: {
   page: number
-  category?: string
 }) {
   function url(page: number) {
     let params = new URLSearchParams()
 
-    if (category) params.set('category', category)
     if (page > 1) params.set('page', page.toString())
 
     return params.size !== 0 ? `/blog?${params.toString()}` : '/blog'
   }
 
-  let totalPosts = await getPostsCount(category)
+  let totalPosts = posts.length
   let hasPreviousPage = page - 1
   let previousPageUrl = hasPreviousPage ? url(page - 1) : undefined
   let hasNextPage = page * postsPerPage < totalPosts
@@ -279,11 +211,6 @@ export default async function Blog({
         : notFound()
       : 1
 
-  let category =
-    typeof searchParams.category === 'string'
-      ? searchParams.category
-      : undefined
-
   return (
     <main className="overflow-hidden">
       <GradientBackground />
@@ -298,11 +225,10 @@ export default async function Blog({
           to sell smarter at your company.
         </Lead>
       </Container>
-      {page === 1 && !category && <FeaturedPosts />}
+      {page === 1 && <LastPosts />}
       <Container className="mt-16 pb-24">
-        <Categories selected={category} />
-        <Posts page={page} category={category} />
-        <Pagination page={page} category={category} />
+        <Posts page={page} />
+        <Pagination page={page}  />
       </Container>
       <Footer />
     </main>

@@ -12,23 +12,19 @@
     "pages:watch": "npx @cloudflare/next-on-pages@1 --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
-"dependencies": {
+  "dependencies": {
     "@headlessui/react": "^2.1.1",
-    "@heroicons/react": "^2.1.4",
     "@headlessui/tailwindcss": "^0.2.0",
-    "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.52.2",
+    "@heroicons/react": "^2.1.4",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.12",
     "feed": "^4.2.2",
     "framer-motion": "^11.2.10",
     "next": "14.2.11",
-    "next-sanity": "^9.4.7",
     "react": "^18",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
     "react-use-measure": "^2.1.1",
-    "sanity": "^3.55.0",
     "starknet": "^6.11.0",
     "starknetkit": "^1.1.9"
   },
