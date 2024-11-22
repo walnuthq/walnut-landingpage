@@ -27,12 +27,56 @@ import CodeSnippet20241025 from "@/images/changelog/CodeSnippet20241025.png";
 import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
-
+import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-11-22T00:00Z"} id="new-verification">
+        <Image src={CodeSnippet20241122} alt="new-verification" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">New Verification Flow</h2>
+          <p className="text-gray-500">
+            We&apos;ve enhanced the contract verification process by enabling
+            users to verify contracts using only the source code, simplifying
+            the process and making it more user-friendly.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added a verification request information to the verifcation status
+              response.{" "}
+              <Link
+                href="https://api.walnut.dev/v1/verification/7df6bcf6-8c14-4e84-b4dc-4992418a964c/status"
+                className="text-blue-500"
+              >
+                Look example here
+              </Link>
+              .
+            </li>
+            <li>
+              Added support for contract verification with Cairo version 2.8.4.
+            </li>
+            <li>Added support for custom network on contract page.</li>
+            <li>
+              Resolved an issue where the presence of the{" "}
+              <code>license-file</code> field in Scarb.toml caused verification
+              to fail.
+            </li>
+            <li>
+              Fixed an issue where error traces for contract calls were missing.
+            </li>
+            <li>
+              Introduced minor UI adjustments and performance optimizations to
+              enhance overall usability and responsiveness.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2024-11-15T00:00Z"} id="function-call-details">
         <Image
           src={CodeSnippet20241115}
@@ -40,27 +84,30 @@ export default function Page() {
           unoptimized
         />
         <>
-          <h2 className="font-bold my-4 text-xl">
-            New Memory Window
-          </h2>
+          <h2 className="font-bold my-4 text-xl">New Memory Window</h2>
           <p className="text-gray-500">
-            We&apos;re excited to introduce a brand new Memory Window in the Debugger to display function call arguments and results.
+            We&apos;re excited to introduce a brand new Memory Window in the
+            Debugger to display function call arguments and results.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Made debugger windows resizable, giving you more control over your workspace and helping you focus on what matters.
+              Made debugger windows resizable, giving you more control over your
+              workspace and helping you focus on what matters.
             </li>
             <li>
-              Core Starknet functions in the call trace are now collapsed by default, making large transactions easier to navigate.
+              Core Starknet functions in the call trace are now collapsed by
+              default, making large transactions easier to navigate.
             </li>
             <li>
-              Added support for class hash verification, a feature requested by StarkWare.
+              Added support for class hash verification, a feature requested by
+              StarkWare.
             </li>
             <li>
-            Fixed contract display issues in the call trace to make the application more reliable.
+              Fixed contract display issues in the call trace to make the
+              application more reliable.
             </li>
           </ul>
         </>
