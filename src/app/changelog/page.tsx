@@ -60,7 +60,7 @@ export default function Page() {
             <li>
               Added support for contract verification with Cairo version 2.8.4.
             </li>
-            <li>Added support for custom network on contract page.</li>
+            <li>Improved the contract page to support custom networks.</li>
             <li>
               Resolved an issue where the presence of the{" "}
               <code>license-file</code> field in Scarb.toml caused verification
