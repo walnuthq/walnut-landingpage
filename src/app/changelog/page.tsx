@@ -59,7 +59,7 @@ export default function Page() {
           <ul className="list-disc text-gray-500 pl-6">
             <li>
               Adjusted the build configuration during verification to use the
-              release profile, aligning with Starknet Foundry's setup.
+              release profile, aligning with Starknet Foundry&apos;s setup.
             </li>
             <li>
               Resolved an issue where errors were not displayed when a contract
