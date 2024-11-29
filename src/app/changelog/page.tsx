@@ -28,7 +28,7 @@ import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
-import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.png";
+import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import Link from "next/link";
 
 export default function Page() {
