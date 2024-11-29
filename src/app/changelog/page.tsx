@@ -45,25 +45,18 @@ export default function Page() {
             Loop Removal from Call Traces
           </h2>
           <p className="text-gray-500">
-            This week, we introduced an improved way to handle loops. Loops are
-            now removed from the call trace, but their iterations are displayed
-            at the same hierarchical level as individual frames. This allows
-            users to see frame for every iteration, making the trace easier to
-            read and providing clearer insights into iteration behavior. Loops
-            are still visible and highlighted in the debugger for better
-            debugging efficiency.
+            This week, we streamlined loop handling in the call trace by removing loops and ensuring function calls within them are displayed at the correct level.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Adjusted the build configuration during verification to use the
+              Adjusted the build configuration during Contract Verification to use the
               release profile, aligning with Starknet Foundry&apos;s setup.
             </li>
             <li>
-              Resolved an issue where errors were not displayed when a contract
-              was not deployed.
+              Fixed an issue in Transaction Simulations where errors weren’t shown for undeployed contracts.
             </li>
             <li>
               Updated the documentation{" "}
@@ -73,12 +66,11 @@ export default function Page() {
               >
                 Walnut Verification Guide
               </Link>{" "}
-              with the new Walnut API verification service, ensuring users are
+              with the new Walnut API Contract Verification service, ensuring users are
               up to date with the latest functionality.
             </li>
             <li>
-              Shifted logic from the frontend to the backend server, resulting
-              in a more efficient and streamlined application.
+              Improved frontend performance by removing regexes from Call Trace function formatting.
             </li>
           </ul>
         </>
