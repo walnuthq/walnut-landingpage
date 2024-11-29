@@ -28,11 +28,62 @@ import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
+import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-11-29T00:00Z"} id="loop-removal-from-call-trace">
+        <Image
+          src={CodeSnippet20241129}
+          alt="loop-removal-from-call-trace"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Loop Removal from Call Traces
+          </h2>
+          <p className="text-gray-500">
+            This week, we introduced an improved way to handle loops. Loops are
+            now removed from the call trace, but their iterations are displayed
+            at the same hierarchical level as individual frames. This allows
+            users to see frame for every iteration, making the trace easier to
+            read and providing clearer insights into iteration behavior. Loops
+            are still visible and highlighted in the debugger for better
+            debugging efficiency.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Adjusted the build configuration during verification to use the
+              release profile, aligning with Starknet Foundry's setup.
+            </li>
+            <li>
+              Resolved an issue where errors were not displayed when a contract
+              was not deployed.
+            </li>
+            <li>
+              Updated the documentation{" "}
+              <Link
+                href="https://docs.walnut.dev/verify-contract-classes"
+                className="text-blue-500"
+              >
+                Walnut Verification Guide
+              </Link>{" "}
+              with the new Walnut API verification service, ensuring users are
+              up to date with the latest functionality.
+            </li>
+            <li>
+              Shifted logic from the frontend to the backend server, resulting
+              in a more efficient and streamlined application.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2024-11-22T00:00Z"} id="new-verification">
         <Image src={CodeSnippet20241122} alt="new-verification" unoptimized />
         <>
