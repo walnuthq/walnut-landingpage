@@ -28,11 +28,54 @@ import CodeSnippet20241101 from "@/images/changelog/CodeSnippet20241101.png";
 import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
+import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2024-11-29T00:00Z"} id="loop-removal-from-call-trace">
+        <Image
+          src={CodeSnippet20241129}
+          alt="loop-removal-from-call-trace"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Loop Removal from Call Traces
+          </h2>
+          <p className="text-gray-500">
+            This week, we streamlined loop handling in the call trace by removing loops and ensuring function calls within them are displayed at the correct level.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More Improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Adjusted the build configuration during Contract Verification to use the
+              release profile, aligning with Starknet Foundry&apos;s setup.
+            </li>
+            <li>
+              Fixed an issue in Transaction Simulations where errors weren’t shown for undeployed contracts.
+            </li>
+            <li>
+              Updated the documentation{" "}
+              <Link
+                href="https://docs.walnut.dev/verify-contract-classes"
+                className="text-blue-500"
+              >
+                Walnut Verification Guide
+              </Link>{" "}
+              with the new Walnut API Contract Verification service, ensuring users are
+              up to date with the latest functionality.
+            </li>
+            <li>
+              Improved frontend performance by removing regexes from Call Trace function formatting.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2024-11-22T00:00Z"} id="new-verification">
         <Image src={CodeSnippet20241122} alt="new-verification" unoptimized />
         <>
