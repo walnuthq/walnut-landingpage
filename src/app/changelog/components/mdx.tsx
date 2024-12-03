@@ -7,19 +7,42 @@ import clsx from 'clsx'
 import { FormattedDate } from './FormattedDate'
 
 
+const bgColors = [
+  'bg-amber-300',
+  'bg-red-300',
+  'bg-lime-300',
+  'bg-violet-300',
+  'bg-purple-300',
+  'bg-pink-300',
+  'bg-indigo-300',
+  'bg-fuchsia-300',
+  'bg-teal-300',
+  'bg-cyan-300'
+]
+
 export const a = Link
 
-type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
+type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string, randomBg?: boolean }
 
-export const img = function Img(props: ImagePropsWithOptionalAlt) {
+export const img = function Img({ randomBg=true, ...props }: ImagePropsWithOptionalAlt) {
+  const getRandomColor = () => {
+    const randomIndex = Math.floor(Math.random() * bgColors.length)
+    return bgColors[randomIndex]
+  }
+
+  const bgColor = randomBg && `${getRandomColor()} px-6 py-6 rounded-xl`
+
   return (
-    <div className="relative mt-8 overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900 [&+*]:mt-8">
-      <Image
-        alt=""
-        sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
-        {...props}
-      />
-      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10" />
+    <div className={`${bgColor} mt-8 `}>
+      <div 
+        className={`relative overflow-hidden rounded-xl [&+*]:mt-8 ${randomBg && 'shadow-2xl drop-shadow-2xl'}`}
+      >
+        <Image
+          alt=""
+          sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
+          {...props}
+        />
+      </div>
     </div>
   )
 }
