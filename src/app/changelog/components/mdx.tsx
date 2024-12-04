@@ -1,41 +1,24 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Image, { type ImageProps } from 'next/image'
+import Image, { type ImageProps, type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { FormattedDate } from './FormattedDate'
 
 
-const bgColors = [
-  'bg-amber-300',
-  'bg-red-300',
-  'bg-lime-300',
-  'bg-violet-300',
-  'bg-purple-300',
-  'bg-pink-300',
-  'bg-indigo-300',
-  'bg-fuchsia-300',
-  'bg-teal-300',
-  'bg-cyan-300'
-]
-
 export const a = Link
 
-type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string, randomBg?: boolean }
+type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 
-export const img = function Img({ randomBg=true, ...props }: ImagePropsWithOptionalAlt) {
-  const getRandomColor = () => {
-    const randomIndex = Math.floor(Math.random() * bgColors.length)
-    return bgColors[randomIndex]
-  }
-
-  const bgColor = randomBg && `${getRandomColor()} px-6 py-6 rounded-xl`
+export const img = function Img({ ...props }: ImagePropsWithOptionalAlt) {
+  const isGif = typeof props.src === 'object' && 'src' in props.src && (props.src as StaticImageData).src.toLowerCase().endsWith('.gif')
+  const bgColor = isGif ? `bg-[#212B47] p-4 rounded-xl` : ''
 
   return (
     <div className={`${bgColor} mt-8 `}>
       <div 
-        className={`relative overflow-hidden rounded-xl [&+*]:mt-8 ${randomBg && 'shadow-2xl drop-shadow-2xl'}`}
+        className={`relative overflow-hidden rounded-xl [&+*]:mt-8 ${isGif && 'shadow-2xl drop-shadow-2xl'}`}
       >
         <Image
           alt=""

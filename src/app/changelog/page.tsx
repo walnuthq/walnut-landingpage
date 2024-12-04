@@ -78,7 +78,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-11-22T00:00Z"} id="new-verification">
-        <Image src={CodeSnippet20241122} alt="new-verification" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241122} alt="new-verification" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">New Verification Flow</h2>
           <p className="text-gray-500">
@@ -126,7 +126,7 @@ export default function Page() {
           src={CodeSnippet20241115}
           alt="function-call-details"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">New Memory Window</h2>
@@ -159,7 +159,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-11-08T00:00Z"} id="class-page">
-        <Image src={CodeSnippet20241108} alt="class-page" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241108} alt="class-page" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             Brand New Page for Class Details
@@ -201,7 +201,7 @@ export default function Page() {
           src={CodeSnippet20241101}
           alt="args-res-simplification"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -255,7 +255,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-10-25T00:00Z"} id="step-over">
-        <Image src={CodeSnippet20241025} alt="step-over" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241025} alt="step-over" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             Step Over Button in Debugger
@@ -301,7 +301,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-10-18T00:00Z"} id="home-page-header">
-        <Image src={CodeSnippet20241018} alt="Home page header" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241018} alt="Home page header" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             New Homepage with easier access to Transaction Simulations and
@@ -334,7 +334,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-10-11T00:00Z"} id="search-call-trace">
-        <Image src={CodeSnippet20241011} alt="Search call trace" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241011} alt="Search call trace" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             New Search in the Call Trace
@@ -369,7 +369,7 @@ export default function Page() {
       </Article>
 
       <Article date={"2024-10-04T00:00Z"} id="search-improvment">
-        <Image src={CodeSnippet20241004} alt="Searh improvment" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20241004} alt="Searh improvment" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">Improvements in Search</h2>
           <p className="text-gray-500">
@@ -410,7 +410,7 @@ export default function Page() {
           src={CodeSnippet20240927}
           alt="Call Trace Improvements"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -452,7 +452,7 @@ export default function Page() {
           src={CodeSnippet20240920}
           alt="Multiple class verfication"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -493,7 +493,7 @@ export default function Page() {
           src={CodeSnippet20240913}
           alt="debug-page-contract-call"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -540,7 +540,7 @@ export default function Page() {
         </>
       </Article>
       <Article date={"2024-09-06T00:00Z"} id="new-settings-page">
-        <Image src={CodeSnippet20240906} alt="settings-page" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20240906} alt="settings-page" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
             Debugging on Custom Networks
@@ -585,7 +585,7 @@ export default function Page() {
           src={CodeSnippet20240830}
           alt="verification-status-api"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -635,7 +635,7 @@ export default function Page() {
           src={CodeSnippet20240823}
           alt="code-attribute-highlight"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -658,7 +658,7 @@ export default function Page() {
         </>
       </Article>
       <Article date={"2024-08-16T00:00Z"} id="aggregated-search">
-        <Image src={CodeSnippet20240816} alt="aggregated-search" unoptimized randomBg={false}/>
+        <Image src={CodeSnippet20240816} alt="aggregated-search" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">Aggregated Search</h2>
           <p className="text-gray-500">
@@ -710,7 +710,7 @@ export default function Page() {
           src={CodeSnippet20240809}
           alt="The gif of source file switch"
           unoptimized
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -742,7 +742,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240802}
           alt="Transaction page information box"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -770,7 +770,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240726}
           alt="Contract Call within Internal Function Call Trace"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -805,7 +805,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240719}
           alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification</h2>
@@ -837,7 +837,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240712}
           alt="Sneak Peek of Walnut Window with internal function call panic"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -872,7 +872,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240705}
           alt="Sneak peak of the Walnut Debugger Window with arguments and result values"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -922,7 +922,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240628}
           alt="Sneak peak of the Walnut Verifaction API for starknet smart contracts"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification API</h2>
@@ -953,7 +953,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240621}
           alt="Sneak peak of the Walnut Debugger for Starknet Transactions"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -976,7 +976,7 @@ export default function Page() {
         </>
       </Article>
       <Article date={"2024-06-14T00:00Z"} id="source-code-introduction">
-        <Image src={CodeSnippet20240614} alt="Code snippet on Walnut" randomBg={false}/>
+        <Image src={CodeSnippet20240614} alt="Code snippet on Walnut" />
         <>
           <h2 className="font-bold my-4 text-xl">
             Contract Source Code in Call Trace
@@ -1012,7 +1012,7 @@ export default function Page() {
         <Image
           src={TxSimIntro}
           alt="Gif of resimulating an existing transaction on Walnut"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Transaction Simulations</h2>
@@ -1041,7 +1041,7 @@ export default function Page() {
         <Image
           src={CallTraceInternal}
           alt="Internal function calls in a transaction call trace."
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -1073,7 +1073,7 @@ export default function Page() {
         <Image
           src={WalnutHPImage}
           alt="Walnut homepage with search for transactions"
-          randomBg={false}
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Walnut v0.1.0</h2>
