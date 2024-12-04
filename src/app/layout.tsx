@@ -55,6 +55,17 @@ const lexend = Lexend({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}>
+			<head>
+			<link
+          rel="stylesheet"
+          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="The Radiant Blog"
+          href="/blog/feed.xml"
+        />
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-3C2NZTCV18" />
 			<Script id="google-analytics">
 				{`
@@ -65,6 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-3C2NZTCV18');
           `}
 			</Script>
+			</head>
+
 			<body className="flex h-full flex-col">
 					{children}
 					</body>
