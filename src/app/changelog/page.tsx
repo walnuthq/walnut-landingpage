@@ -36,21 +36,13 @@ export default function Page() {
   return (
     <Layout>
       <Article date={"2024-12-06T00:00Z"} id="execute-function-error-trace">
-        <Image
-          src={CodeSnippet20241206}
-          alt="execute-function-error-trace"
-          unoptimized
-        />
         <>
-          <h2 className="font-bold my-4 text-xl">Bug Fixes</h2>
+          <h2 className="font-bold my-4 text-xl">Bug Fixes 🐛🐞🪲🕷️🪳🦟</h2>
           <p className="text-gray-500">
-            This week, we focused on bug fixing. When the
-            <code>__execute__</code> function fails due to the contract not
-            being deployed, the status now correctly shows as{" "}
-            <code>REVERTED</code> with a clear visual error line.{" "}
+            This week, we focused on bug fixing. And we also extended our Contract Verification service to support Cairo 2.8.5.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
-            <SparkleIcon className="w-5 h-5" /> More Improvements
+            <SparkleIcon className="w-5 h-5" /> Improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
@@ -62,8 +54,11 @@ export default function Page() {
               reverted transactions.
             </li>
             <li>
-              Added sierra-replace-ids to the Scarb.toml configuration, ensuring
-              sierra_program_debug_info is included in the contract class during
+              Improved handling of the <code>execute</code> account function when it fails due to an undeployed contract. The transaction status now shows <code>REVERTED</code> with a clear error indicator.
+            </li>
+            <li>
+              Added <code>sierra-replace-ids</code> to the <code>Scarb.toml</code> configuration, 
+              ensuring <code>sierra_program_debug_info</code> is included in the contract class during
               the build process.
             </li>
           </ul>
