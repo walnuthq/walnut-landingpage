@@ -707,6 +707,7 @@ export default function Page() {
       </Article>
       <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug-info">
         <Image
+          withoutBg
           src={CodeSnippet20240809}
           alt="The gif of source file switch"
           unoptimized

@@ -11,9 +11,9 @@ export const a = Link
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 
-export const img = function Img({ ...props }: ImagePropsWithOptionalAlt) {
+export const img = function Img({withoutBg = false, ...props }: ImagePropsWithOptionalAlt & { withoutBg?: boolean }) {
   const isGif = typeof props.src === 'object' && 'src' in props.src && (props.src as StaticImageData).src.toLowerCase().endsWith('.gif')
-  const bgColor = isGif ? `bg-[#212B47] p-4 rounded-xl` : ''
+  const bgColor = !withoutBg && isGif ? `bg-[#212B47] p-4 rounded-xl` : ''
 
   return (
     <div className={`${bgColor} mt-8 `}>
