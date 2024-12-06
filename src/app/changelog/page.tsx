@@ -44,11 +44,10 @@ export default function Page() {
         <>
           <h2 className="font-bold my-4 text-xl">Bug Fixes</h2>
           <p className="text-gray-500">
-            This week, we focused on bug fixing in the call trace. When the
+            This week, we focused on bug fixing. When the
             <code>__execute__</code> function fails due to the contract not
             being deployed, the status now correctly shows as{" "}
-            <code>REVERTED</code> with a clear visual error line. Previously,
-            such cases were displayed as successful.
+            <code>REVERTED</code> with a clear visual error line.{" "}
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More Improvements
