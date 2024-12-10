@@ -70,6 +70,7 @@ export default function Page() {
           src={CodeSnippet20241129}
           alt="loop-removal-from-call-trace"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -161,6 +162,7 @@ export default function Page() {
           src={CodeSnippet20241115}
           alt="function-call-details"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">New Memory Window</h2>
@@ -235,6 +237,7 @@ export default function Page() {
           src={CodeSnippet20241101}
           alt="args-res-simplification"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -443,6 +446,7 @@ export default function Page() {
           src={CodeSnippet20240927}
           alt="Call Trace Improvements"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -484,6 +488,7 @@ export default function Page() {
           src={CodeSnippet20240920}
           alt="Multiple class verfication"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -524,6 +529,7 @@ export default function Page() {
           src={CodeSnippet20240913}
           alt="debug-page-contract-call"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -615,6 +621,7 @@ export default function Page() {
           src={CodeSnippet20240830}
           alt="verification-status-api"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -664,6 +671,7 @@ export default function Page() {
           src={CodeSnippet20240823}
           alt="code-attribute-highlight"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -735,9 +743,11 @@ export default function Page() {
       </Article>
       <Article date={"2024-08-09T00:00Z"} id="source-file-switch-debug-info">
         <Image
+          withoutBg
           src={CodeSnippet20240809}
           alt="The gif of source file switch"
           unoptimized
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -769,6 +779,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240802}
           alt="Transaction page information box"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -796,6 +807,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240726}
           alt="Contract Call within Internal Function Call Trace"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -830,6 +842,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240719}
           alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification</h2>
@@ -861,6 +874,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240712}
           alt="Sneak Peek of Walnut Window with internal function call panic"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -895,6 +909,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240705}
           alt="Sneak peak of the Walnut Debugger Window with arguments and result values"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -944,6 +959,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240628}
           alt="Sneak peak of the Walnut Verifaction API for starknet smart contracts"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification API</h2>
@@ -974,6 +990,7 @@ export default function Page() {
         <Image
           src={CodeSnippet20240621}
           alt="Sneak peak of the Walnut Debugger for Starknet Transactions"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -1032,6 +1049,7 @@ export default function Page() {
         <Image
           src={TxSimIntro}
           alt="Gif of resimulating an existing transaction on Walnut"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Transaction Simulations</h2>
@@ -1060,6 +1078,7 @@ export default function Page() {
         <Image
           src={CallTraceInternal}
           alt="Internal function calls in a transaction call trace."
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -1091,6 +1110,7 @@ export default function Page() {
         <Image
           src={WalnutHPImage}
           alt="Walnut homepage with search for transactions"
+          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Walnut v0.1.0</h2>
