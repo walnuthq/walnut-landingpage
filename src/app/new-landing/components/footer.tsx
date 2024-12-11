@@ -15,19 +15,18 @@ function CallToAction() {
     <div className="relative pb-16 pt-20 text-center sm:py-24">
       <hgroup>
         <Subheading>Get started</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to dive in?
+        <h2 className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+        Ready to Debug Smarter?
           <br />
-          Start your free trial today.
-        </p>
+          Start for free today.
+        </h2>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
+        Unlock the tools you need to debug, simulate, and optimize your Starknet Smart Contracts.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
-          Get started
+        <Button className="w-full sm:w-auto" href="#" aria-label="Start debugging for free">
+          Get started for Free
         </Button>
       </div>
     </div>
