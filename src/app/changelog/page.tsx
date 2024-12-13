@@ -38,7 +38,7 @@ export default function Page() {
         <>
           <h2 className="font-bold my-4 text-xl">Support for *ALL* Cairo versions</h2>
           <p className="text-gray-500">
-            This week, we built an automation that allows our Contract Verification Service to automatically support new Cairo versions as soon as they are released. No more "unsupported Cairo version" messages during smart contract verification on Starknet!
+            This week, we built an automation that allows our Contract Verification Service to automatically support new Cairo versions as soon as they are released. No more &quot;unsupported Cairo version&quot; messages during smart contract verification on Starknet!
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
