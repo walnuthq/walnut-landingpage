@@ -36,26 +36,17 @@ export default function Page() {
     <Layout>
       <Article date={"2024-12-13T00:00Z"} id="scarb-downloader">
         <>
-          <h2 className="font-bold my-4 text-xl">Scarb Download Scheduler</h2>
+          <h2 className="font-bold my-4 text-xl">Support for *ALL* Cairo versions</h2>
           <p className="text-gray-500">
-            This week, we introduced the Scarb download scheduler, ensuring our
-            verification server automatically supports newly released Cairo
-            versions.
+            This week, we built an automation that allows our Contract Verification Service to automatically support new Cairo versions as soon as they are released. No more "unsupported Cairo version" messages during smart contract verification on Starknet!
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
-            <SparkleIcon className="w-5 h-5" /> Improvements
+            <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Added support for Cairo versions 2.9.1 and 2.9.2. </li>
+            <li>Retro-added support for Cairo versions <code>2.9.1</code> and <code>2.9.2.</code></li>
             <li>
-              Updated the Walnut verification server to no longer display the
-              list of supported Cairo versions, as it has grown significantly.
-              If support for a specific version is needed, feel free to contact
-              us.
-            </li>
-            <li>
-              Updated the Transaction Simulation form to use transaction version
-              v3 as the default.
+              Updated the Transaction Simulation Form to use transaction&nbsp;version&nbsp;<code>3</code> as the default option.
             </li>
           </ul>
         </>
