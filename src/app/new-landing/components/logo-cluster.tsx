@@ -3,6 +3,7 @@
 import { clsx } from 'clsx'
 import { motion } from 'framer-motion'
 import { Mark } from './logo'
+import Image from 'next/image'
 
 function Circle({
   size,
@@ -54,7 +55,13 @@ function Circles() {
 function MainLogo() {
   return (
     <div className="absolute left-44 top-32 flex size-16 items-center justify-center rounded-full bg-white shadow ring-1 ring-black/5">
-      <Mark className="h-9 fill-black" />
+        <Image
+        width={100}
+        height={100}
+        className='h-16 w-16'
+          src="/logo-cluster/3287b3-ethereum-eth.svg"
+          alt=''
+        />
     </div>
   )
 }
@@ -102,37 +109,37 @@ export function LogoCluster() {
       <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
         <MainLogo />
         <Logo
-          src="/logo-cluster/career-builder.svg"
+          src="/logo-cluster/madara.webp"
           left={360}
           top={144}
           hover={{ x: 6, y: 1, rotate: 5, delay: 0.38 }}
         />
         <Logo
-          src="/logo-cluster/dribbble.svg"
+          src="/logo-cluster/slot.png"
           left={285}
           top={20}
           hover={{ x: 4, y: -5, rotate: 6, delay: 0.3 }}
         />
         <Logo
-          src="/logo-cluster/glassdoor.svg"
+          src="/logo-cluster/madara.webp"
           left={255}
           top={210}
           hover={{ x: 3, y: 5, rotate: 7, delay: 0.2 }}
         />
         <Logo
-          src="/logo-cluster/linkedin.svg"
+          src="/logo-cluster/starknet-token-strk-logo.png"
           left={144}
           top={40}
           hover={{ x: -2, y: -5, rotate: -6, delay: 0.15 }}
         />
         <Logo
-          src="/logo-cluster/upwork.svg"
+          src="/logo-cluster/madara.webp"
           left={36}
           top={56}
           hover={{ x: -4, y: -5, rotate: -6, delay: 0.35 }}
         />
         <Logo
-          src="/logo-cluster/we-work-remotely.svg"
+          src="/logo-cluster/starknet-token-strk-logo.png"
           left={96}
           top={176}
           hover={{ x: -3, y: 5, rotate: 3, delay: 0.15 }}
