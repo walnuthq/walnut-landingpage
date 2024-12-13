@@ -29,17 +29,35 @@ import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
-import CodeSnippet20241206 from "@/images/changelog/CodeSnippet20241206.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-12-06T00:00Z"} id="execute-function-error-trace">
+      <Article date={"2024-12-13T00:00Z"} id="scarb-downloader">
+        <>
+          <h2 className="font-bold my-4 text-xl">Support for *ALL* Cairo versions</h2>
+          <p className="text-gray-500">
+            This week, we built an automation that allows our Contract Verification Service to automatically support new Cairo versions as soon as they are released. No more &quot;unsupported Cairo version&quot; messages during smart contract verification on Starknet!
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Retro-added support for Cairo versions <code>2.9.1</code> and <code>2.9.2.</code></li>
+            <li>
+              Updated the Transaction Simulation Form to use transaction&nbsp;version&nbsp;<code>3</code> as the default option.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-12-06T00:00Z"} id="bug-fixes">
         <>
           <h2 className="font-bold my-4 text-xl">Bug Fixes 🐛🐞🪲🕷️🪳🦟</h2>
           <p className="text-gray-500">
-            This week, we focused on bug fixing. And we also extended our Contract Verification service to support Cairo 2.8.5.
+            This week, we focused on bug fixing. And we also extended our
+            Contract Verification service to support Cairo 2.8.5.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> Improvements
@@ -54,12 +72,16 @@ export default function Page() {
               reverted transactions.
             </li>
             <li>
-              Improved handling of the <code>execute</code> account function when it fails due to an undeployed contract. The transaction status now shows <code>REVERTED</code> with a clear error indicator.
+              Improved handling of the <code>execute</code> account function
+              when it fails due to an undeployed contract. The transaction
+              status now shows <code>REVERTED</code> with a clear error
+              indicator.
             </li>
             <li>
-              Added <code>sierra-replace-ids</code> to the <code>Scarb.toml</code> configuration, 
-              ensuring <code>sierra_program_debug_info</code> is included in the contract class during
-              the build process.
+              Added <code>sierra-replace-ids</code> to the{" "}
+              <code>Scarb.toml</code> configuration, ensuring{" "}
+              <code>sierra_program_debug_info</code> is included in the contract
+              class during the build process.
             </li>
           </ul>
         </>
@@ -70,7 +92,6 @@ export default function Page() {
           src={CodeSnippet20241129}
           alt="loop-removal-from-call-trace"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -162,7 +183,6 @@ export default function Page() {
           src={CodeSnippet20241115}
           alt="function-call-details"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">New Memory Window</h2>
@@ -237,7 +257,6 @@ export default function Page() {
           src={CodeSnippet20241101}
           alt="args-res-simplification"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -446,7 +465,6 @@ export default function Page() {
           src={CodeSnippet20240927}
           alt="Call Trace Improvements"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -488,7 +506,6 @@ export default function Page() {
           src={CodeSnippet20240920}
           alt="Multiple class verfication"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -529,7 +546,6 @@ export default function Page() {
           src={CodeSnippet20240913}
           alt="debug-page-contract-call"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -621,7 +637,6 @@ export default function Page() {
           src={CodeSnippet20240830}
           alt="verification-status-api"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -671,7 +686,6 @@ export default function Page() {
           src={CodeSnippet20240823}
           alt="code-attribute-highlight"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -747,7 +761,6 @@ export default function Page() {
           src={CodeSnippet20240809}
           alt="The gif of source file switch"
           unoptimized
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -779,7 +792,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240802}
           alt="Transaction page information box"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -807,7 +819,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240726}
           alt="Contract Call within Internal Function Call Trace"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -842,7 +853,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240719}
           alt="Sneak Peek of Walnut Window with nudging people to verify contracts"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification</h2>
@@ -874,7 +884,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240712}
           alt="Sneak Peek of Walnut Window with internal function call panic"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -909,7 +918,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240705}
           alt="Sneak peak of the Walnut Debugger Window with arguments and result values"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -959,7 +967,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240628}
           alt="Sneak peak of the Walnut Verifaction API for starknet smart contracts"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Contract Verification API</h2>
@@ -990,7 +997,6 @@ export default function Page() {
         <Image
           src={CodeSnippet20240621}
           alt="Sneak peak of the Walnut Debugger for Starknet Transactions"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -1049,7 +1055,6 @@ export default function Page() {
         <Image
           src={TxSimIntro}
           alt="Gif of resimulating an existing transaction on Walnut"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Transaction Simulations</h2>
@@ -1078,7 +1083,6 @@ export default function Page() {
         <Image
           src={CallTraceInternal}
           alt="Internal function calls in a transaction call trace."
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -1110,7 +1114,6 @@ export default function Page() {
         <Image
           src={WalnutHPImage}
           alt="Walnut homepage with search for transactions"
-          
         />
         <>
           <h2 className="font-bold my-4 text-xl">Walnut v0.1.0</h2>
