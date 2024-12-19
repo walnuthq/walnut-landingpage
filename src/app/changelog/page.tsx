@@ -29,24 +29,66 @@ import CodeSnippet20241108 from "@/images/changelog/CodeSnippet20241108.png";
 import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
+import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-12-13T00:00Z"} id="scarb-downloader">
+      <Article date={"2024-12-20T00:00Z"} id="sign-up">
+        <Image src={CodeSnippet20241220} alt="sign-up" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Support for *ALL* Cairo versions</h2>
+          <h2 className="font-bold my-4 text-xl">
+            GitHub Sign-Up Now Available
+          </h2>
           <p className="text-gray-500">
-            This week, we built an automation that allows our Contract Verification Service to automatically support new Cairo versions as soon as they are released. No more &quot;unsupported Cairo version&quot; messages during smart contract verification on Starknet!
+            This week, we introduced the ability to sign up to Walnut using
+            GitHub accounts. By signing up, users can gain full access to
+            Walnut's features.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Retro-added support for Cairo versions <code>2.9.1</code> and <code>2.9.2.</code></li>
             <li>
-              Updated the Transaction Simulation Form to use transaction&nbsp;version&nbsp;<code>3</code> as the default option.
+              Removed the standalone Event Tabs as they did not offer the best
+              user experience. We plan to bring back event functionality in a
+              more integrated and seamless way within the Call Trace, enhancing
+              overall usability.
+            </li>
+            <li>
+              Optimized the handling of transactions that REVERT due to running
+              out of resources. Walnut now detects these errors early, saving
+              time and computation.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-12-13T00:00Z"} id="scarb-downloader">
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Support for *ALL* Cairo versions
+          </h2>
+          <p className="text-gray-500">
+            This week, we built an automation that allows our Contract
+            Verification Service to automatically support new Cairo versions as
+            soon as they are released. No more &quot;unsupported Cairo
+            version&quot; messages during smart contract verification on
+            Starknet!
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Retro-added support for Cairo versions <code>2.9.1</code> and{" "}
+              <code>2.9.2.</code>
+            </li>
+            <li>
+              Updated the Transaction Simulation Form to use
+              transaction&nbsp;version&nbsp;<code>3</code> as the default
+              option.
             </li>
           </ul>
         </>
