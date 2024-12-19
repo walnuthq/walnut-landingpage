@@ -47,8 +47,8 @@ function Hero() {
             Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Try Walnut for Free</Button>
-            <Button variant="secondary" href="/pricing">
+            <Button href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">Try Walnut for Free</Button>
+            <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
               Open Docs
             </Button>
           </div>
@@ -106,7 +106,7 @@ function BentoSection() {
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
         <BentoCard
-          eyebrow="Speed"
+          eyebrow="Experiment"
           title="Transaction Simulator"
           description="Simulate and perfect transactions before deploying on-chain."
           graphic={
