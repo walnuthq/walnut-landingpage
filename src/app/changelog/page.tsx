@@ -44,7 +44,7 @@ export default function Page() {
           <p className="text-gray-500">
             This week, we introduced the ability to sign up to Walnut using
             GitHub accounts. By signing up, users can gain full access to
-            Walnut's features.
+            Walnut&quot;s features.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
