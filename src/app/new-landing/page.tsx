@@ -185,9 +185,8 @@ function DarkBentoSection() {
             title={<div className='flex items-center gap-2'><a href="https://github.com/walnuthq/op-scan"><img className='h-6 w-6' src="/logo_opscan.webp" alt="" /></a><div>OP Scan</div></div>}
             description="A fully open-source, lightweight, local transaction explorer purpose-built for the OP Stack and the Superchain. Runs on a laptop."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/opscan_screen.png)] bg-cover bg-[left_10%] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/opscan_screen.png)] bg-cover bg-[left_0px_top_0px] bg-no-repeat" />
             }
-            fade={['top']}
             className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
           />
         </div>
