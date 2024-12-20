@@ -50,7 +50,7 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Added proper handling for transactions that REVERT due to "run out of resources" error.
+              Added proper handling for transactions that REVERT due to &quot;run out of resources&quot; error.
             </li>
             <li>
               Improved syntax highlighting in Walnut Docs, making code
