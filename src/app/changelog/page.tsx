@@ -61,6 +61,10 @@ export default function Page() {
               out of resources. Walnut now detects these errors early, saving
               time and computation.
             </li>
+            <li>
+              Introduced improved color themes in our documentation, making code
+              snippets more readable.
+            </li>
           </ul>
         </>
       </Article>
