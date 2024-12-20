@@ -39,31 +39,25 @@ export default function Page() {
         <Image src={CodeSnippet20241220} alt="sign-up" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
-            GitHub Sign-Up Now Available
+            New GitHub Sign-In
           </h2>
           <p className="text-gray-500">
-            This week, we introduced the ability to sign up to Walnut using
-            GitHub accounts. By signing up, users can gain full access to
-            Walnut&quot;s features.
+            This week, we added the ability to sign up to Walnut using
+            a GitHub Account.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Removed the standalone Event Tabs as they did not offer the best
-              user experience. We plan to bring back event functionality in a
-              more integrated and seamless way within the Call Trace, enhancing
-              overall usability.
+              Added proper handling for transactions that REVERT due to "run out of resources" error.
             </li>
             <li>
-              Optimized the handling of transactions that REVERT due to running
-              out of resources. Walnut now detects these errors early, saving
-              time and computation.
-            </li>
-            <li>
-              Introduced improved color themes in our documentation, making code
+              Improved syntax highlighting in Walnut Docs, making code
               snippets more readable.
+            </li>
+            <li>
+              Removed the Events Tab. We plan to bring events back later.
             </li>
           </ul>
         </>
