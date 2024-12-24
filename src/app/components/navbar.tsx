@@ -14,7 +14,7 @@ import logoWalnut from '@/images/logos/walnut.svg'
 
 const links = [
   { href: 'https://docs.walnut.dev', label: 'Docs' },
-  { href: 'new-landing/blog', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
   { href: '/changelog', label: 'Changelog' },
   { href: 'mailto:hi@walnut.dev', label: 'Contact' },
 ]

@@ -79,8 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 
 			<body className="flex h-full flex-col">
-					{children}
-					</body>
+				<div className="text-gray-950 antialiased">{children}</div>
+			</body>
 		</html>
 	)
 }
