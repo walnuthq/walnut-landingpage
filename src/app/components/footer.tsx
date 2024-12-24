@@ -25,9 +25,9 @@ function CallToAction() {
         Unlock the tools you need to debug, simulate, and optimize your Starknet Smart Contracts.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#" aria-label="Start debugging for free">
-          Get started for Free
-        </Button>
+          <Button className="w-full sm:w-auto" href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer"
+                  aria-label="Get started for Free">Get started for Free</Button>
+
       </div>
     </div>
   )
