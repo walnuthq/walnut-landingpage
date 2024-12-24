@@ -16,7 +16,7 @@ export function LogoCloud({
       >
         <img
           alt="StarknetLogo"
-          src="/logo-cloud/Starknet Logo.svg"
+          src="/logo-cloud/Starknet_Logo.svg"
           className="h-9 max-sm:mx-auto sm:h-6 lg:h-10 self-center"
         />
         <img

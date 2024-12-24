@@ -126,7 +126,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Subheading>Testimonials</Subheading>
-          <Heading className="text-3xl/[0.9]">
+          <Heading className="text-3xl/[1.2]">
             Developers love Walnut
           </Heading>
         </div>

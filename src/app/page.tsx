@@ -38,7 +38,7 @@ function Hero() {
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance text-3xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-7xl/[0.8]">
+          <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-7xl/[0.8]">
             Debug Transactions on Starknet
           </h1>
           <p className="mt-8 max-w-lg text-xl/5 font-medium text-gray-950/75 sm:text-2xl/8">
@@ -60,7 +60,7 @@ function FeatureSection() {
   return (
     <div className="overflow-hidden">
       <Container className="pb-24">
-        <Heading as="h2" className="sm:max-w-4xl md:max-w-4xl text-3xl/[0.9]">
+        <Heading as="h2" className="sm:max-w-4xl md:max-w-4xl text-3xl/[1.2]">
         Debug and Simulate Cairo Transactions with Ease.
         </Heading>
         <Screenshot
@@ -78,7 +78,7 @@ function BentoSection() {
   return (
     <Container>
       <Subheading>Features</Subheading>
-      <Heading as="h3" className="mt-2 sm:max-w-3xl md:max-w-3xl text-3xl/[0.9]">
+      <Heading as="h3" className="mt-2 sm:max-w-3xl md:max-w-3xl text-3xl/[1.2]">
       Understand Every Detail of Your Starknet Transactions.
       </Heading>
 
@@ -143,7 +143,7 @@ function DarkBentoSection() {
     <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
       <Container>
         <Subheading dark>Blockchain Research and Engineering</Subheading>
-        <Heading as="h3" dark className="mt-2 sm:max-w-3xl Md:max-w-3xl text-3xl/[0.9]">
+        <Heading as="h3" dark className="mt-2 sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2]">
           More from Walnut&nbsp;Labs
         </Heading>
 
