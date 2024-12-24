@@ -1,50 +1,42 @@
-import { Footer } from '@/components/Footer'
-import BlogHeader from '@/app/blog/components/BlogHeader';
+import { Button } from '../../components/button'
+import { Container } from '../../components/container'
+import { Footer } from '../../components/footer'
+import { GradientBackground } from '../../components/gradient'
+import { Navbar } from '../../components/navbar'
+import { Heading, Subheading } from '../../components/text'
+import { ChevronLeftIcon } from '@heroicons/react/16/solid'
+import author from "@/images/blog/J6fWCiVz_400x400.jpg";
+import Image from 'next/image'
+import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 
 export default function Blog() {
-    return <>
-        <BlogHeader />
-        <div>
-            <div className="max-w-8xl mx-auto">
-                <div className="flex px-4 pt-8 pb-10 lg:px-8">
-                    <a className="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900" href="/blog">
-                        <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-slate-400 w-auto h-6 group-hover:text-slate-600">
-                            <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                        </svg>
-                        Go back
-                    </a>
-                </div>
+  return (
+    <main className="overflow-hidden">
+    <GradientBackground />
+    <Container>
+      <Navbar />
+      <Subheading className="mt-16">
+        Friday, December 29, 2023
+      </Subheading>
+      <Heading as="h1" className="mt-2">
+        Why does Starknet need a debugger?
+      </Heading>
+      <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">
+        <div className="flex flex-wrap items-center gap-8 max-lg:justify-between lg:flex-col lg:items-start">
+          <div className="flex items-center gap-3">
+            <div className="text-sm/5 text-gray-700">
+              @kunal_jain
             </div>
-            <div className="px-4 sm:px-6 md:px-8">
+          </div>
+        </div>
+        <div className="text-gray-700">
+          <div className="max-w-2xl xl:mx-auto">
+            <div>
+              <div className="">
                 <div className="max-w-3xl mx-auto">
-                    <main>
-                        <article className="relative pt-10">
-                            <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl ">
-                                Why does Starknet need a debugger?
-                            </h1>
-                            <div className="text-sm leading-6">
-                                <dl>
-                                    <dt className="sr-only">Date</dt>
-                                    <dd className="absolute top-0 inset-x-0 text-slate-700">
-                                        Friday, December 29, 2023
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div className="mt-6">
-                                <ul className="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
-                                    <li className="flex items-center font-medium whitespace-nowrap px-5 mt-6">
-                                        <div className="text-sm leading-4">
-                                            <div className="text-slate-900">
-                                                Kunal Jain
-                                            </div>
-                                            <div className="mt-1">
-                                                <a target='_blank' href="https://twitter.com/kunal_jain" className="text-sky-500 hover:text-sky-600">@kunal_jain</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="mt-12 mb-24 prose">
+                  <main>
+                    <article className="relative">
+                      <div className="mt-12 mb-24 prose">
                                 <p className="lead">In this article, we&apos;ll explore current challenges developers face with debugging transactions on Starknet.</p>
 
                                 <p>For any Starknet developer, errors are common occurrences. Broadly classified into <strong>Syntax Errors</strong>, <strong>Runtime Errors</strong>, and <strong>Logic Errors</strong>, each presents its unique challenges. While Syntax errors are easily detected by the compiler, the others pose more significant challenges.</p>
@@ -76,12 +68,23 @@ export default function Blog() {
 
 
 
-                            </div>
-                        </article>
-                    </main>
+                      </div>
+                    </article>
+                  </main>
                 </div>
+              </div>
             </div>
-        </div >
-        <Footer />
-    </>
+            <div className="mt-10">
+              <Button variant="outline" href="/new-landing/blog">
+                <ChevronLeftIcon className="size-4" />
+                Back to blog
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+    <Footer />
+    </main>
+  );
 }
