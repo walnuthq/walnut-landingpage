@@ -108,7 +108,7 @@ const testimonials = [
           company: 'Spaceshard',
           companyUrl: 'https://www.spaceshard.io/',
           imageUrl:
-            'https://media.licdn.com/dms/image/v2/D4D35AQGC68B6RiZhYA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1663528432936?e=1732147200&v=beta&t=6ZECmkWZpDwL2a0rMFs9yARUIZg7BsY2ORTp8MuvJcI',
+            'https://pbs.twimg.com/profile_images/1643266633891295233/imvux5PW_400x400.jpg',
         },
       },
     ],
