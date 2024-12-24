@@ -16,10 +16,11 @@ import { notFound } from 'next/navigation'
 import { posts } from '../utils/blogs'
 import Image from 'next/image'
 export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+    'All the latest Walnut news, straight from the team.',
 }
 
 const postsPerPage = 5
@@ -54,7 +55,7 @@ async function LastPosts() {
                   {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
                 </div>
                 <div className="mt-2 text-base/7 font-medium">
-                  <Link href={`/new-landing/blog/${post.slug}`}>
+                  <Link href={`/blog/${post.slug}`}>
                     <span className="absolute inset-0" />
                     {post.title}
                   </Link>
@@ -125,7 +126,7 @@ async function Posts({ page }: { page: number; }) {
             <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
             <div className="mt-4">
               <Link
-                href={`/new-landing/blog/${post.slug}`}
+                href={`/blog/${post.slug}`}
                 className="flex items-center gap-1 text-sm/5 font-medium"
               >
                 <span className="absolute inset-0" />

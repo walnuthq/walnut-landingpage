@@ -100,7 +100,7 @@ export default function Blog() {
               </div>
             </div>
             <div className="mt-10">
-              <Button variant="outline" href="/new-landing/blog">
+              <Button variant="outline" href="/blog">
                 <ChevronLeftIcon className="size-4" />
                 Back to blog
               </Button>
