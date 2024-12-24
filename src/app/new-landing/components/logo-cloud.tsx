@@ -4,7 +4,7 @@ export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex  justify-between items-center'>
       <div className='text-gray-500'>
         Trusted by the best.
       </div>
@@ -16,8 +16,8 @@ export function LogoCloud({
       >
         <img
           alt="StarknetLogo"
-          src="/logo-cloud/Starknet Logo.png"
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-16"
+          src="/logo-cloud/Starknet Logo.svg"
+          className="h-9 max-sm:mx-auto sm:h-6 lg:h-10 self-center"
         />
         <img
           alt="Starkware"

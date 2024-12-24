@@ -15,7 +15,7 @@ function CallToAction() {
     <div className="relative pb-16 pt-20 text-center sm:py-24">
       <hgroup>
         <Subheading>Get started</Subheading>
-        <h2 className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+        <h2 className="mt-6 text-3xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-5xl">
         Ready to Debug Smarter?
           <br />
           Start for free today.
@@ -58,33 +58,30 @@ function Sitemap() {
       <div>
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
+          <SitemapLink href="https://docs.walnut.dev/">Documentation</SitemapLink>
+          <SitemapLink href="https://app.walnut.dev/login">Walnut</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Careers</SitemapLink>
           <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">Company</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
+          <SitemapLink href="mailto:hi@walnut.dev">Contact</SitemapLink>
+          <SitemapLink href="https://t.me/walnuthq">Telegram</SitemapLink>
         </SitemapLinks>
       </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
-        </SitemapLinks>
-      </div>
+      {/*<div>*/}
+      {/*  <SitemapHeading>Company</SitemapHeading>*/}
+      {/*  <SitemapLinks>*/}
+      {/*    <SitemapLink href="#">Terms of service</SitemapLink>*/}
+      {/*    <SitemapLink href="#">Privacy policy</SitemapLink>*/}
+      {/*  </SitemapLinks>*/}
+      {/*</div>*/}
     </>
   )
 }
@@ -155,7 +152,7 @@ export function Footer() {
                   </Link>
                   </PlusGridItem>
                 </div>
-                <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
+                <div className="col-span-2 grid grid-cols-3 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-3 lg:pt-6">
                   <Sitemap />
                 </div>
               </div>
