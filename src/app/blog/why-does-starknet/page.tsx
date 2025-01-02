@@ -8,6 +8,12 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Why does Starknet need a debugger? | walnut.dev',
+    description: 'In this article, we\'ll explore current challenges developers face with debugging transactions on Starknet.',
+}
 
 export default function Blog() {
   return (

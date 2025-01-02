@@ -7,7 +7,12 @@ import { Heading, Subheading } from '../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Announcing Contract Verification on Starknet | walnut.dev',
+  description: 'We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.',
+}
 
 export default function Blog() {
   return (

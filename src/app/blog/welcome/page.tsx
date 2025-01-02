@@ -8,6 +8,12 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Welcome to Walnut blog | walnut.dev',
+  description: 'At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.',
+}
 
 export default function Blog() {
   return (

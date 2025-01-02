@@ -9,6 +9,12 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'cairovm.codes – Run, Debug, and Learn Cairo Programming | walnut.dev',
+  description: 'cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.',
+}
 
 export default function Blog() {
   return (
