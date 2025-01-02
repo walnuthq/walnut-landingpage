@@ -12,7 +12,7 @@ import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png"
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'cairovm.codes – Run, Debug, and Learn Cairo Programming | walnut.dev',
+  title: 'cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut',
   description: 'cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.',
 }
 

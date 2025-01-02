@@ -11,7 +11,7 @@ import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Welcome to Walnut blog | walnut.dev',
+  title: 'Welcome to Walnut blog | Walnut',
   description: 'At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.',
 }
 

@@ -11,7 +11,7 @@ import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Why does Starknet need a debugger? | walnut.dev',
+    title: 'Why does Starknet need a debugger? | Walnut',
     description: 'In this article, we\'ll explore current challenges developers face with debugging transactions on Starknet.',
 }
 

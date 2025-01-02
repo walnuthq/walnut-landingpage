@@ -10,7 +10,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Announcing Contract Verification on Starknet | walnut.dev',
+  title: 'Announcing Contract Verification on Starknet | Walnut',
   description: 'We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.',
 }
 

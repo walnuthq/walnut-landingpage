@@ -18,7 +18,7 @@ import Image from 'next/image'
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-  title: 'Walnut blog | walnut.dev',
+  title: 'Walnut blog',
   description:
     'All the latest Walnut news, straight from the team.',
 }
