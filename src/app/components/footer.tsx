@@ -56,16 +56,11 @@ function Sitemap() {
   return (
     <>
       <div>
-        <SitemapHeading>Product</SitemapHeading>
+        <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="https://docs.walnut.dev/">Documentation</SitemapLink>
-          <SitemapLink href="https://app.walnut.dev/login">Walnut</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
           <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/changelog">Changelog</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
