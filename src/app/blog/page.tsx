@@ -35,7 +35,7 @@ async function LastPosts() {
   return (
     <div className="mt-16 bg-gradient-to-t from-gray-100 pb-14">
       <Container>
-        <h2 className="text-2xl font-medium tracking-tight">Last posts</h2>
+        <h2 className="text-2xl font-medium tracking-tight">Pinned posts</h2>
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {posts.map((post, index) => 
             index < 3 && (
