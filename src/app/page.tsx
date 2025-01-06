@@ -121,13 +121,13 @@ function BentoSection() {
           className="lg:col-span-2"
         />
         <BentoCard
-          eyebrow="Price"
+          eyebrow="Cost Optimisation"
           title="Gas Profiler"
           description="Save on gas with detailed insights into transaction costs."
           graphic={
               <div
                   className="absolute inset-0 bg-[url(/screenshots/gas4.png)] bg-no-repeat bg-center"
-                  style={{backgroundSize: "200px"}}
+                  style={{backgroundSize: "160px"}}
               />
           }
           fade={['bottom']}

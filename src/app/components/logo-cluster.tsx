@@ -58,7 +58,7 @@ function MainLogo() {
         <Image
         width={100}
         height={100}
-        className='h-16 w-16'
+        className='h-14 w-14'
           src="/logo-cluster/3287b3-ethereum-eth.svg"
           alt=''
         />
@@ -97,7 +97,7 @@ function Logo({
       alt=""
       src={src}
       style={{ left, top } as React.CSSProperties}
-      className="absolute size-16 rounded-full bg-white shadow ring-1 ring-black/5"
+      className="absolute size-12 rounded-full bg-white shadow ring-1 ring-black/5"
     />
   )
 }
