@@ -16,7 +16,7 @@ function CallToAction() {
       <hgroup>
         <Subheading>Get started</Subheading>
         <h2 className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-5xl">
-        Ready to Debug Smarter?
+        Ready to Debug Cairo?
           <br />
           Start for free today.
         </h2>
