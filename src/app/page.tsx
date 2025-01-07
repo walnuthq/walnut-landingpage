@@ -88,7 +88,7 @@ function BentoSection() {
           title="Debugger with Memory Details"
           description="Inspect variable states at every step of transaction execution."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/debugger-with-memory.png)] bg-[size:611px_553px] bg-[left_28px_top_28px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/debugger-with-memory.png)] bg-[size:611px_553px] bg-[left_28px_top_22px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
@@ -98,7 +98,7 @@ function BentoSection() {
           title="Live Error Monitoring"
           description="Stay ahead of issues with real-time error detection and alerts."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/errors-table.png)] bg-[size:732px_474px] bg-[left_18px_top_-30px]  bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/errors-table.png)] bg-[size:654px_317px] bg-[left_34px_top_-24px]  bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"

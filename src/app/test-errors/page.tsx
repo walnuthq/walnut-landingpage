@@ -102,9 +102,6 @@ export default function Example() {
                       <th scope="col" className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
                         Environment
                       </th>
-                      <th scope="col" className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Env
-                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
@@ -117,7 +114,7 @@ export default function Example() {
                               </svg>
                               {error.name}
                           </span>
-                          <div>
+                          <div className="font-normal">
                             {error.type}
                           </div>
                         </td>
@@ -128,7 +125,6 @@ export default function Example() {
                           </div>
                             {error.device}
                         </td>
-                        <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-0">{}</td>
                       </tr>
                     ))}
                   </tbody>
