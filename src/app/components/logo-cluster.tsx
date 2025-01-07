@@ -109,7 +109,7 @@ export function LogoCluster() {
       <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
         <MainLogo />
         <Logo
-          src="/logo-cluster/madara.webp"
+          src="/logo-cluster/Karnot Logo.png"
           left={360}
           top={144}
           hover={{ x: 6, y: 1, rotate: 5, delay: 0.38 }}
@@ -121,7 +121,7 @@ export function LogoCluster() {
           hover={{ x: 4, y: -5, rotate: 6, delay: 0.3 }}
         />
         <Logo
-          src="/logo-cluster/Karnot Logo.png"
+          src="/logo-cluster/madara.webp"
           left={255}
           top={210}
           hover={{ x: 3, y: 5, rotate: 7, delay: 0.2 }}
