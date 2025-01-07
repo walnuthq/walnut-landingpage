@@ -121,7 +121,7 @@ export function LogoCluster() {
           hover={{ x: 4, y: -5, rotate: 6, delay: 0.3 }}
         />
         <Logo
-          src="/logo-cluster/madara.webp"
+          src="/logo-cluster/Karnot Logo.png"
           left={255}
           top={210}
           hover={{ x: 3, y: 5, rotate: 7, delay: 0.2 }}
