@@ -67,7 +67,7 @@ function FeatureSection() {
           width={1216}
           height={768}
           src="/screenshots/app.png"
-          className="mt-16  sm:h-auto sm:w-full"
+          className="mt-16 h-auto sm:w-full"
         />
       </Container>
     </div>
