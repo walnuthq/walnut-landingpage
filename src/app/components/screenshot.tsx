@@ -20,7 +20,7 @@ export function Screenshot({
       <img
         alt=""
         src={src}
-        className="h-full rounded-[var(--radius)] shadow-2xl ring-1 ring-black/10"
+        className="h-full w-full object-cover rounded-[var(--radius)] shadow-2xl ring-1 ring-black/10"
       />
     </div>
   )
