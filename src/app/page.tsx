@@ -98,7 +98,7 @@ function BentoSection() {
           title="Live Error Monitoring"
           description="Stay ahead of issues with real-time error detection and alerts."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/errors-table.png)] bg-[size:654px_317px] bg-[left_34px_top_-24px]  bg-no-repeat" />
+            <div className="absolute inset-0 md:bg-[url(/screenshots/errors-table.png)] bg-[url(/screenshots/errors-table-mob.png)] bg-[size:543px_290px] md:bg-[size:654px_317px] bg-[left_34px_top_0px] md:bg-[left_34px_top_-24px]  bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
