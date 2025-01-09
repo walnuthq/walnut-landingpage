@@ -1,354 +1,236 @@
-import { Footer } from "@/components/Footer";
-import BlogHeader from "@/app/blog/components/BlogHeader";
+import { Button } from '../components/button'
+import { Container } from '../components/container'
+import { Footer } from '../components/footer'
+import { GradientBackground } from '../components/gradient'
+import { Link } from '../components/link'
+import { Navbar } from '../components/navbar'
+import { Heading, Lead, Subheading } from '../components/text'
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from '@heroicons/react/16/solid'
+import { clsx } from 'clsx'
+import dayjs from 'dayjs'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { posts } from '../utils/blogs'
+import Image from 'next/image'
+export const runtime = 'edge';
 
-export default function Blog() {
+export const metadata: Metadata = {
+  title: 'Walnut blog',
+  description:
+    'All the latest Walnut news, straight from the team.',
+}
+
+const postsPerPage = 5
+
+async function LastPosts() {
+
+
+  if (posts.length === 0) {
+    return
+  }
+
   return (
-    <>
-      <BlogHeader />
-      <main className="max-w-[52rem] mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
-        <header className="py-16 sm:text-center">
-          <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight text-gray-900 font-bold">
-            Latest Updates
-          </h1>
+    <div className="mt-16 bg-gradient-to-t from-gray-100 pb-14">
+      <Container>
+        <h2 className="text-2xl font-medium tracking-tight">Pinned posts</h2>
+        <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {posts.map((post, index) => 
+            index < 3 && (
+            <div
+              key={post.slug}
+              className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md shadow-black/5 ring-1 ring-black/5"
+            >
+              {post.mainImage && (
+                <Image
+                  alt={''}
+                  src={post.mainImage}
+                  className="aspect-[3/2] w-full rounded-2xl object-cover"
+                />
+              )}
+              <div className="flex flex-1 flex-col p-8">
+                <div className="text-sm/5 text-gray-700">
+                  {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
+                </div>
+                <div className="mt-2 text-base/7 font-medium">
+                  <Link href={`/blog/${post.slug}`}>
+                    <span className="absolute inset-0" />
+                    {post.title}
+                  </Link>
+                </div>
+                <div className="mt-2 flex-1 text-sm/6 text-gray-500">
+                  {post.excerpt}
+                </div>
+                {post.author && (
+                  <div className="mt-6 flex items-center gap-3">
+                    {post.author.image && (
+                      <Image
+                        alt=""
+                        src={post.author.image}
+                        className="aspect-square size-6 rounded-full object-cover"
+                      />
+                    )}
+                    <div className="text-sm/5 text-gray-700">
+                      {post.author.name}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  )
+}
 
-          <p className="text-lg text-gray-700">
-            All the latest Walnut news, straight from the&nbsp;team.
-          </p>
-          {/* <section className="mt-3 max-w-sm sm:mx-auto sm:px-4">
-					<h2 className="sr-only">Sign up for our newsletter</h2>
-					<form action="https://app.convertkit.com/forms/3181837/subscriptions" method="post" className="flex flex-wrap -mx-2"><div className="px-2 grow-[9999] basis-64 mt-3"><div className="group relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-6 h-full absolute inset-y-0 left-3 text-slate-400 pointer-events-none group-focus-within:text-sky-500 dark:group-focus-within:text-slate-400"><path d="M5 7.92C5 6.86 5.865 6 6.931 6h10.138C18.135 6 19 6.86 19 7.92v8.16c0 1.06-.865 1.92-1.931 1.92H6.931A1.926 1.926 0 0 1 5 16.08V7.92Z"></path><path d="m6 7 6 5 6-5"></path></svg>
-					<input name="email_address" type="email" required="" autocomplete="email" aria-label="Email address" className="appearance-none shadow rounded-md ring-1 ring-slate-900/5 leading-5 sm:text-sm border border-transparent py-2 placeholder:text-slate-400 pl-12 pr-3 block w-full text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 bg-white dark:bg-slate-700/20 dark:ring-slate-200/20 dark:focus:ring-sky-500 dark:text-white" placeholder="Subscribe via email" />
-					</div>
-					</div><div className="px-2 grow flex mt-3"><button type="submit" className="bg-sky-500 flex-auto shadow text-white rounded-md text-sm border-y border-transparent py-2 font-semibold px-3 hover:bg-sky-600 dark:hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-300 dark:focus:ring-offset-slate-900 dark:focus:ring-sky-700">Subscribe</button></div></form>
-				</section> */}
-        </header>
+async function Posts({ page }: { page: number; }) {
+  if (posts.length === 0 && (page > 1 )) {
+    notFound()
+  }
 
-        <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
-          <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 sm:block"></div>
+  if (posts.length === 0) {
+    return <p className="mt-6 text-gray-500">No posts found.</p>
+  }
 
-          <div className="space-y-16">
-            <article className="relative group">
-              <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-              <svg
-                viewBox="0 0 9 9"
-                className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
-              >
-                <circle
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  stroke="currentColor"
-                  className="fill-white"
-                  strokeWidth="2"
-                ></circle>
-              </svg>
-              <div className="relative">
-                <h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-                  Walnut Receives Grant from Optimism Foundation to Improve Debugging on the Superchain
-                </h3>
-                <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-                  <p>
-                  We’re excited to announce that Walnut has received a grant from the Optimism Foundation 
-                  to develop Walnut Lite, a fully open-source solution for transaction simulations and debugging 
-                  on the Superchain. This tool is designed to give developers a local, customisable debugging 
-                  experience for smart contracts.
-                  </p>
+  return (
+    <div className="mt-6">
+      {posts.map((post) => (
+        <div
+          key={post.slug}
+          className="relative grid grid-cols-1 border-b border-b-gray-100 py-10 first:border-t first:border-t-gray-200 max-sm:gap-3 sm:grid-cols-3"
+        >
+          <div>
+            <div className="text-sm/5 max-sm:text-gray-700 sm:font-medium">
+              {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
+            </div>
+            {post.author && (
+              <div className="mt-2.5 flex items-center gap-3">
+                {post.author.image && (
+                  <Image
+                    alt=""
+                    src={post.author.image}
+                    className="aspect-square size-6 rounded-full object-cover"
+                  />
+                )}
+                <div className="text-sm/5 text-gray-700">
+                  {post.author.name}
                 </div>
-                <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
-                  <dd className="whitespace-nowrap text-sm leading-6">
-                    November 8, 2024
-                  </dd>
-                </dl>
               </div>
-              <a
-                className="flex items-center text-sm text-pink-600 font-medium"
-                href="/blog/walnut-receives-grant-from-optimism-foundation-to-improve-debugging-on-the-superchain"
+            )}
+          </div>
+          <div className="sm:col-span-2 sm:max-w-2xl">
+            <h2 className="text-sm/5 font-medium">{post.title}</h2>
+            <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
+            <div className="mt-4">
+              <Link
+                href={`/blog/${post.slug}`}
+                className="flex items-center gap-1 text-sm/5 font-medium"
               >
-                <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative">
-                  Read more
-                  <span className="sr-only">
-                    , Walnut Receives Grant from Optimism Foundation to Improve Debugging on the Superchain
-                  </span>
-                </span>
-                <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-pink-600"
-                  width="3"
-                  height="6"
-                  viewBox="0 0 3 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0 0L3 3L0 6"></path>
-                </svg>
-              </a>
-            </article>
-            <article className="relative group">
-              <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-              <svg
-                viewBox="0 0 9 9"
-                className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
-              >
-                <circle
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  stroke="currentColor"
-                  className="fill-white"
-                  strokeWidth="2"
-                ></circle>
-              </svg>
-              <div className="relative">
-                <h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-                  cairovm.codes – Run, Debug, and Learn Cairo Programming
-                </h3>
-                <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-                  <p>
-                    Explore cairovm.codes, the web app for running, debugging,
-                    and learning Cairo programming. Officially recognized by
-                    Starkware, packed with powerful features.
-                  </p>
-                </div>
-                <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
-                  <dd className="whitespace-nowrap text-sm leading-6">
-                    September 16, 2024
-                  </dd>
-                </dl>
-              </div>
-              <a
-                className="flex items-center text-sm text-pink-600 font-medium"
-                href="/blog/cairovm-codes-debug-learn-cairo"
-              >
-                <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative">
-                  Read more
-                  <span className="sr-only">
-                    , cairovm.codes – Run, Debug, and Learn Cairo Programming
-                  </span>
-                </span>
-                <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-pink-600"
-                  width="3"
-                  height="6"
-                  viewBox="0 0 3 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0 0L3 3L0 6"></path>
-                </svg>
-              </a>
-            </article>
-            <article className="relative group">
-              <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-              <svg
-                viewBox="0 0 9 9"
-                className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
-              >
-                <circle
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  stroke="currentColor"
-                  className="fill-white"
-                  strokeWidth="2"
-                ></circle>
-              </svg>
-              <div className="relative">
-                <h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-                  Announcing Contract Verification on Starknet
-                </h3>
-                <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-                  <p>
-                    We are excited to introduce Cairo Contract Verification for
-                    Starknet, now live on Walnut and accessible via Walnut APIs.
-                  </p>
-                </div>
-                <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
-                  <dd className="whitespace-nowrap text-sm leading-6">
-                    August 12, 2024
-                  </dd>
-                </dl>
-              </div>
-              <a
-                className="flex items-center text-sm text-pink-600 font-medium"
-                href="/blog/starknet-contract-verification"
-              >
-                <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative">
-                  Read more
-                  <span className="sr-only">
-                    , Announcing Starknet Contract Verification
-                  </span>
-                </span>
-                <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-pink-600"
-                  width="3"
-                  height="6"
-                  viewBox="0 0 3 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0 0L3 3L0 6"></path>
-                </svg>
-              </a>
-            </article>
-            <article className="relative group">
-              <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-              <svg
-                viewBox="0 0 9 9"
-                className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
-              >
-                <circle
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  stroke="currentColor"
-                  className="fill-white"
-                  strokeWidth="2"
-                ></circle>
-              </svg>
-              <div className="relative">
-                <h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-                  Why blockchains mark a new era for debugging and monitoring
-                  services
-                </h3>
-                <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-                  <p>
-                    Blockchain technology will revolutionize the $100 billion+
-                    application monitoring market, demanding new specialized
-                    tools and creating major opportunities.
-                  </p>
-                </div>
-                <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
-                  <dd className="whitespace-nowrap text-sm leading-6">
-                    July 06, 2024
-                  </dd>
-                </dl>
-              </div>
-              <a
-                className="flex items-center text-sm text-pink-600 font-medium"
-                href="/blog/why-blockchains-mark-new-era-for-debugging-and-monitoring-services"
-              >
-                <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative">
-                  Read more
-                  <span className="sr-only">
-                    , Why does Starknet need a debugger?
-                  </span>
-                </span>
-                <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-pink-600"
-                  width="3"
-                  height="6"
-                  viewBox="0 0 3 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0 0L3 3L0 6"></path>
-                </svg>
-              </a>
-            </article>
-            <article className="relative group">
-              <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-              <svg
-                viewBox="0 0 9 9"
-                className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
-              >
-                <circle
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  stroke="currentColor"
-                  className="fill-white"
-                  strokeWidth="2"
-                ></circle>
-              </svg>
-              <div className="relative">
-                <h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-                  Why does Starknet need a debugger?
-                </h3>
-                <div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-                  <p>
-                    In this article, we&apos;ll explore current challenges
-                    developers face with debugging transactions on Starknet.
-                  </p>
-                </div>
-                <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
-                  <dd className="whitespace-nowrap text-sm leading-6">
-                    December 29, 2023
-                  </dd>
-                </dl>
-              </div>
-              <a
-                className="flex items-center text-sm text-pink-600 font-medium"
-                href="/blog/why-does-starknet"
-              >
-                <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative">
-                  Read more
-                  <span className="sr-only">
-                    , Why does Starknet need a debugger?
-                  </span>
-                </span>
-                <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-pink-600"
-                  width="3"
-                  height="6"
-                  viewBox="0 0 3 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M0 0L3 3L0 6"></path>
-                </svg>
-              </a>
-            </article>
-						<article className="relative group">
-						<div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-gray-50/90"></div>
-						<svg viewBox="0 0 9 9" className="hidden absolute right-full mr-6 top-2 text-gray-200 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"><circle cx="4.5" cy="4.5" r="4.5" stroke="currentColor" className="fill-white" strokeWidth="2"></circle></svg>
-						<div className="relative">
-							<h3 className="text-base font-semibold tracking-tight text-gray-900 pt-8 lg:pt-0">
-								Welcome to Walnut
-							</h3>
-							<div className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 line-clamp-2">
-								<p>Welcome to our blog focused on Starknet developer tooling development. Our first highlight is the Walnut Debugger, a game-changer for Cairo developers, now in closed Beta and set for a Q1 2024 release.</p>
-							</div>
-							<dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-								<dt className="sr-only">Date</dt>
-								<dd className="whitespace-nowrap text-sm leading-6">
-									December 23, 2023
-								</dd>
-							</dl>
-						</div>
-						<a className="flex items-center text-sm text-pink-600 font-medium" href="/blog/welcome">
-							<span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
-							<span className="relative">Read more<span className="sr-only">, Welcome to Walnut Blog</span></span>
-							<svg className="relative mt-px overflow-visible ml-2.5 text-pink-600" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M0 0L3 3L0 6"></path></svg>
-						</a>
-					</article>
+                <span className="absolute inset-0" />
+                Read more
+                <ChevronRightIcon className="size-4 fill-gray-400" />
+              </Link>
+            </div>
           </div>
         </div>
-      </main>
+      ))}
+    </div>
+  )
+}
+
+async function Pagination({
+  page,
+}: {
+  page: number
+}) {
+  function url(page: number) {
+    let params = new URLSearchParams()
+
+    if (page > 1) params.set('page', page.toString())
+
+    return params.size !== 0 ? `/blog?${params.toString()}` : '/blog'
+  }
+
+  let totalPosts = posts.length
+  let hasPreviousPage = page - 1
+  let previousPageUrl = hasPreviousPage ? url(page - 1) : undefined
+  let hasNextPage = page * postsPerPage < totalPosts
+  let nextPageUrl = hasNextPage ? url(page + 1) : undefined
+  let pageCount = Math.ceil(totalPosts / postsPerPage)
+
+  if (pageCount < 2) {
+    return
+  }
+
+  return (
+    <div className="mt-6 flex items-center justify-between gap-2">
+      <Button
+        variant="outline"
+        href={previousPageUrl}
+        disabled={!previousPageUrl}
+      >
+        <ChevronLeftIcon className="size-4" />
+        Previous
+      </Button>
+      <div className="flex gap-2 max-sm:hidden">
+        {Array.from({ length: pageCount }, (_, i) => (
+          <Link
+            key={i + 1}
+            href={url(i + 1)}
+            data-active={i + 1 === page ? true : undefined}
+            className={clsx(
+              'size-7 rounded-lg text-center text-sm/7 font-medium',
+              'data-[hover]:bg-gray-100',
+              'data-[active]:shadow data-[active]:ring-1 data-[active]:ring-black/10',
+              'data-[active]:data-[hover]:bg-gray-50',
+            )}
+          >
+            {i + 1}
+          </Link>
+        ))}
+      </div>
+      <Button variant="outline" href={nextPageUrl} disabled={!nextPageUrl}>
+        Next
+        <ChevronRightIcon className="size-4" />
+      </Button>
+    </div>
+  )
+}
+
+export default async function Blog({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  let page =
+    'page' in searchParams
+      ? typeof searchParams.page === 'string' && parseInt(searchParams.page) > 1
+        ? parseInt(searchParams.page)
+        : notFound()
+      : 1
+
+  return (
+    <main className="overflow-hidden">
+      <GradientBackground />
+      <Container>
+        <Navbar />
+        <Subheading className="mt-16">Blog</Subheading>
+        <Heading as="h1" className="mt-2">
+          What’s happening at Walnut.
+        </Heading>
+        <Lead className="mt-6 max-w-3xl">
+          All the latest Walnut news, straight from the team.
+        </Lead>
+      </Container>
+      {page === 1 && <LastPosts />}
+      <Container className="mt-16 pb-24">
+        <Posts page={page} />
+        <Pagination page={page}  />
+      </Container>
       <Footer />
-    </>
-  );
+    </main>
+  )
 }
