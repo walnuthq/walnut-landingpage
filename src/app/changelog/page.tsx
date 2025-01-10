@@ -35,30 +35,68 @@ import Link from "next/link";
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2024-12-20T00:00Z"} id="sign-up">
-        <Image src={CodeSnippet20241220} alt="sign-up" unoptimized />
+      <Article date={"2025-10-20T00:00Z"} id="release">
         <>
-          <h2 className="font-bold my-4 text-xl">
-            New GitHub Sign-In
-          </h2>
+          <h2 className="font-bold my-4 text-xl">Walnut Beta Launch 🚀</h2>
           <p className="text-gray-500">
-            This week, we added the ability to sign up to Walnut using
-            a GitHub Account.
+            This week, we launched the beta version of{" "}
+            <Link href="https://app.walnut.dev" className="text-blue-500">
+              Walnut
+            </Link>
+            ! Dive in and let us know your thoughts as we continue to improve.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Added proper handling for transactions that REVERT due to &quot;run out of resources&quot; error.
+              Redesigned{" "}
+              <Link href="https://docs.walnut.dev/" className="text-blue-500">
+                Walnut landing page
+              </Link>{" "}
+              to make navigation smoother and content more accessible.
             </li>
             <li>
-              Improved syntax highlighting in Walnut Docs, making code
-              snippets more readable.
+              Updated documentation, check it out -{" "}
+              <Link href="https://docs.walnut.dev/" className="text-blue-500">
+                here
+              </Link>{" "}
             </li>
             <li>
-              Removed the Events Tab. We plan to bring events back later.
+              Added paymaster_data and resource_bounds to transaction info for
+              simulations. This resolves the index out of bounds error caused by
+              missing these details during setup.
             </li>
+            <li>
+              DCALL is now split into DELEGATE and CALL, making it easier to
+              differentiate between entry point and library functions with same
+              names.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2024-12-20T00:00Z"} id="sign-up">
+        <Image src={CodeSnippet20241220} alt="sign-up" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">New GitHub Sign-In</h2>
+          <p className="text-gray-500">
+            This week, we added the ability to sign up to Walnut using a GitHub
+            Account.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added proper handling for transactions that REVERT due to
+              &quot;run out of resources&quot; error.
+            </li>
+            <li>
+              Improved syntax highlighting in Walnut Docs, making code snippets
+              more readable.
+            </li>
+            <li>Removed the Events Tab. We plan to bring events back later.</li>
           </ul>
         </>
       </Article>
