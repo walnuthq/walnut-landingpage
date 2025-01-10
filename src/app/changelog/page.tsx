@@ -64,8 +64,8 @@ export default function Page() {
             </li>
             <li>
               Added paymaster_data and resource_bounds to transaction info for
-              simulations. This resolves the index out of bounds error caused by
-              missing these details during setup.
+              simulations, ensuring accurate transaction state display and
+              resolving issues caused by missing details.
             </li>
             <li>
               DCALL is now split into DELEGATE and CALL, making it easier to
