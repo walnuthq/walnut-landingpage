@@ -67,7 +67,7 @@ function Sitemap() {
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="mailto:hi@walnut.dev">Contact</SitemapLink>
-          <SitemapLink href="https://t.me/walnuthq">Telegram</SitemapLink>
+          <SitemapLink href="https://t.me/walnuthq" target='_blank'>Telegram</SitemapLink>
         </SitemapLinks>
       </div>
       {/*<div>*/}
