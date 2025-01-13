@@ -137,7 +137,13 @@ export default function Blog() {
                           />
                           <figcaption>
                             Full Call Trace of an example transaction on
-                            Starknet
+                            Starknet, as presented on{" "}
+                            <a
+                              href="https://app.walnut.dev/transactions?chainId=SN_MAIN&txHash=0x07bb1d7f7a1c496347475e24e9156edc92640d37bb488cf9181f551a89a37aa2"
+                              target="_blank"
+                            >
+                              Walnut
+                            </a>
                           </figcaption>
                         </figure>
                         <p>
