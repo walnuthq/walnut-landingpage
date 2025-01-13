@@ -33,7 +33,7 @@ export default function Blog() {
       <GradientBackground />
       <Container>
         <Navbar />
-        <Subheading className="mt-16">Tuesday, January 14, 202</Subheading>
+        <Subheading className="mt-16">Tuesday, January 14, 2025</Subheading>
         <Heading as="h1" className="mt-2">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
