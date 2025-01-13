@@ -14,6 +14,7 @@ import { Screenshot } from './components/screenshot'
 import  Testimonials  from './components/testimonials'
 import { Heading, Subheading } from './components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -66,7 +67,7 @@ function FeatureSection() {
         <Screenshot
           width={1216}
           height={768}
-          src="/screenshots/app.png"
+          src={app_sreenshot}
           className="mt-16 h-[10rem] sm:h-auto sm:w-full"
         />
       </Container>
