@@ -1,11 +1,19 @@
-import author from "@/images/blog/J6fWCiVz_400x400.jpg";
+import author_roman from "@/images/blog/J6fWCiVz_400x400.jpg";
 import header_cairovm from "@/images/blog/Cairo Playground.jpg";
-import Image from "next/image";
-import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
-
+import marijamijailovic from "@/images/blog/marijamijailovic.png";
 
 
 export const posts = [ 
+  { 
+    publishedAt:'Wednesday, February 12, 2025',
+    slug: 'deep-dive-into-starknet-tx-call-trace', 
+    title: 'Deep Dive into Starknet Transaction Call Trace', 
+    excerpt:'On Starknet, transactions represent the execution of programs written in the Cairo programming language. Each transaction (or program execution) is identified by a unique transaction hash, making it traceable and distinguishable. For instance, running the same program twenty times will result in twenty unique transactions, each with its own transaction hash. Like any program execution, the behavior of these transactions can be analyzed through a Call Trace, a detailed log that captures the functions invoked, the arguments passed, the outputs returned, and more.', 
+    author: {
+      name: '@marijamijailovic', 
+      image: marijamijailovic
+    },
+  },
   {
     mainImage: header_cairovm, 
     publishedAt:'Monday, September 16, 2024',
@@ -14,7 +22,7 @@ export const posts = [
     excerpt:'Explore cairovm.codes, the web app for running, debugging, and learning Cairo programming. Officially recognized by Starkware, packed with powerful features.', 
     author: {
       name: '@romanmazur', 
-      image: author
+      image: author_roman
     },
   },
   {
@@ -24,7 +32,7 @@ export const posts = [
     excerpt:'We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.', 
     author: {
       name: '@romanmazur', 
-      image: author
+      image: author_roman
     },
   },
   {
@@ -34,7 +42,7 @@ export const posts = [
     excerpt:'Blockchain technology will revolutionize the $100 billion+ application monitoring market, demanding new specialized tools and creating major opportunities.', 
     author: {
       name: '@romanmazur', 
-      image: author
+      image: author_roman
     },
   },
   {
@@ -53,7 +61,7 @@ export const posts = [
     excerpt:"Welcome to our blog focused on Starknet developer tooling development. Our first highlight is the Walnut Debugger, a game-changer for Cairo developers, now in closed Beta and set for a Q1 2024 release.", 
     author: {
       name: '@romanmazur', 
-      image: author
+      image: author_roman
     },
   },
 ]

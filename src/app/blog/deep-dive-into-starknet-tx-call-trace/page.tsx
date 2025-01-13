@@ -18,6 +18,8 @@ import send_token_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace
 import send_token_function_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace/send_token_function_call.png";
 
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Screenshot } from "@/app/components/screenshot";
 
 export const metadata: Metadata = {
   title: "Deep dive",
@@ -37,14 +39,14 @@ export default function Blog() {
         </Heading>
         <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">
           <div className="flex flex-wrap items-center gap-8 max-lg:justify-between lg:flex-col lg:items-start">
-            <div className="flex items-center gap-3">
+            <Link href={'https://x.com/marija_mi'} target="_blank" className="flex items-center gap-3">
               <Image
                 alt=""
                 src={marijamijailovic}
                 className="aspect-square size-6 rounded-full object-cover"
               />
-              <div className="text-sm/5 text-gray-700">@marijamijailovic</div>
-            </div>
+              <div className="text-sm/5 text-gray-700 hover:underline">@marijamijailovic</div>
+            </Link>
           </div>
           <div className="text-gray-700">
             <div className="max-w-2xl xl:mx-auto">
@@ -121,7 +123,7 @@ export default function Blog() {
                           .
                         </p>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={full_call_trace}
                             alt="Full Call Trace of an example transaction on Starknet"
                             width={1300}
@@ -174,7 +176,7 @@ export default function Blog() {
                         </p>
                         <h4>Validation Frame: __validate__</h4>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={__validate__}
                             alt="__validate__"
                             width={1300}
@@ -229,7 +231,7 @@ export default function Blog() {
 
                         <h4>Execution Frame: __execute__</h4>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={__execute__}
                             alt="__execute__"
                             width={1300}
@@ -271,7 +273,7 @@ export default function Blog() {
                         </ul>
                         <h3>Execution Flow of get_beer():</h3>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={get_beer_execution_flow}
                             alt="get_beer() execution flow"
                             width={1300}
@@ -350,7 +352,7 @@ export default function Blog() {
                           contract, and you can see the full source code here.
                         </p>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={verify_call}
                             alt="verify() entrypoint"
                             width={1300}
@@ -369,7 +371,7 @@ export default function Blog() {
                           function calls, such as:
                         </p>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={verify_function_call}
                             alt="verify function calls"
                             width={1300}
@@ -386,7 +388,7 @@ export default function Blog() {
                           Further Nested Contract Calls: Proof Calculation
                         </h3>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={calculation_proof_execution_flow}
                             alt="calculation_proof() execution flow"
                             width={1300}
@@ -429,7 +431,7 @@ export default function Blog() {
                         <h3>Final Frame: Token Transfer</h3>
                         <p>The trace ends with a token transfer operation:</p>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={send_token_call}
                             alt="send_token() entrypoint"
                             width={1300}
@@ -443,7 +445,7 @@ export default function Blog() {
                           several internal operations:
                         </p>
                         <figure>
-                          <Image
+                          <Screenshot
                             src={send_token_function_call}
                             alt="send_token function calls"
                             width={1300}
