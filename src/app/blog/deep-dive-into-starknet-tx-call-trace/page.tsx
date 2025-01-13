@@ -22,9 +22,9 @@ import Link from "next/link";
 import { Screenshot } from "@/app/components/screenshot";
 
 export const metadata: Metadata = {
-  title: "Deep dive",
+  title: "Deep Dive into Starknet Transaction Call Trace",
   description:
-    "cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.",
+    "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior",
 };
 
 export default function Blog() {
@@ -39,13 +39,19 @@ export default function Blog() {
         </Heading>
         <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">
           <div className="flex flex-wrap items-center gap-8 max-lg:justify-between lg:flex-col lg:items-start">
-            <Link href={'https://x.com/marija_mi'} target="_blank" className="flex items-center gap-3">
+            <Link
+              href={"https://x.com/marija_mi"}
+              target="_blank"
+              className="flex items-center gap-3"
+            >
               <Image
                 alt=""
                 src={marijamijailovic}
                 className="aspect-square size-6 rounded-full object-cover"
               />
-              <div className="text-sm/5 text-gray-700 hover:underline">@marijamijailovic</div>
+              <div className="text-sm/5 text-gray-700 hover:underline">
+                @marijamijailovic
+              </div>
             </Link>
           </div>
           <div className="text-gray-700">
