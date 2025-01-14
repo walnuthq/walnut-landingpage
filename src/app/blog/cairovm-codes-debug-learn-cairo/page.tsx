@@ -10,11 +10,11 @@ import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
 import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-  title: 'cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut',
-  description: 'cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.',
-}
+const title = "cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut";
+const description = "cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/cairovm-codes-debug-learn-cairo');
 
 export default function Blog() {
   return (

@@ -21,28 +21,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Screenshot } from "@/app/components/screenshot";
 import logoWalnut from '@/images/logos/walnut.svg';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
 const title = "Deep Dive into Starknet Transaction Call Trace";
 const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";
-export const metadata: Metadata = {
-  title,
-  description,
-  openGraph: {
-    title: title,
-    description: description,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: title,
-    description: description,
-    images: [logoWalnut.src],
-  },
-  icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon.ico',
-    apple: '/favicon/apple-touch-icon.png',
-  },
-};
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/deep-dive-into-starknet-tx-call-trace');
 
 export default function Blog() {
   return (

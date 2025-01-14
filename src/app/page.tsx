@@ -16,11 +16,11 @@ import { Heading, Subheading } from './components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-  description:
-    'Monitoring for Onchain Apps',
-}
+const title = "Debugger for Starknet smart contract developers | Walnut";
+const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/debugger');
 
 function Hero() {
   return (

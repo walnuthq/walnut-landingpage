@@ -8,7 +8,6 @@ import logoWalnut from '@/images/logos/walnut.svg'
 import Script from 'next/script'
 
 
-
 export const metadata: Metadata = {
 	title: {
 		template: '%s | Walnut',
