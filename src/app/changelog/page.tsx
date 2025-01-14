@@ -31,6 +31,13 @@ import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
 import Link from "next/link";
+import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
+
+const title = "Changelog | Walnut";
+const description = "All the latest Walnut news, straight from the team.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/changelog');
+
 
 export default function Page() {
   return (

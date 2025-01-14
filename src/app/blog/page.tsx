@@ -5,23 +5,20 @@ import { GradientBackground } from '../components/gradient'
 import { Link } from '../components/link'
 import { Navbar } from '../components/navbar'
 import { Heading, Lead, Subheading } from '../components/text'
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/16/solid'
+import { ChevronLeftIcon, ChevronRightIcon, } from '@heroicons/react/16/solid'
 import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { posts } from '../utils/blogs'
 import Image from 'next/image'
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
+
 export const runtime = 'edge';
 
-export const metadata: Metadata = {
-  title: 'Walnut blog',
-  description:
-    'All the latest Walnut news, straight from the team.',
-}
+const title = "Walnut blog";
+const description = "At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/blog');
 
 const postsPerPage = 5
 
