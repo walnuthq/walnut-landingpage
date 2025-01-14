@@ -9,11 +9,11 @@ import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-  title: 'Why blockchains mark a new era for debugging and monitoring services',
-  description: 'The application error monitoring market, estimated to be worth over USD 29 billion, is on the cusp of a significant transformation.',
-}
+const title = "Why blockchains mark a new era for debugging and monitoring services";
+const description = "The application error monitoring market, estimated to be worth over USD 29 billion, is on the cusp of a significant transformation.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/why-blockchains-mark-new-era-for-debugging-and-monitoring-services');
 
 export default function Blog() {
   return (

@@ -9,11 +9,11 @@ import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-  title: 'Welcome to Walnut blog | Walnut',
-  description: 'At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.',
-}
+const title = "Welcome to Walnut blog | Walnut";
+const description = "At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/welcome');
 
 export default function Blog() {
   return (

@@ -5,15 +5,12 @@ import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
 import { Heading, Subheading } from '../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
-import author from "@/images/blog/J6fWCiVz_400x400.jpg";
-import Image from 'next/image'
-import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-    title: 'Why does Starknet need a debugger? | Walnut',
-    description: 'In this article, we\'ll explore current challenges developers face with debugging transactions on Starknet.',
-}
+const title = "Why does Starknet need a debugger? | Walnut";
+const description = "In this article, we will explore current challenges developers face with debugging transactions on Starknet.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/why-does-starknet');
 
 export default function Blog() {
   return (

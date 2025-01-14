@@ -8,11 +8,11 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import type { Metadata } from 'next';
+import { generateMetadata } from '@/app/utils/generate-metadata-service';
 
-export const metadata: Metadata = {
-  title: 'Announcing Contract Verification on Starknet | Walnut',
-  description: 'We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.',
-}
+const title = "Announcing Contract Verification on Starknet | Walnut";
+const description = "We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/blog/starknet-contract-verification');
 
 export default function Blog() {
   return (
