@@ -38,6 +38,11 @@ export const metadata: Metadata = {
 		description: 'Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Secure your early access now.',
 		images: [logoWalnut.src],
 	},
+	icons: {
+		icon: '/favicon/favicon.ico',
+		shortcut: '/favicon/favicon.ico',
+		apple: '/favicon/apple-touch-icon.png',
+	},
 }
 
 const inter = Inter({
