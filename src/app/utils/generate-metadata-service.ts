@@ -1,5 +1,3 @@
-import logoWalnut from '@/images/logos/walnut.svg';
-
 export const generateMetadata = (title: string, description: string, pageUrl: string) => {
     return {
         title: title,
@@ -12,7 +10,7 @@ export const generateMetadata = (title: string, description: string, pageUrl: st
             description: description,
             images: [
                 {
-                    url: logoWalnut.src,
+                    url: 'https://walnut.dev/seo.png',
                     width: 520,
                     height: 160,
                     alt: 'Walnut logo',
@@ -26,7 +24,7 @@ export const generateMetadata = (title: string, description: string, pageUrl: st
             card: 'summary_large_image',
             title: title,
             description: description,
-            images: [logoWalnut.src],
+            images: ['https://walnut.dev/seo.png'],
         },
         icons: {
             icon: '/favicon/favicon.ico',
