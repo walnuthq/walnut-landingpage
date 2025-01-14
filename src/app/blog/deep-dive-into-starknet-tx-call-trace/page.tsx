@@ -20,11 +20,28 @@ import send_token_function_call from "@/images/blog/deep-dive-into-starknet-tx-c
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Screenshot } from "@/app/components/screenshot";
+import logoWalnut from '@/images/logos/walnut.svg';
 
+const title = "Deep Dive into Starknet Transaction Call Trace";
+const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";
 export const metadata: Metadata = {
-  title: "Deep Dive into Starknet Transaction Call Trace",
-  description:
-    "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior",
+  title,
+  description,
+  openGraph: {
+    title: title,
+    description: description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: title,
+    description: description,
+    images: [logoWalnut.src],
+  },
+  icons: {
+    icon: '/favicon/favicon.ico',
+    shortcut: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
+  },
 };
 
 export default function Blog() {
