@@ -30,50 +30,105 @@ import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
+import CodeSnippet20250117 from "@/images/changelog/CodeSnippet20250117.png";
 import Link from "next/link";
-import type { Metadata } from 'next';
-import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import type { Metadata } from "next";
+import { generateMetadata } from "@/app/utils/generate-metadata-service";
 
 const title = "Changelog | Walnut";
 const description = "All the latest Walnut news, straight from the team.";
-export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/changelog');
-
+export const metadata: Metadata = generateMetadata(
+  title,
+  description,
+  "https://www.walnut.network/changelog",
+);
 
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2025-10-20T00:00Z"} id="release">
+      <Article date={"2025-01-17T00:00Z"} id="sozo-verify">
+        <Image src={CodeSnippet20250117} alt="sign-up" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Walnut Beta Launch 🚀</h2>
+          <h2 className="font-bold my-4 text-xl">Sozo verify</h2>
           <p className="text-gray-500">
-            This week, after one year of developement, we finally launched the Beta version of{" "}
-            <Link href="https://app.walnut.dev" className="text-blue-500">
-              Walnut
-            </Link>
-            ! Dive in and let us know your thoughts as we continue to improve. We have a <Link href="https://t.me/walnuthq" target="_blank" className="text-blue-500">
-              Telegram group here
-            </Link>.
+            The <code>sozo walnut verify</code> command is now available in the
+            latest version of the Dojo, enabling seamless contract verification
+            in Walnut. Special thanks to the Dojo team for their tremendous
+            support in implementing this feature.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Brand new landing page with all the bell and whistles. <Link href="https://walnut.dev/" target="_blank" className="text-blue-500">
+              Updated the <code>sncast</code> verification prompt to remind
+              users not to expose private keys and update{" "}
+              <Link
+                href="https://github.com/foundry-rs/starknet-foundry/blob/v0.36.0/docs/src/starknet/verify.md"
+                target="_blank"
+                className="text-blue-500"
+              >
+                the documentation{" "}
+              </Link>
+              .
+            </li>
+            <li>
+              Fixed a search bug that prevented certain characters from being
+              searchable when the debugger window was open.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-01-10T00:00Z"} id="release">
+        <>
+          <h2 className="font-bold my-4 text-xl">Walnut Beta Launch 🚀</h2>
+          <p className="text-gray-500">
+            This week, after one year of developement, we finally launched the
+            Beta version of{" "}
+            <Link href="https://app.walnut.dev" className="text-blue-500">
+              Walnut
+            </Link>
+            ! Dive in and let us know your thoughts as we continue to improve.
+            We have a{" "}
+            <Link
+              href="https://t.me/walnuthq"
+              target="_blank"
+              className="text-blue-500"
+            >
+              Telegram group here
+            </Link>
+            .
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Brand new landing page with all the bell and whistles.{" "}
+              <Link
+                href="https://walnut.dev/"
+                target="_blank"
+                className="text-blue-500"
+              >
                 Check it out!
               </Link>{" "}
             </li>
             <li>
               <Link href="https://docs.walnut.dev/" className="text-blue-500">
                 New Docs
-              </Link>.
+              </Link>
+              .
             </li>
             <li>
-              Added <code>paymaster_data</code> and <code>resource_bounds</code> to transaction info section in simulations.
+              Added <code>paymaster_data</code> and <code>resource_bounds</code>{" "}
+              to transaction info section in simulations.
             </li>
             <li>
-              In the Call Trace, <code>DCALL</code> Frame type is now split into <code>DELEGATE</code> and <code>CALL</code>, making it easier to
-              differentiate between entry point and library functions with identical names.
+              In the Call Trace, <code>DCALL</code> Frame type is now split into{" "}
+              <code>DELEGATE</code> and <code>CALL</code>, making it easier to
+              differentiate between entry point and library functions with
+              identical names.
             </li>
           </ul>
         </>
