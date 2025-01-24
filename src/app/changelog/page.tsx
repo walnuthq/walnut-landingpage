@@ -47,18 +47,20 @@ export default function Page() {
     <Layout>
       <Article date={"2025-01-24T00:00Z"} id="sozo-verify">
         <>
-          <h2 className="font-bold my-4 text-xl">Performance Improvements</h2>
+          <h2 className="font-bold my-4 text-xl">
+            Reduced number of RPC calls
+          </h2>
           <p className="text-gray-500">
-            This week, we optimized RPC calls to improve application efficiency
-            and ensure smoother functionality.
+            This week, we reduced the number of RPC calls to improve application
+            efficiency and ensure smoother functionality.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Improved efficiency by using a stream-based approach for
-              searching, allowing RPC calls to execute in parallel.
+              The aggregated search is now faster by implementing a stream-based
+              approach, allowing RPC calls to run in parallel.
             </li>
             <li>
               Removed duplicate and unnecessary RPC calls to avoid redundant
