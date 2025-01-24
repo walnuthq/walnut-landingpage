@@ -48,27 +48,21 @@ export default function Page() {
       <Article date={"2025-01-24T00:00Z"} id="sozo-verify">
         <>
           <h2 className="font-bold my-4 text-xl">
-            Reduced number of RPC calls
+            Faster Search with Parallel Processing
           </h2>
           <p className="text-gray-500">
-            This week, we reduced the number of RPC calls to improve application
-            efficiency and ensure smoother functionality.
+          We&apos;ve upgraded Walnut&apos;s transaction search by implementing a stream-based approach. This enhancement allows RPC calls to run in parallel, significantly improving search speed and efficiency.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              The aggregated search is now faster by implementing a stream-based
-              approach, allowing RPC calls to run in parallel.
-            </li>
-            <li>
-              Removed duplicate and unnecessary RPC calls to avoid redundant
-              execution.
+            Optimized application efficiency by reducing redundant RPC calls, resulting in smoother performance.
             </li>
             <li>Added support for Dojo 1.0.12.</li>
             <li>
-              Removed the requirement for an API Key during class verification.
+            Simplified class verification by removing the need for an API key.
             </li>
           </ul>
         </>
