@@ -93,7 +93,7 @@ export default function Position() {
                                 Our primary product, Walnut, is a transaction debugger and simulator for Starknet. Additionally, we work on several other projects focused on monitoring, security, and transaction simulations.
                                 </p>
                                 <p>
-                                    We also created <Link href="https://cairovm.codes/">cairovm.codes</Link>, a web-based playground for learning and debugging Cairo programs and exploring the Cairo VM execution trace. The app has been recognized by Starkware and is now integrated as the official Cairo playground at <Link href=""></Link>.
+                                    We also created <Link href="https://cairovm.codes/">cairovm.codes</Link>, a web-based playground for learning and debugging Cairo programs and exploring the Cairo VM execution trace. The app has been recognized by Starkware and is now integrated as the official Cairo playground at <Link href="https://www.cairo-lang.org/cairovm/">cairo-lang.org</Link>.
                                 </p>
                                 <p>
                                     We are VC-backed and have a healthy runway. We are not just another &quot;crazy-excited&quot;, &quot;move-fast-and-change-direction-every-day&quot;, &quot;VC-backed-and-soon-to-die&quot; startup. We have been around for a while and have experienced our fair share of successes and failures.
@@ -105,13 +105,13 @@ export default function Position() {
                                 </p>
                                 <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
                                     <li>
-                                        work with Rust on one of our products, including Walnut,
+                                        Work with Rust on one of our products, including Walnut.
                                     </li>
                                     <li>
-                                        collaborate with core-developers at Starkware, Aztec, Miden and other leading ecosystems,
+                                        Collaborate with core-developers at Starkware, Aztec, Miden and other leading ecosystems.
                                     </li>
                                     <li>
-                                        brainstorm and explore new solutions to problems faced by protocol or blockchain developers.
+                                        Brainstorm and explore new solutions to problems faced by protocol or blockchain developers.
                                     </li>
                                 </ul>
 
