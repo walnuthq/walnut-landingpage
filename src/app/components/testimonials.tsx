@@ -6,8 +6,8 @@ const featuredTestimonial = {
     name: 'Ariel Elperin',
     twitter: 'FeedTheFed',
     imageUrl:
-      'https://pbs.twimg.com/profile_images/1715973817082712064/pZKSXb7V_400x400.jpg',
-    logoUrl: 'https://pbs.twimg.com/profile_images/1656026873078398981/Ht7OXAUs_400x400.jpg',
+      '/testimonials/Ariel Elperin LinkedIn.jpg',
+    logoUrl: '/testimonials/starkware.jpg',
     profileUrl: 'https://x.com/feedthefed'
   },
 }
@@ -22,7 +22,7 @@ const testimonials = [
           company: 'Argent',
           companyUrl: 'https://www.argent.xyz',
           imageUrl:
-            'https://media.licdn.com/dms/image/v2/C5103AQFk-SwGD7qXlQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516559225789?e=1736985600&v=beta&t=SPrzlpMkOHvpoiaGSUonRvD_YCQJXvgaES8c4Ij5rR8',
+            '/testimonials/Sergio Garcia Campos.jpeg',
         },
       },
       {
@@ -33,7 +33,7 @@ const testimonials = [
           company: 'Karnot, Appchain Wiz 🧙‍♂️',
           companyUrl: 'https://www.karnot.xyz/',
           imageUrl:
-            'https://pbs.twimg.com/profile_images/1783811322377015297/QKLuV1iB_400x400.jpg',
+            '/testimonials/Apoorv Sadana Profile Picture.jpg',
         },
       },
       // More testimonials...
@@ -47,7 +47,7 @@ const testimonials = [
           company: 'Starkware',
           companyUrl: 'https://starkware.co/',
           imageUrl:
-            'https://pbs.twimg.com/profile_images/1770371954718961664/-VO1BWxj_400x400.jpg',
+            '/testimonials/Amanusk Profile Picture.jpg',
         },
       },
       {
@@ -58,7 +58,7 @@ const testimonials = [
           company: 'Nostra',
           companyUrl: 'https://nostra.finance/',
           imageUrl:
-            'https://media.licdn.com/dms/image/v2/C4D03AQEx_C55GAvEcw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1646393064455?e=1736985600&v=beta&t=QVOQ6gDEWpfuzV6w37RmpvbJzoTEo5fpmuakyGXJxNw',
+            '/testimonials/Vukasin Manojlovic.jpeg',
         },
       },
     ],
@@ -73,7 +73,7 @@ const testimonials = [
           company: 'Cartridge',
           companyUrl: 'https://cartridge.gg/',
           imageUrl:
-            'https://media.licdn.com/dms/image/v2/D5603AQEtgVtXX2_HQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708622697344?e=1736985600&v=beta&t=crDW00mXRMsoS4XLw9sxH4Mrc_G5Kq1XCu3FD4Q-N6E',
+            '/testimonials/Tarrence V LinkedIn.jpeg',
         },
       },
       {
@@ -84,7 +84,7 @@ const testimonials = [
           company: 'Enso Finance',
           companyUrl: 'https://www.enso.finance/',
           imageUrl:
-            'https://pbs.twimg.com/profile_images/1847655739575115777/EUWKAAV9_400x400.jpg',
+            '/testimonials/Connor Profile Image.jpg',
         },
       },
     ],
@@ -108,7 +108,7 @@ const testimonials = [
           company: 'Spaceshard',
           companyUrl: 'https://www.spaceshard.io/',
           imageUrl:
-            'https://pbs.twimg.com/profile_images/1643266633891295233/imvux5PW_400x400.jpg',
+            '/testimonials/Edi Sinovčić LinkedIn Image.jpg',
         },
       },
     ],
