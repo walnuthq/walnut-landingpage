@@ -6,7 +6,7 @@ const featuredTestimonial = {
     name: 'Ariel Elperin',
     twitter: 'FeedTheFed',
     imageUrl:
-      '/testimonials/Ariel Elperin LinkedIn.jpeg',
+      '/testimonials/Ariel Elperin LinkedIn.jpg',
     logoUrl: '/testimonials/starkware.jpg',
     profileUrl: 'https://x.com/feedthefed'
   },
@@ -108,7 +108,7 @@ const testimonials = [
           company: 'Spaceshard',
           companyUrl: 'https://www.spaceshard.io/',
           imageUrl:
-            '/testimonials/Edi Sinovčić LinkedIn Image.jpeg',
+            '/testimonials/Edi Sinovčić LinkedIn Image.jpg',
         },
       },
     ],
