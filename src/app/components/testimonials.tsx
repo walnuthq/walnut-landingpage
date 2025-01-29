@@ -6,7 +6,7 @@ const featuredTestimonial = {
     name: 'Ariel Elperin',
     twitter: 'FeedTheFed',
     imageUrl:
-      '/testimonials/Ariel Elperin LinkedIn.jpg',
+      '/testimonials/ariel.jpg',
     logoUrl: '/testimonials/starkware.jpg',
     profileUrl: 'https://x.com/feedthefed'
   },
@@ -22,7 +22,7 @@ const testimonials = [
           company: 'Argent',
           companyUrl: 'https://www.argent.xyz',
           imageUrl:
-            '/testimonials/Sergio Garcia Campos.jpeg',
+            '/testimonials/garcia.jpeg',
         },
       },
       {
@@ -33,7 +33,7 @@ const testimonials = [
           company: 'Karnot, Appchain Wiz 🧙‍♂️',
           companyUrl: 'https://www.karnot.xyz/',
           imageUrl:
-            '/testimonials/Apoorv Sadana Profile Picture.jpg',
+            '/testimonials/sadana.jpg',
         },
       },
       // More testimonials...
@@ -47,7 +47,7 @@ const testimonials = [
           company: 'Starkware',
           companyUrl: 'https://starkware.co/',
           imageUrl:
-            '/testimonials/Amanusk Profile Picture.jpg',
+            '/testimonials/amanusk.jpg',
         },
       },
       {
@@ -58,7 +58,7 @@ const testimonials = [
           company: 'Nostra',
           companyUrl: 'https://nostra.finance/',
           imageUrl:
-            '/testimonials/Vukasin Manojlovic.jpeg',
+            '/testimonials/manojlovic.jpeg',
         },
       },
     ],
@@ -73,7 +73,7 @@ const testimonials = [
           company: 'Cartridge',
           companyUrl: 'https://cartridge.gg/',
           imageUrl:
-            '/testimonials/Tarrence V LinkedIn.jpeg',
+            '/testimonials/tarrence.jpeg',
         },
       },
       {
@@ -84,7 +84,7 @@ const testimonials = [
           company: 'Enso Finance',
           companyUrl: 'https://www.enso.finance/',
           imageUrl:
-            '/testimonials/Connor Profile Image.jpg',
+            '/testimonials/connor.jpg',
         },
       },
     ],
@@ -108,7 +108,7 @@ const testimonials = [
           company: 'Spaceshard',
           companyUrl: 'https://www.spaceshard.io/',
           imageUrl:
-            '/testimonials/Edi Sinovčić LinkedIn Image.jpg',
+            '/testimonials/edi.jpg',
         },
       },
     ],
