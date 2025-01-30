@@ -25,7 +25,7 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
+      
       <Container className="relative">
         <Navbar
           banner={
@@ -141,7 +141,7 @@ function BentoSection() {
 
 function DarkBentoSection() {
   return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
+    <div className="mx-2 mt-2 rounded-4xl bg-gray-950 py-32">
       <Container>
         <Subheading dark>Blockchain Research and Engineering</Subheading>
         <Heading as="h3" dark className="mt-2 sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2]">
@@ -208,7 +208,7 @@ export default function Home() {
         <Container className="mt-10">
           <LogoCloud />
         </Container>
-        <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
+        <div className="pt-32 bg-gray-950">
           <FeatureSection />
           <BentoSection />
           <Testimonials />

@@ -42,8 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</Script>
 			</head>
 
-			<body className="flex h-full flex-col">
-				<div className="text-gray-950 antialiased">{children}</div>
+			<body className="flex h-full flex-col bg-gray-950">
+				<div className="text-gray-950 antialiased ">{children}</div>
 			</body>
 		</html>
 	)
