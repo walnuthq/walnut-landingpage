@@ -72,7 +72,7 @@ export default function Page() {
             </li>
             <li>
               Added build profile into the verification status page, allowing users
-              to see which build profile was used to generate a given <code>class_hash</code>
+              to see which build profile was used to generate a given <code>class_hash</code>{" "}
               during contract verification.
             </li>
           </ul>
