@@ -53,8 +53,8 @@ export default function Page() {
           <p className="text-gray-500">
             This week, we built an automation that allows our Contract
             Verification Service to automatically support new Sozo versions as
-            soon as they are released. No more "unsupported Dojo version"
-            messages during contract verification on Starknet!
+            soon as they are released. No more &quot;unsupported Dojo
+            version&quot; messages during contract verification on Starknet!
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
