@@ -71,9 +71,9 @@ export default function Page() {
               on how to Debug Dojo with Walnut.
             </li>
             <li>
-              Added built profile into verification status page, allowing users
-              to see which build profile was used to generate a given class_hash
-              during contract verification.{" "}
+              Added build profile into the verification status page, allowing users
+              to see which build profile was used to generate a given <code>class_hash</code>
+              during contract verification.
             </li>
           </ul>
         </>
