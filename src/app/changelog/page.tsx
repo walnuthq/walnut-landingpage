@@ -30,6 +30,7 @@ import CodeSnippet20241115 from "@/images/changelog/CodeSnippet20241115.png";
 import CodeSnippet20241122 from "@/images/changelog/CodeSnippet20241122.png";
 import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
+import CodeSnippet20250207 from "@/images/changelog/CodeSnippet20250207.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -45,6 +46,44 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-02-07T00:00Z"} id="event-tab">
+        <Image src={CodeSnippet20250207} alt="event-tab" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Brand New Events Tab
+          </h2>
+          <p className="text-gray-500">
+            This week, we introduced an Events Tab, allowing users to view all
+            emitted events by a given transaction. This helps track contract interactions and debug
+            more efficiently.{" "}
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>List of Events for both failed and successful transactions.</li>
+            <li>
+              Each Event shows emitted data, allowing users to
+              inspect event contents directly.
+            </li>
+            <li>
+              Improved colors in the Call Trace and made them more consistent:
+              <ul className="list-disc list-inside">
+                <li>
+                  <code>Types</code> &mdash; Orange
+                </li>
+                <li>
+                  <code>Names</code> &mdash; Green
+                </li>
+                <li>
+                  <code>Values</code> &mdash; Dark Orange
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-01-24T00:00Z"} id="sozo-verify">
         <>
           <h2 className="font-bold my-4 text-xl">
@@ -71,9 +110,9 @@ export default function Page() {
               on how to Debug Dojo with Walnut.
             </li>
             <li>
-              Added build profile into the verification status page, allowing users
-              to see which build profile was used to generate a given <code>class_hash</code>{" "}
-              during contract verification.
+              Added build profile into the verification status page, allowing
+              users to see which build profile was used to generate a given{" "}
+              <code>class_hash</code> during contract verification.
             </li>
           </ul>
         </>
