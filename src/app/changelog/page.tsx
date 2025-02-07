@@ -50,24 +50,24 @@ export default function Page() {
         <Image src={CodeSnippet20250207} alt="event-tab" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Event Tab Added to Debugger
+            Brand New Events Tab
           </h2>
           <p className="text-gray-500">
-            This week, we introduced an Event Tab, allowing users to view all
-            emitted events. This helps track contract interactions and debug
+            This week, we introduced an Events Tab, allowing users to view all
+            emitted events by a given transaction. This helps track contract interactions and debug
             more efficiently.{" "}
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Enabled event visibility for failed transactions.</li>
+            <li>List of Events for both failed and successful transactions.</li>
             <li>
-              Added support for displaying emitted event data, allowing users to
+              Each Event shows emitted data, allowing users to
               inspect event contents directly.
             </li>
             <li>
-              Synchronized colors for better clarity in Call Trace:
+              Improved colors in the Call Trace and made them more consistent:
               <ul className="list-disc list-inside">
                 <li>
                   <code>Types</code> &mdash; Orange
