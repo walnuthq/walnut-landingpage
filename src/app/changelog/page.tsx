@@ -54,16 +54,16 @@ export default function Page() {
           </h2>
           <p className="text-gray-500">
             This week, we introduced an Event Tab, allowing users to view all
-            emitted events. This helps in tracking contract interactions and
-            debugging more efficiently.
+            emitted events. This helps track contract interactions and debug
+            more efficiently.{" "}
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
-            <li>Enabled to see events for failed transactions.</li>
+            <li>Enabled event visibility for failed transactions.</li>
             <li>
-              Added support for showinf emitted events datas, allowing users to
+              Added support for displaying emitted event data, allowing users to
               inspect event contents directly.
             </li>
             <li>
