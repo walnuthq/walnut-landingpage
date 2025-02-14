@@ -63,14 +63,22 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Streamlined diagnostics by showing the full build log on the
-              verification status page when a project build failed.{" "}
+              Improved error visibility by showing the full build log on the
+              verification status page when a project build failed.
             </li>
             <li>
               Prevented exposure of private keys by ignoring the{" "}
               <code>[env]</code> section in <code>dojo_*.dev.toml</code> files,
               ensuring no sensitive data is transmitted during contract
               verification.
+            </li>
+            <li>
+              Added support for the functions inlined by the compiler, making
+              them visible in the call trace.
+            </li>
+            <li>
+              Updated the function details window to display values for inline
+              functions as well.
             </li>
           </ul>
         </>
