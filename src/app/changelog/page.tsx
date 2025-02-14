@@ -73,8 +73,9 @@ export default function Page() {
               verification.
             </li>
             <li>
-              Added support for the functions inlined by the compiler, making
-              them visible in the call trace.
+              Added support for functions inlined by the compiler, which is
+              available starting from Cairo version 2.8.2, making them visible
+              in the call trace.
             </li>
             <li>
               Updated the function details window to display values for inline
