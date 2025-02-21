@@ -73,7 +73,7 @@ export default function Page() {
               corresponding function calls.
             </li>
             <li>
-              Enhanced Eevents tab with Contract address and Event selector
+              Enhanced Events tab with Contract address and Event selector
               information.
             </li>
             <li>Added horizontal scrolling in the Events tab.</li>
