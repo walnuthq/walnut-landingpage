@@ -32,6 +32,7 @@ import CodeSnippet20241129 from "@/images/changelog/CodeSnippet20241129.gif";
 import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
 import CodeSnippet20250207 from "@/images/changelog/CodeSnippet20250207.png";
 import CodeSnippet20250214 from "@/images/changelog/CodeSnippet20250214.png";
+import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -47,6 +48,38 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-02-21T00:00Z"} id="call-trace-preview">
+        <Image src={CodeSnippet20250221} alt="call-trace-preview" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Call Trace Preview in Debugger
+          </h2>
+          <p className="text-gray-500">
+            This week, we improved the debugging experience by integrating the
+            Call Trace directly into the debugger window. Users can now track
+            code execution and the full call trace side by side, making it
+            easier to analyze transactions and debug complex interactions.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              The debugger window now has three panels: Function Call Details,
+              Call Trace Preview, and File Explorer.
+            </li>
+            <li>
+              Events are now visible in the Call Trace, linked to their
+              corresponding function calls.
+            </li>
+            <li>
+              Enhanced Events tab with Contract address and Event selector
+              information.
+            </li>
+            <li>Added horizontal scrolling in the Events tab.</li>
+          </ul>
+        </>
+      </Article>
       <Article date={"2025-02-14T00:00Z"} id="stack-error">
         <Image src={CodeSnippet20250214} alt="stack-error" unoptimized />
         <>
