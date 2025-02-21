@@ -70,18 +70,13 @@ export default function Page() {
             </li>
             <li>
               Events are now visible in the Call Trace, linked to their
-              corresponding function calls. Note: Contract verification is
-              required to view events.
+              corresponding function calls.
             </li>
             <li>
-              Enhanced event tab with Contract address and Event selector
+              Enhanced Eevents tab with Contract address and Event selector
               information.
             </li>
-            <li>Added horizontal scrolling in the event tab.</li>
-            <li>
-              Replaced the loader with a table that displays pending status
-              during contract verification.
-            </li>
+            <li>Added horizontal scrolling in the Events tab.</li>
           </ul>
         </>
       </Article>
