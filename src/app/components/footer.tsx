@@ -4,9 +4,9 @@ import { Container } from './container'
 import { Gradient } from './gradient'
 import { Link } from './link'
 import { Logo } from './logo'
-import { Subheading } from './text'
+import { Heading, Subheading } from './text'
 import Image from 'next/image'
-import logoWalnut from '@/images/logos/walnut.svg'
+import logoWalnutWhite from '@/images/logos/walnut_white.svg'
 import { IconLink } from '@/app/changelog/components/IconLink'
 import { GitHubIcon, TelegramIcon, XIcon } from '@/app/changelog/components/Intro'
 
@@ -14,18 +14,18 @@ function CallToAction() {
   return (
     <div className="relative pb-16 pt-20 text-center sm:py-24">
       <hgroup>
-        <Subheading>Get started</Subheading>
-        <h2 className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-5xl">
+        <Subheading dark>Get started</Subheading>
+        <Heading as="h2" dark className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-5xl">
         Ready to Debug Cairo?
           <br />
           Start for free today.
-        </h2>
+        </Heading>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-white">
         Unlock the tools you need to debug, simulate, and optimize your Starknet Smart Contracts.
       </p>
       <div className="mt-6">
-          <Button className="w-full sm:w-auto" href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer"
+          <Button variant="primary" className="w-full sm:w-auto" href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer"
                   aria-label="Get started for Free">Get started for Free</Button>
 
       </div>
@@ -34,7 +34,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-gray-400">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -46,7 +46,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-[hover]:text-gray-950/75"
+        className="font-medium text-white data-[hover]:text-gray-300/75"
       />
     </li>
   )
@@ -85,11 +85,11 @@ function Sitemap() {
 function SocialLinks() {
   return (
     <div className='flex gap-x-1'>
-      <IconLink href="https://x.com/walnut_dev" target="_blank" icon={XIcon} variant='black'>
+      <IconLink isFooter href="https://x.com/walnut_dev" target="_blank" icon={XIcon} variant='white'>
       </IconLink>
-      <IconLink href="https://github.com/walnuthq" target="_blank" icon={GitHubIcon} variant='black'>
+      <IconLink isFooter href="https://github.com/walnuthq" target="_blank" icon={GitHubIcon} variant='white'>
         </IconLink>
-      <IconLink href="https://t.me/walnuthq" target="_blank" icon={TelegramIcon} variant='black'>
+      <IconLink isFooter href="https://t.me/walnuthq" target="_blank" icon={TelegramIcon} variant='white'>
       </IconLink>
     </div>
   )
@@ -97,7 +97,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-950">
+    <div className="text-sm/6 text-gray-400">
       &copy; {new Date().getFullYear()} Wido Inc.
     </div>
   )
@@ -106,17 +106,17 @@ function Copyright() {
 export function Footer() {
   return (
     <footer>
-      <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
+      <div className="relative bg-gray-900">
+        <div className="absolute inset-2 " />
         <Container>
-          <CallToAction />
-          <PlusGrid className="pb-16">
-            <PlusGridRow>
+          <CallToAction/>
+          <PlusGrid >
+            <PlusGridRow isFooter>
               <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
                 <div className="col-span-2 flex">
                   <PlusGridItem className="pt-6 lg:pb-6">
                   <Link href="/" aria-label="Home">
-                    <Image src={logoWalnut} alt="Walnut logo" unoptimized  className="h-10 w-auto white" />
+                    <Image src={logoWalnutWhite} alt="Walnut logo" unoptimized  className="h-10 w-auto white" />
                   </Link>
                   </PlusGridItem>
                 </div>
@@ -125,7 +125,7 @@ export function Footer() {
                 </div>
               </div>
             </PlusGridRow>
-            <PlusGridRow className="flex justify-between">
+            <PlusGridRow isFooter className="flex justify-between">
               <div>
                 <PlusGridItem className="py-3">
                   <Copyright />
@@ -139,7 +139,7 @@ export function Footer() {
             </PlusGridRow>
           </PlusGrid>
         </Container>
-      </Gradient>
+      </div>
     </footer>
   )
 }
