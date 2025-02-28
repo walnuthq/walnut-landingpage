@@ -64,7 +64,7 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              The Call Trace Preview in the debugger no longer shows Events, improving navigation.
+              The Call Trace Preview in the debugger no longer shows Errors, improving navigation.
             </li>
             <li>
               Errors are now always visible in the Call Trace. Previously, they were sometimes collapsed, making them hard to find.
