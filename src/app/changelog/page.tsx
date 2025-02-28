@@ -56,7 +56,7 @@ export default function Page() {
             Enums Decoded in Internal Function Call
           </h2>
           <p className="text-gray-500">
-            This week, we added Enums decoding for Internal functions, making it
+            This week, we added Enums decoding for internal functions, making it
             easier to understand values during debugging.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
@@ -64,23 +64,19 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Error traces are no longer displayed in the Call Trace Preview.
+              The Call Trace Preview in the debugger no longer shows Events, improving navigation.
             </li>
             <li>
-              Fixed collapsed Error trace line, it is now always visible to help
-              users quickly locate where an error occurred.
+              Errors are now always visible in the Call Trace. Previously, they were sometimes collapsed, making them hard to find.
             </li>
             <li>
-              Displayed Events with data information inside the Call Trace.
+              The Call Trace now displays Events with argument data.
             </li>
             <li>
-              Delegate and Events now have distinct colors — Delegate calls are
-              orange, and Events are blue.
+              The call trace now uses different colors for Delegate and Event frames, improving differentiation.
             </li>
             <li>
-              Supported inline functions when both <code>[cairo]</code>
-              and <code>[profile.dev.cairo]</code> sections are present in
-              Scarb.toml.
+              Contract verification now correctly generates debug info for inline functions, even when both [cairo] and [profile.dev.cairo] sections are in Scarb.toml.
             </li>
           </ul>
         </>
