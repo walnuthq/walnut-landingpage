@@ -33,6 +33,7 @@ import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
 import CodeSnippet20250207 from "@/images/changelog/CodeSnippet20250207.png";
 import CodeSnippet20250214 from "@/images/changelog/CodeSnippet20250214.png";
 import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
+import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -48,6 +49,43 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-02-28T00:00Z"} id="enum-decoded">
+        <Image src={CodeSnippet20250228} alt="enum-decoded" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Enums Decoded in Internal Function Call
+          </h2>
+          <p className="text-gray-500">
+            This week, we added Enums decoding for Internal functions, making it
+            easier to understand values during debugging.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Error traces are no longer displayed in the Call Trace Preview.
+            </li>
+            <li>
+              Fixed collapsed Error trace line, it is now always visible to help
+              users quickly locate where an error occurred.
+            </li>
+            <li>
+              Displayed Events with data information inside the Call Trace.
+            </li>
+            <li>
+              Delegate and Events now have distinct colors — Delegate calls are
+              orange, and Events are blue.
+            </li>
+            <li>
+              Supported inline functions when both <code>[cairo]</code>
+              and <code>[profile.dev.cairo]</code> sections are present in
+              Scarb.toml.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-02-21T00:00Z"} id="call-trace-preview">
         <Image src={CodeSnippet20250221} alt="call-trace-preview" unoptimized />
         <>
