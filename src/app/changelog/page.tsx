@@ -34,6 +34,7 @@ import CodeSnippet20250207 from "@/images/changelog/CodeSnippet20250207.png";
 import CodeSnippet20250214 from "@/images/changelog/CodeSnippet20250214.png";
 import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
 import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
+import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -49,6 +50,36 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-03-07T00:00Z"} id="native-data">
+        <Image src={CodeSnippet20250307} alt="native-data" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Native Data Display in Debugger
+          </h2>
+          <p className="text-gray-500">
+            This week, we updated the debugger window to display values in their
+            native type format instead of hexadecimal, improving the overall
+            debugging experience.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added decoding support for byte arrays.</li>
+            <li>
+              The Transaction Detail section now displays the transaction’s
+              position in the block, along with the total number of transactions
+              in the block.
+            </li>
+            <li>
+              In the Call Trace, data tables for calldata now have proper
+              borders, improving readability and navigation.
+            </li>
+            <li>Updated broken documentation link.</li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-02-28T00:00Z"} id="enum-decoded">
         <Image src={CodeSnippet20250228} alt="enum-decoded" unoptimized />
         <>
@@ -64,19 +95,22 @@ export default function Page() {
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              The Call Trace Preview in the debugger no longer shows Errors, improving navigation.
+              The Call Trace Preview in the debugger no longer shows Errors,
+              improving navigation.
             </li>
             <li>
-              Errors are now always visible in the Call Trace. Previously, they were sometimes collapsed, making them hard to find.
+              Errors are now always visible in the Call Trace. Previously, they
+              were sometimes collapsed, making them hard to find.
+            </li>
+            <li>The Call Trace now displays Events with argument data.</li>
+            <li>
+              The call trace now uses different colors for Delegate and Event
+              frames, improving differentiation.
             </li>
             <li>
-              The Call Trace now displays Events with argument data.
-            </li>
-            <li>
-              The call trace now uses different colors for Delegate and Event frames, improving differentiation.
-            </li>
-            <li>
-              Contract verification now correctly generates debug info for inline functions, even when both [cairo] and [profile.dev.cairo] sections are in Scarb.toml.
+              Contract verification now correctly generates debug info for
+              inline functions, even when both [cairo] and [profile.dev.cairo]
+              sections are in Scarb.toml.
             </li>
           </ul>
         </>
