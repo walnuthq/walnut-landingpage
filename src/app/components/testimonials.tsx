@@ -111,6 +111,17 @@ const testimonials = [
             '/testimonials/edi.jpg',
         },
       },
+      {
+        body: 'Walnut is an essential tool for debugging complex transactions with nested calls and large amounts of calldata. Walnut helped me with a massive blocker on the Bitcoin inscriptions project. 🌰',
+        author: {
+          name: 'Lana Ives',
+          position: 'Exploration at',
+          company: 'Starkware',
+          companyUrl: 'https://starkware.co/',
+          imageUrl:
+            '/testimonials/lana-ives.jpg',
+        },
+      },
     ],
 
   ],
