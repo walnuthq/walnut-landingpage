@@ -36,6 +36,17 @@ const testimonials = [
             '/testimonials/sadana.jpg',
         },
       },
+      {
+        body: 'Debugging transactions and performance monitoring are pain points on Starknet today. Every DeFi protocol builder woud benefit from better tooling, and it’s great to see Walnut addressing this need.',
+        author: {
+          name: 'Vukašin Manojlović',
+          position: 'DEFI developer at',
+          company: 'Nostra',
+          companyUrl: 'https://nostra.finance/',
+          imageUrl:
+            '/testimonials/manojlovic.jpeg',
+        },
+      },
       // More testimonials...
     ],
     [
@@ -51,14 +62,16 @@ const testimonials = [
         },
       },
       {
-        body: 'Debugging transactions and performance monitoring are pain points on Starknet today. Every DeFi protocol builder woud benefit from better tooling, and it’s great to see Walnut addressing this need.',
+        body: 'Walnut is an essential tool for debugging complex transactions with nested calls and large amounts of calldata. Walnut helped me with a massive blocker on the Bitcoin inscriptions project. 🌰',
         author: {
-          name: 'Vukašin Manojlović',
-          position: 'DEFI developer at',
-          company: 'Nostra',
-          companyUrl: 'https://nostra.finance/',
+          name: 'Lana Ives',
+          position: 'Exploration at',
+          company: 'Starkware',
+          companyUrl: 'https://starkware.co/',
           imageUrl:
-            '/testimonials/manojlovic.jpeg',
+            '/testimonials/lana-ives.jpg',
+          profileUrl: 'https://x.com/tx_track?lang=en'
+          
         },
       },
     ],
@@ -111,6 +124,7 @@ const testimonials = [
             '/testimonials/edi.jpg',
         },
       },
+
     ],
 
   ],
@@ -142,10 +156,10 @@ export default function Testimonials() {
                 className="h-10 w-10 flex-none rounded-full bg-gray-50"
               />
               <div className="flex-auto">
-                <a className="hover:underline" href={featuredTestimonial.author.profileUrl}>
+                <a target="_blank" className="hover:underline" href={featuredTestimonial.author.profileUrl}>
                   <div className="font-semibold">{featuredTestimonial.author.name}</div>
                 </a>
-                <a className="hover:underline" href={featuredTestimonial.author.profileUrl}>
+                <a target="_blank" className="hover:underline" href={featuredTestimonial.author.profileUrl}>
                   <div className="text-gray-600">{`@${featuredTestimonial.author.twitter}`}</div>
                 </a>
               </div>
@@ -176,11 +190,12 @@ export default function Testimonials() {
                       <figcaption className="mt-6 flex items-center gap-x-4">
                         <img alt="" src={testimonial.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
                         <div>
-                          <div className="font-semibold">{testimonial.author.name}</div>
+                          {testimonial.author.profileUrl? <a href={testimonial.author.profileUrl} className="font-semibold hover:underline">{testimonial.author.name}</a> : 
+                          <div className="font-semibold">{testimonial.author.name}</div>}
                           <div className="text-gray-600">{`${testimonial.author.position}`}
                             <span>
                             {' '}
-                              <a className="text-blue-500 hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
+                              <a target="_blank" className="text-blue-500 hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
                               </span>
                           </div>
                         </div>
