@@ -35,6 +35,7 @@ import CodeSnippet20250214 from "@/images/changelog/CodeSnippet20250214.png";
 import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
 import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
 import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
+import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -50,6 +51,33 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-03-14T00:00Z"} id="breakpoints">
+        <Image src={CodeSnippet20250314} alt="breakpoints" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Breakpoints in Debugger</h2>
+          <p className="text-gray-500">
+            This week, Walnut is getting BREAKPOINTS! Now you can pause the execution at any line to quickly inspect what&apos;s going on.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Call Trace now displays calldata in auto-decoded and raw formats,
+              eliminating the need for separate hex and decimal views.
+            </li>
+            <li>Added the Cairo Version and Networks on the Contract page.</li>
+            <li>
+              ContractState type is no longer shown in the debugger memory window, as it is a marker type with
+              empty values.
+            </li>
+            <li>
+              Fixed a bug where File Explorer was not visible in certain screen sizes.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-03-07T00:00Z"} id="native-data">
         <Image src={CodeSnippet20250307} alt="native-data" unoptimized />
         <>
