@@ -56,26 +56,23 @@ export default function Page() {
         <>
           <h2 className="font-bold my-4 text-xl">Breakpoints in Debugger</h2>
           <p className="text-gray-500">
-            This week, we improved the debugging experience by implementing
-            Breakpoints, making it easier to pause and inspect execution flow.
+            This week, Walnut is getting BREAKPOINTS! Now you can pause the execution at any line to quickly inspect what&apos;s going on.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Call Trace displays data in both native and raw formats,
+              Call Trace now displays calldata in auto-decoded and raw formats,
               eliminating the need for separate hex and decimal views.
             </li>
             <li>Added the Cairo Version and Networks on the Contract page.</li>
             <li>
-              ContractState type is no longer shown, as it is a marker type with
+              ContractState type is no longer shown in the debugger memory window, as it is a marker type with
               empty values.
             </li>
             <li>
-              Fixed the layout for side panels so that Function Call View, Call
-              Trace Preview, and File Explorer now have fixed sizes and remain
-              visible for smoother navigation.
+              Fixed a bug where File Explorer was not visible in certain screen sizes.
             </li>
           </ul>
         </>
