@@ -50,6 +50,34 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-03-14T00:00Z"} id="calldata-native-data">
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Call Trace: Native and Raw Calldata
+          </h2>
+          <p className="text-gray-500">
+            This week, we enhanced the Call Trace to display data in both native
+            and raw formats, eliminating the need for separate hex and decimal
+            views.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added the Cairo Version and Networks on the Contract page.</li>
+            <li>
+              ContractState type is no longer shown, as it is a marker type with
+              empty values.
+            </li>
+            <li>
+              All three side panels - Function Call View, Call Trace Preview,
+              and File Explorer now have fixed sizes and remain visible for
+              seamless navigation.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-03-07T00:00Z"} id="native-data">
         <Image src={CodeSnippet20250307} alt="native-data" unoptimized />
         <>
