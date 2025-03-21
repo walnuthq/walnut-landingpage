@@ -36,6 +36,7 @@ import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
 import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
 import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
 import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
+import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -51,12 +52,33 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-03-21T00:00Z"} id="l1_handler_tx">
+        <Image src={CodeSnippet20250321} alt="l1_handler_tx" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            L1 Handler Transaction Support
+          </h2>
+          <p className="text-gray-500">
+            This week, we introduced support for L1 Handler transactions. You
+            can now search for Ethereum L1 transactions and view the
+            corresponding L2 Call Trace for deeper insights.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for Cairo v1 ABI.</li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-03-14T00:00Z"} id="breakpoints">
         <Image src={CodeSnippet20250314} alt="breakpoints" unoptimized />
         <>
           <h2 className="font-bold my-4 text-xl">Breakpoints in Debugger</h2>
           <p className="text-gray-500">
-            This week, Walnut is getting BREAKPOINTS! Now you can pause the execution at any line to quickly inspect what&apos;s going on.
+            This week, Walnut is getting BREAKPOINTS! Now you can pause the
+            execution at any line to quickly inspect what&apos;s going on.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
@@ -68,11 +90,12 @@ export default function Page() {
             </li>
             <li>Added the Cairo Version and Networks on the Contract page.</li>
             <li>
-              ContractState type is no longer shown in the debugger memory window, as it is a marker type with
-              empty values.
+              ContractState type is no longer shown in the debugger memory
+              window, as it is a marker type with empty values.
             </li>
             <li>
-              Fixed a bug where File Explorer was not visible in certain screen sizes.
+              Fixed a bug where File Explorer was not visible in certain screen
+              sizes.
             </li>
           </ul>
         </>
