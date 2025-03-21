@@ -124,6 +124,20 @@ const testimonials = [
             '/testimonials/edi.jpg',
         },
       },
+      {
+        body: '“Had to debug an OpenZeppelin tx on Starknet Sepolia—Walnut made it <i>way</i> too easy. Lifesaver!”',
+        author: {
+          name: 'Adam Borco',
+          position: 'Co-founder of',
+          company: 'Atomiq Labs',
+          companyUrl: 'https://x.com/atomiqlabs?lang=en',
+          imageUrl:
+            '/testimonials/adam-borco.jpg',
+          profileUrl: 'https://x.com/AdamBorco'
+          
+        },
+        htmlBody: true
+      },
 
     ],
 
@@ -185,7 +199,8 @@ export default function Testimonials() {
                       className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
                     >
                       <blockquote className=" text-sm/6 text-gray-600 group-data-[dark]:text-gray-400">
-                        <p>{`“${testimonial.body}”`}</p>
+                      {(testimonial as { htmlBody?: boolean }).htmlBody? <p dangerouslySetInnerHTML={{__html: testimonial.body}}/> : 
+                        <p>{`“${testimonial.body}”`}</p>}
                       </blockquote>
                       <figcaption className="mt-6 flex items-center gap-x-4">
                         <img alt="" src={testimonial.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
