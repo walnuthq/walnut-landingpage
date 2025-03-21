@@ -124,6 +124,19 @@ const testimonials = [
             '/testimonials/edi.jpg',
         },
       },
+      {
+        body: 'Had to debug an OpenZeppelin tx on Starknet Sepolia—Walnut made it *way* too easy. Lifesaver!',
+        author: {
+          name: 'Adam Borco',
+          position: 'Co-founder of',
+          company: 'Atomiq Labs',
+          companyUrl: 'https://x.com/atomiqlabs?lang=en',
+          imageUrl:
+            '/testimonials/adam-borco.jpg',
+          profileUrl: 'https://x.com/AdamBorco'
+          
+        },
+      },
 
     ],
 
