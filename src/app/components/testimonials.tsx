@@ -199,7 +199,7 @@ export default function Testimonials() {
                       className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
                     >
                       <blockquote className=" text-sm/6 text-gray-600 group-data-[dark]:text-gray-400">
-                      {testimonial.htmlBody? <p dangerouslySetInnerHTML={{__html: testimonial.body}}/> : 
+                      {(testimonial as { htmlBody?: boolean }).htmlBody? <p dangerouslySetInnerHTML={{__html: testimonial.body}}/> : 
                         <p>{`“${testimonial.body}”`}</p>}
                       </blockquote>
                       <figcaption className="mt-6 flex items-center gap-x-4">
