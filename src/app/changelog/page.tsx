@@ -60,41 +60,40 @@ export default function Page() {
           unoptimized
         />
         <>
-          <h2 className="font-bold my-4 text-xl">Source File Organization</h2>
+          <h2 className="font-bold my-4 text-xl">Improved File Explorer</h2>
           <p className="text-gray-500">
-            This week, we introduced a new organization in the Debugger window
-            by sorting source files by contract address.
+            This week, we improved the File Explorer by grouping source files of verified contracts by contract address.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Updated{" "}
+              Added a guide to the{" "}
               <Link
                 href="https://www.dojoengine.org/tutorial/deploy-to-mainnet/main#debug-with-walnut"
                 className="text-blue-500"
               >
                 Dojo documentation{" "}
               </Link>
-              on how to Debug Dojo with Walnut.
+              on how to debug Dojo Games with Walnut.
             </li>
             <li>
-              Upgraded the Walnut server to Rust 1.85 to ensure compatibility
-              with the latest snfoundry version, resolving verification failures
-              requiring Rust 1.80.1 or higher.
+              Upgraded Walnut Server to Rust 1.85 to ensure compatibility
+              with the latest snfoundry. This resolved some contract verification failures
+              which required Rust 1.80.1 or higher.
             </li>
             <li>
               Fixed a UI bug in the Debugger window where icons and window
               titles were not displayed correctly.
             </li>
             <li>
-              Fixed an issue with Ethereum contract search, where the network
+              Fixed an issue with searching for contracts on Ethereum, where the network
               was not displayed correctly.
             </li>
             <li>
               Fixed a bug where calldata arrays with nested elements were
-              incorrectly decoded.{" "}
+              incorrectly decoded, which led to Walnut Server timeout errors in some cases.{" "}
             </li>
           </ul>
         </>
