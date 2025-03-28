@@ -37,6 +37,7 @@ import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
 import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
 import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
 import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
+import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -52,6 +53,52 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-03-28T00:00Z"} id="source-file-organization">
+        <Image
+          src={CodeSnippet20250328}
+          alt="source-dile-organization"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">Improved File Explorer</h2>
+          <p className="text-gray-500">
+            This week, we improved the File Explorer by grouping source files of verified contracts by contract address.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added a guide to the{" "}
+              <Link
+                href="https://www.dojoengine.org/tutorial/deploy-to-mainnet/main#debug-with-walnut"
+                className="text-blue-500"
+              >
+                Dojo documentation{" "}
+              </Link>
+              on how to debug Dojo Games with Walnut.
+            </li>
+            <li>
+              Upgraded Walnut Server to Rust 1.85 to ensure compatibility
+              with the latest snfoundry. This resolved some contract verification failures
+              which required Rust 1.80.1 or higher.
+            </li>
+            <li>
+              Fixed a UI bug in the Debugger window where icons and window
+              titles were not displayed correctly.
+            </li>
+            <li>
+              Fixed an issue with searching for contracts on Ethereum, where the network
+              was not displayed correctly.
+            </li>
+            <li>
+              Fixed a bug where calldata arrays with nested elements were
+              incorrectly decoded, which led to Walnut Server timeout errors in some cases.{" "}
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-03-21T00:00Z"} id="l1_handler_tx">
         <Image src={CodeSnippet20250321} alt="l1_handler_tx" unoptimized />
         <>
