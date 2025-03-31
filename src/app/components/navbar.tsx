@@ -16,6 +16,7 @@ const links = [
   { href: 'https://docs.walnut.dev', label: 'Docs' },
   { href: '/blog', label: 'Blog' },
   { href: '/changelog', label: 'Changelog' },
+  { href: '/changelog-new', label: 'Changelog-New' },
   { href: 'mailto:hi@walnut.dev', label: 'Contact' },
 ]
 
