@@ -80,7 +80,7 @@ export default function Page() {
             </li>
             <li>
               Fixed an issue where missing memory values wrongly show
-              "Transaction hash not found" error.
+              &apos;&apos;Transaction hash not found&apos;&apos; error.
             </li>
           </ul>
         </>
