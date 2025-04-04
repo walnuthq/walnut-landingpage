@@ -38,6 +38,7 @@ import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
 import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
 import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
 import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
+import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -53,16 +54,49 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-04-04T00:00Z"} id="new-simualation-page">
+        <Image
+          src={CodeSnippet20250404}
+          alt="new-simulation-page"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">New Simulation Page</h2>
+          <p className="text-gray-500">
+            This week, we introduced a new Simulation Page that simplifies data
+            entries for transaction simulations. Entry points are now
+            automatically fetched based on the provided contract address and
+            network.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for verifying contracts with Cairo 2.9.4. </li>
+            <li>
+              Improved error clarity during verification, providing better
+              insights when an unsupported Cairo version is used or a build
+              failure occurs.
+            </li>
+            <li>
+              Fixed an issue where missing memory values wrongly 
+              show <code>Transaction hash not found</code> error.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-03-28T00:00Z"} id="source-file-organization">
         <Image
           src={CodeSnippet20250328}
-          alt="source-dile-organization"
+          alt="source-file-organization"
           unoptimized
         />
         <>
           <h2 className="font-bold my-4 text-xl">Improved File Explorer</h2>
           <p className="text-gray-500">
-            This week, we improved the File Explorer by grouping source files of verified contracts by contract address.
+            This week, we improved the File Explorer by grouping source files of
+            verified contracts by contract address.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
@@ -79,21 +113,22 @@ export default function Page() {
               on how to debug Dojo Games with Walnut.
             </li>
             <li>
-              Upgraded Walnut Server to Rust 1.85 to ensure compatibility
-              with the latest snfoundry. This resolved some contract verification failures
-              which required Rust 1.80.1 or higher.
+              Upgraded Walnut Server to Rust 1.85 to ensure compatibility with
+              the latest snfoundry. This resolved some contract verification
+              failures which required Rust 1.80.1 or higher.
             </li>
             <li>
               Fixed a UI bug in the Debugger window where icons and window
               titles were not displayed correctly.
             </li>
             <li>
-              Fixed an issue with searching for contracts on Ethereum, where the network
-              was not displayed correctly.
+              Fixed an issue with searching for contracts on Ethereum, where the
+              network was not displayed correctly.
             </li>
             <li>
               Fixed a bug where calldata arrays with nested elements were
-              incorrectly decoded, which led to Walnut Server timeout errors in some cases.{" "}
+              incorrectly decoded, which led to Walnut Server timeout errors in
+              some cases.{" "}
             </li>
           </ul>
         </>
