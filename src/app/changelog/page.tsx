@@ -79,8 +79,8 @@ export default function Page() {
               failure occurs.
             </li>
             <li>
-              Fixed an issue where missing memory values wrongly show
-              &apos;&apos;Transaction hash not found&apos;&apos; error.
+              Fixed an issue where missing memory values wrongly 
+              show <code>Transaction hash not found</code> error.
             </li>
           </ul>
         </>
