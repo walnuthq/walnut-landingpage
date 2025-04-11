@@ -127,7 +127,7 @@ export function LogoCluster() {
           hover={{ x: 3, y: 5, rotate: 7, delay: 0.2 }}
         />
         <Logo
-          src="/logo-cluster/starknet-token-strk-logo.png"
+          src="/logo-cluster/starknet-logo.png"
           left={144}
           top={40}
           hover={{ x: -2, y: -5, rotate: -6, delay: 0.15 }}
@@ -139,7 +139,7 @@ export function LogoCluster() {
           hover={{ x: -4, y: -5, rotate: -6, delay: 0.35 }}
         />
         <Logo
-          src="/logo-cluster/starknet-token-strk-logo.png"
+          src="/logo-cluster/starknet-logo.png"
           left={96}
           top={176}
           hover={{ x: -3, y: 5, rotate: 3, delay: 0.15 }}

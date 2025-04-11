@@ -1,4 +1,4 @@
-import { Heading, Subheading } from "./text"
+import { Heading, SectionHeading, Subheading } from "./text"
 
 const featuredTestimonial = {
   body: 'Transaction Debugging and Simulations are a big missing piece on Starknet, so it’s great to see Walnut providing developers with these essential tools.',
@@ -122,10 +122,10 @@ function classNames(...classes: any[]) {
 
 export default function Testimonials() {
   return (
-    <div className="relative isolate pb-32 pt-24 sm:pt-32">
+    <div className="relative isolate pb-[8.5rem] pt-24 sm:pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <Subheading>Testimonials</Subheading>
+          <SectionHeading>Testimonials</SectionHeading>
           <Heading className="text-3xl/[1.2]">
             Developers love Walnut
           </Heading>

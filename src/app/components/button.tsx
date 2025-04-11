@@ -11,10 +11,10 @@ const variants = {
   ),
   secondary: clsx(
     'relative inline-flex items-center justify-center px-[1.3rem] py-[calc(0.6rem-1px)]',
-    'rounded-full border border-transparent bg-WHITE shadow-md ring-1 ring-[#D15052]/15',
+    'rounded-full border border-slate-200 bg-WHITE shadow-md',
     'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]',
     'whitespace-nowrap text-base font-medium text-gray-950',
-    'data-[disabled]:bg-white/15 data-[hover]:bg-WHITE-2 data-[disabled]:opacity-40 transition-all ease-in-out',
+    'data-[disabled]:bg-white/15 data-[hover]:bg-slate-100 data-[disabled]:opacity-40 transition-all ease-in-out',
   ),
   outline: clsx(
     'inline-flex items-center justify-center px-2 py-[calc(theme(spacing.[1.5])-1px)]',

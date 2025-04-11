@@ -3,17 +3,13 @@ import BlogSection from './components/blog-section'
 import { Button } from './components/button'
 import { Container } from './components/container'
 import {  GetStarted } from './components/get-started'
-import { Gradient } from './components/gradient'
-import { Link } from './components/link'
 import { LinkedAvatars } from './components/linked-avatars'
 import { LogoCloud } from './components/logo-cloud'
 import { LogoCluster } from './components/logo-cluster'
 import { LogoTimeline } from './components/logo-timeline'
-import { Navbar } from './components/navbar'
 import { Screenshot } from './components/screenshot'
 import  Testimonials  from './components/testimonials'
 import { Heading, SectionHeading, Subheading } from './components/text'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
@@ -26,13 +22,13 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <div className="relative bg-GREY border-b">
-      <Container className="relative">
-        <div className="pb-24 pt-28 sm:pt-32 sm:pb-32 md:pb-48 md:pt-48 ">
+    <div className="relative bg-GREY border-b h-screen">
+      <Container className="h-full flex items-center justify-center">
+        <div className="flex flex-col items-center text-center">
           <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
             Debug Transactions on Starknet
           </h1>
-          <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8 ">
+          <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8">
             Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
@@ -44,13 +40,14 @@ function Hero() {
         </div>
       </Container>
     </div>
+
   )
 }
 
 function FeatureSection() {
   return (
     <div className="overflow-hidden">
-      <Container className="pb-32">
+      <Container className="pb-[8.5rem]">
         <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
         Debug and Simulate Cairo Transactions with Ease.
         </Heading>
@@ -68,7 +65,7 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-        <Subheading className='mx-auto text-center'>Features</Subheading>
+        <SectionHeading className='mx-auto text-center'>Features</SectionHeading>
         <Heading as="h3" className="mt-2 text-3xl/[1.2] mx-auto text-center">
         Understand Every Detail of Your Starknet Transactions.
         </Heading>
@@ -116,8 +113,8 @@ function BentoSection() {
           description="Save on gas with detailed insights into transaction costs."
           graphic={
               <div
-                  className="absolute inset-0 bg-[url(/screenshots/gas4.png)] bg-no-repeat bg-center"
-                  style={{backgroundSize: "160px"}}
+                  className="absolute inset-0 bg-[url(/screenshots/gas4.svg)] bg-no-repeat bg-center"
+                  style={{backgroundSize: "200px"}}
               />
           }
           fade={['bottom']}

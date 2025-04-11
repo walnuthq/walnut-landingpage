@@ -1,47 +1,15 @@
 'use client'
 
 import Image from 'next/image'
-
-import { Fragment } from 'react'
 import Link from 'next/link'
 import { Disclosure, DisclosureButton, DisclosurePanel, Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { Bars2Icon } from '@heroicons/react/24/solid'
 
-import { useRouter } from 'next/navigation'
-
-import { NavLink } from '@/components/NavLink'
-import logoWalnut from '@/images/logos/walnut.svg'
+import logoWalnut from '@/images/logos/walnut_black.svg'
 import { Container } from '@/app/components/container'
 import { motion } from 'framer-motion'
 
-
-function MobileNavIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-      fill="none"
-      strokeWidth={2}
-      strokeLinecap="round"
-    >
-      <path
-        d="M0 1H14M0 7H14M0 13H14"
-        className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0',
-        )}
-      />
-      <path
-        d="M2 2L12 12M12 2L2 12"
-        className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0',
-        )}
-      />
-    </svg>
-  )
-}
 
 const links = [
   { href: 'https://docs.walnut.dev', label: 'Docs' },

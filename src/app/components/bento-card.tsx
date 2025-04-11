@@ -31,7 +31,7 @@ export function BentoCard({
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
         'bg-white shadow-sm ring-1 ring-black/5',
-        'data-[dark]:bg-DARK-BLUE-2 data-[dark]:ring-white/15',
+        'data-[dark]:bg-DARK-BLUE-2 data-[dark]:ring-white/[0.075]',
       )}
     >
       <div className="relative h-80 shrink-0">
@@ -47,7 +47,7 @@ export function BentoCard({
         <Subheading as="h3" dark={dark}>
           {eyebrow}
         </Subheading>
-        <div className="mt-1 text-2xl/8 font-medium tracking-tight text-gray-950 group-data-[dark]:text-white">
+        <div className="mt-1 text-2xl/8 font-medium tracking-tight text-BLACK group-data-[dark]:text-WHITE">
           {title}
         </div>
         <div className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-[dark]:text-gray-400">
