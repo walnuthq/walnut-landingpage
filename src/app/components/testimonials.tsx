@@ -180,7 +180,7 @@ export default function Testimonials() {
                           <div className="text-gray-600">{`${testimonial.author.position}`}
                             <span>
                             {' '}
-                              <a className="text-BLUE hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
+                              <a className="text-blue-500 hover:underline" target="_blank" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
                               </span>
                           </div>
                         </div>

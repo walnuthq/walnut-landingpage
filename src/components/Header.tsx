@@ -60,7 +60,7 @@ function MobileNavButton() {
 export function Header({ condensed }: { condensed?: boolean}) {
   return (
     <Disclosure as="header" className="">
-      <header className={clsx('py-4', condensed && 'border-b border-slate-200')}>
+      <header className={clsx('py-4 h-[4.5rem]', condensed && 'border-b border-slate-200')}>
         <Container>
           <nav className="relative z-50 flex justify-between">
             <div className="flex items-center md:gap-x-12">

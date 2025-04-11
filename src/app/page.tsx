@@ -22,7 +22,7 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <div className="relative bg-GREY border-b h-screen">
+    <div className="relative bg-GREY border-b h-screen pt-[4.5rem]">
       <Container className="h-full flex items-center justify-center">
         <div className="flex flex-col items-center text-center">
           <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
@@ -163,6 +163,7 @@ function DarkBentoSection() {
             <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain. Read more{' '}
               <a 
               className='text-blue-500 hover:underline' 
+              target='_blank'
               href='https://walnut.dev/blog/walnut-receives-grant-from-optimism-foundation-to-improve-debugging-on-the-superchain'>
                 in our blog
               </a>.
