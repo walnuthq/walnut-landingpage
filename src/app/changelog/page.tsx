@@ -83,8 +83,8 @@ export default function Page() {
               to align with the new Simulation page.
             </li>
             <li>
-              Enabled contract verification via <code>sncast verify</code> using{" "}
-              <code>--class-hash</code>.
+              Enabled contract verification with <code>sncast verify</code>{" "}
+              using <code>--class-hash</code>.
             </li>
           </ul>
         </>
