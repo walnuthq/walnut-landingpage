@@ -57,21 +57,20 @@ export default function Page() {
       <Article date={"2025-04-11T00:00Z"} id="upgrade-dependencies">
         <>
           <h2 className="font-bold my-4 text-xl">
-            Stay Up to date with Starknet
+            Starknet Core Dependency Upgrades
           </h2>
           <p className="text-gray-500">
-            This week, we upgraded core dependencies — Cairo compiler, SN
-            Foundry, and Blockifier — to stay aligned with the latest updates in
-            Starknet. This ensures better compatibility, stability, and support
-            for the most recent protocol updates.
+            This week, we upgraded core dependencies: Cairo compiler, SN
+            Foundry, and Blockifier. This ensures better compatibility,
+            stability, and support for the latest protocol changes.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Fixed a bug where reverted transactions showed the wrong error
-              during simulation, due to a gas calculation issue.
+              Fixed a bug in gas computation that made transactions show the
+              wrong status during simulation.
             </li>
             <li>
               Updated{" "}
@@ -79,13 +78,13 @@ export default function Page() {
                 href="https://docs.walnut.dev/simulations"
                 className="text-blue-500"
               >
-                documentation{" "}
+                Simulations docs{" "}
               </Link>
-              to reflect the changes introduced by the new Simulation page.
+              to align with the new Simulation page.
             </li>
             <li>
-              Enabled contract verification via <code>sncast</code> using{" "}
-              <code>class-hash</code>.
+              Enabled contract verification via <code>sncast verify</code> using{" "}
+              <code>--class-hash</code>.
             </li>
           </ul>
         </>
