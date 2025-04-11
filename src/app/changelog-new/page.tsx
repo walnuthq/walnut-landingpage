@@ -1,7 +1,7 @@
 'use client';
 
 import { Container } from '../components/container'
-import { Footer } from '../components/footer'
+import { GetStarted } from '../components/get-started'
 import { GradientBackground } from '../components/gradient'
 import { Navbar } from '../components/navbar'
 import { Heading, Lead, Subheading } from '../components/text'
@@ -13,6 +13,8 @@ import matter from 'gray-matter'
 
 import callTracePreviewMD from './posts/calltrace-preview.md';
 import loopRemoval from './posts/loop-removal-from-call-traces.md';
+import MainHeader from '../components/MainHeader';
+import { Footer } from '@/components/Footer';
 
 
 
@@ -51,10 +53,9 @@ export default function NewChangelog() {
 
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
+      <MainHeader/>
       <Container>
-        <Navbar />
-        <Subheading className="mt-16">Walnut</Subheading>
+        <Subheading className="mt-32">Walnut</Subheading>
         <Heading as="h1" className="mt-2">
           Changelog
         </Heading>
@@ -121,6 +122,7 @@ export default function NewChangelog() {
           ))}
         </div>
       </Container>
+      <GetStarted/>
       <Footer />
     </main>
   )

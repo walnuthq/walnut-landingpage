@@ -1,6 +1,6 @@
 import { Button } from '../../components/button'
 import { Container } from '../../components/container'
-import { Footer } from '../../components/footer'
+
 import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
 import { Heading, Subheading } from '../../components/text'
@@ -10,6 +10,9 @@ import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from '@/components/Footer'
+import { GetStarted } from '@/app/components/get-started'
+import MainHeader from '@/app/components/MainHeader'
 
 const title = "Why blockchains mark a new era for debugging and monitoring services";
 const description = "The application error monitoring market, estimated to be worth over USD 29 billion, is on the cusp of a significant transformation.";
@@ -18,10 +21,9 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-    <GradientBackground />
+    <MainHeader/>
     <Container>
-      <Navbar />
-      <Subheading className="mt-16">
+      <Subheading className="mt-32">
         Saturday, July 06, 2024
       </Subheading>
       <Heading as="h1" className="mt-2">
@@ -869,6 +871,7 @@ export default function Blog() {
         </div>
       </div>
     </Container>
+    <GetStarted/>
     <Footer />
   </main>
   );

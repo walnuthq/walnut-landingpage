@@ -2,7 +2,7 @@ import { BentoCard } from './components/bento-card'
 import BlogSection from './components/blog-section'
 import { Button } from './components/button'
 import { Container } from './components/container'
-import { Footer } from './components/footer'
+import {  GetStarted } from './components/get-started'
 import { Gradient } from './components/gradient'
 import { Link } from './components/link'
 import { LinkedAvatars } from './components/linked-avatars'
@@ -17,6 +17,8 @@ import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import MainHeader from './components/MainHeader'
+import { Footer } from '@/components/Footer'
 
 const title = "Debugger for Starknet smart contract developers | Walnut";
 const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
@@ -24,18 +26,17 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <div className="relative">
+    <div className="relative bg-GREY border-b">
       <Container className="relative">
-        <Navbar />
-        <div className="pb-24 pt-28 sm:pt-32 sm:pb-32 md:pb-48 md:pt-48 flex flex-col items-center">
-          <h1 className="font-display text-balance text-center text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
+        <div className="pb-24 pt-28 sm:pt-32 sm:pb-32 md:pb-48 md:pt-48 ">
+          <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
             Debug Transactions on Starknet
           </h1>
-          <p className="mt-8 max-w-lg text-xl/5 font-medium text-gray-950/75 sm:text-2xl/8 text-center">
+          <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8 ">
             Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">Try Walnut for Free</Button>
+            <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">Try Walnut for Free</Button>
             <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
               Open Docs
             </Button>
@@ -49,7 +50,7 @@ function Hero() {
 function FeatureSection() {
   return (
     <div className="overflow-hidden">
-      <Container className="pb-24">
+      <Container className="pb-32">
         <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
         Debug and Simulate Cairo Transactions with Ease.
         </Heading>
@@ -129,10 +130,10 @@ function BentoSection() {
 
 function DarkBentoSection() {
   return (
-    <div className="mt-2 bg-gray-900 py-32">
+    <div className="mt-2 bg-BLACK-2 py-32">
       <Container>
         <Subheading className='mx-auto text-center' dark>Blockchain Research and Engineering</Subheading>
-        <Heading as="h3" dark className="mt-2 sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2] mx-auto text-center">
+        <Heading as="h3" dark className="mt-2 !text-BLUE sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2] mx-auto text-center">
           More from Walnut&nbsp;Labs
         </Heading>
 
@@ -190,7 +191,8 @@ function DarkBentoSection() {
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden relative">
+      <MainHeader />
       <Hero />
       <main>
         <Container className="mt-10">
@@ -204,8 +206,8 @@ export default function Home() {
         <BlogSection/>
         </div>
       </main>
-      
-      <Footer />
+      <GetStarted />
+      <Footer/>
     </div>
   )
 }

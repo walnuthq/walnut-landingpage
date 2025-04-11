@@ -1,6 +1,6 @@
 import { Button } from '../components/button'
 import { Container } from '../components/container'
-import { Footer } from '../components/footer'
+import { GetStarted } from '../components/get-started'
 import { GradientBackground } from '../components/gradient'
 import { Link } from '../components/link'
 import { Navbar } from '../components/navbar'
@@ -13,6 +13,8 @@ import { notFound } from 'next/navigation'
 import { posts } from '../utils/blogs'
 import Image from 'next/image'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import MainHeader from '../components/MainHeader'
+import { Footer } from '@/components/Footer'
 
 export const runtime = 'edge';
 
@@ -210,11 +212,10 @@ export default async function Blog({
       : 1
 
   return (
-    <main className="overflow-hidden">
-      <GradientBackground />
+    <main className="overflow-hidden relative">
+      <MainHeader/>
       <Container>
-        <Navbar />
-        <Subheading className="mt-16">Blog</Subheading>
+        <Subheading className="mt-32">Blog</Subheading>
         <Heading as="h1" className="mt-2">
           What’s happening at Walnut.
         </Heading>
@@ -227,7 +228,8 @@ export default async function Blog({
         <Posts page={page} />
         <Pagination page={page}  />
       </Container>
-      <Footer />
+      <GetStarted />
+      <Footer/>
     </main>
   )
 }

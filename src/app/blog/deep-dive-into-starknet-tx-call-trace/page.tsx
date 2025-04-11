@@ -1,6 +1,5 @@
 import { Button } from "../../components/button";
 import { Container } from "../../components/container";
-import { Footer } from "../../components/footer";
 import { GradientBackground } from "../../components/gradient";
 import { Navbar } from "../../components/navbar";
 import { Heading, Subheading } from "../../components/text";
@@ -22,6 +21,9 @@ import Link from "next/link";
 import { Screenshot } from "@/app/components/screenshot";
 import logoWalnut from '@/images/logos/walnut.svg';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from "@/components/Footer";
+import { GetStarted } from "@/app/components/get-started";
+import MainHeader from "@/app/components/MainHeader";
 
 const title = "Deep Dive into Starknet Transaction Call Trace";
 const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";
@@ -30,10 +32,9 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
+      <MainHeader/>
       <Container>
-        <Navbar />
-        <Subheading className="mt-16">Tuesday, January 14, 2025</Subheading>
+        <Subheading className="mt-32">Tuesday, January 14, 2025</Subheading>
         <Heading as="h1" className="mt-2">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
@@ -544,6 +545,7 @@ export default function Blog() {
           </div>
         </div>
       </Container>
+      <GetStarted/>
       <Footer />
     </main>
   );

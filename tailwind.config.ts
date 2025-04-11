@@ -22,6 +22,17 @@ const config: Config = {
 			'9xl': ['8rem', { lineHeight: '1' }],
 		},
 		extend: {
+			colors: {
+				BLUE: 'var(--BLUE)',
+				'DARK-BLUE': 'var(--DARK-BLUE)',
+				'DARK-BLUE-2': 'var(--DARK-BLUE-2)',
+				GREY: 'var(--GREY)',
+				'GREY-2': 'var(--GREY-2)',
+				WHITE: 'var(--WHITE)',
+				'WHITE-2': 'var(--WHITE-2)',
+				BLACK: 'var(--BLACK)',
+				'BLACK-2': 'var(--BLACK-2)'
+			},
 			borderRadius: {
 				'4xl': '2rem',
 			},

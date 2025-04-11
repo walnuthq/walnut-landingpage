@@ -38,7 +38,7 @@ function Logo({
 
 export function LogoTimeline() {
   return (
-    <div aria-hidden="true" className="relative h-full overflow-hidden rounded-lg lg:rounded-tr-4xl bg-[url(/screenshots/Noir_Package_Registry.webp)] bg-cover bg-[center_50%] bg-no-repeat">
+    <div aria-hidden="true" className="relative h-full overflow-hidden rounded-t-lg  bg-[url(/screenshots/Noir_Package_Registry.webp)] bg-cover bg-[center_50%] bg-no-repeat">
       {/* <div className="absolute  inset-0 top-8 z-10 flex items-center justify-center">
         <div
           className="absolute inset-0 backdrop-blur-md"

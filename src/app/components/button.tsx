@@ -4,17 +4,17 @@ import { Link } from './link'
 
 const variants = {
   primary: clsx(
-    'inline-flex items-center justify-center px-4 py-[calc(theme(spacing.2)-1px)]',
-    'rounded-full border border-transparent bg-gray-950 shadow-md',
+    'inline-flex items-center justify-center px-[1.3rem] py-[calc(0.6rem-1px)]',
+    'rounded-full border border-transparent bg-BLUE shadow-md',
     'whitespace-nowrap text-base font-medium text-white',
-    'data-[disabled]:bg-gray-950 data-[hover]:bg-gray-800 data-[disabled]:opacity-40 transition-all ease-in-out',
+    'data-[hover]:bg-DARK-BLUE data-[disabled]:opacity-40 transition-all ease-in-out',
   ),
   secondary: clsx(
-    'relative inline-flex items-center justify-center px-4 py-[calc(theme(spacing.2)-1px)]',
-    'rounded-full border border-transparent bg-white/15 shadow-md ring-1 ring-[#D15052]/15',
+    'relative inline-flex items-center justify-center px-[1.3rem] py-[calc(0.6rem-1px)]',
+    'rounded-full border border-transparent bg-WHITE shadow-md ring-1 ring-[#D15052]/15',
     'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]',
     'whitespace-nowrap text-base font-medium text-gray-950',
-    'data-[disabled]:bg-white/15 data-[hover]:bg-gray-100 data-[disabled]:opacity-40 transition-all ease-in-out',
+    'data-[disabled]:bg-white/15 data-[hover]:bg-WHITE-2 data-[disabled]:opacity-40 transition-all ease-in-out',
   ),
   outline: clsx(
     'inline-flex items-center justify-center px-2 py-[calc(theme(spacing.[1.5])-1px)]',

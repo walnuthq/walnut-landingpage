@@ -1,10 +1,10 @@
 import { Footer } from '@/components/Footer'
-import BlogHeader from '@/app/blog/components/BlogHeader';
+import MainHeader from '@/app/components/MainHeader';
 import Link from 'next/link';
 
 export default function Position() {
 	return <>
-		<BlogHeader />
+		<MainHeader />
 		<div>
             <div className="max-w-8xl mx-auto">
                 <div className="flex px-4 pt-8 pb-10 lg:px-8">

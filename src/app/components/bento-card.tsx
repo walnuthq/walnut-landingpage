@@ -31,7 +31,7 @@ export function BentoCard({
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
         'bg-white shadow-sm ring-1 ring-black/5',
-        'data-[dark]:bg-gray-800 data-[dark]:ring-white/15',
+        'data-[dark]:bg-DARK-BLUE-2 data-[dark]:ring-white/15',
       )}
     >
       <div className="relative h-80 shrink-0">

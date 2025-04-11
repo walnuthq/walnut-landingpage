@@ -1,6 +1,6 @@
 import { Button } from '../../components/button'
 import { Container } from '../../components/container'
-import { Footer } from '../../components/footer'
+
 import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
 import { Heading, Subheading } from '../../components/text'
@@ -9,6 +9,9 @@ import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { GetStarted } from '@/app/components/get-started'
+import { Footer } from '@/components/Footer'
+import MainHeader from '@/app/components/MainHeader'
 
 const title = "Announcing Contract Verification on Starknet | Walnut";
 const description = "We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.";
@@ -17,10 +20,9 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-    <GradientBackground />
+    <MainHeader/>
     <Container>
-      <Navbar />
-      <Subheading className="mt-16">
+      <Subheading className="mt-32">
         Monday, August 12, 2024
       </Subheading>
       <Heading as="h1" className="mt-2">
@@ -114,6 +116,7 @@ export default function Blog() {
         </div>
       </div>
     </Container>
+    <GetStarted/>
     <Footer />
   </main>
   );
