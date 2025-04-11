@@ -146,7 +146,7 @@ export default function Testimonials() {
                   <div className="font-semibold">{featuredTestimonial.author.name}</div>
                 </a>
                 <a className="hover:underline" href={featuredTestimonial.author.profileUrl}>
-                  <div className="text-gray-600">{`@${featuredTestimonial.author.twitter}`}</div>
+                  <div className="text-GREY-2">{`@${featuredTestimonial.author.twitter}`}</div>
                 </a>
               </div>
               <img alt="" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" />
@@ -170,7 +170,7 @@ export default function Testimonials() {
                       key={testimonial.author.position}
                       className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
                     >
-                      <blockquote className=" text-sm/6 text-gray-600 group-data-[dark]:text-gray-400">
+                      <blockquote className=" text-sm/6 text-GREY-2 group-data-[dark]:text-gray-400">
                         <p>{`“${testimonial.body}”`}</p>
                       </blockquote>
                       <figcaption className="mt-6 flex items-center gap-x-4">
@@ -180,7 +180,7 @@ export default function Testimonials() {
                           <div className="text-gray-600">{`${testimonial.author.position}`}
                             <span>
                             {' '}
-                              <a className="text-blue-500 hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
+                              <a className="text-BLUE hover:underline" href={testimonial.author.companyUrl}>{testimonial.author.company}</a>
                               </span>
                           </div>
                         </div>

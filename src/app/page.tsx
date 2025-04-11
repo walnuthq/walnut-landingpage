@@ -12,7 +12,7 @@ import { LogoTimeline } from './components/logo-timeline'
 import { Navbar } from './components/navbar'
 import { Screenshot } from './components/screenshot'
 import  Testimonials  from './components/testimonials'
-import { Heading, Subheading } from './components/text'
+import { Heading, SectionHeading, Subheading } from './components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
@@ -132,7 +132,7 @@ function DarkBentoSection() {
   return (
     <div className="mt-2 bg-BLACK-2 py-32">
       <Container>
-        <Subheading className='mx-auto text-center' dark>Blockchain Research and Engineering</Subheading>
+        <SectionHeading className='mx-auto text-center' dark>Blockchain Research and Engineering</SectionHeading>
         <Heading as="h3" dark className="mt-2 !text-BLUE sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2] mx-auto text-center">
           More from Walnut&nbsp;Labs
         </Heading>
