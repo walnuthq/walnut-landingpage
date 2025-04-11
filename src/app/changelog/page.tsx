@@ -54,6 +54,42 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-04-11T00:00Z"} id="upgrade-dependencies">
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Starknet Core Dependency Upgrades
+          </h2>
+          <p className="text-gray-500">
+            This week, we upgraded core dependencies: Cairo compiler, SN
+            Foundry, and Blockifier. This ensures better compatibility,
+            stability, and support for the latest protocol changes.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Fixed a bug in gas computation that made transactions show the
+              wrong status during simulation.
+            </li>
+            <li>
+              Updated{" "}
+              <Link
+                href="https://docs.walnut.dev/simulations"
+                className="text-blue-500"
+              >
+                Simulations docs{" "}
+              </Link>
+              to align with the new Simulation page.
+            </li>
+            <li>
+              Enabled contract verification with <code>sncast verify</code>{" "}
+              using <code>--class-hash</code>.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-04-04T00:00Z"} id="new-simualation-page">
         <Image
           src={CodeSnippet20250404}
@@ -79,8 +115,8 @@ export default function Page() {
               failure occurs.
             </li>
             <li>
-              Fixed an issue where missing memory values wrongly 
-              show <code>Transaction hash not found</code> error.
+              Fixed an issue where missing memory values wrongly show{" "}
+              <code>Transaction hash not found</code> error.
             </li>
           </ul>
         </>
