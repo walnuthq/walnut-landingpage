@@ -10,17 +10,6 @@ export function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container>
-        <div className="pt-16 pb-[2rem]">
-          <Logo className="mx-auto h-10 w-auto" />
-          <nav className="mt-10 text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="https://docs.walnut.dev">Docs</Link>
-              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/changelog-new">Changelog</Link>
-              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/blog">Blog</Link>
-              <Link className="cursor-pointer inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="mailto:hi@walnut.dev">Contact</Link>
-            </div>
-          </nav>
-        </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-4 sm:flex-row-reverse sm:justify-between">
         <div className='flex gap-x-1'>
           <IconLink isFooter href="https://x.com/walnut_dev" target="_blank" icon={XIcon} variant='black'>
