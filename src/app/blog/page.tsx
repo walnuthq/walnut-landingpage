@@ -4,7 +4,7 @@ import { GetStarted } from '../components/get-started'
 import { GradientBackground } from '../components/gradient'
 import { Link } from '../components/link'
 import { Navbar } from '../components/navbar'
-import { Heading, Lead, Subheading } from '../components/text'
+import { Heading, Lead, SectionHeading, Subheading } from '../components/text'
 import { ChevronLeftIcon, ChevronRightIcon, } from '@heroicons/react/16/solid'
 import { clsx } from 'clsx'
 import dayjs from 'dayjs'
@@ -40,7 +40,7 @@ async function LastPosts() {
             index < 3 && (
             <div
               key={post.slug}
-              className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md shadow-black/5 ring-1 ring-black/5"
+              className="relative flex flex-col rounded-3xl hover:bg-GREY transition-all bg-white p-2 shadow-md shadow-black/5 ring-1 ring-black/5"
             >
               {post.mainImage && (
                 <Image
@@ -54,8 +54,8 @@ async function LastPosts() {
                   {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
                 </div>
                 <div className="mt-2 text-base/7 font-medium">
-                  <Link href={`/blog/${post.slug}`}>
-                    <span className="absolute inset-0" />
+                  <Link href={`/blog/${post.slug}`} className='text-BLUE'>
+                    <span className="absolute inset-0 " />
                     {post.title}
                   </Link>
                 </div>
@@ -121,7 +121,7 @@ async function Posts({ page }: { page: number; }) {
             )}
           </div>
           <div className="sm:col-span-2 sm:max-w-2xl">
-            <h2 className="text-sm/5 font-medium">{post.title}</h2>
+            <h2 className="text-sm/5 font-medium text-BLUE">{post.title}</h2>
             <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
             <div className="mt-4">
               <Link
@@ -215,7 +215,7 @@ export default async function Blog({
     <main className="overflow-hidden relative">
       <MainHeader/>
       <Container>
-        <Subheading className="mt-32">Blog</Subheading>
+        <SectionHeading className="mt-32">Blog</SectionHeading>
         <Heading as="h1" className="mt-2">
           What’s happening at Walnut.
         </Heading>
