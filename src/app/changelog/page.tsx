@@ -69,12 +69,7 @@ export default function Page() {
             Enhanced Function Call Details Window
           </h2>
           <p className="text-gray-500">
-            This week, we&apos;ve made function-level debugging clearer and more
-            intuitive. The Function Call Details panel now displays expression
-            and line number, along with the arguments and results values for the
-            current execution step. It follows the highlighted line as you step
-            through the code, making it easier to see what&apos;s being passed
-            and returned during execution.
+            This week, we&apos;ve made function-level debugging clearer and more intuitive. The Function Call Details panel now displays information about the current execution step, including the line number, arguments, and results—making it easier to see what&apos;s being passed and returned during CairoVM execution.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
@@ -85,12 +80,12 @@ export default function Page() {
               the Function Call Details panel.
             </li>
             <li>
-              Resolved a problem where some functions couldn’t be found during
+              Resolved a problem where some functions were not found during
               multicall simulation.
             </li>
             <li>
               Improved system call mappings, fixing a bug that blocked debugging
-              during simulation.
+              during simulations.
             </li>
           </ul>
         </>
