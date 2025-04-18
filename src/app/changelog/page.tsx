@@ -39,6 +39,7 @@ import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
 import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
 import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
 import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
+import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -54,6 +55,47 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article
+        date={"2025-04-18T00:00Z"}
+        id="expression-function-call-details-debugger"
+      >
+        <Image
+          src={CodeSnippet20250418}
+          alt="expression-function-call-details-debugger"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Enhanced Function Call Details Window
+          </h2>
+          <p className="text-gray-500">
+            This week, we&apos;ve made function-level debugging clearer and more
+            intuitive. The Function Call Details panel now displays expression
+            and line number, along with the arguments and results values for the
+            current execution step. It follows the highlighted line as you step
+            through the code, making it easier to see what&apos;s being passed
+            and returned during execution.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Fixed an issue where the result type name was displayed twice in
+              the Function Call Details panel.
+            </li>
+            <li>
+              Resolved a problem where some functions couldn’t be found during
+              multicall simulation.
+            </li>
+            <li>
+              Improved system call mappings, fixing a bug that blocked debugging
+              during simulation.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-04-11T00:00Z"} id="upgrade-dependencies">
         <>
           <h2 className="font-bold my-4 text-xl">
