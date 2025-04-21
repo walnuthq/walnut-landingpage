@@ -22,27 +22,36 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <div className="relative bg-GREY border-b h-screen pt-[4.5rem]">
-      <Container className="h-full flex items-center justify-center">
-        <div className="flex flex-col items-center text-center">
-          <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
-            Debug Transactions on Starknet
-          </h1>
-          <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8">
-            Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
-          </p>
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">Try Walnut for Free</Button>
-            <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
-              Open Docs
-            </Button>
+    <Container className='bg-GREY border-b '>
+      <div className="relative h-screen pt-[4.5rem] flex flex-col">
+        <div className="flex-1 flex items-center justify-center">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
+              Debug Transactions on Starknet
+            </h1>
+            <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8">
+              Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
+            </p>
+            <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+              <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Try Walnut for Free
+              </Button>
+              <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Open Docs
+              </Button>
+            </div>
           </div>
         </div>
-      </Container>
-    </div>
+        <div className="pb-8">
+          <LogoCloud />
+        </div>
+      </div>
+    </Container>
 
-  )
+  );
 }
+
+
 
 function FeatureSection() {
   return (
@@ -193,9 +202,6 @@ export default function Home() {
       <MainHeader />
       <Hero />
       <main>
-        <Container className="mt-10">
-          <LogoCloud />
-        </Container>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
           <FeatureSection />
           <BentoSection />

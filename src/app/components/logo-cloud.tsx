@@ -4,7 +4,7 @@ export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
   return (
-    <div className='flex md:flex-row flex-col justify-between items-center'>
+    <div className='flex lg:flex-row flex-col justify-between items-center'>
       <div className='text-BLUE mb-6 md:mb-0'>
         Trusted by the best.
       </div>
