@@ -70,7 +70,7 @@ export function Header({ condensed }: { condensed?: boolean}) {
             </div>
             <div className="flex items-center gap-x-5 md:gap-x-8">
               <div className="hidden md:flex md:gap-x-6">
-                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="https://docs.walnut.dev">Docs</Link>
+                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" target='_blank' href="https://docs.walnut.dev">Docs</Link>
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/blog">Blog</Link>
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/changelog-new">Changelog</Link>
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="mailto:hi@walnut.dev">Contact</Link>
