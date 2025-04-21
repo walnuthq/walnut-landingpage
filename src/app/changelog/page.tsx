@@ -33,6 +33,13 @@ import CodeSnippet20241220 from "@/images/changelog/CodeSnippet20241220.png";
 import CodeSnippet20250207 from "@/images/changelog/CodeSnippet20250207.png";
 import CodeSnippet20250214 from "@/images/changelog/CodeSnippet20250214.png";
 import CodeSnippet20250221 from "@/images/changelog/CodeSnippet20250221.png";
+import CodeSnippet20250228 from "@/images/changelog/CodeSnippet20250228.png";
+import CodeSnippet20250307 from "@/images/changelog/CodeSnippet20250307.png";
+import CodeSnippet20250314 from "@/images/changelog/CodeSnippet20250314.gif";
+import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
+import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
+import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
+import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -48,6 +55,273 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article
+        date={"2025-04-18T00:00Z"}
+        id="expression-function-call-details-debugger"
+      >
+        <Image
+          src={CodeSnippet20250418}
+          alt="expression-function-call-details-debugger"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Enhanced Function Call Details Window
+          </h2>
+          <p className="text-gray-500">
+            This week, we&apos;ve made function-level debugging clearer and more intuitive. The Function Call Details panel now displays information about the current execution step, including the line number, arguments, and results—making it easier to see what&apos;s being passed and returned during CairoVM execution.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Fixed an issue where the result type name was displayed twice in
+              the Function Call Details panel.
+            </li>
+            <li>
+              Resolved a problem where some functions were not found during
+              multicall simulation.
+            </li>
+            <li>
+              Improved system call mappings, fixing a bug that blocked debugging
+              during simulations.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-04-11T00:00Z"} id="upgrade-dependencies">
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Starknet Core Dependency Upgrades
+          </h2>
+          <p className="text-gray-500">
+            This week, we upgraded core dependencies: Cairo compiler, SN
+            Foundry, and Blockifier. This ensures better compatibility,
+            stability, and support for the latest protocol changes.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Fixed a bug in gas computation that made transactions show the
+              wrong status during simulation.
+            </li>
+            <li>
+              Updated{" "}
+              <Link
+                href="https://docs.walnut.dev/simulations"
+                className="text-blue-500"
+              >
+                Simulations docs{" "}
+              </Link>
+              to align with the new Simulation page.
+            </li>
+            <li>
+              Enabled contract verification with <code>sncast verify</code>{" "}
+              using <code>--class-hash</code>.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-04-04T00:00Z"} id="new-simualation-page">
+        <Image
+          src={CodeSnippet20250404}
+          alt="new-simulation-page"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">New Simulation Page</h2>
+          <p className="text-gray-500">
+            This week, we introduced a new Simulation Page that simplifies data
+            entries for transaction simulations. Entry points are now
+            automatically fetched based on the provided contract address and
+            network.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for verifying contracts with Cairo 2.9.4. </li>
+            <li>
+              Improved error clarity during verification, providing better
+              insights when an unsupported Cairo version is used or a build
+              failure occurs.
+            </li>
+            <li>
+              Fixed an issue where missing memory values wrongly show{" "}
+              <code>Transaction hash not found</code> error.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-03-28T00:00Z"} id="source-file-organization">
+        <Image
+          src={CodeSnippet20250328}
+          alt="source-file-organization"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">Improved File Explorer</h2>
+          <p className="text-gray-500">
+            This week, we improved the File Explorer by grouping source files of
+            verified contracts by contract address.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added a guide to the{" "}
+              <Link
+                href="https://www.dojoengine.org/tutorial/deploy-to-mainnet/main#debug-with-walnut"
+                className="text-blue-500"
+              >
+                Dojo documentation{" "}
+              </Link>
+              on how to debug Dojo Games with Walnut.
+            </li>
+            <li>
+              Upgraded Walnut Server to Rust 1.85 to ensure compatibility with
+              the latest snfoundry. This resolved some contract verification
+              failures which required Rust 1.80.1 or higher.
+            </li>
+            <li>
+              Fixed a UI bug in the Debugger window where icons and window
+              titles were not displayed correctly.
+            </li>
+            <li>
+              Fixed an issue with searching for contracts on Ethereum, where the
+              network was not displayed correctly.
+            </li>
+            <li>
+              Fixed a bug where calldata arrays with nested elements were
+              incorrectly decoded, which led to Walnut Server timeout errors in
+              some cases.{" "}
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-03-21T00:00Z"} id="l1_handler_tx">
+        <Image src={CodeSnippet20250321} alt="l1_handler_tx" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            L1 Handler Transaction Support
+          </h2>
+          <p className="text-gray-500">
+            This week, we introduced support for L1 Handler transactions. You
+            can now search for Ethereum L1 transactions and view the
+            corresponding L2 Call Trace for deeper insights.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added support for Cairo v1 ABI.</li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-03-14T00:00Z"} id="breakpoints">
+        <Image src={CodeSnippet20250314} alt="breakpoints" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Breakpoints in Debugger</h2>
+          <p className="text-gray-500">
+            This week, Walnut is getting BREAKPOINTS! Now you can pause the
+            execution at any line to quickly inspect what&apos;s going on.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Call Trace now displays calldata in auto-decoded and raw formats,
+              eliminating the need for separate hex and decimal views.
+            </li>
+            <li>Added the Cairo Version and Networks on the Contract page.</li>
+            <li>
+              ContractState type is no longer shown in the debugger memory
+              window, as it is a marker type with empty values.
+            </li>
+            <li>
+              Fixed a bug where File Explorer was not visible in certain screen
+              sizes.
+            </li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-03-07T00:00Z"} id="native-data">
+        <Image src={CodeSnippet20250307} alt="native-data" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Native Data Display in Debugger
+          </h2>
+          <p className="text-gray-500">
+            This week, we updated the debugger window to display values in their
+            native type format instead of hexadecimal, improving the overall
+            debugging experience.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>Added decoding support for byte arrays.</li>
+            <li>
+              The Transaction Detail section now displays the transaction’s
+              position in the block, along with the total number of transactions
+              in the block.
+            </li>
+            <li>
+              In the Call Trace, data tables for calldata now have proper
+              borders, improving readability and navigation.
+            </li>
+            <li>Updated broken documentation link.</li>
+          </ul>
+        </>
+      </Article>
+
+      <Article date={"2025-02-28T00:00Z"} id="enum-decoded">
+        <Image src={CodeSnippet20250228} alt="enum-decoded" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Enums Decoded in Internal Function Call
+          </h2>
+          <p className="text-gray-500">
+            This week, we added Enums decoding for internal functions, making it
+            easier to understand values during debugging.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              The Call Trace Preview in the debugger no longer shows Errors,
+              improving navigation.
+            </li>
+            <li>
+              Errors are now always visible in the Call Trace. Previously, they
+              were sometimes collapsed, making them hard to find.
+            </li>
+            <li>The Call Trace now displays Events with argument data.</li>
+            <li>
+              The call trace now uses different colors for Delegate and Event
+              frames, improving differentiation.
+            </li>
+            <li>
+              Contract verification now correctly generates debug info for
+              inline functions, even when both [cairo] and [profile.dev.cairo]
+              sections are in Scarb.toml.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-02-21T00:00Z"} id="call-trace-preview">
         <Image src={CodeSnippet20250221} alt="call-trace-preview" unoptimized />
         <>
