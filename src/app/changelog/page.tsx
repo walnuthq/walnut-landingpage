@@ -59,7 +59,7 @@ export default function Page() {
       <Article date={"2025-04-25T00:00Z"} id="storage-tab">
         <Image src={CodeSnippet20250425} alt="storage-tab" unoptimized />
         <>
-          <h2 className="font-bold my-4 text-xl">Brand New Starage Tab</h2>
+          <h2 className="font-bold my-4 text-xl">Brand New Storage Tab</h2>
           <p className="text-gray-500">
             This week, we introduced a new Storage Tab! You can now inspect the
             previous and current storage states for each contract whenever
