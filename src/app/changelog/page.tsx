@@ -40,6 +40,7 @@ import CodeSnippet20250321 from "@/images/changelog/CodeSnippet20250321.png";
 import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
 import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
 import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
+import CodeSnippet20250425 from "@/images/changelog/CodeSnippet20250425.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -55,6 +56,36 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-04-25T00:00Z"} id="storage-tab">
+        <Image src={CodeSnippet20250425} alt="storage-tab" unoptimized />
+        <>
+          <h2 className="font-bold my-4 text-xl">Brand New Storage Tab</h2>
+          <p className="text-gray-500">
+            This week, we introduced a new Storage Tab! You can now inspect the
+            previous and current storage states for each contract whenever
+            storage changes occur. For now, values are displayed in raw format.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Upgraded Starknet Provider to stay aligned with the latest
+              ecosystem changes and ensure overall compatibility.
+            </li>
+            <li>
+              Increased Nginx payload limit to <code>2 MB</code>, addressing a
+              user-reported issue where large contract payloads couldn&apos;t be
+              processed during verification.
+            </li>
+            <li>
+              Added connection timeout for long-running transaction simulations
+              to prevent server overload caused by heavy transactions.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article
         date={"2025-04-18T00:00Z"}
         id="expression-function-call-details-debugger"
@@ -69,7 +100,11 @@ export default function Page() {
             Enhanced Function Call Details Window
           </h2>
           <p className="text-gray-500">
-            This week, we&apos;ve made function-level debugging clearer and more intuitive. The Function Call Details panel now displays information about the current execution step, including the line number, arguments, and results—making it easier to see what&apos;s being passed and returned during CairoVM execution.
+            This week, we&apos;ve made function-level debugging clearer and more
+            intuitive. The Function Call Details panel now displays information
+            about the current execution step, including the line number,
+            arguments, and results—making it easier to see what&apos;s being
+            passed and returned during CairoVM execution.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
