@@ -75,7 +75,7 @@ export default function Page() {
             </li>
             <li>
               Increased Nginx payload limit to <code>2 MB</code>, addressing a
-              user-reported issue where large contract payloads couldn't be
+              user-reported issue where large contract payloads couldn&apos;t be
               processed during verification.
             </li>
             <li>
