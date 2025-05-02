@@ -56,6 +56,45 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-05-02T00:00Z"} id="overall-improve">
+        <>
+          <h2 className="font-bold my-4 text-xl">Focus on Stability </h2>
+          <p className="text-gray-500">
+            This week we focused on fixing bugs and edge cases to improve
+            platform reliability and consistency.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Optimized data handling in the Storage View tab to improve
+              transaction debugging performance.
+            </li>
+            <li>
+              Fixed a bug that allowed excessive memory allocation when input
+              parameters couldn&apos;t be deserialized.
+            </li>
+            <li>
+              Calldata is now always shown in raw format, ensuring it&apos;s
+              visibility even when argument deserialization fails.
+            </li>
+            <li>
+              Removed duplicated raw result entries in the Call Trace Details
+              panel.
+            </li>
+            <li>
+              Revert error messages now skip ASCII control characters for
+              cleaner display.
+            </li>
+            <li>
+              Fixed an issue where the wrong Sierra version was selected based
+              on class hash.
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-04-25T00:00Z"} id="storage-tab">
         <Image src={CodeSnippet20250425} alt="storage-tab" unoptimized />
         <>
