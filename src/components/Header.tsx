@@ -21,7 +21,7 @@ const links = [
 
 function MobileNav() {
   return (
-    <DisclosurePanel className="lg:hidden">
+    <DisclosurePanel className="lg:hidden bg-GREY backdrop-blur absolute left-0 right-0 px-6 lg:px-8">
       <div className="flex flex-col gap-6 py-4">
         {links.map(({ href, label }, linkIndex) => (
           <motion.div
@@ -76,7 +76,7 @@ export function Header({ condensed }: { condensed?: boolean}) {
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="mailto:hi@walnut.dev">Contact</Link>
 
               </div>
-              <div className="-mr-1 md:hidden">
+              <div className="-mr-1 md:hidden !px-0">
                 <MobileNavButton/>
               </div>
             </div>
