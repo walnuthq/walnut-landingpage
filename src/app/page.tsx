@@ -22,7 +22,8 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <Container className='bg-GREY border-b '>
+    <Container className='bg-GREY relative'>
+      <div className='absolute inset-0 bg-[url("/landing-page-pattern.svg")] bg-cover bg-center opacity-[66%]'></div>
       <div className="relative h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">

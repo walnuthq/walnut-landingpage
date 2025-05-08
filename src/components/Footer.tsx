@@ -13,7 +13,7 @@ export function Footer() {
           <Link className="text-GREY-2 hover:text-BLUE" href="/blog">Blog</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/changelog-new">Changelog</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/">Hiring</Link>
-          <Link className="text-GREY-2 hover:text-BLUE" href="mailto:hi@walnut.dev">Contact</Link>
+          <Link className="text-GREY-2 hover:text-BLUE" href="/contact">Contact</Link>
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">
         <IconLink isFooter href="https://x.com/walnut_dev" target="_blank" icon={XIcon} variant='black'>

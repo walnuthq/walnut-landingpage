@@ -73,7 +73,7 @@ export function Header({ condensed }: { condensed?: boolean}) {
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" target='_blank' href="https://docs.walnut.dev">Docs</Link>
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/blog">Blog</Link>
                 <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/changelog-new">Changelog</Link>
-                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="mailto:hi@walnut.dev">Contact</Link>
+                <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/contact">Contact</Link>
 
               </div>
               <div className="-mr-1 md:hidden !px-0">
