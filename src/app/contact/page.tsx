@@ -23,7 +23,7 @@ export default async function Contact() {
   return (
     <main className="overflow-hidden relative">
       <MainHeader/>
-      <Container className="mt-16 static ">
+      <Container className="pt-16 lg:pt-36 static  min-h-screen ">
         <div className="relative isolate lg:bg-WHITE">
         <div className="mx-auto flex justify-end max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
