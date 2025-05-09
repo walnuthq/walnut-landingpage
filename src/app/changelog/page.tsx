@@ -41,6 +41,7 @@ import CodeSnippet20250328 from "@/images/changelog/CodeSnippet20250328.png";
 import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
 import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
 import CodeSnippet20250425 from "@/images/changelog/CodeSnippet20250425.png";
+import CodeSnippet20250509 from "@/images/changelog/CodeSnippet20250509.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -56,6 +57,57 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-05-09T00:00Z"} id="folder-organization">
+        <Image
+          src={CodeSnippet20250509}
+          alt="folder-organization"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Source Code Files Organization
+          </h2>
+          <p className="text-gray-500">
+            This week, we introduced Source Code Files grouping by folders
+            across the Contracts, Classes, and Debugger Preview pages. This
+            makes it easier to navigate large codebases and keep related
+            contracts organized.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Added file names to contract and class pages for quicker
+              identification.
+            </li>
+            <li>
+              Improved layout on mobile, so long addresses and names now wrap
+              properly and can be copied.
+            </li>
+            <li>
+              Resizable panels have been added to contract and class pages,
+              allowing for a more customizable view.
+            </li>
+            <li>
+              Fixed a bug where <code>NaN</code> appeared for the block number
+              after simulating transaction on the latest block.
+            </li>
+            <li>
+              Unified header height across all pages for a consistent look.
+            </li>
+            <li>
+              Fixed inconsistent transaction errors caused by manually set fee
+              values. We now show same error messages as the chain does, like:{" "}
+              <code>
+                Insufficient max fee: max fee: 3298534883328, actual fee:
+                5833172244412.
+              </code>
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-05-02T00:00Z"} id="overall-improve">
         <>
           <h2 className="font-bold my-4 text-xl">Focus on Stability </h2>
