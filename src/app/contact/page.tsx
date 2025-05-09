@@ -21,9 +21,9 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 export default async function Contact() {
   return (
-<main className="overflow-hidden relative">
+    <main className="overflow-hidden relative">
       <MainHeader/>
-      <Container className="min-h-screen">
+      <Container className="min-h-screen ">
         <div className="relative isolate lg:bg-WHITE w-full flex items-center min-h-screen">
           <div className="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative hidden lg:block">
