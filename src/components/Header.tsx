@@ -49,7 +49,7 @@ function MobileNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
+      className="flex size-12 items-center justify-end self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
       aria-label="Open main menu"
     >
       <Bars2Icon className="size-6" />

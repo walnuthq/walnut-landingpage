@@ -36,7 +36,7 @@ export default async function Contact() {
                 />
               </div>
             </div>
-            <div className="relative px-6 lg:static lg:px-8">
+            <div className="relative flex justify-end lg:static ">
               <div className="max-w-xl lg:max-w-lg">
                 <Heading as="h2" className="text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl">
                   Get in touch
