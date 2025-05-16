@@ -66,29 +66,27 @@ export default function Page() {
         />
         <>
           <h2 className="font-bold my-4 text-xl">
-            Call-Level Sierra Gas Visibility
+            Gas Consumption in the Call Trace ⛽️
           </h2>
           <p className="text-gray-500">
-            This week update focuses on improving around gas usage during
-            simulation and debugging.
+            This week, we’re introducing the first version of gas profiling in Walnut. It gives Cairo developers a powerful way to optimize their contracts and reduce gas usage. Gas profiling works for both existing Starknet transactions and simulations.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Sierra gas per call is now displayed in the Call Trace — available
-              for contracts using <code>Sierra &ge; 1.7.0</code> and{" "}
-              <code>Transaction Version 3</code>.
+              Gas per Contract Call is now displayed in the Call Trace on Walnut — available
+              for Contracts using <code>Sierra &ge; 1.7.0</code> and{" "}
+              <code>Transactions Version 3</code> or above.
             </li>
             <li>
-              Initial gas values now align with{" "}
+              Initial gas values (visible after expansion of each call in the call trace) now align with{" "}
               <code>Starknet v0.13.5 constants</code>, resulting in more
               accurate and reliable gas estimates.
             </li>
             <li>
-              Displayed Message Hashes associated with L2-&gt;L1 transactions,
-              making it easier to trace cross-layer communication{" "}
+              Added support for message hashes on cross-chain L2-&gt;L1 transactions, making it easy to find the original Starknet L2 transaction from an L1 transaction hash.
             </li>
           </ul>
         </>
