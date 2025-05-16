@@ -42,6 +42,7 @@ import CodeSnippet20250404 from "@/images/changelog/CodeSnippet20250404.png";
 import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
 import CodeSnippet20250425 from "@/images/changelog/CodeSnippet20250425.png";
 import CodeSnippet20250509 from "@/images/changelog/CodeSnippet20250509.png";
+import CodeSnippet20250516 from "@/images/changelog/CodeSnippet20250516.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -57,6 +58,42 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-05-16T00:00Z"} id="call-trace-sierra-gas">
+        <Image
+          src={CodeSnippet20250516}
+          alt="call-trace-sierra-gas"
+          unoptimized
+        />
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Call-Level Sierra Gas Visibility
+          </h2>
+          <p className="text-gray-500">
+            This week update focuses on improving around gas usage during
+            simulation and debugging.
+          </p>
+          <h3 className="flex items-center gap-2 font-bold my-4 text-base">
+            <SparkleIcon className="w-5 h-5" /> More improvements
+          </h3>
+          <ul className="list-disc text-gray-500 pl-6">
+            <li>
+              Sierra gas per call is now displayed in the Call Trace — available
+              for contracts using <code>Sierra &ge; 1.7.0</code> and{" "}
+              <code>Transaction Version 3</code>.
+            </li>
+            <li>
+              Initial gas values now align with{" "}
+              <code>Starknet v0.13.5 constants</code>, resulting in more
+              accurate and reliable gas estimates.
+            </li>
+            <li>
+              Displayed Message Hashes associated with L2-&gt;L1 transactions,
+              making it easier to trace cross-layer communication{" "}
+            </li>
+          </ul>
+        </>
+      </Article>
+
       <Article date={"2025-05-09T00:00Z"} id="folder-organization">
         <Image
           src={CodeSnippet20250509}
