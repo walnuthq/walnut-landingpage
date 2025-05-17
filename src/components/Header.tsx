@@ -14,9 +14,8 @@ import { motion } from 'framer-motion'
 const links = [
   { href: 'https://docs.walnut.dev', label: 'Docs' },
   { href: '/blog', label: 'Blog' },
-  { href: '/changelog', label: 'Changelog' },
-  { href: '/changelog-new', label: 'Changelog-New' },
-  { href: 'mailto:hi@walnut.dev', label: 'Contact' },
+  { href: '/changelog-new', label: 'Changelog' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 function MobileNav() {
@@ -60,9 +59,9 @@ function MobileNavButton() {
 export function Header({ condensed }: { condensed?: boolean}) {
   return (
     <Disclosure as="header" className="">
-      <header className={clsx('py-4 h-[4.5rem]', condensed && 'border-b border-slate-200')}>
+      <header className={clsx('py-4', condensed && 'border-b border-slate-200')}>
         <Container>
-          <nav className="relative z-50 flex justify-between">
+          <nav className="relative z-50 flex justify-between items-center">
             <div className="flex items-center md:gap-x-12">
               <Link href="/" aria-label="Home">
                 <Image src={logoWalnut} alt="Walnut logo" unoptimized  className="h-10 w-auto white" />

@@ -7,12 +7,11 @@ import { GitHubIcon, TelegramIcon, XIcon } from '@/app/changelog/components/Intr
 export function Footer() {
   return (
     <footer className="bg-GREY">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-[4rem] sm:py-24 lg:px-8">
         <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
           <Link className="text-GREY-2 hover:text-BLUE" target='_blank' href="https://docs.walnut.dev">Docs</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/blog">Blog</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/changelog-new">Changelog</Link>
-          <Link className="text-GREY-2 hover:text-BLUE" href="/">Hiring</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/contact">Contact</Link>
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">

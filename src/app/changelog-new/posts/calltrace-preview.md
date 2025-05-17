@@ -1,7 +1,7 @@
 ---
 title: Call Trace Preview in Debugger
 date: 2025-02-21
-image: /changelog/CodeSnippet20250221.png
+image: /changelog/CodeSnippet20240927.gif
 ---
 
 This week, we improved the debugging experience by integrating the Call Trace directly into the debugger window. Users can now track code execution and the full call trace side by side, making it easier to analyze transactions and debug complex interactions.

@@ -3,7 +3,7 @@ import { Container } from '../../components/container'
 
 import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
-import { Heading, Subheading } from '../../components/text'
+import { Heading, SectionHeading, Subheading } from '../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
@@ -23,9 +23,9 @@ export default function Blog() {
     <main className="overflow-hidden">
     <MainHeader/>
     <Container>
-      <Subheading className="mt-32">
+      <SectionHeading className="mt-32">
         Saturday, July 06, 2024
-      </Subheading>
+      </SectionHeading>
       <Heading as="h1" className="mt-2">
         Why blockchains mark a new era for debugging and monitoring services
       </Heading>

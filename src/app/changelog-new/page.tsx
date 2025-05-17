@@ -4,7 +4,7 @@ import { Container } from '../components/container'
 import { GetStarted } from '../components/get-started'
 import { GradientBackground } from '../components/gradient'
 import { Navbar } from '../components/navbar'
-import { Heading, Lead, Subheading } from '../components/text'
+import { Heading, Lead, SectionHeading, Subheading } from '../components/text'
 import { SparkleIcon } from '../changelog/components/SparkleIcon'
 import {img as Image} from './mdx'
 import { useState, useEffect } from 'react'
@@ -55,11 +55,11 @@ export default function NewChangelog() {
     <main className="overflow-hidden">
       <MainHeader/>
       <Container>
-        <Subheading className="mt-32">Walnut</Subheading>
-        <Heading as="h1" className="mt-2">
+        <SectionHeading className="mt-32 mx-auto text-center">Walnut</SectionHeading>
+        <Heading as="h1" className="mt-2 mx-auto text-center">
           Changelog
         </Heading>
-        <Lead className="mt-6 max-w-3xl">
+        <Lead className="mt-6 max-w-3xl mx-auto text-center">
           All the latest Walnut news, straight from the team.
         </Lead>
       </Container>
@@ -75,7 +75,7 @@ export default function NewChangelog() {
                   {post.title}
                 </h2>
                 <div className="mt-2.5 flex items-center gap-3">
-                  <div className="text-sm/5 text-gray-700">
+                  <div className="text-sm/5 text-BLUE">
                     {new Date(post.date).toLocaleDateString('en-En', {
                       year: 'numeric',
                       month: 'long',

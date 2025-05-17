@@ -43,7 +43,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className="pb-8">
+        <div className="pb-4">
           <LogoCloud />
         </div>
       </div>
@@ -170,13 +170,7 @@ function DarkBentoSection() {
             eyebrow="Optimism / Superchain"
             title="Walnut Lite"
             description={
-            <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain. Read more{' '}
-              <a 
-              className='text-blue-500 hover:underline' 
-              target='_blank'
-              href='https://walnut.dev/blog/walnut-receives-grant-from-optimism-foundation-to-improve-debugging-on-the-superchain'>
-                in our blog
-              </a>.
+            <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain.
             </div>}
             graphic={<LinkedAvatars />}
             className="lg:col-span-2"

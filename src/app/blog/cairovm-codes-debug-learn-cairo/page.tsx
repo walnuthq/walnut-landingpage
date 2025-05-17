@@ -4,7 +4,7 @@ import { Container } from '../../components/container'
 import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
 import header_cairovm from "@/images/blog/Cairo Playground.jpg";
-import { Heading, Subheading } from '../../components/text'
+import { Heading, SectionHeading, Subheading } from '../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
@@ -24,9 +24,9 @@ export default function Blog() {
     <main className="overflow-hidden">
       <MainHeader />
       <Container>
-        <Subheading className="mt-32">
+        <SectionHeading className="mt-32">
           Monday, September 16, 2024
-        </Subheading>
+        </SectionHeading>
         <Heading as="h1" className="mt-2">
           cairovm.codes – Run, Debug, and Learn Cairo Programming
         </Heading>

@@ -1,7 +1,7 @@
 ---
 title: Loop Removal from Call Traces
 date: 2024-11-29
-image: /changelog/CodeSnippet20241129.gif
+image: /changelog/CodeSnippet20241011.gif
 ---
 
 This week, we streamlined loop handling in the call trace by removing loops and ensuring function calls within them are displayed at the correct level.

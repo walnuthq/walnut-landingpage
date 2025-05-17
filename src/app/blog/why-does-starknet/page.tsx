@@ -3,7 +3,7 @@ import { Container } from '../../components/container'
 
 import { GradientBackground } from '../../components/gradient'
 import { Navbar } from '../../components/navbar'
-import { Heading, Subheading } from '../../components/text'
+import { Heading, SectionHeading, Subheading } from '../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
@@ -20,9 +20,9 @@ export default function Blog() {
     <main className="overflow-hidden">
     <MainHeader/>
     <Container>
-      <Subheading className="mt-32">
+      <SectionHeading className="mt-32">
         Friday, December 29, 2023
-      </Subheading>
+      </SectionHeading>
       <Heading as="h1" className="mt-2">
         Why does Starknet need a debugger?
       </Heading>

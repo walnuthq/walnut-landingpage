@@ -5,7 +5,7 @@ import { Link } from './link'
 import { Heading, Subheading } from './text'
 function CallToAction() {
   return (
-    <div className="relative pb-16 pt-20 text-center sm:pt-[8rem] sm:pb-[8rem]">
+    <div className="relative pt-20 text-center sm:pt-[8rem] ">
       <hgroup>
         <Subheading className='!text-BLUE' dark>Get started</Subheading>
         <Heading as="h2" className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl">

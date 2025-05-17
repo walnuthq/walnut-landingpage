@@ -2,7 +2,7 @@ import { Button } from "../../components/button";
 import { Container } from "../../components/container";
 import { GradientBackground } from "../../components/gradient";
 import { Navbar } from "../../components/navbar";
-import { Heading, Subheading } from "../../components/text";
+import { Heading, SectionHeading, Subheading } from "../../components/text";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import marijamijailovic from "@/images/blog/marijamijailovic.png";
 import Image from "next/image";
@@ -34,8 +34,8 @@ export default function Blog() {
     <main className="overflow-hidden">
       <MainHeader/>
       <Container>
-        <Subheading className="mt-32">Tuesday, January 14, 2025</Subheading>
-        <Heading as="h1" className="mt-2">
+        <SectionHeading className="mt-32 mx-auto text-center">Tuesday, January 14, 2025</SectionHeading>
+        <Heading as="h1" className="mt-2 mx-auto text-center">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
         <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">
