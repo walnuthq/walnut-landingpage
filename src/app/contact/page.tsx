@@ -42,7 +42,7 @@ export default async function Contact() {
                   Get in touch
                 </Heading>
                 <p className="mt-6 text-lg/8 text-GREY-2">
-                  Whether you have a questiona project in mind or just want to say hi, we&apos;d love to hear from you.
+                  Whether you have a question, a project in mind, or just want to say hi, we&apos;d love to hear from you.
                 </p>
                 <dl className="mt-10 space-y-4 text-base/7 text-GREY-2">
                   <div className="flex items-center gap-x-4">
