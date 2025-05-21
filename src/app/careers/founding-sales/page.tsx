@@ -1,15 +1,15 @@
-import MainHeader from '@/app/components/MainHeader';
-import { Footer } from '@/components/Footer'
+import MainHeader from '@/components/main-header';
+import { Footer } from '@/components/footer'
 import Link from 'next/link';
 
 export default function FoundingPosition() {
 	return <>
 		<MainHeader />
 		<div>
-      <div className="max-w-8xl mx-auto mt-24 md:mt-32">
+      <div className="max-w-8xl mx-auto mt-24 ">
           <div className="flex px-4 lg:px-8">
-              <a className="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900" href="/">
-                  <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-slate-400 w-auto h-6 group-hover:text-slate-600">
+              <a className="group flex font-semibold text-sm leading-6 text-GREY-2 hover:text-BLACK" href="/">
+                  <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-GREY-2 w-auto h-6 group-hover:text-BLACK">
                       <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                   </svg>
                   Go back
@@ -20,7 +20,7 @@ export default function FoundingPosition() {
           <div className="max-w-3xl mx-auto">
               <main>
                   <article className="relative pt-10">
-                      <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl flex">
+                      <h1 className="text-2xl font-extrabold tracking-tight text-BLACK md:text-3xl flex">
                       Founding Sales & Business Development Lead
                           🔗
                       </h1>
@@ -28,12 +28,12 @@ export default function FoundingPosition() {
                           <ul className="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
                               <li className="flex items-center font-medium whitespace-nowrap px-5 mt-6">
                                   <div className="text-sm leading-4">
-                                      <div className="text-slate-900 flex gap-x-3 items-center text-base">
+                                      <div className="text-BLACK flex gap-x-3 items-center text-base">
                                           Location: Remote
                                           <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 flex-none fill-gray-500" aria-hidden="true">
                                               <circle cx="1" cy="1" r="1" />
                                           </svg>
-                                          <a target='_blank' href="mailto:hi@walnut.dev" className="text-pink-600 hover:text-pink-800">Send your CV</a>
+                                          <a target='_blank' href="mailto:hi@walnut.dev" className="text-BLUE hover:text-GREY-2">Send your CV</a>
                                       </div>
                                   </div>
                               </li>
@@ -42,7 +42,7 @@ export default function FoundingPosition() {
                       <div className="mt-12 mb-24 prose">
                         <p className="lead">Join us in our mission to secure the onchain economy. We&apos;re still early, giving you the chance to make a lasting impact and grow your career alongside us. With active partnerships with billion-dollar ecosystems like Starknet, Miden, and Aztec, we’re in a strong position to succeed.</p>
                           <h2>🎯 Why you should care</h2>
-                          <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                          <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                               <li>
                                   <strong>Grow faster than anywhere else.</strong> Being our first sales hire gives you a front-row seat as we scale and the chance to grow into a leadership role fast. No bureaucracy, no waiting.
                               </li>
@@ -59,7 +59,7 @@ export default function FoundingPosition() {
 
 
                           <h2>🔍 Who are we looking for</h2>
-                          <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                          <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                           <li>
                             You&apos;re genuinely excited about new technologies—especially blockchain, developer tools, or security.
                           </li>
@@ -78,7 +78,7 @@ export default function FoundingPosition() {
                           </ul>
 
                           <h2>🚀 What you&apos;ll do</h2>
-                          <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                          <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                           <li>
                             Build and manage strategic relationships with leading blockchain teams—starting with Starknet, Aztec, and Arbitrum Stylus.
                           </li>
@@ -100,7 +100,7 @@ export default function FoundingPosition() {
                           </ul>
                           
                           <h2>✨ Bonus points</h2>
-                          <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                          <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                           <li>
                             You&apos;ve worked at an early-stage startup or have founder experience.
                           </li>
@@ -113,7 +113,7 @@ export default function FoundingPosition() {
                           </ul>
 
                           <h2>🎁 Perks & benefits</h2>
-                          <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                          <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                           <li>
                             Highly competitive compensation (salary + performance-based upside).
                           </li>

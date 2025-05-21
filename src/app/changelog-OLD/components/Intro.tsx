@@ -1,9 +1,11 @@
 import Link from 'next/link'
 
-import { Logo } from '@/components/Logo'
+
 import { SignUpForm } from './SignUpForm'
 import { IconLink } from './IconLink'
 import logoWalnut from '@/images/logos/walnut_white.svg'
+import { Logo } from '@/components/logo'
+
 
 
 export function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -35,7 +37,7 @@ export function Intro() {
     <>
       <div>
         <Link href="/">
-          <Logo src={logoWalnut} className="inline-block h-8 w-auto" />
+          <Logo className="inline-block h-8 w-auto" />
         </Link>
       </div>
       <h1 className="mt-14 font-display text-4xl/tight font-semibold text-white">

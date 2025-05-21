@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-import { posts } from "../utils/blogs"
+import { posts } from "../app/utils/blogs"
 import Image from "next/image"
 import { Heading, SectionHeading } from "./text"
 

@@ -1,17 +1,14 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
-
-import { GradientBackground } from '../../components/gradient'
-import { Navbar } from '../../components/navbar'
-import { Heading, SectionHeading, Subheading } from '../../components/text'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
+import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { GetStarted } from '@/app/components/get-started'
-import { Footer } from '@/components/Footer'
-import MainHeader from '@/app/components/MainHeader'
+import { GetStarted } from '@/components/get-started'
+import { Footer } from '@/components/footer'
+import MainHeader from '@/components/main-header'
 
 const title = "Announcing Contract Verification on Starknet | Walnut";
 const description = "We are excited to introduce Cairo contract verification for Starknet, now live on Walnut and accessible via Walnut APIs.";

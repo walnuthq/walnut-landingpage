@@ -1,8 +1,6 @@
-import { Button } from "../../components/button";
-import { Container } from "../../components/container";
-import { GradientBackground } from "../../components/gradient";
-import { Navbar } from "../../components/navbar";
-import { Heading, SectionHeading, Subheading } from "../../components/text";
+import { Button } from "../../../components/button";
+import { Container } from "../../../components/container";
+import { Heading, SectionHeading, Subheading } from "../../../components/text";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import marijamijailovic from "@/images/blog/marijamijailovic.png";
 import Image from "next/image";
@@ -18,12 +16,12 @@ import send_token_function_call from "@/images/blog/deep-dive-into-starknet-tx-c
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Screenshot } from "@/app/components/screenshot";
+import { Screenshot } from "@/components/screenshot";
 import logoWalnut from '@/images/logos/walnut.svg';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { Footer } from "@/components/Footer";
-import { GetStarted } from "@/app/components/get-started";
-import MainHeader from "@/app/components/MainHeader";
+import { Footer } from "@/components/footer";
+import { GetStarted } from "@/components/get-started";
+import MainHeader from "@/components/main-header";
 
 const title = "Deep Dive into Starknet Transaction Call Trace";
 const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";

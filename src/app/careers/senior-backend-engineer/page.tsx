@@ -1,15 +1,15 @@
-import { Footer } from '@/components/Footer'
-import MainHeader from '@/app/components/MainHeader';
+import { Footer } from '@/components/footer'
+import MainHeader from '@/components/main-header';
 import Link from 'next/link';
 
 export default function Position() {
 	return <>
 		<MainHeader />
 		<div>
-            <div className="max-w-8xl mx-auto">
+            <div className="max-w-8xl mx-auto mt-24">
                 <div className="flex px-4 pt-8 pb-10 lg:px-8">
-                    <a className="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900" href="/">
-                        <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-slate-400 w-auto h-6 group-hover:text-slate-600">
+                    <a className="group flex font-semibold text-sm leading-6  text-GREY-2 hover:text-BLACK" href="/">
+                        <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-GREY-2 w-auto h-6 group-hover:text-BLACK">
                             <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                         </svg>
                         Go back
@@ -20,7 +20,7 @@ export default function Position() {
                 <div className="max-w-3xl mx-auto">
                     <main>
                         <article className="relative pt-10">
-                            <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl flex">
+                            <h1 className="text-2xl font-extrabold tracking-tight text-BLACK md:text-3xl flex">
                             Senior Backend Engineer
                                 🔗
                             </h1>
@@ -28,12 +28,12 @@ export default function Position() {
                                 <ul className="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
                                     <li className="flex items-center font-medium whitespace-nowrap px-5 mt-6">
                                         <div className="text-sm leading-4">
-                                            <div className="text-slate-900 flex gap-x-3 items-center text-base">
+                                            <div className="text-BLACK flex gap-x-3 items-center text-base">
                                                 Location: Remote
                                                 <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 flex-none fill-gray-500" aria-hidden="true">
                                                     <circle cx="1" cy="1" r="1" />
                                                 </svg>
-                                                <a target='_blank' href="mailto:hi@walnut.dev" className="text-pink-600 hover:text-pink-800">Send your CV</a>
+                                                <a target='_blank' href="mailto:hi@walnut.dev" className="text-BLUE hover:text-GREY-2">Send your CV</a>
                                             </div>
                                         </div>
                                     </li>
@@ -44,7 +44,7 @@ export default function Position() {
 
                                 <h2>Why you should care</h2>
                                 
-                                <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                                <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                                     <li>
                                         <strong>Learn from the best and brightest.</strong> We work directly with the core development teams of some of the most cutting-edge ZK blockchain ecosystems, including Aztec, Miden, and Starknet.
                                     </li>
@@ -67,7 +67,7 @@ export default function Position() {
 
 
                                 <h2>Who are we looking for</h2>
-                                <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                                <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                                     <li>
                                         At least 5 years of experience as a Full-stack / Backend engineer.
                                     </li>
@@ -103,7 +103,7 @@ export default function Position() {
                                 <p>
                                     You will spend approximately 100% of your time building. The only regular meetings we conduct are standups and short bi-weekly retrospectives. We focus on building, learning and iterating. You will mainly:
                                 </p>
-                                <ul className="marker:text-pink-600 list-disc pl-5 space-y-3">
+                                <ul className="marker:text-BLUE list-disc pl-5 space-y-3">
                                     <li>
                                         Work with Rust on one of our products, including Walnut.
                                     </li>

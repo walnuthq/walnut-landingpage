@@ -1,48 +1,46 @@
-import Link from 'next/link'
-import clsx from 'clsx'
+import * as Headless from '@headlessui/react'
+import { clsx } from 'clsx'
+import { Link } from './link'
 
-const baseStyles = {
-	solid:
-		'group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2',
-	outline: 'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none',
+const variants = {
+  primary: clsx(
+    'inline-flex items-center justify-center px-[1.3rem] py-[calc(0.6rem-1px)]',
+    'rounded-full border border-transparent bg-BLUE shadow-md',
+    'whitespace-nowrap text-base font-medium text-white',
+    'data-[hover]:bg-DARK-BLUE data-[disabled]:opacity-40 transition-all ease-in-out',
+  ),
+  secondary: clsx(
+    'relative inline-flex items-center justify-center px-[1.3rem] py-[calc(0.6rem-1px)]',
+    'rounded-full border border-slate-200 bg-WHITE shadow-md',
+    'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]',
+    'whitespace-nowrap text-base font-medium text-gray-950',
+    'data-[disabled]:bg-white/15 data-[hover]:bg-slate-100 data-[disabled]:opacity-40 transition-all ease-in-out',
+  ),
+  outline: clsx(
+    'inline-flex items-center justify-center px-2 py-[calc(theme(spacing.[1.5])-1px)]',
+    'rounded-lg border border-transparent shadow ring-1 ring-black/10',
+    'whitespace-nowrap text-sm font-medium text-gray-950',
+    'data-[disabled]:bg-transparent data-[hover]:bg-gray-50 data-[disabled]:opacity-40 transition-all ease-in-out',
+  ),
 }
 
-const variantStyles = {
-	solid: {
-		slate: 'bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900',
-		blue: 'bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600',
-		white: 'bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white',
-	},
-	outline: {
-		slate:
-			'ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300',
-		white: 'ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white',
-	},
-}
-
-type VariantKey = keyof typeof variantStyles
-type ColorKey<Variant extends VariantKey> = keyof (typeof variantStyles)[Variant]
-
-type ButtonProps<Variant extends VariantKey, Color extends ColorKey<Variant>> = {
-	variant?: Variant
-	color?: Color
+type ButtonProps = {
+  variant?: keyof typeof variants
 } & (
-	| Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
-	| (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
-			href?: undefined
-	  })
+  | React.ComponentPropsWithoutRef<typeof Link>
+  | (Headless.ButtonProps & { href?: undefined })
 )
 
-export function Button<Color extends ColorKey<Variant>, Variant extends VariantKey = 'solid'>({
-	variant,
-	color,
-	className,
-	...props
-}: ButtonProps<Variant, Color>) {
-	variant = variant ?? ('solid' as Variant)
-	color = color ?? ('slate' as Color)
+export function Button({
+  variant = 'primary',
+  className,
+  ...props
+}: ButtonProps) {
+  className = clsx(className, variants[variant])
 
-	className = clsx(baseStyles[variant], [variantStyles[variant][color]], className)
+  if (typeof props.href === 'undefined') {
+    return <Headless.Button {...props} className={className} />
+  }
 
-	return typeof props.href === 'undefined' ? <button className={className} {...props} /> : <Link className={className} {...props} />
+  return <Link {...props} className={className} />
 }

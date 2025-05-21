@@ -1,5 +1,6 @@
+import { Header } from "./header";
 
-import { Header } from '@/components/Header'
+
 
 
 export default function MainHeader() {

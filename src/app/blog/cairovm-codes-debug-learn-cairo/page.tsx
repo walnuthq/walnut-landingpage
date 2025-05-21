@@ -1,19 +1,16 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
-
-import { GradientBackground } from '../../components/gradient'
-import { Navbar } from '../../components/navbar'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
 import header_cairovm from "@/images/blog/Cairo Playground.jpg";
-import { Heading, SectionHeading, Subheading } from '../../components/text'
+import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { Footer } from '@/components/Footer';
-import { GetStarted } from '@/app/components/get-started';
-import MainHeader from '@/app/components/MainHeader';
+import { Footer } from '@/components/footer';
+import { GetStarted } from '@/components/get-started';
+import MainHeader from '@/components/main-header';
 
 const title = "cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut";
 const description = "cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.";
