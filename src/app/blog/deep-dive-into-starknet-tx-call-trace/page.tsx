@@ -34,8 +34,8 @@ export default function Blog() {
     <main className="overflow-hidden">
       <MainHeader/>
       <Container>
-        <SectionHeading className="mt-32 mx-auto text-center">Tuesday, January 14, 2025</SectionHeading>
-        <Heading as="h1" className="mt-2 mx-auto text-center">
+        <SectionHeading className="mt-32">Tuesday, January 14, 2025</SectionHeading>
+        <Heading as="h1" className="mt-2">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
         <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">

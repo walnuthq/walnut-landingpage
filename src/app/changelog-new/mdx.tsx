@@ -12,17 +12,17 @@ type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 
 export const img = function Img({ withoutBg = false, ...props }: ImgProps) {
   const isGif = typeof props.src === 'string' && props.src.toLowerCase().endsWith('.gif')
-  const bgColor =  `bg-[url('/contact-pattern.svg')] bg-WHITE bg-cover bg-center no-repeat p-4 lg:p-12` 
+  const bgColor =  `lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-12` 
 
   return (
-    <div className={`${bgColor}`}>
+    <div className={`lg:bg-GREY lg:p-8`}>
       <div 
-        className={`relative overflow-hidden [&+*]:mt-8`}
+        className={`relative overflow-hidden [&+*]:mt-8 ${bgColor}`}
       >
         <img
           alt=""
           {...props}
-          className={`w-full h-auto ${props.className || ''}`}
+          className={`w-full h-auto ${props.className || ''} lg:shadow-2xl rounded-3xl`}
         />
       </div>
     </div>

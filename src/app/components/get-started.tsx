@@ -8,7 +8,7 @@ function CallToAction() {
     <div className="relative pt-20 text-center sm:pt-[8rem] ">
       <hgroup>
         <Subheading className='!text-BLUE' dark>Get started</Subheading>
-        <Heading as="h2" className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl">
+        <Heading as="h2" className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl mx-auto text-center">
         Ready to Debug Cairo?
           <br />
           Start for free today.
