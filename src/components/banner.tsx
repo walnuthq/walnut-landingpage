@@ -1,8 +1,8 @@
-import { XMarkIcon } from '@heroicons/react/20/solid'
+
 
 export default function Banner() {
   return (
-    <div className="flex justify-center items-center gap-x-6 bg-BLUE lg:px-6 py-1 sm:py-2.5 sm:px-3.5 ">
+    <div className="flex justify-center items-center gap-x-6 bg-BLUE lg:px-6 py-1 sm:py-2.5 sm:px-3.5 mt-14 absolute left-0 right-0 top-6 md:top-4 z-30">
       <p className="text-sm/6 text-WHITE">
         <a href="https://cairovm.codes/" target='_blank'>
           <strong className="font-semibold">Introducing cairovm.codes</strong>

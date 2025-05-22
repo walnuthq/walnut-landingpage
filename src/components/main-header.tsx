@@ -8,8 +8,8 @@ import { Header } from "./header";
 export default function MainHeader() {
     return <>
         <div className='z-40 backdrop-blur bg-GREY fixed left-0 right-0'>
-            <Banner/>
             <Header condensed />
         </div>
+        <Banner/>
     </>
 }
