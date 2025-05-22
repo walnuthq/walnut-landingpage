@@ -1,5 +1,5 @@
 import MainHeader from '@/components/main-header';
-import { Footer } from '@/components/footer_'
+import { Footer } from '@/components/footer'
 import Link from 'next/link';
 
 export default function FoundingPosition() {

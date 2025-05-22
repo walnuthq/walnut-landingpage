@@ -1,5 +1,5 @@
-import { Button } from '../../../components/button_'
-import { Container } from '../../../components/container_'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
 import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
@@ -7,7 +7,7 @@ import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { Footer } from '@/components/footer_'
+import { Footer } from '@/components/footer'
 import { GetStarted } from '@/components/get-started'
 import MainHeader from '@/components/main-header'
 

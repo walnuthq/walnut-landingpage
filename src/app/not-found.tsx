@@ -1,4 +1,4 @@
-import { Button } from "../components/button_";
+import { Button } from "../components/button";
 import MainHeader from "../components/main-header";
 
 export default function NotFound() {

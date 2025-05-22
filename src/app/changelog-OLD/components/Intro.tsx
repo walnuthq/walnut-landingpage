@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { SignUpForm } from './SignUpForm'
 import { IconLink } from './IconLink'
-import { Logo } from '@/components/logo_'
+import { Logo } from '@/components/logo'
 
 
 

@@ -1,5 +1,5 @@
-import { Button } from '../../../components/button_'
-import { Container } from '../../../components/container_'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
 import header_cairovm from "@/images/blog/Cairo Playground.jpg";
 import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
@@ -8,7 +8,7 @@ import Image from 'next/image'
 import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { Footer } from '@/components/footer_';
+import { Footer } from '@/components/footer';
 import { GetStarted } from '@/components/get-started';
 import MainHeader from '@/components/main-header';
 

@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Mark } from './logo_'
+import { Mark } from './logo'
 
 function Row({ children }: { children: React.ReactNode }) {
   return (
