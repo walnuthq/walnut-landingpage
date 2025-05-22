@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import { SignUpForm } from './SignUpForm'
 import { IconLink } from './IconLink'
-import logoWalnut from '@/images/logos/walnut_white.svg'
 import { Logo } from '@/components/logo'
 
 

@@ -1,7 +1,5 @@
 import { useId } from 'react'
 import { Intro } from './Intro'
-import Image from 'next/image'
-import backgroundImage from '@/images/background-faqs.jpg'
 function Timeline() {
   let id = useId()
 
