@@ -1,5 +1,5 @@
-import { Button } from '../../../components/button'
-import { Container } from '../../../components/container'
+import { Button } from '../../../components/button_'
+import { Container } from '../../../components/container_'
 import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
@@ -7,7 +7,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { GetStarted } from '@/components/get-started'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer_'
 import MainHeader from '@/components/main-header'
 
 const title = "Announcing Contract Verification on Starknet | Walnut";

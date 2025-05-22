@@ -1,7 +1,7 @@
 import { BentoCard } from '../components/bento-card'
 import BlogSection from '../components/blog-section'
-import { Button } from '../components/button'
-import { Container } from '../components/container'
+import { Button } from '../components/button_'
+import { Container } from '../components/container_'
 import {  GetStarted } from '../components/get-started'
 import { LinkedAvatars } from '../components/linked-avatars'
 import { LogoCloud } from '../components/logo-cloud'
@@ -14,7 +14,7 @@ import app_sreenshot from '../../public/screenshots/app.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import MainHeader from '../components/main-header'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer_'
 
 const title = "Debugger for Starknet smart contract developers | Walnut";
 const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";

@@ -1,5 +1,5 @@
-import { Button } from "../../../components/button";
-import { Container } from "../../../components/container";
+import { Button } from "../../../components/button_";
+import { Container } from "../../../components/container_";
 import { Heading, SectionHeading, Subheading } from "../../../components/text";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import marijamijailovic from "@/images/blog/marijamijailovic.png";
@@ -19,7 +19,7 @@ import Link from "next/link";
 import { Screenshot } from "@/components/screenshot";
 import logoWalnut from '@/images/logos/walnut.svg';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/footer_";
 import { GetStarted } from "@/components/get-started";
 import MainHeader from "@/components/main-header";
 

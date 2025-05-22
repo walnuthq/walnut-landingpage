@@ -1,4 +1,4 @@
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer_'
 import MainHeader from '@/components/main-header';
 import Link from 'next/link';
 

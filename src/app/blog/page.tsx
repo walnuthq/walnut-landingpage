@@ -1,5 +1,5 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
+import { Button } from '../../components/button_'
+import { Container } from '../../components/container_'
 import { GetStarted } from '../../components/get-started'
 import { Link } from '../../components/link'
 import { Heading, Lead, SectionHeading, Subheading } from '../../components/text'
@@ -12,7 +12,7 @@ import { posts } from '../utils/blogs'
 import Image from 'next/image'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import MainHeader from '../../components/main-header'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer_'
 
 export const runtime = 'edge';
 

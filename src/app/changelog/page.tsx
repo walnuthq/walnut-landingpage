@@ -1,6 +1,6 @@
 'use client';
 
-import { Container } from '../../components/container'
+import { Container } from '../../components/container_'
 import { GetStarted } from '../../components/get-started'
 import { Heading, Lead, SectionHeading, Subheading } from '../../components/text'
 import {img as Image} from './mdx'
@@ -11,7 +11,7 @@ import matter from 'gray-matter'
 import callTracePreviewMD from './posts/calltrace-preview.md';
 import loopRemoval from './posts/loop-removal-from-call-traces.md';
 import MainHeader from '../../components/main-header';
-import { Footer } from '@/components/footer';
+import { Footer } from '@/components/footer_';
 import { SparkleIcon } from './components/SparkleIcon';
 
 

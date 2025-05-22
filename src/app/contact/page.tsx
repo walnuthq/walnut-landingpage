@@ -1,10 +1,10 @@
-import { Container } from '../../components/container'
+import { Container } from '../../components/container_'
 import { GetStarted } from '../../components/get-started'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import MainHeader from '../../components/main-header'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/footer_'
 import contact_pattern from "@/images/contact/contact-pattern.svg"
 import contact_logo_x from "@/images/contact/contact-logo-x.svg"
 import contact_logo_email from "@/images/contact/contact-logo-email.svg"

@@ -1,6 +1,6 @@
 
-import { Button } from './button'
-import { Container } from './container'
+import { Button } from './button_'
+import { Container } from './container_'
 import { Link } from './link'
 import { Heading, Subheading } from './text'
 function CallToAction() {

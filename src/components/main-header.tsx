@@ -7,7 +7,7 @@ import clsx from 'clsx'
 import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 import logoWalnut from '@/images/logos/walnut_black.svg'
-import { Container } from '@/components/container'
+import { Container } from '@/components/container_'
 import {  motion } from 'framer-motion'
 import extertnalLink from "@/images/external-link.svg"
 import { useEffect } from 'react'
