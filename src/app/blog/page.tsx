@@ -213,7 +213,7 @@ export default async function Blog({
     <main className="overflow-hidden relative">
       <MainHeader/>
       <Container>
-        <SectionHeading className="mt-32 mx-auto text-center">Blog</SectionHeading>
+        <SectionHeading className="mt-44 mx-auto text-center">Blog</SectionHeading>
         <Heading as="h1" className="mt-2 mx-auto text-center">
           What’s happening at Walnut.
         </Heading>

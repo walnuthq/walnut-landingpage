@@ -27,10 +27,10 @@ function Hero() {
       <div className="relative min-h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
-            <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/[0.8] md:text-6xl/[0.8] lg:text-7xl/[0.8]">
+            <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
               Debug Transactions on Starknet
             </h1>
-            <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 sm:text-2xl/8">
+            <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 md:text-2xl/8">
               Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
             </p>
             <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">

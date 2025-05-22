@@ -20,7 +20,7 @@ export default function Blog() {
     <main className="overflow-hidden">
     <MainHeader/>
     <Container>
-      <SectionHeading className="mt-32">
+      <SectionHeading className="mt-44">
         Saturday, July 06, 2024
       </SectionHeading>
       <Heading as="h1" className="mt-2">

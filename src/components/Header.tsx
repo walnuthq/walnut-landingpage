@@ -59,7 +59,7 @@ function MobileNav() {
             </motion.div>
           ))}
         </div>
-        <div className="flex justify-center pb-8">
+        <div className="flex justify-center h-full items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
