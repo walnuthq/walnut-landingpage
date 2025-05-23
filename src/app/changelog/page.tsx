@@ -58,6 +58,17 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
+      <Article date={"2025-05-23T00:00Z"} id="call-trace-sierra-gas">
+        <>
+          <h2 className="font-bold my-4 text-xl">
+            Call Trace Sierra Gas in Failed Transactions
+          </h2>
+          <p className="text-gray-500">
+            This week, we added gas cost calculation support for reverted transactions. We also started working on a full gas profiler and expect to ship it next week.
+          </p>
+        </>
+      </Article>
+
       <Article date={"2025-05-16T00:00Z"} id="call-trace-sierra-gas">
         <Image
           src={CodeSnippet20250516}
