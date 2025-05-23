@@ -43,6 +43,7 @@ import CodeSnippet20250418 from "@/images/changelog/CodeSnippet20250418.gif";
 import CodeSnippet20250425 from "@/images/changelog/CodeSnippet20250425.png";
 import CodeSnippet20250509 from "@/images/changelog/CodeSnippet20250509.png";
 import CodeSnippet20250516 from "@/images/changelog/CodeSnippet20250516.png";
+import CodeSnippet20250523 from "@/images/changelog/CodeSnippet20250523.png";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateMetadata } from "@/app/utils/generate-metadata-service";
@@ -58,13 +59,20 @@ export const metadata: Metadata = generateMetadata(
 export default function Page() {
   return (
     <Layout>
-      <Article date={"2025-05-23T00:00Z"} id="call-trace-sierra-gas">
+      <Article date={"2025-05-23T00:00Z"} id="call-trace-sierra-reverted-gas">
+        <Image
+          src={CodeSnippet20250523}
+          alt="call-trace-sierra-reverted-gas"
+          unoptimized
+        />
         <>
           <h2 className="font-bold my-4 text-xl">
             Call Trace Sierra Gas in Failed Transactions
           </h2>
           <p className="text-gray-500">
-            This week, we added gas cost calculation support for reverted transactions. We also started working on a full gas profiler and expect to ship it next week.
+            This week, we added gas cost calculation support for reverted
+            transactions. We also started working on a full gas profiler and
+            expect to ship it next week.
           </p>
         </>
       </Article>
@@ -80,24 +88,29 @@ export default function Page() {
             Gas Consumption in the Call Trace ⛽️
           </h2>
           <p className="text-gray-500">
-            This week, we’re introducing the first version of gas profiling in Walnut. It gives Cairo developers a powerful way to optimize their contracts and reduce gas usage. Gas profiling works for both existing Starknet transactions and simulations.
+            This week, we’re introducing the first version of gas profiling in
+            Walnut. It gives Cairo developers a powerful way to optimize their
+            contracts and reduce gas usage. Gas profiling works for both
+            existing Starknet transactions and simulations.
           </p>
           <h3 className="flex items-center gap-2 font-bold my-4 text-base">
             <SparkleIcon className="w-5 h-5" /> More improvements
           </h3>
           <ul className="list-disc text-gray-500 pl-6">
             <li>
-              Gas per Contract Call is now displayed in the Call Trace on Walnut — available
-              for Contracts using <code>Sierra &ge; 1.7.0</code> and{" "}
+              Gas per Contract Call is now displayed in the Call Trace on Walnut
+              — available for Contracts using <code>Sierra &ge; 1.7.0</code> and{" "}
               <code>Transactions Version 3</code> or above.
             </li>
             <li>
-              Initial gas values (visible after expansion of each call in the call trace) now align with{" "}
-              <code>Starknet v0.13.5 constants</code>, resulting in more
-              accurate and reliable gas estimates.
+              Initial gas values (visible after expansion of each call in the
+              call trace) now align with <code>Starknet v0.13.5 constants</code>
+              , resulting in more accurate and reliable gas estimates.
             </li>
             <li>
-              Added support for message hashes on cross-chain L2-&gt;L1 transactions, making it easy to find the original Starknet L2 transaction from an L1 transaction hash.
+              Added support for message hashes on cross-chain L2-&gt;L1
+              transactions, making it easy to find the original Starknet L2
+              transaction from an L1 transaction hash.
             </li>
           </ul>
         </>
