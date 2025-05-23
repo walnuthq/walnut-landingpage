@@ -6,8 +6,8 @@ export function Screenshot({
   className,
   alt
 }: {
-  width: number
-  height: number
+  width?: number
+  height?: number
   src: string | StaticImageData
   className?: string
   alt?: string

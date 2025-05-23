@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { IconLink } from '@/app/changelog-OLD/components/IconLink'
-import { GitHubIcon, TelegramIcon, XIcon } from '@/app/changelog-OLD/components/Intro'
+import { IconLink } from '@/components/icon-link'
 import extertnalLink from "@/images/external-link.svg"
+import { GitHubIcon, TelegramIcon, XIcon } from './Intro'
 
 export function Footer() {
   return (

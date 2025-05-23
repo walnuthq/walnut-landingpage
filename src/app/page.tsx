@@ -15,6 +15,7 @@ import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import MainHeader from '../components/main-header'
 import { Footer } from '@/components/footer'
+import Banner from '@/components/banner'
 
 const title = "Debugger for Starknet smart contract developers | Walnut";
 const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
@@ -195,6 +196,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden relative">
       <MainHeader />
+      <Banner/>
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">

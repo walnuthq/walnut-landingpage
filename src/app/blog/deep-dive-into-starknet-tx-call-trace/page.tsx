@@ -32,7 +32,7 @@ export default function Blog() {
     <main className="overflow-hidden">
       <MainHeader/>
       <Container>
-        <SectionHeading className="mt-44">Tuesday, January 14, 2025</SectionHeading>
+        <SectionHeading className="mt-32">Tuesday, January 14, 2025</SectionHeading>
         <Heading as="h1" className="mt-2">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
