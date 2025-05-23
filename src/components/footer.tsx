@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { IconLink } from '@/components/icon-link'
 import extertnalLink from "@/images/external-link.svg"
-import { GitHubIcon, TelegramIcon, XIcon } from './Intro'
+import { GitHubIcon, TelegramIcon, XIcon } from './intro'
 
 export function Footer() {
   return (
