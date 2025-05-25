@@ -1,9 +1,6 @@
-import { Button } from "../../components/button";
-import { Container } from "../../components/container";
-import { Footer } from "../../components/footer";
-import { GradientBackground } from "../../components/gradient";
-import { Navbar } from "../../components/navbar";
-import { Heading, Subheading } from "../../components/text";
+import { Button } from "../../../components/button";
+import { Container } from "../../../components/container";
+import { Heading, SectionHeading, Subheading } from "../../../components/text";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import marijamijailovic from "@/images/blog/marijamijailovic.png";
 import Image from "next/image";
@@ -19,9 +16,12 @@ import send_token_function_call from "@/images/blog/deep-dive-into-starknet-tx-c
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Screenshot } from "@/app/components/screenshot";
+import { Screenshot } from "@/components/screenshot";
 import logoWalnut from '@/images/logos/walnut.svg';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from "@/components/footer";
+import { GetStarted } from "@/components/get-started";
+import MainHeader from "@/components/main-header";
 
 const title = "Deep Dive into Starknet Transaction Call Trace";
 const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";
@@ -30,10 +30,9 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
+      <MainHeader/>
       <Container>
-        <Navbar />
-        <Subheading className="mt-16">Tuesday, January 14, 2025</Subheading>
+        <SectionHeading className="mt-32">Tuesday, January 14, 2025</SectionHeading>
         <Heading as="h1" className="mt-2">
           Deep Dive into Starknet Transaction Call Trace
         </Heading>
@@ -129,12 +128,13 @@ export default function Blog() {
                           .
                         </p>
                         <figure>
-                          <Screenshot
-                            src={full_call_trace}
-                            alt="Full Call Trace of an example transaction on Starknet"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={full_call_trace} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>
                             Full Call Trace of an example transaction on
                             Starknet, as presented on{" "}
@@ -188,12 +188,13 @@ export default function Blog() {
                         </p>
                         <h4>Validation Frame: __validate__</h4>
                         <figure>
-                          <Screenshot
-                            src={__validate__}
-                            alt="__validate__"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={__validate__} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>__validate__</figcaption>
                         </figure>
                         <p>
@@ -243,12 +244,13 @@ export default function Blog() {
 
                         <h4>Execution Frame: __execute__</h4>
                         <figure>
-                          <Screenshot
-                            src={__execute__}
-                            alt="__execute__"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={__execute__} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>__execute__</figcaption>
                         </figure>
 
@@ -285,12 +287,13 @@ export default function Blog() {
                         </ul>
                         <h3>Execution Flow of get_beer():</h3>
                         <figure>
-                          <Screenshot
-                            src={get_beer_execution_flow}
-                            alt="get_beer() execution flow"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={get_beer_execution_flow} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>get_beer() execution flow</figcaption>
                         </figure>
                         <p>
@@ -364,12 +367,13 @@ export default function Blog() {
                           contract, and you can see the full source code here.
                         </p>
                         <figure>
-                          <Screenshot
-                            src={verify_call}
-                            alt="verify() entrypoint"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={verify_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>verify() entrypoint</figcaption>
                         </figure>
                         <p>
@@ -383,12 +387,13 @@ export default function Blog() {
                           function calls, such as:
                         </p>
                         <figure>
-                          <Screenshot
-                            src={verify_function_call}
-                            alt="verify function calls"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={verify_function_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>Verify Function calls</figcaption>
                         </figure>
                         <p>
@@ -400,12 +405,13 @@ export default function Blog() {
                           Further Nested Contract Calls: Proof Calculation
                         </h3>
                         <figure>
-                          <Screenshot
-                            src={calculation_proof_execution_flow}
-                            alt="calculation_proof() execution flow"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={calculation_proof_execution_flow} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>
                             calculation_proof() execution flow
                           </figcaption>
@@ -443,12 +449,13 @@ export default function Blog() {
                         <h3>Final Frame: Token Transfer</h3>
                         <p>The trace ends with a token transfer operation:</p>
                         <figure>
-                          <Screenshot
-                            src={send_token_call}
-                            alt="send_token() entrypoint"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={send_token_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>send_token() entrypoint</figcaption>
                         </figure>
                         <h4>Function calls inside send_token()</h4>
@@ -457,12 +464,13 @@ export default function Blog() {
                           several internal operations:
                         </p>
                         <figure>
-                          <Screenshot
-                            src={send_token_function_call}
-                            alt="send_token function calls"
-                            width={1300}
-                            height={742}
-                          />
+                          <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={send_token_function_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                           <figcaption>Send Token Function calls</figcaption>
                         </figure>
                         <p>
@@ -544,6 +552,7 @@ export default function Blog() {
           </div>
         </div>
       </Container>
+      <GetStarted/>
       <Footer />
     </main>
   );

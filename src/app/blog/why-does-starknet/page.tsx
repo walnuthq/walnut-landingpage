@@ -1,12 +1,13 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
-import { Footer } from '../../components/footer'
-import { GradientBackground } from '../../components/gradient'
-import { Navbar } from '../../components/navbar'
-import { Heading, Subheading } from '../../components/text'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
+
+import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from '@/components/footer'
+import { GetStarted } from '@/components/get-started'
+import MainHeader from '@/components/main-header'
 
 const title = "Why does Starknet need a debugger? | Walnut";
 const description = "In this article, we will explore current challenges developers face with debugging transactions on Starknet.";
@@ -15,12 +16,11 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-    <GradientBackground />
+    <MainHeader/>
     <Container>
-      <Navbar />
-      <Subheading className="mt-16">
+      <SectionHeading className="mt-32">
         Friday, December 29, 2023
-      </Subheading>
+      </SectionHeading>
       <Heading as="h1" className="mt-2">
         Why does Starknet need a debugger?
       </Heading>
@@ -87,6 +87,7 @@ export default function Blog() {
         </div>
       </div>
     </Container>
+    <GetStarted/>
     <Footer />
     </main>
   );

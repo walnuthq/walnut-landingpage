@@ -1,16 +1,16 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
-import { Footer } from '../../components/footer'
-import { GradientBackground } from '../../components/gradient'
-import { Navbar } from '../../components/navbar'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
 import header_cairovm from "@/images/blog/Cairo Playground.jpg";
-import { Heading, Subheading } from '../../components/text'
+import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import cairovmcodes_playground from "@/images/blog/cairovm-codes playground.png";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from '@/components/footer';
+import { GetStarted } from '@/components/get-started';
+import MainHeader from '@/components/main-header';
 
 const title = "cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut";
 const description = "cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.";
@@ -19,12 +19,11 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
+      <MainHeader />
       <Container>
-        <Navbar />
-        <Subheading className="mt-16">
+        <SectionHeading className="mt-32">
           Monday, September 16, 2024
-        </Subheading>
+        </SectionHeading>
         <Heading as="h1" className="mt-2">
           cairovm.codes – Run, Debug, and Learn Cairo Programming
         </Heading>
@@ -194,6 +193,7 @@ export default function Blog() {
           </div>
         </div>
       </Container>
+      <GetStarted/>
       <Footer />
     </main>
   );

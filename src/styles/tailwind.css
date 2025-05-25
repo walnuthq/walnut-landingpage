@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --BLUE: #3c3fe7;
+    --DARK-BLUE: #2e31b3;
+    --DARK-BLUE-2: #3c3fe714;
+    --GREY: #f8fafc;
+    --GREY-2: #4b5563;
+    --WHITE: #ffffff;
+    --WHITE-2:#ffffffe6;
+    --BLACK: #0f172a;
+    --BLACK-2: #070b15;
+  }
+}
+
 @keyframes move-x {
   0% {
     transform: translateX(var(--move-x-from));
