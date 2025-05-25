@@ -32,12 +32,12 @@ export function LogoCloud({
         <img
           alt="Arbitrum"
           src="/logo-cloud/arbitrum_logo.png"
-          className="max-sm:mx-auto h-[2.75rem]"
+          className="max-sm:mx-auto h-[1.75rem] self-center"
         />
         <img
           alt="Optimism"
           src="/logo-cloud/optimism.png"
-          className="max-sm:mx-auto h-[2.75rem] self-center"
+          className="max-sm:mx-auto h-[1rem] self-center"
         />
       </div>
     </div>
