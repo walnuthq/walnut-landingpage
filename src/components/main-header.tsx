@@ -27,7 +27,7 @@ function MobileNav() {
     >
       <div className="flex flex-col h-full">
         <div className="flex justify-end pt-4 pb-8">
-          <DisclosureButton className="flex size-12 items-center justify-center rounded-lg data-[hover]:bg-black/5">
+          <DisclosureButton className="flex size-12 items-center justify-center rounded-lg data-[hover]:bg-black/5 focus:outline-none focus:ring-0">
             <XMarkIcon className="size-6 ml-7" />
           </DisclosureButton>
         </div>
@@ -77,15 +77,15 @@ function MobileNav() {
   )
 }
 
-function MobileNavButton({ open } : {open: boolean}) {
+function MobileNavButton({ open } : { open: boolean }) {
   return (
     <DisclosureButton 
-      className="flex size-12 items-center justify-end self-center rounded-lg lg:hidden" 
+      className="flex size-12 items-center justify-end self-center rounded-lg lg:hidden focus:outline-none focus:ring-0" 
       aria-label={open ? "Close main menu" : "Open main menu"}
     >
         <Bars2Icon className="size-6" />
     </DisclosureButton>
-  )
+  );
 }
 
 function HeaderContent({ condensed, open }: { condensed?: boolean, open: boolean }) {

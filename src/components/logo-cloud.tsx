@@ -30,14 +30,14 @@ export function LogoCloud({
           className="max-sm:mx-auto h-[2.75rem] self-center"
         />
         <img
-          alt="Dojo"
-          src="/logo-cloud/Dojo_Logo_Starknet.png"
-          className="max-sm:mx-auto h-[2.75rem] lg:h-14"
+          alt="Arbitrum"
+          src="/logo-cloud/arbitrum_logo.png"
+          className="max-sm:mx-auto h-[2.75rem]"
         />
         <img
-          alt="CF"
-          src="/logo-cloud/Vesu_Logo.png"
-          className="max-sm:mx-auto h-[1rem] self-center"
+          alt="Optimism"
+          src="/logo-cloud/optimism.png"
+          className="max-sm:mx-auto h-[2.75rem] self-center"
         />
       </div>
     </div>

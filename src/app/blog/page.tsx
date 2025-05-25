@@ -57,7 +57,7 @@ async function LastPosts() {
                 <div className="text-sm/5 text-gray-700">
                   {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
                 </div>
-                <div className="mt-2 text-base/7 font-medium">
+                <div className="mt-2 text-lg/7 font-medium">
                   <Link href={`/blog/${post.slug}`} className="text-BLACK">
                     <span className="absolute inset-0 " />
                     {post.title}
@@ -127,7 +127,7 @@ async function Posts({ page }: { page: number }) {
             )}
           </div>
           <div className="sm:col-span-2 sm:max-w-2xl">
-            <h2 className="text-sm/5 font-medium text-BLACK transition-all">
+            <h2 className="text-base/5 font-medium text-BLACK transition-all">
               {post.title}
             </h2>
             <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>

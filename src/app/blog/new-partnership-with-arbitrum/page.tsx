@@ -68,7 +68,13 @@ export default function Blog() {
                           compile to WebAssembly (WASM), such as Rust or C. This approach enables faster, more memory-efficient execution while 
                           maintaining full compatibility with the Ethereum development model.
                         </p>
-                        <Screenshot src={arbitrum1} alt='arbitrum1' className='w-full'/>
+                        <div className={`lg:bg-GREY lg:p-2`}>
+                            <div 
+                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
+                            >
+                              <Image src={arbitrum1} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
+                            </div>
+                          </div>
                         <p>While this flexibility unlocks significant development potential, it also introduces new complexity to the debugging 
                           process. To address this, Walnut Labs is building an open-source, CLI-based debugger tailored for the MultiVM environment.
                            Open-source makes it ideal for chains that need custom tooling and deep integration. Over the next year, our team will focus 
