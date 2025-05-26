@@ -49,22 +49,20 @@ export default function Blog() {
                         <p>Optimism and the Superchain are some of the fastest-growing ecosystems in blockchain. 
                           We’re excited to announce a new partnership between Walnut and Optimism to bring open-source 
                           debugging and simulation tools to this fast-moving environment.</p>
-                        <p>With teams like Base, Kraken, World, Sony and many others building on Optimism, 
-                          the developer ecosystem is growing fast—millions of users, dozens of rollups, and an increasingly complex stack.</p>
+                        <p>With teams like Base, Kraken, World, Sony and many others building on Optimism, the developer 
+                          ecosystem is growing fast—millions of users, dozens of rollups, and an increasingly complex stack.</p>
                         <p>
-                          As the network expands, the need for robust debugging becomes critical. 
-                          Today, most options are closed-source, expensive, and not designed for local workflows.
+                          As the network expands, the need for robust debugging becomes critical. Today, most options are closed-source, expensive, and not designed for local workflows.
                         </p>
                         <blockquote>
-                          <p>Debugging isn’t flashy—but it’s essential. Making it open-source and free knocks out one of the highest-friction, 
+                          <p>Debugging isn’t flashy—but it’s essential. Making it open-source knocks out one of the highest-friction, 
                             highest-cost elements of building for new and even veteran developers.</p>
                           <a href="https://x.com/jack_anorak" target='_blank' className='text-BLUE no-underline'>— jackanorak</a>
                         </blockquote>
-                        <p>Walnut is stepping in to fix that. We’re building an open-source debugger and simulator for the Superchain—one that any team can run locally, 
-                          automate, and customize for their own chains.
+                        <p>Walnut is stepping in to address that. We’re building an open-source debugger and simulator for the Superchain—built to be run locally, fully automatable, and easily customized for any chain.
                         </p>
                         <p>
-                          If you’re building infrastructure or apps on the Superchain and want better devtools—let’s talk.
+                        If you’re building infrastructure or apps on the Superchain and want better devtools—let’s talk.
                         </p>
                       </div>
                     </article>

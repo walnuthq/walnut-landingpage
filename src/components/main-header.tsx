@@ -27,7 +27,7 @@ function MobileNav() {
     >
       <div className="flex flex-col h-full">
         <div className="flex justify-end pt-4 pb-8">
-          <DisclosureButton className="flex size-12 items-center justify-center rounded-lg data-[hover]:bg-black/5 focus:outline-none focus:ring-0">
+          <DisclosureButton className="flex size-12 items-center justify-center rounded-lg focus:outline-none focus:ring-0">
             <XMarkIcon className="size-6 ml-7" />
           </DisclosureButton>
         </div>
