@@ -9,8 +9,9 @@ import { LogoCluster } from '../components/logo-cluster'
 import { LogoTimeline } from '../components/logo-timeline'
 import { Screenshot } from '../components/screenshot'
 import  Testimonials  from '../components/testimonials'
-import { Heading, SectionHeading, Subheading } from '../components/text'
+import { Heading, SectionHeading } from '../components/text'
 import app_sreenshot from '../../public/screenshots/app.png'
+import app_sreenshot_mobile from '../../public/screenshots/app-mobile.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import MainHeader from '../components/main-header'
@@ -66,7 +67,11 @@ function FeatureSection() {
           width={1216}
           height={768}
           src={app_sreenshot}
-          className="mt-16 h-[10rem] sm:h-auto sm:w-full"
+          className="mt-16 h-[10rem] sm:h-auto hidden md:block sm:w-full"
+        />
+        <Screenshot
+          src={app_sreenshot_mobile}
+          className="mt-16 md:hidden sm:w-full"
         />
       </Container>
     </div>
