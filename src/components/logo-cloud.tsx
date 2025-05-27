@@ -6,7 +6,7 @@ export function LogoCloud({
   return (
     <div className='flex lg:flex-row flex-col justify-between items-center'>
       <div className='text-BLUE mb-6 lg:mb-0'>
-        Trusted by the best.
+        Supported by the best.
       </div>
       <div
         className={clsx(
