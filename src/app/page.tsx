@@ -1,22 +1,22 @@
-import { BentoCard } from './components/bento-card'
-import BlogSection from './components/blog-section'
-import { Button } from './components/button'
-import { Container } from './components/container'
-import { Footer } from './components/footer'
-import { Gradient } from './components/gradient'
-import { Link } from './components/link'
-import { LinkedAvatars } from './components/linked-avatars'
-import { LogoCloud } from './components/logo-cloud'
-import { LogoCluster } from './components/logo-cluster'
-import { LogoTimeline } from './components/logo-timeline'
-import { Navbar } from './components/navbar'
-import { Screenshot } from './components/screenshot'
-import  Testimonials  from './components/testimonials'
-import { Heading, Subheading } from './components/text'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import { BentoCard } from '../components/bento-card'
+import BlogSection from '../components/blog-section'
+import { Button } from '../components/button'
+import { Container } from '../components/container'
+import {  GetStarted } from '../components/get-started'
+import { LinkedAvatars } from '../components/linked-avatars'
+import { LogoCloud } from '../components/logo-cloud'
+import { LogoCluster } from '../components/logo-cluster'
+import { LogoTimeline } from '../components/logo-timeline'
+import { Screenshot } from '../components/screenshot'
+import  Testimonials  from '../components/testimonials'
+import { Heading, SectionHeading } from '../components/text'
 import app_sreenshot from '../../public/screenshots/app.png'
+import app_sreenshot_mobile from '../../public/screenshots/app-mobile.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import MainHeader from '../components/main-header'
+import { Footer } from '@/components/footer'
+import Banner from '@/components/banner'
 
 const title = "Debugger for Starknet smart contract developers | Walnut";
 const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
@@ -24,51 +24,54 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
-      <Container className="relative">
-        <Navbar
-          banner={
-            <Link
-              href="/blog/cairovm-codes-debug-learn-cairo"
-              className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-[hover]:bg-fuchsia-950/30"
-            >
-              Introducing cairovm.codes: a playground to explore the CairoVM.
-              <ChevronRightIcon className="size-4" />
-            </Link>
-          }
-        />
-        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-7xl/[0.8]">
-            Debug Transactions on Starknet
-          </h1>
-          <p className="mt-8 max-w-lg text-xl/5 font-medium text-gray-950/75 sm:text-2xl/8">
-            Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
-          </p>
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">Try Walnut for Free</Button>
-            <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
-              Open Docs
-            </Button>
+    <Container className='bg-GREY relative'>
+      <div className='absolute inset-0 bg-[url("/landing-page-pattern.svg")] bg-cover bg-center opacity-[66%]'></div>
+      <div className="relative min-h-screen pt-[4.5rem] flex flex-col">
+        <div className="flex-1 flex items-center justify-center">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
+              Debug Transactions on Starknet
+            </h1>
+            <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 md:text-2xl/8">
+              Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
+            </p>
+            <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+              <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Try Walnut for Free
+              </Button>
+              <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Open Docs
+              </Button>
+            </div>
           </div>
         </div>
-      </Container>
-    </div>
-  )
+        <div className="pb-4">
+          <LogoCloud />
+        </div>
+      </div>
+    </Container>
+
+  );
 }
+
+
 
 function FeatureSection() {
   return (
     <div className="overflow-hidden">
-      <Container className="pb-24">
-        <Heading as="h2" className="sm:max-w-4xl md:max-w-4xl text-3xl/[1.2]">
+      <Container className="pb-[8.5rem]">
+        <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
         Debug and Simulate Cairo Transactions with Ease.
         </Heading>
         <Screenshot
           width={1216}
           height={768}
           src={app_sreenshot}
-          className="mt-16 h-[10rem] sm:h-auto sm:w-full"
+          className="mt-16 h-[10rem] sm:h-auto hidden md:block sm:w-full"
+        />
+        <Screenshot
+          src={app_sreenshot_mobile}
+          className="mt-16 md:hidden sm:w-full"
         />
       </Container>
     </div>
@@ -78,11 +81,10 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-      <Subheading>Features</Subheading>
-      <Heading as="h3" className="mt-2 sm:max-w-3xl md:max-w-3xl text-3xl/[1.2]">
-      Understand Every Detail of Your Starknet Transactions.
-      </Heading>
-
+        <SectionHeading className='mx-auto text-center'>Features</SectionHeading>
+        <Heading as="h3" className="mt-2 text-3xl/[1.2] mx-auto text-center">
+        Understand Every Detail of Your Starknet Transactions.
+        </Heading>
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
           eyebrow="Insight"
@@ -92,7 +94,7 @@ function BentoSection() {
             <div className="h-80 bg-[url(/screenshots/debugger-with-memory.png)] bg-[size:611px_553px] bg-[left_28px_top_22px] bg-no-repeat" />
           }
           fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
+          className=" lg:col-span-3 "
         />
         <BentoCard
           eyebrow="Analysis"
@@ -102,7 +104,7 @@ function BentoSection() {
             <div className="absolute inset-0 md:bg-[url(/screenshots/errors-table.png)] bg-[url(/screenshots/errors-table-mob.png)] bg-[size:543px_290px] md:bg-[size:654px_317px] bg-[left_34px_top_0px] md:bg-[left_34px_top_-24px]  bg-no-repeat" />
           }
           fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
+          className="lg:col-span-3"
         />
         <BentoCard
           eyebrow="Experiment"
@@ -112,7 +114,7 @@ function BentoSection() {
             <div className="absolute inset-0 bg-[url(/screenshots/simulation.png)] bg-[size:471px_347px] bg-[left_0px_top_10px] bg-no-repeat" />
           }
           fade={['bottom']}
-          className="lg:col-span-2 lg:rounded-bl-4xl"
+          className="lg:col-span-2"
         />
         <BentoCard
           eyebrow="Multi-chain"
@@ -127,12 +129,12 @@ function BentoSection() {
           description="Save on gas with detailed insights into transaction costs."
           graphic={
               <div
-                  className="absolute inset-0 bg-[url(/screenshots/gas4.png)] bg-no-repeat bg-center"
-                  style={{backgroundSize: "160px"}}
+                  className="absolute inset-0 bg-[url(/screenshots/gas4.svg)] bg-no-repeat bg-center"
+                  style={{backgroundSize: "200px"}}
               />
           }
           fade={['bottom']}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
+          className="lg:col-span-2 "
         />
       </div>
     </Container>
@@ -141,10 +143,10 @@ function BentoSection() {
 
 function DarkBentoSection() {
   return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
+    <div className="mt-2 bg-BLACK-2 py-32">
       <Container>
-        <Subheading dark>Blockchain Research and Engineering</Subheading>
-        <Heading as="h3" dark className="mt-2 sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2]">
+        <SectionHeading className='mx-auto text-center' dark>Blockchain Research and Engineering</SectionHeading>
+        <Heading as="h3" dark className="mt-2 !text-BLUE sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2] mx-auto text-center">
           More from Walnut&nbsp;Labs
         </Heading>
 
@@ -158,7 +160,7 @@ function DarkBentoSection() {
               <div className="h-80 bg-[url(https://walnut.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCairo%20Playground.b1e65fa5.jpg&w=3840&q=75)] bg-cover bg-[center_10%] bg-no-repeat" />
             }
             fade={['top']}
-            className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
+            className="lg:col-span-4 "
           />
           <BentoCard
             dark
@@ -167,22 +169,17 @@ function DarkBentoSection() {
             description="An online catalog of Noir libraries where developers can discover, search, and download libraries for their projects."
             graphic={<LogoTimeline />}
             // `!overflow-visible` is needed to work around a Chrome bug that disables the mask on the graphic.
-            className="z-10 !overflow-visible lg:col-span-2 lg:rounded-tr-4xl"
+            className="z-10 !overflow-visible lg:col-span-2"
           />
           <BentoCard
             dark
             eyebrow="Optimism / Superchain"
             title="Walnut Lite"
             description={
-            <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain. Read more{' '}
-              <a 
-              className='text-blue-500 hover:underline' 
-              href='https://walnut.dev/blog/walnut-receives-grant-from-optimism-foundation-to-improve-debugging-on-the-superchain'>
-                in our blog
-              </a>.
+            <div>A fully open-source, local transaction debugger and simulator for the EVM, initially launching on the Superchain.
             </div>}
             graphic={<LinkedAvatars />}
-            className="lg:col-span-2 lg:rounded-bl-4xl"
+            className="lg:col-span-2"
           />
           <BentoCard
             dark
@@ -192,7 +189,7 @@ function DarkBentoSection() {
             graphic={
               <div className="h-80 bg-[url(/screenshots/opscan_screen.png)] bg-cover bg-[left_0px_top_0px] bg-no-repeat" />
             }
-            className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
+            className="lg:col-span-4"
           />
         </div>
       </Container>
@@ -202,22 +199,21 @@ function DarkBentoSection() {
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden relative">
+      <MainHeader />
+      <Banner/>
       <Hero />
       <main>
-        <Container className="mt-10">
-          <LogoCloud />
-        </Container>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
           <FeatureSection />
           <BentoSection />
           <Testimonials />
-        </div>
         <DarkBentoSection />
         <BlogSection/>
+        </div>
       </main>
-      
-      <Footer />
+      <GetStarted />
+      <Footer/>
     </div>
   )
 }

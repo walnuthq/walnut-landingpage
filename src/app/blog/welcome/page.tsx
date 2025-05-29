@@ -1,15 +1,15 @@
-import { Button } from '../../components/button'
-import { Container } from '../../components/container'
-import { Footer } from '../../components/footer'
-import { GradientBackground } from '../../components/gradient'
-import { Navbar } from '../../components/navbar'
-import { Heading, Subheading } from '../../components/text'
+import { Button } from '../../../components/button'
+import { Container } from '../../../components/container'
+import { Heading, SectionHeading, Subheading } from '../../../components/text'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import author from "@/images/blog/J6fWCiVz_400x400.jpg";
 import Image from 'next/image'
 import TenderlyGasProfiler from "@/images/blog/tenderly-gas-profiler.webp";
 import type { Metadata } from 'next';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
+import { Footer } from '@/components/footer'
+import { GetStarted } from '@/components/get-started'
+import MainHeader from '@/components/main-header'
 
 const title = "Welcome to Walnut blog | Walnut";
 const description = "At Walnut we develop tools for blockchain engineers, with a specific focus on Starknet.";
@@ -18,12 +18,11 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 export default function Blog() {
   return (
     <main className="overflow-hidden">
-    <GradientBackground />
+    <MainHeader/>
     <Container>
-      <Navbar />
-      <Subheading className="mt-16">
+      <SectionHeading className="mt-32">
         Saturday, December 23, 2023
-      </Subheading>
+      </SectionHeading>
       <Heading as="h1" className="mt-2">
         Welcome to Walnut blog
       </Heading>
@@ -188,6 +187,7 @@ export default function Blog() {
         </div>
       </div>
     </Container>
+    <GetStarted/>
     <Footer />
   </main>
   );
