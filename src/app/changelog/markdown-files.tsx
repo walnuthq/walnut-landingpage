@@ -42,13 +42,18 @@ import sourceCodeIntroduction from "./posts/source-code-introduction.md";
 import transactionSimulationIntroduction from "./posts/transaction-simulation-introduction.md";
 import callTraceInternal from "./posts/call-trace-internal.md";
 import initialPost from "./posts/initial-post.md";
-import brandNewStorageTab from "./posts/brand-new-storage-tab.md"
-import focusOnStability from "./posts/focus-on-stability.md"
-import soueceCodeFiles from "./posts/source-code-files-organization.md"
-import gasConsumption from "./posts/gas-consumption-in-the-call-trace.md"
-import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transactions.md"
+import brandNewStorageTab from "./posts/brand-new-storage-tab.md";
+import focusOnStability from "./posts/focus-on-stability.md";
+import soueceCodeFiles from "./posts/source-code-files-organization.md";
+import gasConsumption from "./posts/gas-consumption-in-the-call-trace.md";
+import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transactions.md";
+import flamecharts from "./posts/flamecharts.md";
 
 export const markdownFiles = [
+  {
+    slug: "flamecharts",
+    content: flamecharts,
+  },
   {
     slug: "call-trace-sierra-gas-in-failed-transactions",
     content: callTraceSierraGas,
