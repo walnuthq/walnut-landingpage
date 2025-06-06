@@ -48,8 +48,13 @@ import soueceCodeFiles from "./posts/source-code-files-organization.md";
 import gasConsumption from "./posts/gas-consumption-in-the-call-trace.md";
 import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transactions.md";
 import flamecharts from "./posts/flamecharts.md";
+import newLogo from "./posts/new-logo.md";
 
 export const markdownFiles = [
+  {
+    slug: "new-logo",
+    content: newLogo,
+  },
   {
     slug: "flamecharts",
     content: flamecharts,
