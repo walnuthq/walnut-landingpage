@@ -37,10 +37,10 @@ function Hero() {
             </p>
             <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
               <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
-                Try Walnut for Free
+                Open Walnut
               </Button>
               <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
-                Open Docs
+                Docs
               </Button>
             </div>
           </div>
