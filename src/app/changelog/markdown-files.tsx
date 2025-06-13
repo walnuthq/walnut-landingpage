@@ -49,8 +49,13 @@ import gasConsumption from "./posts/gas-consumption-in-the-call-trace.md";
 import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transactions.md";
 import flamecharts from "./posts/flamecharts.md";
 import newLogo from "./posts/new-logo.md";
+import gasChipAlwaysPresent from "./posts/gas-chip-always-present.md";
 
 export const markdownFiles = [
+  {
+    slug: "gas-chip-always-present",
+    content: gasChipAlwaysPresent,
+  },
   {
     slug: "new-logo",
     content: newLogo,
