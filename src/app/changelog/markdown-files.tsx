@@ -49,8 +49,13 @@ import gasConsumption from "./posts/gas-consumption-in-the-call-trace.md";
 import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transactions.md";
 import flamecharts from "./posts/flamecharts.md";
 import newLogo from "./posts/new-logo.md";
+import bugFixes06232025 from "./posts/bug-fixes-06132025.md";
 
 export const markdownFiles = [
+  {
+    slug: "bug-fixes-06132025",
+    content: bugFixes06232025,
+  },
   {
     slug: "new-logo",
     content: newLogo,
