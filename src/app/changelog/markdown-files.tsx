@@ -50,11 +50,12 @@ import callTraceSierraGas from "./posts/call-trace-sierra-gas-in-failed-transact
 import flamecharts from "./posts/flamecharts.md";
 import newLogo from "./posts/new-logo.md";
 import bugFixes06232025 from "./posts/bug-fixes-06132025.md";
-import uiPolishLayout from "./posts/ui-polish-layout.md";
+import executionResourcesAndFeeInTransactionInfo from "./posts/execution-resources-and-fee-in-transaction-info.md";
+
 export const markdownFiles = [
   {
-    slug: "ui-polish-layout",
-    content: uiPolishLayout,
+    slug: "execution-resources-and-fee-in-transaction-info",
+    content: executionResourcesAndFeeInTransactionInfo,
   },
   {
     slug: "bug-fixes-06132025",
