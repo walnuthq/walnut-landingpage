@@ -85,7 +85,7 @@ export default function NewChangelog() {
               </div>
               <div className="sm:col-span-2 sm:max-w-4xl">
                 {post.image && (
-                  <div className="relative overflow-hidden [&+*]:mt-8">
+                  <div className="relative lg:overflow-hidden [&+*]:mt-8">
                     <Image
                       src={post.image}
                       alt={post.title}
