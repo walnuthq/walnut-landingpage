@@ -123,6 +123,16 @@ export default function NewChangelog() {
                       li: ({ children }) => (
                         <li className="mb-2">{children}</li>
                       ),
+                      a: ({ href, children }) => (
+                        <a
+                          href={href}
+                          className="text-BLUE hover:underline transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {children}
+                        </a>
+                      ),
                     }}
                   >
                     {post.content}
