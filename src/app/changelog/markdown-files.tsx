@@ -51,8 +51,10 @@ import flamecharts from "./posts/flamecharts.md";
 import newLogo from "./posts/new-logo.md";
 import bugFixes06232025 from "./posts/bug-fixes-06132025.md";
 import executionResourcesAndFeeInTransactionInfo from "./posts/execution-resources-and-fee-in-transaction-info.md";
+import l1DataFlamegraph from "./posts/l1-data-flamegraph.md";
 
 export const markdownFiles = [
+  { slug: "l1-data-flamegraph", content: l1DataFlamegraph },
   {
     slug: "execution-resources-and-fee-in-transaction-info",
     content: executionResourcesAndFeeInTransactionInfo,
