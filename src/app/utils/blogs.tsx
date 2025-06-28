@@ -4,6 +4,17 @@ import marijamijailovic from "@/images/blog/marijamijailovic.png";
 
 export const posts = [
   {
+    publishedAt: "Friday, June 27, 2025",
+    slug: "gas-calculation",
+    title: "Analyse Gas Usage in Starknet Transactions with Walnut Flamegraphs",
+    excerpt:
+      "If you've ever looked at a Starknet transaction and wondered where all the gas goes — we’ve got the answer.",
+    author: {
+      name: "@marijamijailovic",
+      image: marijamijailovic,
+    },
+  },
+  {
     publishedAt: "Friday, May 2, 2025",
     slug: "debugging-and-transaction-simulations-are-the-most-requested-features",
     title: "Debugging and Transaction Simulations Are the Most Requested Features by Blockchain Developers",
