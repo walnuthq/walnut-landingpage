@@ -8,17 +8,9 @@ import click_blue_gas from "@/images/blog/click-blue-gas.png";
 import flamechart from "@/images/blog/flamechart.png";
 import __validate__ from "@/images/blog/deep-dive-into-starknet-tx-call-trace/__validate__.png";
 import __execute__ from "@/images/blog/deep-dive-into-starknet-tx-call-trace/__execute__.png";
-import get_beer_execution_flow from "@/images/blog/deep-dive-into-starknet-tx-call-trace/get_beer_execution_frame.png";
-import verify_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace/verify_call.png";
-import verify_function_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace/verify_function_call.png";
-import calculation_proof_execution_flow from "@/images/blog/deep-dive-into-starknet-tx-call-trace/calculation_proof_execution_frame.png";
-import send_token_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace/send_token_call.png";
-import send_token_function_call from "@/images/blog/deep-dive-into-starknet-tx-call-trace/send_token_function_call.png";
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Screenshot } from "@/components/screenshot";
-import logoWalnut from '@/images/logos/walnut.svg';
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { Footer } from "@/components/footer";
 import { GetStarted } from "@/components/get-started";
@@ -42,28 +34,6 @@ const asciiTree = `L2 Gas
     └── State resources`
 ;
 
-const tableData = [
-  {
-    component: 'Computation Resources > VM Cost',
-    optimization: 'Simplify logic, avoid expensive builtins like ec_op, keccak, ECDSA.'
-  },
-  {
-    component: 'Computation Resources > Sierra cost',
-    optimization: 'Refactor your Cairo code to use cheaper Sierra libfuncs, reduce intermediate variables and duplicated operations.'
-  },
-  {
-    component: 'Starknet Resources > Archival resources',
-    optimization: 'Minimize calldata size, use compact types (felt252), reduce event emissions.'
-  },
-  {
-    component: 'Starknet Resources > Messages resources',
-    optimization: 'Avoid unnecessary L1<>L2 messages, batch and pack data before sending.'
-  },
-  {
-    component: 'Starknet Resources > State resources',
-    optimization: 'Reduce storage_write, avoid redundant updates. Reuse existing keys when possible; batch updates to same slot.'
-  }
-];
 export default function Blog() {
   return (
     <main className="overflow-hidden">
@@ -106,7 +76,7 @@ export default function Blog() {
                           </li>
                           <li>
                             <strong>L1 data gas</strong> - covers the cost of posting the transaction’s state diff 
-                            (e.g., storage changes or class declarations) to L1 for data availability, 0 if blobs are used.
+                            (e.g., storage changes or class declarations) to L1 for data availability.
                           </li>
                           <li>
                             <strong>L1 gas fee </strong> - applies when sending messages from L2 to L1, or when calldata (instead of blobs) is used for data availability.
@@ -115,9 +85,9 @@ export default function Blog() {
                         <p>
                           The transaction&apos;s <strong>actual fee (the fee users see in their wallet)</strong> is calculated from these three components. 
                           It is computed as a weighted sum of the components multiplied by their respective gas prices. Gas prices 
-                          <strong>(L1 gas price, L1 data gas price, and L2 gas price)</strong> are determined by the sequencer at block production time. 
+                          <strong> (L1 gas price, L1 data gas price, and L2 gas price)</strong> are determined by the sequencer at block production time. 
                           These prices reflect the current cost of using L1 and L2 resources and are embedded in the block context. 
-                          For more details, see the <a href="https://docs.starknet.io/architecture-and-concepts/network-architecture/fee-mechanism/#fee_formula" target="_blank">
+                          For more details, see the <a href="https://docs.starknet.io/architecture/fees/#fee_formula" target="_blank">
                           Starknet fee mechanism documentation.</a>
                         </p>
                         <p>In this post we will break down into how L2 gas is calculated on Starknet, using a real transaction to illustrate how 
@@ -132,7 +102,7 @@ export default function Blog() {
                           We’ll use the following transaction {' '}
                           <span className="font-mono p-1 bg-GREY rounded-sm text-red-600">0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b </span>
                           as our running example, you can check it at {' '}
-                          <a href="https://app.walnut.dev/transactions?chainId=SN_SEPOLIA&txHash=0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b">walnut.dev</a>
+                          <a href="https://app.walnut.dev/transactions?chainId=SN_SEPOLIA&txHash=0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b" target="_blank">walnut.dev</a>
                         </p>
                         <p>The prerequisites for getting per-call gas breakdown on Cairo contracts on Walnut are:</p>
                         <ul>
@@ -204,8 +174,10 @@ export default function Blog() {
                             (libfuncs are similar to opcodes in the EVM, e.g. <span className="font-mono p-1 bg-GREY rounded-sm text-red-600">u8_add </span> is a libfunc).
                             </li>
                           </ul>
+                          <li className="list-none">
+                            <p>Each frame under Computation resources represents a contract call execution and its children — internal calls made by that contract.</p>
+                          </li>
                         </ul>
-                        <p>Each frame under Computation resources represents a contract call execution and its children — internal calls made by that contract.</p>
                         <ul>
                           <li>
                             <span className="font-bold">Starknet resources:</span> system-level overhead:
@@ -215,7 +187,7 @@ export default function Blog() {
                               Archival resources: cost of storing calldata, signatures, declared class code, and emitted events on L2.
                             </li>
                             <li>
-                              Messages resources (e.g., L1 ↔ L2): gas usage for processing L1{'<>'}L2 messages (e.g., <span className="font-mono p-1 bg-GREY rounded-sm text-red-600">send_message_to_l1</span>).
+                              Messages resources: gas usage for processing L1 ↔ L2 messages (e.g., <span className="font-mono p-1 bg-GREY rounded-sm text-red-600">send_message_to_l1</span>).
                             </li>
                             <li>
                             State resources: cost of storage writes, class hash updates, compiled class updates, and contract deployments. Also, number of new storage keys allocated in the transaction.
@@ -225,10 +197,9 @@ export default function Blog() {
                         <p>This structure is what the Flamegraph visualizes, helping you trace gas usage from top-level categories to specific calls.</p>
                         <pre className="font-mono text-sm bg-gray-800 text-gray-300 p-4 rounded-lg overflow-x-auto">
                           {asciiTree.split('\n').map((line, idx) => {
-                            const isHighlight = line.includes('__validate__') || line.includes('__execute__');
                             return (
                               <div key={idx}>
-                                <span className={isHighlight ? 'text-yellow-300' : ''}>{line}</span>
+                                <span>{line}</span>
                               </div>
                             );
                           })}
@@ -251,7 +222,7 @@ export default function Blog() {
                                 </tr>
                                 <tr className="bg-gray-100">
                                   <td className="border border-gray-300 px-4 py-2 font-semibold">Computation Resources &gt; Sierra cost</td>
-                                  <td className="border border-gray-300 px-4 py-2">Refactor your Cairo code to use cheaper <a href="https://docs.starknet.io/architecture-and-concepts/network-architecture/fee-mechanism/#sierra_gas" target="_blank">Sierra libfuncs</a>, 
+                                  <td className="border border-gray-300 px-4 py-2">Refactor your Cairo code to use cheaper <a href="https://docs.starknet.io/architecture/fees/#sierra_gas" target="_blank">Sierra libfuncs</a>, 
                                   reduce intermediate variables and duplicated operations.</td>
                                 </tr>
                                 <tr className="bg-white">
@@ -260,7 +231,7 @@ export default function Blog() {
                                 </tr>
                                 <tr className="bg-gray-100">
                                   <td className="border border-gray-300 px-4 py-2 font-semibold">Starknet Resources &gt; Messages resources</td>
-                                  <td className="border border-gray-300 px-4 py-2">Avoid unnecessary L1{'<>'}L2 messages, batch and pack data before sending.</td>
+                                  <td className="border border-gray-300 px-4 py-2">Avoid unnecessary L1 ↔ L2 messages, batch and pack data before sending.</td>
                                 </tr>
                                 <tr className="bg-white">
                                   <td className="border border-gray-300 px-4 py-2 font-semibold">Starknet Resources &gt; State resources</td>
@@ -274,7 +245,7 @@ export default function Blog() {
                           </p>
                           <p>In the upcoming posts, we&apos;ll dive deeper into each gas component with hands-on tips for optimizing your contracts more effectively.</p>
                         <h3>Summary</h3>
-                        <p>In this post, we focused on one important part of Starknet gas: the L2 gas. We explained different components 
+                        <p>In this post, we focused on one important part of Starknet gas the L2 Gas. We explained different components 
                           of it and presented Walnut’s new feature that helps you analyse how your Starknet Application consumes those 
                           resources on a granular level.
                         </p>
