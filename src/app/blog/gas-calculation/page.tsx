@@ -245,7 +245,7 @@ export default function Blog() {
                           </p>
                           <p>In the upcoming posts, we&apos;ll dive deeper into each gas component with hands-on tips for optimizing your contracts more effectively.</p>
                         <h3>Summary</h3>
-                        <p>In this post, we focused on one important part of Starknet gas the L2 gas. We explained different components 
+                        <p>In this post, we focused on one important part of Starknet gas - the L2 gas. We explained different components 
                           of it and presented Walnut’s new feature that helps you analyse how your Starknet Application consumes those 
                           resources on a granular level.
                         </p>
