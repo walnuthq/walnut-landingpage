@@ -1,6 +1,7 @@
 ---
 title: 🌗 Theme toggle is here - Light or dark?
 date: 2025-07-04
+image: /changelog/CodeSnippet20250704.png
 imageBg: true
 ---
 
