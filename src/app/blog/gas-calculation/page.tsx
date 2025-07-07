@@ -15,6 +15,7 @@ import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { Footer } from "@/components/footer";
 import { GetStarted } from "@/components/get-started";
 import MainHeader from "@/components/main-header";
+import BlogScreenshot from "../components/BlogScreenshot";
 
 const title = "Analyse Gas Usage in Starknet Transactions with Walnut Flamegraphs";
 const description = "If you've ever looked at a Starknet transaction and wondered where all the gas goes — we’ve got the answer.";
@@ -101,7 +102,7 @@ export default function Blog() {
                         </h2>
                         <p>
                           We’ll use the following transaction {' '}
-                          <span className="font-mono p-1 bg-GREY rounded-sm text-red-600">0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b </span>
+                          <span className="font-mono p-1 bg-GREY rounded-sm text-red-600 break-words">0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b </span>
                           as our running example, you can check it at {' '}
                           <a href="https://app.walnut.dev/transactions?chainId=SN_SEPOLIA&txHash=0x30e60f2bf9dd5ae90a642fcca957883a8f517549c0f69fd9c0decaa0b7ca54b" target="_blank">walnut.dev</a>
                         </p>
@@ -114,18 +115,7 @@ export default function Blog() {
                             Sierra Contract Version: ≥ 1.7.0
                           </li>
                         </ul>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={click_blue_gas} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>
-                          🔎 Tip: Click each &quot;blue gas&quot; chip on the right to get quick access to a specific level of the Flamegraph.
-                          </figcaption>
-                        </figure>
+                        <BlogScreenshot src={click_blue_gas} caption="🔎 Tip: Click each &quot;blue gas&quot; chip on the right to get quick access to a specific level of the Flamegraph."/>
                         <p>
                           The image above shows a full Call Trace on Walnut with enhanced Gas Information. It involves a few contract calls, each with its own gas cost visualised in the blue chip on the right:
                         </p>
@@ -158,18 +148,7 @@ export default function Blog() {
                           To provide a more visual representation of where the majority of gas is spent, we are introducing Flamecharts for Cairo transactions.
                           They are a great way to understand the gas usage of a transaction and to identify the most expensive parts of the transaction.
                         </p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={flamechart} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>
-                            Flamechart for our transaction clearly reveals that the majority of L2 gas is spent on <code>test_signature_verification_secp256r1</code> function call.
-                          </figcaption>
-                        </figure>
+                        <BlogScreenshot src={flamechart} caption="Flamechart for our transaction clearly reveals that the majority of L2 gas is spent on <code>test_signature_verification_secp256r1</code> function call."/>
                         <p>
                           The image above presents the gas Flamechart for our transaction. 
                           The root frame represents the total L2 Gas of the transaction and it is then divided into two main parts:

@@ -12,6 +12,7 @@ import MainHeader from '@/components/main-header'
 import image1 from '@/images/blog/need-for-debugging-tools-1.png'
 import image2 from '@/images/blog/need-for-debugging-tools-2.png'
 import { Screenshot } from '@/components/screenshot';
+import BlogScreenshot from '../components/BlogScreenshot';
 
 const title = "Walnut Labs Selected as Core Maintainer of Madara Documentation — Official Appchain Stack on Starknet";
 const description = "We’re excited to announce that Walnut Labs, the team behind Walnut, has been selected as the core maintainer of the official Madara Documentation.";
@@ -63,25 +64,13 @@ export default function Blog() {
                           online debugger and profiler for Starknet, surpassing other tools like a Cairo package registry and documentation generators.
                           This emphasis on debugging tools indicates a pressing need for better developer support in the ecosystem.
                         </p>
-                        <div className={`lg:bg-GREY lg:p-2`}>
-                          <div 
-                            className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                          >
-                            <Image src={image1} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                          </div>
-                        </div>
+                        <BlogScreenshot src={image1} />
                         <p>The survey also delved into security tooling preferences. In that category, transaction debugging emerged as the top priority, 
                           with 32.4% of respondents selecting it over other options such as formal verification, 
                           static analysis, and code coverage tools. This consistent demand across different tooling categories underscores 
                           the critical role of debugging in the development process.
                         </p>
-                        <div className={`lg:bg-GREY lg:p-2`}>
-                          <div 
-                            className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                          >
-                            <Image src={image2} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                          </div>
-                        </div>
+                         <BlogScreenshot src={image2} />
                         <p>These insights from the Starknet developer survey highlight a clear and pressing demand for robust debugging and 
                           simulation tools within the ecosystem.</p>
                         

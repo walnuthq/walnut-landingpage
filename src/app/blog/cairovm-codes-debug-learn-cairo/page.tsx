@@ -11,6 +11,7 @@ import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { Footer } from '@/components/footer';
 import { GetStarted } from '@/components/get-started';
 import MainHeader from '@/components/main-header';
+import BlogScreenshot from '../components/BlogScreenshot';
 
 const title = "cairovm.codes – Run, Debug, and Learn Cairo Programming | Walnut";
 const description = "cairovm.codes is a powerful web application that serves both educational and debugging purposes, helping users run and explore Cairo programs.";
@@ -47,6 +48,7 @@ export default function Blog() {
                   src={header_cairovm}
                   className="mb-10 aspect-[3/2] w-full rounded-2xl object-cover shadow-xl"
                 />
+                
                 <div>
                   <div>
                     <div className="mx-auto">
@@ -97,19 +99,8 @@ export default function Blog() {
                                 function call stack.
                               </li>
                             </ul>
-                            <figure>
-                              <Image
-                                src={cairovmcodes_playground}
-                                alt="cairovm.codes is a web application for running and debugging Cairo programs"
-                                width={1300}
-                                height={742}
-                              />
-                              <figcaption>
-                                cairovm.codes is a web application for running and
-                                debugging Cairo programs
-                              </figcaption>
-                            </figure>
-
+                            <BlogScreenshot src={cairovmcodes_playground} caption="cairovm.codes is a web application for running and
+                                debugging Cairo programs"/>
                             <p>
                               The app also offers a three-column mode, for users
                               interested in seeing Sierra alongside Cairo and CASM. By
