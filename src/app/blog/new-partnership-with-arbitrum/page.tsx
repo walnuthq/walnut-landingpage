@@ -11,6 +11,7 @@ import { Footer } from '@/components/footer'
 import MainHeader from '@/components/main-header'
 import arbitrum1 from '@/images/blog/arbitrum-blog-1.png'
 import { Screenshot } from '@/components/screenshot';
+import BlogScreenshot from '../components/BlogScreenshot';
 
 const title = "Walnut Labs Selected as Core Maintainer of Madara Documentation — Official Appchain Stack on Starknet";
 const description = "We’re excited to announce that Walnut Labs, the team behind Walnut, has been selected as the core maintainer of the official Madara Documentation.";
@@ -68,13 +69,7 @@ export default function Blog() {
                           compile to WebAssembly (WASM), such as Rust or C. This approach enables faster, more memory-efficient execution while 
                           maintaining full compatibility with the Ethereum development model.
                         </p>
-                        <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={arbitrum1} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
+                        <BlogScreenshot src={arbitrum1} />
                         <p>While this flexibility unlocks significant development potential, it also introduces new complexity to the debugging 
                           process. To address this, Walnut Labs is building an open-source, CLI-based debugger tailored for the MultiVM environment.
                            Open-source makes it ideal for chains that need custom tooling and deep integration. Over the next year, our team will focus 

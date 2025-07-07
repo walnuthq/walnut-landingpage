@@ -10,6 +10,7 @@ import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { Footer } from '@/components/footer'
 import { GetStarted } from '@/components/get-started'
 import MainHeader from '@/components/main-header'
+import BlogScreenshot from '../components/BlogScreenshot';
 
 const title = "Why blockchains mark a new era for debugging and monitoring services";
 const description = "The application error monitoring market, estimated to be worth over USD 29 billion, is on the cusp of a significant transformation.";
@@ -646,22 +647,25 @@ export default function Blog() {
                         </ul>
 
                         <figure>
+                        <div className="lg:bg-GREY lg:p-2 lg:-mx-24">
+                        <div className="relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:px-[5.5rem]">
                           <Image
                             src={TenderlyGasProfiler.src}
                             alt="Tenderly's Gas Profiler"
                             width={1300}
                             height={742}
+                            className="rounded-3xl w-full h-auto max-w-2xl md:max-w-7xl mx-auto"
                           />
                           {/* <img src={TenderlyGasProfiler.src} alt="Tenderly's Gas Profiler" /> */}
+                          </div>
+                          </div>
                           <figcaption>
                             In the picture above you can see a screenshot of
                             Tenderly&apos;s Gas Profiler, a tool built for optimising
                             the gas consumption (or cost) of blockchain applications.
                           </figcaption>
                         </figure>
-
                         <h3>Foundry, Hardhat, Truffle</h3>
-
                         <p>
                           Besides Tenderly, there is a set of open-source tools for
                           developing and testing smart contracts on Ethereum and EVM

@@ -22,6 +22,7 @@ import { generateMetadata } from '@/app/utils/generate-metadata-service';
 import { Footer } from "@/components/footer";
 import { GetStarted } from "@/components/get-started";
 import MainHeader from "@/components/main-header";
+import BlogScreenshot from "../components/BlogScreenshot";
 
 const title = "Deep Dive into Starknet Transaction Call Trace";
 const description = "On Starknet, every transaction represents the execution of a Cairo program, uniquely identified by a transaction hash. A Call Trace offers a detailed breakdown of each execution, capturing invoked functions, arguments, and outputs—making it an essential tool for understanding transaction behavior";
@@ -127,25 +128,13 @@ export default function Blog() {
                           </a>
                           .
                         </p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={full_call_trace} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>
-                            Full Call Trace of an example transaction on
-                            Starknet, as presented on{" "}
+                        <BlogScreenshot src={full_call_trace} caption='Full Call Trace of an example transaction on
+                            Starknet, as presented on
                             <a
                               href="https://app.walnut.dev/transactions?chainId=SN_MAIN&txHash=0x07bb1d7f7a1c496347475e24e9156edc92640d37bb488cf9181f551a89a37aa2"
                               target="_blank"
-                            >
-                              Walnut
-                            </a>
-                          </figcaption>
-                        </figure>
+                            >Walnut
+                            </a>'/>
                         <p>
                           Let&apos;s now walk through a real-world example of a
                           transaction on Starknet. You can see a full Call Trace
@@ -187,16 +176,7 @@ export default function Blog() {
                           __validate__ function.
                         </p>
                         <h4>Validation Frame: __validate__</h4>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={__validate__} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>__validate__</figcaption>
-                        </figure>
+                        <BlogScreenshot src={__validate__} caption='__validate__'/>
                         <p>
                           The __validate__ function is the initial validation
                           frame of each INVOKE transaction on Starknet. This
@@ -243,17 +223,7 @@ export default function Blog() {
                         </p>
 
                         <h4>Execution Frame: __execute__</h4>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={__execute__} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>__execute__</figcaption>
-                        </figure>
-
+                        <BlogScreenshot src={__execute__} caption='__execute__'/>
                         <p>
                           Once __validate__ passes, the __execute__ function is
                           invoked with the same Calldata. This is the stage
@@ -286,16 +256,7 @@ export default function Blog() {
                           </li>
                         </ul>
                         <h3>Execution Flow of get_beer():</h3>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={get_beer_execution_flow} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>get_beer() execution flow</figcaption>
-                        </figure>
+                        <BlogScreenshot src={get_beer_execution_flow} caption='get_beer() execution flow'/>
                         <p>
                           After successfully passing the validation phases,
                           get_beer() is called through Starknet&apos;s multicall
@@ -366,16 +327,7 @@ export default function Blog() {
                           method is part of an internal logic of the IBeer2
                           contract, and you can see the full source code here.
                         </p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={verify_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>verify() entrypoint</figcaption>
-                        </figure>
+                        <BlogScreenshot src={verify_call} caption='verify() entrypoint'/>
                         <p>
                           Similar to the get_beer() flow, this contract call
                           involves both an entrypoint and a function call
@@ -386,16 +338,7 @@ export default function Blog() {
                           Inside the verify() call, you&apos;ll notice multiple
                           function calls, such as:
                         </p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={verify_function_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>Verify Function calls</figcaption>
-                        </figure>
+                        <BlogScreenshot src={verify_function_call} caption='Verify Function calls'/>
                         <p>
                           Each of this function frames represent the specific
                           operations executed as part of the verify() function
@@ -404,18 +347,7 @@ export default function Blog() {
                         <h3>
                           Further Nested Contract Calls: Proof Calculation
                         </h3>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={calculation_proof_execution_flow} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>
-                            calculation_proof() execution flow
-                          </figcaption>
-                        </figure>
+                        <BlogScreenshot src={calculation_proof_execution_flow} caption='calculation_proof() execution flow'/>
                         <p>
                           The calculation_proof() entrypoint on the
                           IVerificationHelper contract is invoked to calculate
@@ -448,31 +380,13 @@ export default function Blog() {
                         </ul>
                         <h3>Final Frame: Token Transfer</h3>
                         <p>The trace ends with a token transfer operation:</p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={send_token_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>send_token() entrypoint</figcaption>
-                        </figure>
+                        <BlogScreenshot src={send_token_call} caption='send_token() entrypoint'/>
                         <h4>Function calls inside send_token()</h4>
                         <p>
                           Inside the send_token() contract call, the trace shows
                           several internal operations:
                         </p>
-                        <figure>
-                          <div className={`lg:bg-GREY lg:p-2`}>
-                            <div 
-                              className={`relative overflow-hidden [&+*]:mt-8 lg:bg-[url('/changelog-bg.svg')] bg-cover bg-center no-repeat lg:p-4`}
-                            >
-                              <Image src={send_token_function_call} alt="" className='lg:shadow-2xl rounded-3xl w-full h-auto'/>
-                            </div>
-                          </div>
-                          <figcaption>Send Token Function calls</figcaption>
-                        </figure>
+                        <BlogScreenshot src={send_token_function_call} caption='Send Token Function calls'/>
                         <p>
                           These operations handle mathematical calculations
                           (e.g., for token balances) and state updates (e.g.,
