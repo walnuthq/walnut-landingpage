@@ -53,8 +53,10 @@ import bugFixes06232025 from "./posts/bug-fixes-06132025.md";
 import executionResourcesAndFeeInTransactionInfo from "./posts/execution-resources-and-fee-in-transaction-info.md";
 import l1DataFlamegraph from "./posts/l1-data-flamegraph.md";
 import darkTheme from "./posts/dark-theme.md";
+import contractCallTraceImprovment from "./posts/contract-call-trace-improvment.md";
 
 export const markdownFiles = [
+  { slug: "contract-call-trace-improvment", content: contractCallTraceImprovment },
   { slug: "dark-theme", content: darkTheme },
   { slug: "l1-data-flamegraph", content: l1DataFlamegraph },
   {
