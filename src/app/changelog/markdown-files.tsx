@@ -54,8 +54,10 @@ import executionResourcesAndFeeInTransactionInfo from "./posts/execution-resourc
 import l1DataFlamegraph from "./posts/l1-data-flamegraph.md";
 import darkTheme from "./posts/dark-theme.md";
 import contractCallTraceImprovment from "./posts/contract-call-trace-improvment.md";
+import functionCallTraceImprovment from "./posts/function-call-trace-improvment.md";
 
 export const markdownFiles = [
+  { slug: "function-call-trace-improvment", content: functionCallTraceImprovment },
   { slug: "contract-call-trace-improvment", content: contractCallTraceImprovment },
   { slug: "dark-theme", content: darkTheme },
   { slug: "l1-data-flamegraph", content: l1DataFlamegraph },
