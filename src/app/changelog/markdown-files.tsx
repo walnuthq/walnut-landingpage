@@ -55,8 +55,10 @@ import l1DataFlamegraph from "./posts/l1-data-flamegraph.md";
 import darkTheme from "./posts/dark-theme.md";
 import contractCallTraceImprovment from "./posts/contract-call-trace-improvment.md";
 import functionCallTraceImprovment from "./posts/function-call-trace-improvment.md";
+import inputOutputTab from "./posts/input-output-tab.md";
 
 export const markdownFiles = [
+  { slug: "input-output-tab", content: inputOutputTab },
   { slug: "function-call-trace-improvment", content: functionCallTraceImprovment },
   { slug: "contract-call-trace-improvment", content: contractCallTraceImprovment },
   { slug: "dark-theme", content: darkTheme },
