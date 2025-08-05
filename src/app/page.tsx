@@ -24,18 +24,18 @@ export const metadata: Metadata = generateMetadata(title, description, 'https://
 
 function Hero() {
   return (
-    <Container className='bg-GREY relative'>
+    <Container className='bg-GREY relative hero-compact'>
       <div className='absolute inset-0 bg-[url("/landing-page-pattern.svg")] bg-cover bg-center opacity-[66%]'></div>
-      <div className="relative min-h-screen pt-[4.5rem] flex flex-col">
+      <div className="relative hero-container min-h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
-            <h1 className="font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
+            <h1 className="hero-title font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
               Debug Transactions on Starknet
             </h1>
-            <p className="mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 md:text-2xl/8">
+            <p className="hero-subtitle mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 md:text-2xl/8">
               Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
             </p>
-            <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+            <div className="hero-buttons mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
               <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
                 Open Walnut
               </Button>
@@ -50,9 +50,9 @@ function Hero() {
         </div>
       </div>
     </Container>
-
   );
 }
+
 
 
 
