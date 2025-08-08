@@ -57,8 +57,10 @@ import contractCallTraceImprovment from "./posts/contract-call-trace-improvment.
 import functionCallTraceImprovment from "./posts/function-call-trace-improvment.md";
 import inputOutputTab from "./posts/input-output-tab.md";
 import argsResultsJsonShow from "./posts/args-results-json-show.md";
+import contractAddressCustomColor from "./posts/contract-address-custom-color.md"
 
 export const markdownFiles = [
+  { slug: "contract-address-custom-color", content: contractAddressCustomColor },
   { slug: "args-results-json-show", content: argsResultsJsonShow },
   { slug: "input-output-tab", content: inputOutputTab },
   { slug: "function-call-trace-improvment", content: functionCallTraceImprovment },
