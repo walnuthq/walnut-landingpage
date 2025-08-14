@@ -58,8 +58,10 @@ import functionCallTraceImprovment from "./posts/function-call-trace-improvment.
 import inputOutputTab from "./posts/input-output-tab.md";
 import argsResultsJsonShow from "./posts/args-results-json-show.md";
 import contractAddressCustomColor from "./posts/contract-address-custom-color.md"
+import removeCoreFunction from "./posts/remove-core-function.md"
 
-export const markdownFiles = [
+export const markdownFiles = [  
+  { slug: "remove-core-function", content: removeCoreFunction },
   { slug: "contract-address-custom-color", content: contractAddressCustomColor },
   { slug: "args-results-json-show", content: argsResultsJsonShow },
   { slug: "input-output-tab", content: inputOutputTab },
