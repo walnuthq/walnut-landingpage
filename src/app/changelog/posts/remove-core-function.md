@@ -11,5 +11,5 @@ We’ve removed functions coming from the core Cairo libraries to reduce clutter
 
 - Standardized the empty-state message style across all tabs for visual consistency.
 - Custom address settings now apply across all UI elements, including function call values.
-- When decoding fails, the Call Trace now shows the raw call values — giving you structure even without full decoding.
-- The decode table now collapses raw data by default, improving readability.
+- When decoding function arguments and results fails, the Call Trace now displays the raw call values - giving you structure even without full decoding.
+- The decode data table now collapses raw call values by default, making large traces easier to read.
