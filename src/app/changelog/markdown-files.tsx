@@ -59,8 +59,10 @@ import inputOutputTab from "./posts/input-output-tab.md";
 import argsResultsJsonShow from "./posts/args-results-json-show.md";
 import contractAddressCustomColor from "./posts/contract-address-custom-color.md"
 import removeCoreFunction from "./posts/remove-core-function.md"
+import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "stack-error-trace-improvements", content: stackErrorTraceImprovements },
   { slug: "remove-core-function", content: removeCoreFunction },
   { slug: "contract-address-custom-color", content: contractAddressCustomColor },
   { slug: "args-results-json-show", content: argsResultsJsonShow },
