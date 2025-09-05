@@ -61,9 +61,11 @@ import contractAddressCustomColor from "./posts/contract-address-custom-color.md
 import removeCoreFunction from "./posts/remove-core-function.md"
 import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.md"
 import contractPageEntrypointsTab from "./posts/contract-page-entrypoints-tab.md"
+import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-entrypoints.md"
 
 export const markdownFiles = [  
   { slug: "contract-page-entrypoints-tab", content: contractPageEntrypointsTab },
+  { slug: "expand-complex-types-in-entrypoints", content: expandComplexTypesInEntrypoints },
   { slug: "stack-error-trace-improvements", content: stackErrorTraceImprovements },
   { slug: "remove-core-function", content: removeCoreFunction },
   { slug: "contract-address-custom-color", content: contractAddressCustomColor },
