@@ -62,8 +62,10 @@ import removeCoreFunction from "./posts/remove-core-function.md"
 import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.md"
 import contractPageEntrypointsTab from "./posts/contract-page-entrypoints-tab.md"
 import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-entrypoints.md"
+import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smarter.md"
 
 export const markdownFiles = [  
+  { slug: "search-functionality-got-smarter", content: searchFunctionalityGotSmarter },
   { slug: "contract-page-entrypoints-tab", content: contractPageEntrypointsTab },
   { slug: "expand-complex-types-in-entrypoints", content: expandComplexTypesInEntrypoints },
   { slug: "stack-error-trace-improvements", content: stackErrorTraceImprovements },
