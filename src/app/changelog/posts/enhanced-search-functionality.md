@@ -4,7 +4,7 @@ date: 2025-09-12
 imageBg: true
 ---
 
-This week, we've significantly improved search functionality across the Walnut! The search bar on the transaction page now follows custom settings, and the Contract page supports full-text search across both source code and entrypoints.
+This week, we've significantly improved search functionality across Walnut! The search bar on the transaction page now follows custom settings, and the Contract page supports full-text search across both source code and entrypoints.
 
 ## More improvements
 
