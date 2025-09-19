@@ -63,8 +63,10 @@ import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.
 import contractPageEntrypointsTab from "./posts/contract-page-entrypoints-tab.md"
 import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-entrypoints.md"
 import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smarter.md"
+import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md"
 
 export const markdownFiles = [  
+  { slug: "debugger-tab-lazy-loader", content: debuggerTabLazyLoader },
   { slug: "search-functionality-got-smarter", content: searchFunctionalityGotSmarter },
   { slug: "contract-page-entrypoints-tab", content: contractPageEntrypointsTab },
   { slug: "expand-complex-types-in-entrypoints", content: expandComplexTypesInEntrypoints },
