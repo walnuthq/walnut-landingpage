@@ -65,8 +65,10 @@ import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-ent
 import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smarter.md"
 import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md"
 import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md"
+import stabilityImprovements from "./posts/stability-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "stability-improvements", content: stabilityImprovements },
   { slug: "bug-fixes-and-improvements", content: bugFixesAndImprovements },
   { slug: "debugger-tab-lazy-loader", content: debuggerTabLazyLoader },
   { slug: "search-functionality-got-smarter", content: searchFunctionalityGotSmarter },
