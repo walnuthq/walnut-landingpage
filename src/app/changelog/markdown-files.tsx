@@ -66,8 +66,10 @@ import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smar
 import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md"
 import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md"
 import stabilityImprovements from "./posts/stability-improvements.md"
+import simulationFormWithParameters from "./posts/simulation-form-with-parameters.md"
 
 export const markdownFiles = [  
+  { slug: "simulation-form-with-parameters", content: simulationFormWithParameters },
   { slug: "stability-improvements", content: stabilityImprovements },
   { slug: "bug-fixes-and-improvements", content: bugFixesAndImprovements },
   { slug: "debugger-tab-lazy-loader", content: debuggerTabLazyLoader },
