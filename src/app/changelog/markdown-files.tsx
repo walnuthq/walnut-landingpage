@@ -67,8 +67,10 @@ import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md"
 import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md"
 import stabilityImprovements from "./posts/stability-improvements.md"
 import simulationFormWithParameters from "./posts/simulation-form-with-parameters.md"
+import contractSimulationImprovements from "./posts/contract-simulation-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "contract-simulation-improvements", content: contractSimulationImprovements },
   { slug: "simulation-form-with-parameters", content: simulationFormWithParameters },
   { slug: "stability-improvements", content: stabilityImprovements },
   { slug: "bug-fixes-and-improvements", content: bugFixesAndImprovements },
