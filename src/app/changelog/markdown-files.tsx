@@ -68,8 +68,11 @@ import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md"
 import stabilityImprovements from "./posts/stability-improvements.md"
 import simulationFormWithParameters from "./posts/simulation-form-with-parameters.md"
 import contractSimulationImprovements from "./posts/contract-simulation-improvements.md"
+import improvedClarityAcrossSimulationContractAndDebuggerViews from "./posts/20251024-improved-clarity-across-simulation-contract-and-debugger-views.md"
+
 
 export const markdownFiles = [  
+  { slug: "improved-clarity-across-simulation-contract-and-debugger-views", content: improvedClarityAcrossSimulationContractAndDebuggerViews },
   { slug: "contract-simulation-improvements", content: contractSimulationImprovements },
   { slug: "simulation-form-with-parameters", content: simulationFormWithParameters },
   { slug: "stability-improvements", content: stabilityImprovements },
