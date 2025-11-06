@@ -29,10 +29,6 @@ function Hero() {
       <div className="relative hero-container min-h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
-            <a href="https://github.com/walnuthq/walnut" target="_blank" rel="noopener noreferrer" className="mb-7 rounded-full bg-gray-100/30 px-3 h-7 text-xs font-medium text-gray-500 border border-gray-300/50 flex items-center gap-1.5 transition-all hover:bg-gray-200/25" style={{ borderWidth: '0.5px' }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              Walnut<strong className="-mx-0.5">Beta</strong> is now live
-            </a>
             <h1 className="hero-title font-display text-balance text-3xl leading-tight font-medium tracking-tight text-BLACK sm:text-6xl sm:leading-none md:text-6xl md:leading-none lg:text-7xl lg:leading-none">
               Debug Transactions on EVM & Rollups
             </h1>
@@ -216,7 +212,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden relative">
       <MainHeader />
-      <Banner variant="appear"/>
+      <Banner />
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">

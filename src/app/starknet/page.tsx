@@ -201,7 +201,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden relative">
       <MainHeader />
-      <Banner variant="static"/>
+      <Banner />
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
