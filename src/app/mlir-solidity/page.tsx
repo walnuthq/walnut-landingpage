@@ -7,13 +7,9 @@ import {
   SectionHeading,
 } from "../../components/text";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { GitHubIcon, TelegramIcon, XIcon } from '@/components/intro'
+import { TelegramIcon } from '@/components/intro'
 import {
-  CheckCircle,
-  RefreshCw,
-  Clock,
   Calendar,
-  ArrowRight,
   Zap,
   Code2,
   Cpu,
@@ -22,12 +18,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import ethLogo from "../../../public/logo-cluster/eth-logo.svg"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 import MainHeader from "../../components/main-header";
-import { Progress } from "@/components/progress";
-import Link from "next/link";
+import { WorkProgress } from "../../components/work-progress";
 
 
 
@@ -57,144 +52,7 @@ export default function MLIR() {
       </Container>
 
       <Container className="py-24 md:py-32">
-        <div className="mx-auto max-w-4xl">
-          <Heading as="h2" className="text-center mb-16">
-            Work Progress
-          </Heading>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
-                    <CheckCircle className="w-6 h-6 text-green-600" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <CardTitle className="text-BLACK">
-                      MLIR Integration into solc
-                    </CardTitle>
-                    <Badge variant="success" className="mt-1">
-                      <span className="inline-block w-2 h-2 rounded-full bg-green-600 mr-1"></span>
-                      Done
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-GREY-2">
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>MLIR infrastructure integrated into our solc branch</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Solidity AST → MLIR working pipeline</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter className="border-t border-slate-200">
-                <Link href="/" className="inline-flex mt-4 items-center gap-2 text-sm font-medium text-BLUE hover:text-DARK-BLUE transition-colors">
-                  View on GitHub
-                  <ArrowRight className="w-4 h-4" strokeWidth={2} />
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="border-2 border-BLUE shadow-md hover:shadow-lg transition-shadow relative">
-              <div className="absolute -top-3 left-8 px-3 py-1 bg-BLUE text-white text-xs font-semibold rounded-full">
-                Current Phase
-              </div>
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100">
-                    <RefreshCw className="w-6 h-6 text-BLUE" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <CardTitle className="text-BLACK">
-                      Solidity Dialect
-                    </CardTitle>
-                    <Badge className="mt-1">
-                      <span className="inline-block w-2 h-2 rounded-full bg-BLUE animate-pulse mr-1"></span>
-                      In Progress
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-BLACK">Goal: Compile 100 real contracts, full list here (link).</span>
-                    <span className="text-sm font-bold text-BLUE">17%</span>
-                  </div>
-                  <Progress value={17} className="h-3" />
-                </div>
-                <ul className="space-y-3 text-sm text-GREY-2">
-                  <li className="flex items-center gap-2">
-                    <span className="text-BLUE">•</span>
-                    <span>Defining Solidity ops/types in MLIR</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-BLUE ">•</span>
-                    <span>Lowering high-level constructs</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-BLUE">•</span>
-                    <span>Iterative coverage tracking</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100">
-                    <Clock className="w-6 h-6 text-slate-400" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <CardTitle className="text-BLACK">
-                      Optimizations & Reports
-                    </CardTitle>
-                    <Badge variant="secondary" className="mt-1 bg-slate-100 text-slate-500">
-                      <span className="inline-block w-2 h-2 rounded-full bg-slate-400 mr-1"></span>
-                      Not Started
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4 text-sm text-GREY-2">
-                <div>
-                  <p className="font-medium text-BLACK mb-2">Planned comparisons:</p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">solc</Badge>
-                    <Badge variant="secondary">solc --via-ir</Badge>
-                    <Badge variant="secondary">solx</Badge>
-                    <Badge variant="secondary">Solar</Badge>
-                  </div>
-                </div>
-                <div>
-                  <p className="font-medium text-BLACK mb-2">Focus areas:</p>
-                  <ul className="space-y-1.5">
-                    <li className="flex items-center gap-2">
-                      <ArrowRight className="w-3 h-3 text-slate-400" />
-                      <span>Gas</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <ArrowRight className="w-3 h-3 text-slate-400" />
-                      <span>Code size</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <ArrowRight className="w-3 h-3 text-slate-400" />
-                      <span>Memory</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <ArrowRight className="w-3 h-3 text-slate-400" />
-                      <span>Stack depth</span>
-                    </li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <WorkProgress />
       </Container>
       <div className="bg-GREY py-24 md:py-32">
         <Container>
@@ -305,59 +163,6 @@ export default function MLIR() {
           </div>
         </Container>
       </div>
-      <Container className="py-24 md:py-32">
-        <div className="mx-auto  max-w-4xl">
-          <Heading as="h2" className="text-center mb-16">
-            MLIR Across Solidity Compilers
-          </Heading>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <Card className="border-2 border-BLUE hover:shadow-lg transition-all relative group">
-              <div className="absolute -top-3 left-6 px-3 py-1 bg-BLUE text-white text-xs font-semibold rounded-full">
-                this project
-              </div>
-              <Link href="/" className="block p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-BLACK">solc</h3>
-                  <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
-                </div>
-                <p className="text-sm text-GREY-2">
-                  MLIR integration in progress (this project)
-                </p>
-              </Link>
-            </Card>
-            <Card className="hover:shadow-md transition-all group">
-              <Link href="/" className="block p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-BLACK">solx</h3>
-                  <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
-                </div>
-                <p className="text-sm text-GREY-2">
-                  No MLIR integration yet
-                </p>
-              </Link>
-            </Card>
-
-            <Card className="hover:shadow-md transition-all group">
-              <Link href="/" className="block p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-BLACK">Solar</h3>
-                  <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
-                </div>
-                <p className="text-sm text-GREY-2">
-                  No MLIR integration yet
-                </p>
-              </Link>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <p className="text-lg text-GREY-2">
-              <span className="font-semibold text-BLACK">Interested in MLIR integration?</span> Contact us.
-            </p>
-          </div>
-        </div>
-      </Container>
       <footer className="border-t border-slate-200 py-4">
         <Container>
           <div className="text-center">
