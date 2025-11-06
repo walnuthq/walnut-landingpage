@@ -26,7 +26,7 @@
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.552.0",
-    "next": "14.2.11",
+    "next": "^15.0.0",
     "raw-loader": "^4.0.2",
     "react": "^18",
     "react-dom": "^18",
