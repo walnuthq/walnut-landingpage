@@ -27,6 +27,7 @@ import { Badge } from "@/components/ui/badge";
 
 import MainHeader from "../../components/main-header";
 import { Progress } from "@/components/progress";
+import Link from "next/link";
 
 
 
@@ -92,10 +93,10 @@ export default function MLIR() {
                 </ul>
               </CardContent>
               <CardFooter className="border-t border-slate-200">
-                <a href="/" className="inline-flex mt-4 items-center gap-2 text-sm font-medium text-BLUE hover:text-DARK-BLUE transition-colors">
+                <Link href="/" className="inline-flex mt-4 items-center gap-2 text-sm font-medium text-BLUE hover:text-DARK-BLUE transition-colors">
                   View on GitHub
                   <ArrowRight className="w-4 h-4" strokeWidth={2} />
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="border-2 border-BLUE shadow-md hover:shadow-lg transition-shadow relative">
@@ -315,7 +316,7 @@ export default function MLIR() {
               <div className="absolute -top-3 left-6 px-3 py-1 bg-BLUE text-white text-xs font-semibold rounded-full">
                 this project
               </div>
-              <a href="/" className="block p-8">
+              <Link href="/" className="block p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-BLACK">solc</h3>
                   <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
@@ -323,10 +324,10 @@ export default function MLIR() {
                 <p className="text-sm text-GREY-2">
                   MLIR integration in progress (this project)
                 </p>
-              </a>
+              </Link>
             </Card>
             <Card className="hover:shadow-md transition-all group">
-              <a href="/" className="block p-8">
+              <Link href="/" className="block p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-BLACK">solx</h3>
                   <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
@@ -334,11 +335,11 @@ export default function MLIR() {
                 <p className="text-sm text-GREY-2">
                   No MLIR integration yet
                 </p>
-              </a>
+              </Link>
             </Card>
 
             <Card className="hover:shadow-md transition-all group">
-              <a href="/" className="block p-8">
+              <Link href="/" className="block p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-BLACK">Solar</h3>
                   <GitHubIcon className="w-5 h-5 text-GREY-2 group-hover:text-BLUE transition-colors" />
@@ -346,7 +347,7 @@ export default function MLIR() {
                 <p className="text-sm text-GREY-2">
                   No MLIR integration yet
                 </p>
-              </a>
+              </Link>
             </Card>
           </div>
 
