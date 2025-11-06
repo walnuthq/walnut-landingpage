@@ -124,7 +124,7 @@ export default function MLIR() {
               <CardContent>
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-BLACK">Goal: Compile 100 real contracts</span>
+                    <span className="text-sm font-semibold text-BLACK">Goal: Compile 100 real contracts, full list here (link).</span>
                     <span className="text-sm font-bold text-BLUE">17%</span>
                   </div>
                   <Progress value={17} className="h-3" />
