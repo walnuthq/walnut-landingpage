@@ -1,26 +1,26 @@
-import { BentoCard } from '../components/bento-card'
-import BlogSection from '../components/blog-section'
-import { Button } from '../components/button'
-import { Container } from '../components/container'
-import {  GetStarted } from '../components/get-started'
-import { LinkedAvatars } from '../components/linked-avatars'
-import { LogoCloudHome } from '../components/logo-cloud-home'
-import { LogoCluster } from '../components/logo-cluster'
-import { LogoTimeline } from '../components/logo-timeline'
-import { Screenshot } from '../components/screenshot'
-import  Testimonials  from '../components/testimonials'
-import { Heading, SectionHeading } from '../components/text'
-import app_sreenshot from '../../public/screenshots/app.png'
-import app_sreenshot_mobile from '../../public/screenshots/app-mobile.png'
+import { BentoCard } from '../../components/bento-card'
+import BlogSection from '../../components/blog-section'
+import { Button } from '../../components/button'
+import { Container } from '../../components/container'
+import {  GetStarted } from '../../components/get-started'
+import { LinkedAvatars } from '../../components/linked-avatars'
+import { LogoCloud } from '../../components/logo-cloud'
+import { LogoCluster } from '../../components/logo-cluster'
+import { LogoTimeline } from '../../components/logo-timeline'
+import { Screenshot } from '../../components/screenshot'
+import  Testimonials  from '../../components/testimonials'
+import { Heading, SectionHeading } from '../../components/text'
+import app_sreenshot from '../../../public/screenshots/app.png'
+import app_sreenshot_mobile from '../../../public/screenshots/app-mobile.png'
 import type { Metadata } from 'next'
 import { generateMetadata } from '@/app/utils/generate-metadata-service';
-import MainHeader from '../components/main-header'
+import MainHeader from '../../components/main-header'
 import { Footer } from '@/components/footer'
 import Banner from '@/components/banner'
 
-const title = "Walnut | Transaction Debugger & Simulator";
-const description = "An open-source stack for discovering and fixing bugs in smart contracts. Trace and simulate transactions, optimize gas and more. Self-host or use on the web.";
-export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.dev');
+const title = "Debugger for Starknet smart contract developers | Walnut";
+const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/debugger');
 
 function Hero() {
   return (
@@ -29,19 +29,15 @@ function Hero() {
       <div className="relative hero-container min-h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
-            <a href="https://github.com/walnuthq/walnut" target="_blank" rel="noopener noreferrer" className="mb-7 rounded-full bg-gray-100/30 px-3 h-7 text-xs font-medium text-gray-500 border border-gray-300/50 flex items-center gap-1.5 transition-all hover:bg-gray-200/25" style={{ borderWidth: '0.5px' }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              Walnut<strong className="-mx-0.5">Beta</strong> is now live
-            </a>
-            <h1 className="hero-title font-display text-balance text-3xl leading-tight font-medium tracking-tight text-BLACK sm:text-6xl sm:leading-none md:text-6xl md:leading-none lg:text-7xl lg:leading-none">
-              Debug Transactions on EVM & Rollups
+            <h1 className="hero-title font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
+              Debug Transactions on Starknet
             </h1>
             <p className="hero-subtitle mt-8 max-w-lg text-lg leading-5 font-medium text-GREY-2 md:text-lg md:leading-8">
-            Try Walnut, an <span className="font-semibold">open-source stack</span> for discovering and fixing bugs in your smart contracts.
+              Cairo developers use Walnut to discover and fix<br className="hidden sm:inline" /> bugs in their smart contracts.
             </p>
             <div className="hero-buttons mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-              <Button className='bg-BLUE' href="https://evm.walnut.dev" target="_blank" rel="noopener noreferrer">
-                Launch Walnut
+              <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Open Walnut
               </Button>
               <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
                 Docs
@@ -50,7 +46,7 @@ function Hero() {
           </div>
         </div>
         <div className="pb-4">
-          <LogoCloudHome />
+          <LogoCloud />
         </div>
       </div>
     </Container>
@@ -65,11 +61,8 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-[8.5rem]">
         <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
-        Self-Host. Debug. Simulate
+        Debug and Simulate Cairo Transactions With Ease
         </Heading>
-        <p className="mt-6 max-w-2xl mx-auto text-center text-base text-gray-600">
-        Self-host or use Walnut on the web as your go-to tool for clearing roadblocks. Trace and simulate transactions, optimize gas and more.
-        </p>
         <Screenshot
           width={1216}
           height={768}
@@ -90,7 +83,7 @@ function BentoSection() {
     <Container>
         <SectionHeading className='mx-auto text-center'>Features</SectionHeading>
         <Heading as="h3" className="mt-2 text-3xl/[1.2] mx-auto text-center">
-        Break Down Transactions<br className="hidden sm:inline" /> to the Last Opcode
+        Understand Every Detail of Your Starknet Transactions
         </Heading>
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
@@ -105,15 +98,7 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="Analysis"
-          title={
-            <div className="flex items-center gap-2">
-              <span>Live Error Monitoring</span>
-              <span className="rounded-full bg-gray-100/25 px-3 h-7 text-xs font-medium text-gray-500 border border-gray-300/50 mt-[1px] ml-[0.5rem] flex items-center gap-1.5" style={{ borderWidth: '0.5px' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
-                Coming Soon
-              </span>
-            </div>
-          }
+          title="Live Error Monitoring"
           description="Stay ahead of issues with real-time error detection and alerts."
           graphic={
             <div className="absolute inset-0 md:bg-[url(/screenshots/errors-table.png)] bg-[url(/screenshots/errors-table-mob.png)] bg-[size:543px_290px] md:bg-[size:654px_317px] bg-[left_34px_top_0px] md:bg-[left_34px_top_-24px]  bg-no-repeat" />
@@ -133,8 +118,8 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="Multi-chain"
-          title="Rollup Support"
-          description="Debug and monitor transactions effortlessly across L2s & L3s."
+          title="Appchain Support"
+          description="Debug and monitor transactions effortlessly across Starknet appchains."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
@@ -216,7 +201,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden relative">
       <MainHeader />
-      <Banner variant="appear"/>
+      <Banner variant="static"/>
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">

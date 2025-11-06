@@ -11,6 +11,7 @@ export function Footer() {
         <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
           <Link className="text-GREY-2 hover:text-BLUE flex gap-2" target='_blank' href="https://docs.walnut.dev">Docs <Image src={extertnalLink} className='w-3 h-3' alt=''/></Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/blog">Blog</Link>
+          <Link className="text-GREY-2 hover:text-BLUE" href="/starknet">Starknet</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/changelog">Changelog</Link>
           <Link className="text-GREY-2 hover:text-BLUE" href="/contact">Contact</Link>
         </nav>

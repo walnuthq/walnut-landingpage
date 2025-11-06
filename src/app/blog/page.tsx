@@ -236,7 +236,7 @@ export default async function Blog({
           Blog
         </SectionHeading>
         <Heading as="h1" className="mt-2 mx-auto text-center">
-          What’s happening at Walnut.
+          What’s Happening at Walnut
         </Heading>
         <Lead className="mt-6 max-w-3xl mx-auto text-center">
           All the latest Walnut news, straight from the team.
