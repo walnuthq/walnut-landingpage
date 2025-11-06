@@ -27,6 +27,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.552.0",
     "next": "^15.0.0",
+    "raw-loader": "^4.0.2",
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^10.1.0",
