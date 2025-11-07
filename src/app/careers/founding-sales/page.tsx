@@ -8,12 +8,12 @@ export default function FoundingPosition() {
 		<div>
       <div className="max-w-8xl mx-auto mt-24 ">
           <div className="flex px-4 lg:px-8">
-              <a className="group flex font-semibold text-sm leading-6 text-GREY-2 hover:text-BLACK" href="/">
+              <Link className="group flex font-semibold text-sm leading-6 text-GREY-2 hover:text-BLACK" href="/">
                   <svg viewBox="0 -9 3 24" className="overflow-visible mr-3 text-GREY-2 w-auto h-6 group-hover:text-BLACK">
                       <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                   </svg>
                   Go back
-              </a>
+              </Link>
           </div>
       </div>
       <div className="px-4 sm:px-6 md:px-8">

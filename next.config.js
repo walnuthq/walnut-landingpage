@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // eslint: {
+  //   ignoreDuringBuilds: true,
+  // },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -7,7 +10,7 @@ const nextConfig = {
     });
 
     return config;
-  }
+  },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

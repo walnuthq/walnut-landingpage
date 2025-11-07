@@ -212,7 +212,7 @@ async function Pagination({ page }: { page: number }) {
 export default async function Blog({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }> 
 }) {
   const totalPosts = posts.length
   const pageCount = Math.max(1, Math.ceil(totalPosts / postsPerPage))
