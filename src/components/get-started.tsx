@@ -11,7 +11,7 @@ function CallToAction() {
         <Heading as="h2" className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl mx-auto text-center">
         Try Walnut.
           <br />
-          It's Free
+          It's Free.
         </Heading>
       </hgroup>
       <p className="mx-auto mt-[1.9rem] max-w-xs text-sm/6 text-GREY-2">

@@ -30,10 +30,10 @@ function Hero() {
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
             <h1 className="hero-title font-display text-balance text-3xl leading-tight font-medium tracking-tight text-BLACK sm:text-6xl sm:leading-none md:text-6xl md:leading-none lg:text-7xl lg:leading-none">
-              Debug Transactions on EVM & Rollups
+              Debug & Simulate Transactions on EVM Chains
             </h1>
             <p className="hero-subtitle mt-8 max-w-lg text-lg leading-5 font-medium text-GREY-2 md:text-lg md:leading-8">
-            Try Walnut, an <span className="font-semibold">open-source stack</span> for discovering and fixing bugs in your smart contracts.
+            Walnut is an <span className="font-semibold">open-source stack</span> for discovering, monitoring and fixing bugs in Smart Contract Applications.
             </p>
             <div className="hero-buttons mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
               <Button className='bg-BLUE' href="https://evm.walnut.dev" target="_blank" rel="noopener noreferrer">
@@ -61,10 +61,10 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-[8.5rem]">
         <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
-        Self-Host. Debug. Simulate
+        Self-Host. Debug. Simulate.
         </Heading>
         <p className="mt-6 max-w-2xl mx-auto text-center text-base text-gray-600">
-        Self-host or use Walnut on the web as your go-to tool for clearing roadblocks. Trace and simulate transactions, optimize gas and more.
+        Self-host or SaaS, use Walnut as your go-to tool for fighting bugs in your Smart Contracts. Trace and simulate transactions, optimize gas and more.
         </p>
         <Screenshot
           width={1216}
@@ -86,7 +86,7 @@ function BentoSection() {
     <Container>
         <SectionHeading className='mx-auto text-center'>Features</SectionHeading>
         <Heading as="h3" className="mt-2 text-3xl/[1.2] mx-auto text-center">
-        Break Down Transactions<br className="hidden sm:inline" /> to the Last Opcode
+        Pro Tool. Fully Open-Source.
         </Heading>
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
@@ -105,7 +105,6 @@ function BentoSection() {
             <div className="flex items-center gap-2">
               <span>Live Error Monitoring</span>
               <span className="rounded-full bg-gray-100/25 px-3 h-7 text-xs font-medium text-gray-500 border border-gray-300/50 mt-[1px] ml-[0.5rem] flex items-center gap-1.5" style={{ borderWidth: '0.5px' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
                 Coming Soon
               </span>
             </div>
@@ -129,8 +128,8 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="Multi-chain"
-          title="Rollup Support"
-          description="Debug and monitor transactions effortlessly across L2s & L3s."
+          title="Self-Host or Run Locally"
+          description="Supports any RPC provider, making Walnut available to anyone."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
