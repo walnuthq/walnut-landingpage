@@ -15,7 +15,6 @@ import { useEffect } from 'react'
 const links = [
   { href: 'https://docs.walnut.dev', label: 'Docs' },
   { href: '/blog', label: 'Blog' },
-  { href: '/starknet', label: 'Starknet' },
   { href: '/changelog', label: 'Changelog' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -115,7 +114,6 @@ function HeaderContent({ condensed, open }: { condensed?: boolean, open: boolean
             <div className="hidden md:flex md:gap-x-6">
               <Link className="rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK flex gap-2" target='_blank' href="https://docs.walnut.dev">Docs<Image src={extertnalLink} className='w-3 h-3' alt=''/></Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/blog">Blog</Link>
-              <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/starknet">Starknet</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/changelog">Changelog</Link>
               <Link className="inline-block rounded-lg px-2 py-1 text-sm text-GREY-2 hover:bg-slate-100 hover:text-BLACK" href="/contact">Contact</Link>
             </div>
