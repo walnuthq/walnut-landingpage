@@ -9,17 +9,17 @@ function CallToAction() {
       <hgroup>
         <Subheading className='!text-BLUE' dark>Get started</Subheading>
         <Heading as="h2" className="mt-6 text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-5xl mx-auto text-center">
-        Ready to Debug Cairo?
+        Try Walnut.
           <br />
-          Start for free today.
+          It&apos;s Free.
         </Heading>
       </hgroup>
       <p className="mx-auto mt-[1.9rem] max-w-xs text-sm/6 text-GREY-2">
-        Unlock the tools you need to debug, simulate, and optimize your Starknet Smart Contracts.
+        Unlock the tools you need to debug, simulate, and optimize your smart contracts.
       </p>
       <div className="mt-[1.9rem]">
-          <Button variant="primary" className="w-full sm:w-auto" href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer"
-                  aria-label="Get started for Free">Get started for Free</Button>
+          <Button variant="primary" className="w-full sm:w-auto" href="https://evm.walnut.dev" target="_blank" rel="noopener noreferrer"
+                  aria-label="Get started">Get Started</Button>
 
       </div>
     </div>

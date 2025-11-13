@@ -4,7 +4,7 @@ import { Button } from '../components/button'
 import { Container } from '../components/container'
 import {  GetStarted } from '../components/get-started'
 import { LinkedAvatars } from '../components/linked-avatars'
-import { LogoCloud } from '../components/logo-cloud'
+import { LogoCloudHome } from '../components/logo-cloud-home'
 import { LogoCluster } from '../components/logo-cluster'
 import { LogoTimeline } from '../components/logo-timeline'
 import { Screenshot } from '../components/screenshot'
@@ -18,9 +18,9 @@ import MainHeader from '../components/main-header'
 import { Footer } from '@/components/footer'
 import Banner from '@/components/banner'
 
-const title = "Debugger for Starknet smart contract developers | Walnut";
-const description = "Delve deeper into Cairo transaction execution with our state-of-the-art debugger. Swiftly identify bugs and pinpoint areas for enhancement.";
-export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.network/debugger');
+const title = "Walnut | Transaction Debugger & Simulator";
+const description = "An open-source stack for discovering and fixing bugs in smart contracts. Trace and simulate transactions, optimize gas and more. Self-host or use on the web.";
+export const metadata: Metadata = generateMetadata(title, description, 'https://www.walnut.dev');
 
 function Hero() {
   return (
@@ -29,15 +29,15 @@ function Hero() {
       <div className="relative hero-container min-h-screen pt-[4.5rem] flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-center">
-            <h1 className="hero-title font-display text-balance text-3xl/[1.2] font-medium tracking-tight text-BLACK sm:text-6xl/1] md:text-6xl/[1] lg:text-7xl/[1]">
-              Debug Transactions on Starknet
+            <h1 className="hero-title font-display text-balance text-3xl leading-tight font-medium tracking-tight text-BLACK sm:text-6xl sm:leading-none md:text-6xl md:leading-none lg:text-7xl lg:leading-none">
+              Debug & Simulate Transactions on EVM Chains
             </h1>
-            <p className="hero-subtitle mt-8 max-w-lg text-xl/5 font-medium text-GREY-2 md:text-2xl/8">
-              Cairo Developers use Walnut to discover and fix bugs in their Smart Contracts.
+            <p className="hero-subtitle mt-8 max-w-lg text-lg leading-5 font-medium text-GREY-2 md:text-lg md:leading-8">
+            Walnut is an <span className="font-semibold">open-source stack</span> for discovering, monitoring and fixing bugs in Smart Contract Applications.
             </p>
             <div className="hero-buttons mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-              <Button className='bg-BLUE' href="https://app.walnut.dev" target="_blank" rel="noopener noreferrer">
-                Open Walnut
+              <Button className='bg-BLUE' href="https://evm.walnut.dev" target="_blank" rel="noopener noreferrer">
+                Launch Walnut
               </Button>
               <Button variant="secondary" href="https://docs.walnut.dev" target="_blank" rel="noopener noreferrer">
                 Docs
@@ -46,7 +46,7 @@ function Hero() {
           </div>
         </div>
         <div className="pb-4">
-          <LogoCloud />
+          <LogoCloudHome />
         </div>
       </div>
     </Container>
@@ -61,8 +61,11 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-[8.5rem]">
         <Heading as="h2" className=" mx-auto text-center text-3xl/[1.2]">
-        Debug and Simulate Cairo Transactions with Ease.
+        Self-Host. Debug. Simulate.
         </Heading>
+        <p className="mt-6 max-w-2xl mx-auto text-center text-base text-gray-600">
+        Self-host or SaaS, use Walnut as your go-to tool for fighting bugs in your Smart Contracts. Trace and simulate transactions, optimize gas and more.
+        </p>
         <Screenshot
           width={1216}
           height={768}
@@ -83,7 +86,7 @@ function BentoSection() {
     <Container>
         <SectionHeading className='mx-auto text-center'>Features</SectionHeading>
         <Heading as="h3" className="mt-2 text-3xl/[1.2] mx-auto text-center">
-        Understand Every Detail of Your Starknet Transactions.
+        Pro Tool. Fully Open-Source.
         </Heading>
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
@@ -98,7 +101,14 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="Analysis"
-          title="Live Error Monitoring"
+          title={
+            <div className="flex items-center gap-2">
+              <span>Live Error Monitoring</span>
+              <span className="rounded-full bg-gray-100/25 px-3 h-7 text-xs font-medium text-gray-500 border border-gray-300/50 mt-[1px] ml-[0.5rem] flex items-center gap-1.5" style={{ borderWidth: '0.5px' }}>
+                Coming Soon
+              </span>
+            </div>
+          }
           description="Stay ahead of issues with real-time error detection and alerts."
           graphic={
             <div className="absolute inset-0 md:bg-[url(/screenshots/errors-table.png)] bg-[url(/screenshots/errors-table-mob.png)] bg-[size:543px_290px] md:bg-[size:654px_317px] bg-[left_34px_top_0px] md:bg-[left_34px_top_-24px]  bg-no-repeat" />
@@ -118,8 +128,8 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="Multi-chain"
-          title="Support for Appchains"
-          description="Debug and monitor transactions effortlessly across Starknet appchains."
+          title="Self-Host or Run Locally"
+          description="Supports any RPC provider, making Walnut available to anyone."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
@@ -147,7 +157,7 @@ function DarkBentoSection() {
       <Container>
         <SectionHeading className='mx-auto text-center' dark>Blockchain Research and Engineering</SectionHeading>
         <Heading as="h3" dark className="mt-2 !text-BLUE sm:max-w-3xl Md:max-w-3xl text-3xl/[1.2] mx-auto text-center">
-          More from Walnut&nbsp;Labs
+          More From Walnut&nbsp;Labs
         </Heading>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -201,7 +211,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden relative">
       <MainHeader />
-      <Banner/>
+      <Banner />
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 pt-32">
