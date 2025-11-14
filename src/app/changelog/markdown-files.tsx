@@ -71,9 +71,10 @@ import contractSimulationImprovements from "./posts/contract-simulation-improvem
 import improvedClarityAcrossSimulationContractAndDebuggerViews from "./posts/20251024-improved-clarity-across-simulation-contract-and-debugger-views.md"
 import classPageDebuggerAndSimulationImprovements from "./posts/20251031-class-page-debugger-and-simulation-improvements.md"
 import enhancementsAcrossThePlatform from "./posts/20251107-enhancements-across-the-platform.md"
-
+import clearerErrorUi from "./posts/20251114-novi-error-ui-i-poboljsanja-class-i-contract-stranica.md"
 
 export const markdownFiles = [  
+  { slug: "clearer-error-ui", content: clearerErrorUi },
   { slug: "enhancements-across-the-platform", content: enhancementsAcrossThePlatform },
   { slug: "class-page-debugger-and-simulation-improvements", content: classPageDebuggerAndSimulationImprovements },
   { slug: "improved-clarity-across-simulation-contract-and-debugger-views", content: improvedClarityAcrossSimulationContractAndDebuggerViews },
