@@ -47,8 +47,16 @@
     "prettier": "^3.3.2",
     "prettier-plugin-organize-imports": "^4.0.0",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.18",
     "typescript": "^5",
     "vercel": "^32.4.1"
+  },
+  "overrides": {
+    "@next/eslint-plugin-next": {
+      "glob": "10.5.0"
+    },
+    "sucrase": {
+      "glob": "10.5.0"
+    }
   }
 }
