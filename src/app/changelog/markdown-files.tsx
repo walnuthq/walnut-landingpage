@@ -75,8 +75,10 @@ import clearerErrorUi from "./posts/20251114-clearer-error-ui.md"
 import redisignedCalldataUI from "./posts/20251121-redisigned-calldata-ui.md"
 import abiTabAndErrorImprovements from "./posts/20251128-abi-tab-and-error-improvements.md"
 import bugFixesAndImprovements20251205 from "./posts/20251205-bug-fixes-and-improvements.md"
+import uiImprovements from "./posts/20251212-ui-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "ui-improvements", content: uiImprovements },
   { slug: "bug-fixes-and-improvements-20251205", content: bugFixesAndImprovements20251205 },
   { slug: "abi-tab-and-error-improvements", content: abiTabAndErrorImprovements},
   { slug: "redisigned-calldata-ui", content: redisignedCalldataUI},
