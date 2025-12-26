@@ -14,3 +14,4 @@ This week's release introduces a new way to navigate to the Debugger — clickin
 - Enhanced the network selection list on the Simulation page by adding network logos.
 - Enhanced transaction search performance, making it more responsive on Walnut EVM.
 - Removed class hash information display on EVM contract pages.
+- Removed the Transaction Version field from the EVM Simulation Form to prevent confusion with Starknet numeric versions.
