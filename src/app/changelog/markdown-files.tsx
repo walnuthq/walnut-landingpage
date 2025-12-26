@@ -77,8 +77,10 @@ import abiTabAndErrorImprovements from "./posts/20251128-abi-tab-and-error-impro
 import bugFixesAndImprovements20251205 from "./posts/20251205-bug-fixes-and-improvements.md"
 import uiImprovements from "./posts/20251212-ui-improvements.md"
 import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-improvements.md"
+import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md"
 
 export const markdownFiles = [  
+  { slug: "debugger-improvements-and-bug-fixes", content: debuggerImprovementsAndBugFixes },
   { slug: "api-simulation-and-improvements", content: apiSimulationAndImprovements },
   { slug: "ui-improvements", content: uiImprovements },
   { slug: "bug-fixes-and-improvements-20251205", content: bugFixesAndImprovements20251205 },
