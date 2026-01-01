@@ -78,8 +78,10 @@ import bugFixesAndImprovements20251205 from "./posts/20251205-bug-fixes-and-impr
 import uiImprovements from "./posts/20251212-ui-improvements.md"
 import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-improvements.md"
 import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md"
+import stabilityAndImprovements from "./posts/20260102-stability-and-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "stability-and-improvements", content: stabilityAndImprovements },
   { slug: "debugger-improvements-and-bug-fixes", content: debuggerImprovementsAndBugFixes },
   { slug: "api-simulation-and-improvements", content: apiSimulationAndImprovements },
   { slug: "ui-improvements", content: uiImprovements },
