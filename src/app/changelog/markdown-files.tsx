@@ -79,8 +79,10 @@ import uiImprovements from "./posts/20251212-ui-improvements.md"
 import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-improvements.md"
 import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md"
 import stabilityAndImprovements from "./posts/20260102-stability-and-improvements.md"
+import uiRefinements from "./posts/20260109-ui-refinements.md"
 
 export const markdownFiles = [  
+  { slug: "ui-refinements", content: uiRefinements },
   { slug: "stability-and-improvements", content: stabilityAndImprovements },
   { slug: "debugger-improvements-and-bug-fixes", content: debuggerImprovementsAndBugFixes },
   { slug: "api-simulation-and-improvements", content: apiSimulationAndImprovements },
