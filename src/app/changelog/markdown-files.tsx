@@ -80,8 +80,10 @@ import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-im
 import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md"
 import stabilityAndImprovements from "./posts/20260102-stability-and-improvements.md"
 import uiRefinements from "./posts/20260109-ui-refinements.md"
+import rpcAndHeaderUiImprovements from "./posts/20260116-rpc-and-header-ui-improvements.md"
 
 export const markdownFiles = [  
+  { slug: "rpc-and-header-ui-improvements", content: rpcAndHeaderUiImprovements },
   { slug: "ui-refinements", content: uiRefinements },
   { slug: "stability-and-improvements", content: stabilityAndImprovements },
   { slug: "debugger-improvements-and-bug-fixes", content: debuggerImprovementsAndBugFixes },
