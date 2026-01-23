@@ -57,60 +57,113 @@ import contractCallTraceImprovment from "./posts/contract-call-trace-improvment.
 import functionCallTraceImprovment from "./posts/function-call-trace-improvment.md";
 import inputOutputTab from "./posts/input-output-tab.md";
 import argsResultsJsonShow from "./posts/args-results-json-show.md";
-import contractAddressCustomColor from "./posts/contract-address-custom-color.md"
-import removeCoreFunction from "./posts/remove-core-function.md"
-import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.md"
-import contractPageEntrypointsTab from "./posts/contract-page-entrypoints-tab.md"
-import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-entrypoints.md"
-import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smarter.md"
-import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md"
-import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md"
-import stabilityImprovements from "./posts/stability-improvements.md"
-import simulationFormWithParameters from "./posts/simulation-form-with-parameters.md"
-import contractSimulationImprovements from "./posts/contract-simulation-improvements.md"
-import improvedClarityAcrossSimulationContractAndDebuggerViews from "./posts/20251024-improved-clarity-across-simulation-contract-and-debugger-views.md"
-import classPageDebuggerAndSimulationImprovements from "./posts/20251031-class-page-debugger-and-simulation-improvements.md"
-import enhancementsAcrossThePlatform from "./posts/20251107-enhancements-across-the-platform.md"
-import clearerErrorUi from "./posts/20251114-clearer-error-ui.md"
-import redisignedCalldataUI from "./posts/20251121-redisigned-calldata-ui.md"
-import abiTabAndErrorImprovements from "./posts/20251128-abi-tab-and-error-improvements.md"
-import bugFixesAndImprovements20251205 from "./posts/20251205-bug-fixes-and-improvements.md"
-import uiImprovements from "./posts/20251212-ui-improvements.md"
-import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-improvements.md"
-import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md"
-import stabilityAndImprovements from "./posts/20260102-stability-and-improvements.md"
-import uiRefinements from "./posts/20260109-ui-refinements.md"
-import rpcAndHeaderUiImprovements from "./posts/20260116-rpc-and-header-ui-improvements.md"
+import contractAddressCustomColor from "./posts/contract-address-custom-color.md";
+import removeCoreFunction from "./posts/remove-core-function.md";
+import stackErrorTraceImprovements from "./posts/stack-error-trace-improvements.md";
+import contractPageEntrypointsTab from "./posts/contract-page-entrypoints-tab.md";
+import expandComplexTypesInEntrypoints from "./posts/expand-complex-types-in-entrypoints.md";
+import searchFunctionalityGotSmarter from "./posts/search-functionality-got-smarter.md";
+import debuggerTabLazyLoader from "./posts/debugger-tab-lazy-loader.md";
+import bugFixesAndImprovements from "./posts/bug-fixes-and-improvements.md";
+import stabilityImprovements from "./posts/stability-improvements.md";
+import simulationFormWithParameters from "./posts/simulation-form-with-parameters.md";
+import contractSimulationImprovements from "./posts/contract-simulation-improvements.md";
+import improvedClarityAcrossSimulationContractAndDebuggerViews from "./posts/20251024-improved-clarity-across-simulation-contract-and-debugger-views.md";
+import classPageDebuggerAndSimulationImprovements from "./posts/20251031-class-page-debugger-and-simulation-improvements.md";
+import enhancementsAcrossThePlatform from "./posts/20251107-enhancements-across-the-platform.md";
+import clearerErrorUi from "./posts/20251114-clearer-error-ui.md";
+import redisignedCalldataUI from "./posts/20251121-redisigned-calldata-ui.md";
+import abiTabAndErrorImprovements from "./posts/20251128-abi-tab-and-error-improvements.md";
+import bugFixesAndImprovements20251205 from "./posts/20251205-bug-fixes-and-improvements.md";
+import uiImprovements from "./posts/20251212-ui-improvements.md";
+import apiSimulationAndImprovements from "./posts/20251219-api-simulation-and-improvements.md";
+import debuggerImprovementsAndBugFixes from "./posts/20251226-debugger-improvements-and-bug-fixes.md";
+import stabilityAndImprovements from "./posts/20260102-stability-and-improvements.md";
+import uiRefinements from "./posts/20260109-ui-refinements.md";
+import rpcAndHeaderUiImprovements from "./posts/20260116-rpc-and-header-ui-improvements.md";
+import improvedDataVisibility from "./posts/20260123-improved-data-visibility.md";
 
-export const markdownFiles = [  
-  { slug: "rpc-and-header-ui-improvements", content: rpcAndHeaderUiImprovements },
+export const markdownFiles = [
+  { slug: "improved-data-visibility", content: improvedDataVisibility },
+  {
+    slug: "rpc-and-header-ui-improvements",
+    content: rpcAndHeaderUiImprovements,
+  },
   { slug: "ui-refinements", content: uiRefinements },
   { slug: "stability-and-improvements", content: stabilityAndImprovements },
-  { slug: "debugger-improvements-and-bug-fixes", content: debuggerImprovementsAndBugFixes },
-  { slug: "api-simulation-and-improvements", content: apiSimulationAndImprovements },
+  {
+    slug: "debugger-improvements-and-bug-fixes",
+    content: debuggerImprovementsAndBugFixes,
+  },
+  {
+    slug: "api-simulation-and-improvements",
+    content: apiSimulationAndImprovements,
+  },
   { slug: "ui-improvements", content: uiImprovements },
-  { slug: "bug-fixes-and-improvements-20251205", content: bugFixesAndImprovements20251205 },
-  { slug: "abi-tab-and-error-improvements", content: abiTabAndErrorImprovements},
-  { slug: "redisigned-calldata-ui", content: redisignedCalldataUI},
+  {
+    slug: "bug-fixes-and-improvements-20251205",
+    content: bugFixesAndImprovements20251205,
+  },
+  {
+    slug: "abi-tab-and-error-improvements",
+    content: abiTabAndErrorImprovements,
+  },
+  { slug: "redisigned-calldata-ui", content: redisignedCalldataUI },
   { slug: "clearer-error-ui", content: clearerErrorUi },
-  { slug: "enhancements-across-the-platform", content: enhancementsAcrossThePlatform },
-  { slug: "class-page-debugger-and-simulation-improvements", content: classPageDebuggerAndSimulationImprovements },
-  { slug: "improved-clarity-across-simulation-contract-and-debugger-views", content: improvedClarityAcrossSimulationContractAndDebuggerViews },
-  { slug: "contract-simulation-improvements", content: contractSimulationImprovements },
-  { slug: "simulation-form-with-parameters", content: simulationFormWithParameters },
+  {
+    slug: "enhancements-across-the-platform",
+    content: enhancementsAcrossThePlatform,
+  },
+  {
+    slug: "class-page-debugger-and-simulation-improvements",
+    content: classPageDebuggerAndSimulationImprovements,
+  },
+  {
+    slug: "improved-clarity-across-simulation-contract-and-debugger-views",
+    content: improvedClarityAcrossSimulationContractAndDebuggerViews,
+  },
+  {
+    slug: "contract-simulation-improvements",
+    content: contractSimulationImprovements,
+  },
+  {
+    slug: "simulation-form-with-parameters",
+    content: simulationFormWithParameters,
+  },
   { slug: "stability-improvements", content: stabilityImprovements },
   { slug: "bug-fixes-and-improvements", content: bugFixesAndImprovements },
   { slug: "debugger-tab-lazy-loader", content: debuggerTabLazyLoader },
-  { slug: "search-functionality-got-smarter", content: searchFunctionalityGotSmarter },
-  { slug: "contract-page-entrypoints-tab", content: contractPageEntrypointsTab },
-  { slug: "expand-complex-types-in-entrypoints", content: expandComplexTypesInEntrypoints },
-  { slug: "stack-error-trace-improvements", content: stackErrorTraceImprovements },
+  {
+    slug: "search-functionality-got-smarter",
+    content: searchFunctionalityGotSmarter,
+  },
+  {
+    slug: "contract-page-entrypoints-tab",
+    content: contractPageEntrypointsTab,
+  },
+  {
+    slug: "expand-complex-types-in-entrypoints",
+    content: expandComplexTypesInEntrypoints,
+  },
+  {
+    slug: "stack-error-trace-improvements",
+    content: stackErrorTraceImprovements,
+  },
   { slug: "remove-core-function", content: removeCoreFunction },
-  { slug: "contract-address-custom-color", content: contractAddressCustomColor },
+  {
+    slug: "contract-address-custom-color",
+    content: contractAddressCustomColor,
+  },
   { slug: "args-results-json-show", content: argsResultsJsonShow },
   { slug: "input-output-tab", content: inputOutputTab },
-  { slug: "function-call-trace-improvment", content: functionCallTraceImprovment },
-  { slug: "contract-call-trace-improvment", content: contractCallTraceImprovment },
+  {
+    slug: "function-call-trace-improvment",
+    content: functionCallTraceImprovment,
+  },
+  {
+    slug: "contract-call-trace-improvment",
+    content: contractCallTraceImprovment,
+  },
   { slug: "dark-theme", content: darkTheme },
   { slug: "l1-data-flamegraph", content: l1DataFlamegraph },
   {
