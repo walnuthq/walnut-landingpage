@@ -82,8 +82,10 @@ import stabilityAndImprovements from "./posts/20260102-stability-and-improvement
 import uiRefinements from "./posts/20260109-ui-refinements.md";
 import rpcAndHeaderUiImprovements from "./posts/20260116-rpc-and-header-ui-improvements.md";
 import improvedDataVisibility from "./posts/20260123-improved-data-visibility.md";
+import voyagerVerificationIntegration from "./posts/20260130-voyager-verification-integration.md";
 
 export const markdownFiles = [
+  { slug: "voyager-verification-integration", content: voyagerVerificationIntegration },
   { slug: "improved-data-visibility", content: improvedDataVisibility },
   {
     slug: "rpc-and-header-ui-improvements",
